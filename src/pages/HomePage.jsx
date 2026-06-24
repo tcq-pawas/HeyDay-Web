@@ -10,19 +10,18 @@ import FamilyCardSection from "../components/FamilyCardSection";
 import WorkflowSection from "../components/WorkflowSection";
 import FAQSection from "../components/FAQSection";
 import OurTeamSection from "../components/OurTeamSection";
+import AboutSection from "../components/AboutSection";
 
 const HomePage = () => {
   return (
     <>
       <Navbar />
       <HeroSection />
-      <Features />
+      <AboutSection/>
       <PropertySection />
-      <FamilyCardSection />
-      <Experience />
       <WorkflowSection />
       <TestimonialSection />
-      <OurTeamSection />
+      {/* <OurTeamSection /> */}
       <FAQSection />
       <Footer />
     </>

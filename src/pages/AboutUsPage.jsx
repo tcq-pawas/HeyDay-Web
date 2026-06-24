@@ -1,16 +1,23 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import AboutHero from "../components/about/AboutHero";
+import WhoWeAre from "../components/about/WhoWeAre";
+import WhyChooseUs from "../components/about/WhyChooseUs";
+import CompanyStats from "../components/about/CompanyStats";
+import OurTeamSection from "../components/OurTeamSection";
 
 const AboutUsPage = () => {
   return (
     <>
       <Navbar />
 
-      <div className="pt-40 min-h-screen">
-        <h1 className="text-center text-5xl font-bold">
-          About Us Page
-        </h1>
-      </div>
+      <AboutHero/>
+
+      <WhoWeAre/>
+
+      <WhyChooseUs/>
+
+      <OurTeamSection/>
 
       <Footer />
     </>

@@ -1,74 +1,208 @@
+import React from "react";
+
+import bgImage from "../assets/herobg.png";
+import gallery1 from "../assets/herobg.png";
+import gallery2 from "../assets/herobg.png";
+import gallery3 from "../assets/herobg.png";
+import gallery4 from "../assets/herobg.png";
+import gallery5 from "../assets/herobg.png";
+import gallery6 from "../assets/herobg.png";
+
 const WorkflowSection = () => {
   const steps = [
     {
-      emoji: "🏡",
-      title: "Choose Property",
-      desc: "Browse premium homes and find the perfect property for your lifestyle.",
+      no: "01",
+      title: "Verified Documentation",
+      desc: "Choose your preferred land that fits your needs.",
     },
     {
-      emoji: "📅",
-      title: "Book A Visit",
-      desc: "Schedule a personal property visit at your preferred time and date.",
+      no: "02",
+      title: "Site Visit",
+      desc: "Visit the site and verify location & surroundings.",
     },
     {
-      emoji: "🤝",
-      title: "Meet Our Experts",
-      desc: "Get trusted advice from our professional real estate consultants.",
+      no: "03",
+      title: "Legal Verification",
+      desc: "Our experts verify all documents and titles.",
     },
     {
-      emoji: "🔑",
-      title: "Get Your Dream Home",
-      desc: "Complete the process and unlock the door to your dream home.",
+      no: "04",
+      title: "Documentation",
+      desc: "Preparation and review of required documents.",
+    },
+    {
+      no: "05",
+      title: "NRI Support",
+      desc: "Dedicated assistance for NRI investors.",
+    },
+    {
+      no: "06",
+      title: "Registry & Ownership",
+      desc: "Smooth registration and ownership transfer.",
     },
   ];
 
+  const gallery = [
+    gallery1,
+    gallery2,
+    gallery3,
+    gallery4,
+    gallery5,
+    gallery6,
+  ];
+
   return (
-    <section className="relative overflow-hidden py-28 bg-gradient-to-br from-blue-50 via-sky-100 to-blue-200">
-      <div className="absolute top-0 left-0 w-72 h-72 bg-blue-300/20 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-sky-300/20 rounded-full blur-3xl"></div>
-      <div className="absolute top-20 right-20 w-40 h-40 bg-white/20 rounded-full blur-2xl"></div>
+    <section className="bg-white">
 
-      <div className="relative max-w-7xl mx-auto px-6 lg:px-10">
-        <div className="text-center mb-20">
-          <p className="text-orange-500 font-semibold uppercase tracking-[4px]">
-            Simple Process
-          </p>
+      {/* Timeline Section */}
+      <div className="bg-[#041b35] py-12">
 
-          <h1 className="text-4xl md:text-6xl font-bold text-[#032349] mt-4 leading-tight">
-            Your Dream Home Journey ✨
-          </h1>
+        <div className="max-w-7xl mx-auto px-6">
 
-          <p className="text-gray-600 mt-5 max-w-2xl mx-auto leading-8 text-lg">
-            Buying your dream home has never been easier. Follow these simple
-            steps and move into your perfect property stress-free.
-          </p>
+          <h2 className="text-center text-2xl md:text-2xl font-bold text-white mb-12">
+            FROM SITE VISIT{" "}
+            <span className="text-[#e66a10]">
+              TO REGISTRATION
+            </span>
+          </h2>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+
+            {steps.map((step, index) => (
+              <div
+                key={index}
+                className="text-center relative"
+              >
+                <div className="w-10 h-10 mx-auto rounded-full bg-white text-[#f4a300] font-bold flex items-center justify-center shadow-md">
+                  {step.no}
+                </div>
+
+                <h3 className="text-white text-sm font-semibold mt-4">
+                  {step.title}
+                </h3>
+
+                <p className="text-gray-300 text-xs mt-2 leading-5">
+                  {step.desc}
+                </p>
+              </div>
+            ))}
+
+          </div>
+
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {steps.map((step, index) => (
+      </div>
+
+      {/* Why Heyday Realty */}
+      <div className="max-w-7xl mx-auto px-6 py-14">
+
+        <div className="flex items-center justify-center gap-4 mb-10">
+
+          <div className="h-[2px] w-16 bg-[#d8c28a]" />
+
+          <h2 className="text-2xl font-bold text-[#08213f]">
+            WHY{" "}
+            <span className="text-[#7aac3b]">
+              HEYDAY REALTY
+            </span>
+          </h2>
+
+          <div className="h-[2px] w-16 bg-[#d8c28a]" />
+
+        </div>
+
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+
+          {gallery.map((img, index) => (
             <div
               key={index}
-              className="group bg-white/90 backdrop-blur-md rounded-[32px] p-8 shadow-xl hover:shadow-2xl hover:-translate-y-4 duration-500 border border-white/50 text-center"
+              className="overflow-hidden rounded-xl shadow-md"
             >
-              <div className="text-6xl mb-5 transition-transform duration-500 group-hover:scale-110">
-                {step.emoji}
-              </div>
-
-              <div className="w-14 h-14 rounded-full bg-orange-500 text-white flex items-center justify-center font-bold mx-auto mb-5 text-xl shadow-md">
-                {index + 1}
-              </div>
-
-              <h1 className="text-2xl font-bold text-[#032349] leading-snug">
-                {step.title}
-              </h1>
-
-              <p className="text-gray-500 mt-4 leading-7 text-[15px]">
-                {step.desc}
-              </p>
+              <img
+                src={img}
+                alt=""
+                className="w-full h-28 object-cover hover:scale-105 transition duration-300"
+              />
             </div>
           ))}
+
+        </div>
+
+      </div>
+
+      {/* Stats Banner */}
+      <div
+        className="relative bg-cover bg-center"
+        style={{
+          backgroundImage: `url(${bgImage})`,
+        }}
+      >
+        <div className="absolute inset-0 bg-[#041b35]/70" />
+
+        <div className="relative max-w-7xl mx-auto px-6 py-14">
+
+          <div className="grid md:grid-cols-5 gap-8 items-center">
+
+            <div>
+              <h2 className="text-2xl font-bold text-white leading-tight">
+                LAND ISN'T JUST
+                <br />
+                PROPERTY.
+                <br />
+                IT'S A{" "}
+                <span className="text-[#e66a10]">
+                  LEGACY.
+                </span>
+              </h2>
+            </div>
+
+            <div className="text-center">
+              <h3 className="text-4xl font-bold text-[#e66a10]">
+                15%
+              </h3>
+              <p className="text-white mt-2">
+                Average Annual
+                <br />
+                Appreciation
+              </p>
+            </div>
+
+            <div className="text-center">
+              <h3 className="text-4xl font-bold text-[#e66a10]">
+                500+
+              </h3>
+              <p className="text-white mt-2">
+                Acres Sold
+              </p>
+            </div>
+
+            <div className="text-center">
+              <h3 className="text-4xl font-bold text-[#e66a10]">
+                1000+
+              </h3>
+              <p className="text-white mt-2">
+                Satisfied
+                <br />
+                Buyers
+              </p>
+            </div>
+
+            <div className="text-center">
+              <h3 className="text-4xl font-bold text-[#e66a10]">
+                100%
+              </h3>
+              <p className="text-white mt-2">
+                Verified
+                <br />
+                Documentation
+              </p>
+            </div>
+
+          </div>
+
         </div>
       </div>
+
     </section>
   );
 };

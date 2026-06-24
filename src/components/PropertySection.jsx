@@ -1,68 +1,184 @@
-import PropertyCard from "./PropertyCard";
-import apartment from "../assets/images/apartment.jpg";
-import villa from "../assets/images/villa.jpg";
-import plot from "../assets/images/plot.jpg";
-import land from "../assets/images/land.jpg";
+import React from "react";
+import { Link } from "react-router-dom";
+import {
+  Sprout,
+  Home,
+  Building2,
+  Landmark,
+  Factory,
+  Map,
+} from "lucide-react";
 
+import project1 from "../assets/herobg.png";
+import project2 from "../assets/herobg.png";
+import project3 from "../assets/herobg.png";
+
+const projects = [
+  {
+    image: project1,
+    badge: "PREMIUM",
+    title: "Roushan Baag Residency",
+    features: [
+      "Premium Residential Plots",
+      "Near Gorakhpur City",
+      "Blacktop Roads",
+      "Gated Entry",
+    ],
+  },
+  {
+    image: project2,
+    badge: "POPULAR",
+    title: "Bhathat Green City",
+    features: [
+      "Agricultural Farm Plots",
+      "Plantation Ready",
+      "High Appreciation Zone",
+      "Peaceful Environment",
+    ],
+  },
+  {
+    image: project3,
+    badge: "BEST VALUE",
+    title: "Swastik Puram",
+    features: [
+      "Investment Plots",
+      "Highway Connectivity",
+      "Legal Documentation",
+      "Developing Corridor",
+    ],
+  },
+];
+
+const categories = [
+  { icon: Sprout, title: "Agricultural Land" },
+  { icon: Home, title: "Farmhouse Plots" },
+  { icon: Building2, title: "Residential Plots" },
+  { icon: Landmark, title: "Investment Lands" },
+  { icon: Factory, title: "Commercial Roadside Land" },
+  { icon: Map, title: "Gated Plotting Projects" },
+];
 
 const PropertySection = () => {
-
-  const properties = [
-    {
-      image: apartment,
-      title: "Modern Villa in Green Woods",
-      location: "Bangalore, Karnataka",
-      price: "4.85"
-    },
-    {
-      image: villa,
-      title: "Luxury Apartment Skyline",
-      location: "Mumbai, Maharashtra",
-      price: "3.25"
-    },
-    {
-      image: plot ,
-      title: "Premium Residential Plot",
-      location: "Devanahalli, Bangalore",
-      price: "1.20"
-    },
-    {
-      image: land,
-      title: "Commercial Land",
-      location: "Sarjapur Road",
-      price: "2.80"
-    }
-  ]
-
   return (
-    <div className="max-w-7xl mx-auto mt-20">
+    <section className="py-20 bg-white">
 
-      <div className="flex justify-between items-center mb-10">
+      <div className="max-w-7xl mx-auto px-6">
 
-        <h1 className="text-4xl text-center font-bold text-[#102a56] uppercase">
-          FEATURED PROPERTIES
-        </h1>
+        {/* Heading */}
+        <div className="flex items-center justify-center gap-4 mb-12">
+          <div className="h-[2px] w-16 bg-[#d8c28a]" />
+          <h2 className="text-2xl font-bold text-[#08213f] text-center">
+            EXPLORE OUR{" "}
+            <span className="text-[#7aac3b]">
+              FEATURED PROJECTS
+            </span>
+          </h2>
+          <div className="h-[2px] w-16 bg-[#d8c28a]" />
+        </div>
 
-        <button className="border px-6 py-2 rounded-lg">
-          VIEW ALL
-        </button>
+        {/* Project Cards */}
+        <div className="grid lg:grid-cols-3 gap-8">
+
+          {projects.map((project, index) => (
+            <div
+              key={index}
+              className="bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-md hover:shadow-xl transition-all duration-300"
+            >
+
+              {/* Image */}
+              <div className="relative">
+
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-40 object-cover"
+                />
+
+                <span className="absolute top-3 left-3 bg-[#e66a10] text-white text-xs font-semibold px-3 py-1 rounded-md">
+                  {project.badge}
+                </span>
+
+              </div>
+
+              {/* Content */}
+              <div className="p-6">
+
+                <h3 className="text-lg font-bold text-[#08213f] mb-4">
+                  {project.title}
+                </h3>
+
+                <ul className="space-y-2 mb-5">
+
+                  {project.features.map((item, i) => (
+                    <li
+                      key={i}
+                      className="text-gray-600 text-sm flex items-center gap-2"
+                    >
+                      <span className="text-[#f4a300]">•</span>
+                      {item}
+                    </li>
+                  ))}
+
+                </ul>
+
+                <Link
+                  to="/projects"
+                  className="text-[#f4a300] font-semibold text-sm hover:underline"
+                >
+                  View Project →
+                </Link>
+
+              </div>
+
+            </div>
+          ))}
+
+        </div>
+
+        {/* Second Heading */}
+        <div className="flex items-center justify-center gap-4 mt-20 mb-12">
+
+          <div className="h-[2px] w-16 bg-[#d8c28a]" />
+
+          <h2 className="text-2xl font-bold text-[#08213f] text-center">
+            LAND OPPORTUNITIES FOR{" "}
+            <span className="text-[#7aac3b]">
+              EVERY INVESTOR
+            </span>
+          </h2>
+
+          <div className="h-[2px] w-16 bg-[#d8c28a]" />
+
+        </div>
+
+        {/* Categories */}
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+
+          {categories.map((item, index) => {
+            const Icon = item.icon;
+
+            return (
+              <div
+                key={index}
+                className="text-center"
+              >
+                <div className="w-10 h-10 mx-auto rounded-full bg-[#08213f] flex items-center justify-center">
+                  <Icon className="w-5 h-5 text-[#a5c53b]" />
+                </div>
+
+                <h4 className="mt-4 text-sm font-semibold text-[#08213f] leading-6">
+                  {item.title}
+                </h4>
+              </div>
+            );
+          })}
+
+        </div>
 
       </div>
 
-      <div className="grid grid-cols-4 gap-6">
-        {properties.map((property, index) => (
-          <PropertyCard
-            key={index}
-            image={property.image}
-            title={property.title}
-            location={property.location}
-            price={property.price}
-          />
-        ))}
-      </div>
+    </section>
+  );
+};
 
-    </div>
-  )
-}
-
-export default PropertySection
+export default PropertySection;

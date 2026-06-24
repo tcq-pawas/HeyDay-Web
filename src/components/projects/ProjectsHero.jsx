@@ -1,38 +1,49 @@
 import { FaArrowRight } from "react-icons/fa";
-import heroImage from "../../assets/images/city.jpg";
+import heroImage from "../../assets/images/projectbg.png";
+import { Link } from "react-router-dom";
 
 const ProjectsHero = () => {
   return (
     <section
-      className="relative min-h-screen w-full bg-cover bg-center flex items-start"
+      className="relative h-[80vh] min-h-[650px] w-full bg-cover bg-center"
       style={{
         backgroundImage: `url(${heroImage})`,
       }}
     >
-      <div className="absolute inset-0 bg-black/65"></div>
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black/60"></div>
 
-      <div className="relative z-10 w-full px-6 lg:px-16 pt-32 md:pt-40">
-        <div className="flex flex-col  justify-center mt-10 mr-20">
-          <h1 className="text-white text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.1]">
+      {/* Content */}
+      <div className="relative z-10 h-full max-w-7xl mx-auto px-6 lg:px-8 flex items-center mt-15">
+        <div className="max-w-3xl">
+
+          <span className="inline-block text-[#f47c20] uppercase tracking-[4px] text-sm font-semibold mb-5">
+            Premium Plotted Developments
+          </span>
+
+          <h1 className="text-white text-4xl md:text-6xl font-bold leading-tight">
             Find The Perfect
-            <span className="block text-white mt-2">Land For Your Future</span>
+            <span className="block text-[#f47c20]">
+              Land For Your Future
+            </span>
           </h1>
-          <p className="mt-6 text-gray-200 text-lg md:text-xl leading-8 max-w-xl">
-            Discover premium residential, commercial, and investment properties
-            in the most desirable locations. Your dream property is just one
-            step away.
+
+          <p className="mt-6 text-gray-200 text-lg leading-8 max-w-2xl">
+            Discover premium residential and investment plots in strategically
+            located developments. Secure your future with properties designed
+            for long-term growth and value.
           </p>
 
-          <div className="flex flex-wrap gap-4 mt-10">
-            <button className="bg-orange-500 hover:text-orange-600 text-black px-8 py-4 rounded-full font-semibold transition-all duration-300 flex items-center gap-3 shadow-lg">
-              Explore Properties
-              <FaArrowRight />
-            </button>
-
-            <button className="border border-white text-white hover:bg-white hover:text-black px-8 py-4 rounded-full font-semibold transition-all duration-300">
+          <div className="mt-10">
+            <Link
+              to="/contact"
+              className="inline-flex items-center gap-3 bg-[#f47c20] text-white px-8 py-4 rounded-xl font-semibold shadow-lg hover:bg-[#e66a10] hover:-translate-y-1 transition-all duration-300"
+            >
               Contact Us
-            </button>
+              <FaArrowRight />
+            </Link>
           </div>
+
         </div>
       </div>
     </section>

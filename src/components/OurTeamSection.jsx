@@ -1,6 +1,7 @@
-import team1 from "../assets/images/villa2.jpg";
-import team2 from "../assets/images/land.jpg";
-import team3 from "../assets/images/villa.jpg";
+import team1 from "../assets/Rahul Chaudhary.jpg";
+import team2 from "../assets/Sahil Varma.jpg";
+import team3 from "../assets/Rohit Pandey.jpg";
+
 
 const OurTeamSection = () => {
   const teamMembers = [
@@ -22,47 +23,54 @@ const OurTeamSection = () => {
   ];
 
   return (
-    <div className="max-w-7xl mx-auto px-6 lg:px-10 mt-28 mb-28">
-      <div className="text-center mb-16">
-        <p className="text-orange-500 font-semibold uppercase tracking-[3px]">
+    <section className="max-w-6xl mx-auto px-6 py-20">
+      
+      {/* Heading */}
+      <div className="text-center mb-12">
+        <p className="text-[#f47c20] font-semibold uppercase tracking-[3px] text-sm">
           Our Experts
         </p>
 
-        <h1 className="text-5xl font-bold text-[#032349] mt-4">
+        <h1 className="text-3xl md:text-4xl font-bold text-[#032349] mt-3">
           Meet Our Professional Team
         </h1>
 
-        <p className="text-gray-500 mt-5 max-w-2xl mx-auto leading-7">
-          Our experienced real estate professionals are here to guide you in
-          finding the perfect property for your lifestyle and future.
+        <p className="text-gray-500 mt-4 max-w-xl mx-auto">
+          Our experienced real estate professionals are here to guide you every step of the way.
         </p>
+
+        <div className="w-20 h-1 bg-[#f47c20] mx-auto mt-4 rounded-full"></div>
       </div>
 
-      <div className="grid md:grid-cols-3 gap-8">
+      {/* Team Cards */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
         {teamMembers.map((member, index) => (
           <div
             key={index}
-            className="group bg-white rounded-[30px] overflow-hidden shadow-lg hover:shadow-2xl duration-500 hover:-translate-y-3"
+            className="group bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
           >
             <div className="overflow-hidden">
               <img
                 src={member.image}
                 alt={member.name}
-                className="w-full h-[420px] object-cover group-hover:scale-110 duration-700"
+                className="w-full h-60 object-cover group-hover:scale-105 transition duration-500"
               />
             </div>
 
-            <div className="p-7 text-center">
-              <h1 className="text-2xl font-bold text-[#032349]">
+            <div className="p-4 text-center">
+              <h2 className="text-lg font-bold text-[#032349]">
                 {member.name}
-              </h1>
+              </h2>
 
-              <p className="text-orange-500 mt-2 font-medium">{member.role}</p>
+              <p className="text-[#f47c20] mt-1 text-sm">
+                {member.role}
+              </p>
             </div>
           </div>
         ))}
       </div>
-    </div>
+
+    </section>
   );
 };
 

@@ -1,106 +1,139 @@
 import { useState } from "react";
-import {
-  FaStar,
-  FaQuoteLeft,
-  FaChevronLeft,
-  FaChevronRight,
-} from "react-icons/fa";
+import { FaChevronLeft, FaChevronRight, FaQuoteLeft } from "react-icons/fa";
+
+import profile from "../assets/herobg.png";
 
 const TestimonialSection = () => {
-
   const testimonials = [
     {
+      name: "Ramesh Singh",
+      role: "Investor",
       comment:
-        "HeyDay Realty made finding our first home an absolute breeze. Their knowledge of the market and dedication to our needs was unmatched.",
-      name: "Shalini & Pramod",
-      role: "Homeowners, Downtown District",
+        "Very transparent and professional team. The land I purchased has excellent appreciation potential.",
     },
-
     {
+      name: "Ankit Verma",
+      role: "NRI Investor",
       comment:
-        "The entire buying process felt smooth and stress-free. Their team helped us find the perfect family home in no time.",
-      name: "Suraj Maurya",
-      role: "Property Buyer",
+        "As an NRI, I needed a reliable partner. HeyDay Realty made the entire process smooth and trustworthy.",
     },
-
     {
+      name: "Vivek Yadav",
+      role: "Business Owner",
       comment:
-        "Professional, trustworthy, and very responsive. We found our dream apartment faster than expected.",
-      name: "Priti Singh",
-      role: "Apartment Owner",
+        "Best agricultural plot buying experience. Clear documentation and peaceful location.",
     },
-
     {
+      name: "Priya Sharma",
+      role: "Investor",
       comment:
-        "Amazing experience from start to finish. They truly cared about our needs and budget.",
-      name: "Rahul & Sharavini",
-      role: "Luxury Home Clients",
+        "Very supportive team. Everything from site visit to registration was handled professionally.",
+    },
+    {
+      name: "Amit Mishra",
+      role: "Land Buyer",
+      comment:
+        "Excellent location options and transparent dealing. Highly recommended.",
     },
   ];
 
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [startIndex, setStartIndex] = useState(0);
 
   const nextSlide = () => {
-    setCurrentIndex((prev) =>
-      prev === testimonials.length - 1 ? 0 : prev + 1
+    setStartIndex((prev) =>
+      prev + 3 >= testimonials.length ? 0 : prev + 1
     );
   };
 
   const prevSlide = () => {
-    setCurrentIndex((prev) =>
-      prev === 0 ? testimonials.length - 1 : prev - 1
+    setStartIndex((prev) =>
+      prev === 0 ? testimonials.length - 3 : prev - 1
     );
   };
 
+  const visibleTestimonials = testimonials.slice(
+    startIndex,
+    startIndex + 3
+  );
+
   return (
-    <div className="max-w-7xl mx-auto mt-24 mb-20">
-      <div className="bg-[#f4f7fc] py-24 px-16 relative rounded-sm">
+    <section className="py-16 bg-white">
 
-        <button
-          onClick={prevSlide}
-          className="absolute left-5 top-1/2 -translate-y-1/2 w-20 h-20 rounded-full border border-gray-300 flex items-center justify-center text-blue-500 text-3xl hover:bg-blue-500 hover:text-white transition-all duration-300"
-        >
-          <FaChevronLeft />
-        </button>
+      <div className="max-w-7xl mx-auto px-6">
 
-        <button
-          onClick={nextSlide}
-          className="absolute right-5 top-1/2 -translate-y-1/2 w-20 h-20 rounded-full border border-gray-300 flex items-center justify-center text-blue-500 text-3xl hover:bg-blue-500 hover:text-white transition-all duration-300"
-        >
-          <FaChevronRight />
-        </button>
+        {/* Heading */}
+        <div className="text-center mb-10">
+          <h2 className="text-2xl md:text-2xl font-bold text-[#08213f]">
+            ✓ WHAT OUR{" "}
+            <span className="text-[#7aac3b]">
+              INVESTORS SAY
+            </span>
+          </h2>
+        </div>
 
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-[50px] font-bold text-[#102a56] uppercase">
-            WHAT OUR CLIENTS SAY
-          </h1>
+        <div className="relative">
 
-          <div className="w-24 h-1 bg-[#d5a03f] mx-auto mt-4 rounded-full"></div>
+          {/* Left Arrow */}
+          <button
+            onClick={prevSlide}
+            className="absolute left-0 top-1/2 -translate-y-1/2 z-20 w-8 h-8 rounded-full bg-[#3f372c] text-white flex items-center justify-center shadow-lg"
+          >
+            <FaChevronLeft size={12} />
+          </button>
 
-          <FaQuoteLeft className="text-[#d5a03f] text-4xl mx-auto mt-5" />
+          {/* Right Arrow */}
+          <button
+            onClick={nextSlide}
+            className="absolute right-0 top-1/2 -translate-y-1/2 z-20 w-8 h-8 rounded-full bg-[#3f372c] text-white flex items-center justify-center shadow-lg"
+          >
+            <FaChevronRight size={12} />
+          </button>
 
-          <p className="text-[22px] text-gray-700 mt-8 leading-[55px] font-medium">
-            {testimonials[currentIndex].comment}
-          </p>
+          {/* Centered Cards */}
+          <div className="flex flex-wrap justify-center gap-6 px-14">
 
-          <div className="flex justify-center gap-2 text-yellow-500 text-4xl mt-8">
-            <FaStar />
-            <FaStar />
-            <FaStar />
-            <FaStar />
-            <FaStar />
+            {visibleTestimonials.map((item, index) => (
+              <div
+                key={index}
+                className="w-full md:w-[320px] bg-white rounded-2xl border border-gray-100 shadow-md p-5"
+              >
+
+                <FaQuoteLeft className="text-[#f4a300] text-xs mb-3" />
+
+                <p className="text-gray-600 text-sm leading-7 min-h-[90px] text-center">
+                  {item.comment}
+                </p>
+
+                <div className="flex items-center gap-3 mt-5 text-center justify-center mr-14">
+
+                  <img
+                    src={profile}
+                    alt={item.name}
+                    className="w-11 h-11 rounded-full object-cover"
+                  />
+
+                  <div>
+                    <h4 className="font-bold text-[#08213f] text-sm">
+                      {item.name}
+                    </h4>
+
+                    <p className="text-gray-500 text-xs">
+                      {item.role}
+                    </p>
+                  </div>
+
+                </div>
+
+              </div>
+            ))}
+
           </div>
 
-          <h2 className="text-[22px] font-bold text-[#102a56] mt-8">
-            {testimonials[currentIndex].name}
-          </h2>
-
-          <p className="text-gray-500 text-lg mt-1">
-            {testimonials[currentIndex].role}
-          </p>
         </div>
+
       </div>
-    </div>
+
+    </section>
   );
 };
 

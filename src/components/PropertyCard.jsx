@@ -13,29 +13,29 @@ const PropertyCard = ({ image, title, location, price }) => {
         />
 
         <button className="absolute top-4 right-4 bg-white rounded-full p-3">
-          <FaHeart />
+          <FaHeart className="text-red-500" />
         </button>
 
       </div>
 
       <div className="p-5">
 
-        <h2 className="font-bold text-xl">
+        <h2 className="font-medium text-lg">
           {title}
         </h2>
 
-        <p className="text-gray-500 mt-1">
+        <p className="text-gray-500 text-sm mt-1">
           {location}
         </p>
 
-        <h1 className="text-orange-500 font-bold text-3xl mt-4">
+        <h1 className="text-[#f47c20] font-bold text-xl ">
           ₹ {price} Cr
         </h1>
 
       </div>
 
     </div>
-  )
-}
+  );
+};
 
-export default PropertyCard
+export default PropertyCard;
