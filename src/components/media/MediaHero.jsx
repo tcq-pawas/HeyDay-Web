@@ -1,45 +1,67 @@
-import heroImage from "../../assets/images/projectbg.png";
+import heroImage from "../../assets/herobg.png";
+import { FaImages, FaMapMarkerAlt } from "react-icons/fa";
+import { HiOutlineMap } from "react-icons/hi2";
 
 const MediaHero = () => {
   return (
     <section
-      className="relative pt-36 pb-24 bg-cover bg-center"
+      className="relative h-[85vh] min-h-[650px] bg-cover bg-center flex items-center"
       style={{
         backgroundImage: `url(${heroImage})`,
       }}
     >
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-black/65"></div>
+      {/* Dark Overlay */}
+      <div className="absolute inset-0 bg-[#081826]/65"></div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
-
-        <div className="max-w-4xl mx-auto text-center bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-8 md:p-12">
-
+      {/* Content */}
+      <div className="relative z-10 max-w-7xl mx-auto w-full px-6 lg:px-8 mt-25">
+        <div className="max-w-2xl">
           {/* Badge */}
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-[#f47c20]/20 text-[#f47c20] text-xs font-semibold uppercase tracking-[3px] border border-[#f47c20]/30">
-            Media Gallery
-          </div>
+          <p className="text-[#d7a23a] uppercase tracking-[3px] font-semibold text-medium
+           mb-4">
+            Gallery
+          </p>
 
           {/* Heading */}
-          <h1 className="mt-6 text-3xl md:text-5xl font-bold text-white leading-tight">
-            Discover Our
-            <span className="block text-[#f47c20] mt-1">
-              Premium Land Portfolio
-            </span>
+          <h1 className="text-white text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
+            Explore Our Land
+            <br />
+            & Plot <span className="text-lime-400">Gallery</span>
           </h1>
 
           {/* Description */}
-          <p className="max-w-2xl mx-auto mt-5 text-gray-200 text-base md:text-lg leading-8">
-            Explore residential and investment plots across Gorakhpur's most
-            promising locations. Browse our project gallery and discover
-            opportunities designed for long-term growth and future value.
+          <p className="mt-6 text-gray-300 text-medium leading-8 max-w-xl">
+            Discover a wide range of agricultural lands, premium plots,<br/>
+            and investment opportunities across prime locations.
           </p>
 
-          {/* Divider */}
-          <div className="w-20 h-1 bg-[#f47c20] mx-auto mt-8 rounded-full"></div>
+          {/* Stats */}
+          <div className="flex flex-wrap gap-10 lg:gap-14 mt-14">
+            <div className="flex items-center gap-4">
+              <FaImages className="text-[#d7a23a] text-4xl" />
+              <div>
+                <h3 className="text-white text-2xl font-bold">200+</h3>
+                <p className="text-gray-300">Photos</p>
+              </div>
+            </div>
 
+            <div className="flex items-center gap-4">
+              <HiOutlineMap className="text-[#d7a23a] text-4xl" />
+              <div>
+                <h3 className="text-white text-2xl font-bold">25+</h3>
+                <p className="text-gray-300">Projects</p>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-4">
+              <FaMapMarkerAlt className="text-[#d7a23a] text-4xl" />
+              <div>
+                <h3 className="text-white text-2xl font-bold">10+</h3>
+                <p className="text-gray-300">Locations</p>
+              </div>
+            </div>
+          </div>
         </div>
-
       </div>
     </section>
   );

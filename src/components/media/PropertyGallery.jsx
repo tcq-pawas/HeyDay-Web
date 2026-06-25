@@ -1,181 +1,208 @@
 import { useState } from "react";
-import agriculture from "../../assets/media/agriculture.png"
-import bazar from "../../assets/media/bazar.png"
-import farm from "../../assets/media/farm.png"
-import highway from "../../assets/media/highway.png"
-import kushmi from "../../assets/media/kushmi.png"
-import madical from "../../assets/media/madicalroad.png"
-import mohanapur from "../../assets/media/Mohanapur.png"
-import nausad from "../../assets/media/nausad.png"
-import raptinagar from "../../assets/media/raptinagar.png"
-import residency from "../../assets/media/residency.png"
-import rustampur from "../../assets/media/rustampur.png"
-import taramandal from "../../assets/media/taramandal.png"
+import {
+  FaImages,
+  FaLeaf,
+  FaHome,
+  FaWarehouse,
+  FaRoad,
+} from "react-icons/fa";
+import { MdVilla } from "react-icons/md";
 
-const properties = [
-  {
-    id: 1,
-    category: "Residential",
-    title: "Taramandal Premium Plot",
-    location: "Taramandal, Gorakhpur",
-    image: taramandal,
-  },
-  {
-    id: 2,
-    category: "Residential",
-    title: "Rapti Nagar Residency Plot",
-    location: "Rapti Nagar, Gorakhpur",
-    image: raptinagar,
-  },
-  {
-    id: 3,
-    category: "Residential",
-    title: "Padri Bazar Plot",
-    location: "Padri Bazar, Gorakhpur",
-    image: bazar,
-  },
-  {
-    id: 4,
-    category: "Commercial",
-    title: "Medical College Road Plot",
-    location: "Medical College Road",
-    image: madical,
-  },
-  {
-    id: 5,
-    category: "Commercial",
-    title: "Nausad Highway Plot",
-    location: "Nausad, Gorakhpur",
-    image:nausad,
-  },
-  {
-    id: 6,
-    category: "Commercial",
-    title: "Golghar Business Plot",
-    location: "Golghar, Gorakhpur",
-    image:highway,
-  },
-  {
-    id: 7,
-    category: "Farm Land",
-    title: "Kusmhi Farm Land",
-    location: "Kusmhi, Gorakhpur",
-    image:kushmi,
-  },
-  {
-    id: 8,
-    category: "Farm Land",
-    title: "Jungle Kaudia Farm Land",
-    location: "Jungle Kaudia",
-    image:farm,
-  },
-  {
-    id: 9,
-    category: "Farm Land",
-    title: "Pipraich Agriculture Land",
-    location: "Pipraich",
-    image:agriculture,
-  },
-  {
-    id: 10,
-    category: "Premium",
-    title: "Rapti Nagar Premium Plot",
-    location: "Rapti Nagar",
-    image:raptinagar,
-  },
-  {
-    id: 11,
-    category: "Premium",
-    title: "Civil Lines Luxury Plot",
-    location: "Civil Lines",
-    image:mohanapur,
-  },
-  {
-    id: 12,
-    category: "Premium",
-    title: "Gorakhnath Premium Residency",
-    location: "Gorakhnath",
-    image:residency,
-  },
-];
+import kushmi from "../../assets/project/kushmi.png";
+import nausad from "../../assets/project/nausad.png";
+import mohanapur from "../../assets/project/Mohanapur.png";
+import rustampur from "../../assets/project/rustampur.png";
+import madical from "../../assets/project/madicalroad.png";
+import taramandal from "../../assets/project/taramandal.png";
+import bhathat from "../../assets/project/taramandal.png";
+import swastik from "../../assets/project/rustampur.png";
+import roshanbag from "../../assets/project/kushmi.png";
 
 const categories = [
-  "All",
-  "Residential",
-  "Commercial",
-  "Farm Land",
-  "Premium",
+  {
+    name: "All Images",
+    icon: <FaImages />,
+  },
+  {
+    name: "Agricultural Land",
+    icon: <FaLeaf />,
+  },
+  {
+    name: "Residential Plots",
+    icon: <FaHome />,
+  },
+  {
+    name: "Farmhouse Plots",
+    icon: <MdVilla />,
+  },
+  {
+    name: "Gated Projects",
+    icon: <FaWarehouse />,
+  },
+  {
+    name: "Roadside Land",
+    icon: <FaRoad />,
+  },
 ];
 
-const PropertyGallery = () => {
-  const [active, setActive] = useState("All");
+const gallery = [
+  {
+    image: kushmi,
+    title: "Agricultural Land",
+    category: "Agricultural Land",
+  },
+  {
+    image: nausad,
+    title: "Residential Plots",
+    category: "Residential Plots",
+  },
+  {
+    image: mohanapur,
+    title: "Farmhouse Plots",
+    category: "Farmhouse Plots",
+  },
+  {
+    image: rustampur,
+    title: "Gated Community",
+    category: "Gated Projects",
+  },
+  {
+    image: madical,
+    title: "Investment Plots",
+    category: "Residential Plots",
+  },
+  {
+    image: taramandal,
+    title: "Roadside Land",
+    category: "Roadside Land",
+  },
+  {
+    image: bhathat,
+    title: "Bhathat Green City",
+    category: "Gated Projects",
+  },
+  {
+    image: swastik,
+    title: "Swastik Puram",
+    category: "Residential Plots",
+  },
+  {
+    image: roshanbag,
+    title: "Roushan Baag Residency",
+    category: "Gated Projects",
+  },
+  {
+    image: kushmi,
+    title: "Agricultural Land 2",
+    category: "Agricultural Land",
+  },
+  {
+    image: kushmi,
+    title: "Agricultural Land 3",
+    category: "Agricultural Land",
+  },
+  {
+    image: nausad,
+    title: "Residential Plots 2",
+    category: "Residential Plots",
+  },
+  {
+    image: nausad,
+    title: "Residential Plots 3",
+    category: "Residential Plots",
+  },
+  {
+    image: mohanapur,
+    title: "Farmhouse Plots 2",
+    category: "Farmhouse Plots",
+  },
+  {
+    image: mohanapur,
+    title: "Farmhouse Plots 3",
+    category: "Farmhouse Plots",
+  },
+];
 
-  const filtered =
-    active === "All"
-      ? properties
-      : properties.filter((item) => item.category === active);
+const MediaHero = () => {
+  const [activeCategory, setActiveCategory] = useState("All Images");
+
+  // Filter Images
+  const filteredGallery =
+    activeCategory === "All Images"
+      ? gallery // Show ALL images
+      : gallery
+          .filter((item) => item.category === activeCategory)
+          .slice(0, 5); // Show only first 5 images of selected category
 
   return (
-    <section className="py-20 bg-white">
-      <div className="max-w-6xl mx-auto px-6">
+    <section className="bg-[#faf8f5] py-24">
+      <div className="max-w-7xl mx-auto px-6">
 
-        {/* Filter Buttons */}
-        <div className="flex flex-wrap justify-center gap-3 mb-12">
-          {categories.map((category) => (
+        {/* Heading */}
+        <div className="text-center mb-14">
+          <p className="text-[#b66a1d] uppercase tracking-[3px] font-semibold">
+            Gallery
+          </p>
+
+          <h2 className="text-4xl md:text-4xl font-bold text-[#1d1d1d] mt-3">
+            Explore Our Collection
+          </h2>
+
+          <p className="text-gray-500 mt-5 max-w-2xl mx-auto">
+            Browse our premium collection of agricultural lands,
+            residential plots, gated communities, farmhouse plots,
+            and investment opportunities.
+          </p>
+        </div>
+
+        {/* Categories */}
+        <div className="flex flex-wrap justify-center gap-4 mb-14">
+          {categories.map((item, index) => (
             <button
-              key={category}
-              onClick={() => setActive(category)}
-              className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${
-                active === category
-                  ? "bg-[#f47c20] text-white shadow-md"
-                  : "bg-white border border-gray-200 text-gray-600 hover:border-[#f47c20] hover:text-[#f47c20]"
+              key={index}
+              onClick={() => setActiveCategory(item.name)}
+              className={`flex items-center gap-2 px-6 py-3 rounded-full border transition-all duration-300 ${
+                activeCategory === item.name
+                  ? "bg-[#b66a1d] text-white border-[#b66a1d]"
+                  : "bg-white text-gray-700 border-gray-200 hover:border-[#b66a1d] hover:text-[#b66a1d]"
               }`}
             >
-              {category}
+              <span className="text-lg">{item.icon}</span>
+              <span className="font-medium">{item.name}</span>
             </button>
           ))}
         </div>
 
-        {/* Gallery */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filtered.map((item) => (
-            <div
-              key={item.id}
-              className="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300"
-            >
-              {/* Image */}
-              <div className="overflow-hidden">
+        {/* Gallery Grid */}
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-6">
+          {filteredGallery.length > 0 ? (
+            filteredGallery.map((item, index) => (
+              <div
+                key={index}
+                className="relative rounded-2xl overflow-hidden group cursor-pointer"
+              >
                 <img
                   src={item.image}
                   alt={item.title}
-                  className="h-56 w-full object-cover group-hover:scale-105 transition duration-700"
+                  className="w-full h-[250px] object-cover transition duration-500 group-hover:scale-110"
                 />
-              </div>
 
-              {/* Content */}
-              <div className="p-5">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
 
-                <span className="inline-flex px-3 py-1 rounded-full text-xs font-medium bg-[#f47c20]/10 text-[#f47c20]">
-                  {item.category}
-                </span>
-
-                <h3 className="text-lg font-bold text-[#032349] mt-3">
-                  {item.title}
-                </h3>
-
-                <p className="text-gray-500 text-sm mt-1">
-                  {item.location}
-                </p>
-
-                <div className="mt-4 pt-4 border-t border-gray-100 flex justify-between items-center">
-                  <span className="font-semibold text-[#f47c20]">
-                    Starting ₹12 Lakh
+                <div className="absolute bottom-5 left-5">
+                  <span className="bg-black/50 backdrop-blur-sm text-white text-sm px-4 py-2 rounded-full">
+                    {item.title}
                   </span>
                 </div>
-
               </div>
+            ))
+          ) : (
+            <div className="col-span-3 text-center py-10">
+              <p className="text-gray-500 text-lg">
+                No images found.
+              </p>
             </div>
-          ))}
+          )}
         </div>
 
       </div>
@@ -183,4 +210,4 @@ const PropertyGallery = () => {
   );
 };
 
-export default PropertyGallery;
+export default MediaHero;

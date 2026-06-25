@@ -1,45 +1,92 @@
-import heroImage from "../../assets/images/projectbg.png";
+import heroImage from "../../assets/herobg.png";
+
+import roadImg from "../../assets/project/nausad.png";
+import gateImg from "../../assets/project/kushmi.png";
+import aerialImg from "../../assets/project/Mohanapur.png";
 
 const AboutHero = () => {
   return (
     <section
-      className="relative pt-36 pb-24 bg-cover bg-center"
+      className="relative h-screen flex items-center overflow-hidden bg-cover bg-center"
       style={{
         backgroundImage: `url(${heroImage})`,
       }}
     >
-      {/* Dark Overlay */}
+      {/* Overlay */}
       <div className="absolute inset-0 bg-black/65"></div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
+      {/* Left Gradient */}
+      <div className="absolute inset-0 bg-gradient-to-r from-[#08141d]/95 via-[#08141d]/10 to-transparent"></div>
 
-        <div className="max-w-4xl mx-auto text-center bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-8 md:p-12">
+      <div className="relative z-10 max-w-7xl mx-auto w-full px-6 lg:px-8 py-24 mt-20">
+        <div className="grid lg:grid-cols-2 gap-10 items-center">
 
-          {/* Badge */}
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-[#f47c20]/20 text-[#f47c20] text-xs font-semibold uppercase tracking-[3px] border border-[#f47c20]/30">
-            About Us
+          {/* LEFT CONTENT */}
+          <div className="max-w-xl">
+
+            <p className="text-[#f2b321] uppercase tracking-widest font-semibold text-sm">
+              ABOUT HEYDAY REALTY
+            </p>
+
+            <h1 className="mt-5 text-3xl md:text-3xl lg:text-[45px] font-bold leading-[1.15] text-white">
+              Building Trust.
+              <br />
+              Delivering Value.
+              <br />
+              Growing{" "}
+              <span className="text-lime-400">
+                Together.
+              </span>
+            </h1>
+
+            <div className="w-24 h-1 rounded-full bg-[#f2b321] mt-7"></div>
+
+            <p className="mt-8 text-gray-300 text-medium leading-8">
+              At HeyDay Realty, we believe land is more than just property—
+              it's an opportunity, a future, and a legacy. We help families
+              and investors discover premium land opportunities in
+              Gorakhpur's fastest-growing locations.
+            </p>
+
+            <button className="mt-10 bg-[#c66b1d] hover:bg-[#aa5a17] duration-300 text-white font-semibold px-6 py-3 rounded-xl shadow-xl">
+              Explore Our Projects →
+            </button>
+
           </div>
 
-          {/* Heading */}
-          <h1 className="mt-6 text-3xl md:text-5xl font-bold text-white leading-tight">
-            Building Trust Through
-            <span className="block text-[#f47c20] mt-1">
-              Premium Land Opportunities
-            </span>
-          </h1>
+          {/* RIGHT IMAGES */}
+          <div className="relative hidden lg:block h-[500px] mt-20">
 
-          {/* Description */}
-          <p className="max-w-2xl mx-auto mt-5 text-gray-200 text-base md:text-lg leading-8">
-            We help families, investors, and businesses discover premium
-            residential and commercial plots in Gorakhpur's fastest-growing
-            locations, delivering transparency, trust, and long-term value.
-          </p>
+            {/* Top Image - Behind Middle */}
+            <div className="absolute right-0 top-0 w-[380px] rounded-[24px] overflow-hidden border-[4px] border-white shadow-2xl z-20 mr-35">
+              <img
+                src={roadImg}
+                alt=""
+                className="w-full h-[175px] object-cover"
+              />
+            </div>
 
-          {/* Divider */}
-          <div className="w-20 h-1 bg-[#f47c20] mx-auto mt-8 rounded-full"></div>
+            {/* Middle Image - Front */}
+            <div className="absolute right-10 top-[140px] w-[380px] rounded-[24px] overflow-hidden border-[4px] border-white shadow-2xl z-30">
+              <img
+                src={gateImg}
+                alt=""
+                className="w-full h-[175px] object-cover"
+              />
+            </div>
+
+            {/* Left Bottom Image - Behind Middle */}
+            <div className="absolute left-6 bottom-0 w-[300px] rounded-[24px] overflow-hidden border-[4px] border-white shadow-2xl z-10 mb-14">
+              <img
+                src={aerialImg}
+                alt=""
+                className="w-full h-[180px] object-cover"
+              />
+            </div>
+
+          </div>
 
         </div>
-
       </div>
     </section>
   );

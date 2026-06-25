@@ -1,6 +1,6 @@
-import team1 from "../assets/Rahul Chaudhary.jpg";
-import team2 from "../assets/Sahil Varma.jpg";
-import team3 from "../assets/Rohit Pandey.jpg";
+import team1 from "../../assets/Rahul Chaudhary.jpg";
+import team2 from "../../assets/Sahil Varma.jpg";
+import team3 from "../../assets/Rohit Pandey.jpg";
 
 
 const OurTeamSection = () => {
@@ -27,11 +27,8 @@ const OurTeamSection = () => {
       
       {/* Heading */}
       <div className="text-center mb-12">
-        <p className="text-[#f47c20] font-semibold uppercase tracking-[3px] text-sm">
-          Our Experts
-        </p>
 
-        <h1 className="text-3xl md:text-4xl font-bold text-[#032349] mt-3">
+        <h1 className="text-3xl md:text-3xl font-bold text-[#315d2f] mt-3">
           Meet Our Professional Team
         </h1>
 
@@ -39,7 +36,7 @@ const OurTeamSection = () => {
           Our experienced real estate professionals are here to guide you every step of the way.
         </p>
 
-        <div className="w-20 h-1 bg-[#f47c20] mx-auto mt-4 rounded-full"></div>
+        <div className="w-20 h-1 bg-[#d9a021] mx-auto mt-4 rounded-full"></div>
       </div>
 
       {/* Team Cards */}
@@ -53,7 +50,7 @@ const OurTeamSection = () => {
               <img
                 src={member.image}
                 alt={member.name}
-                className="w-full h-60 object-cover group-hover:scale-105 transition duration-500"
+                className="w-full h-50 object-cover group-hover:scale-105 transition duration-500"
               />
             </div>
 
@@ -62,7 +59,7 @@ const OurTeamSection = () => {
                 {member.name}
               </h2>
 
-              <p className="text-[#f47c20] mt-1 text-sm">
+              <p className="text-gray-500 mt-1 text-sm">
                 {member.role}
               </p>
             </div>

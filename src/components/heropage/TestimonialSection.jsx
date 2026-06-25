@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { FaChevronLeft, FaChevronRight, FaQuoteLeft } from "react-icons/fa";
 
-import profile from "../assets/herobg.png";
+import profile from "../../assets/herobg.png";
 
 const TestimonialSection = () => {
   const testimonials = [

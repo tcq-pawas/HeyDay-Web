@@ -9,9 +9,9 @@ import {
   Map,
 } from "lucide-react";
 
-import project1 from "../assets/herobg.png";
-import project2 from "../assets/herobg.png";
-import project3 from "../assets/herobg.png";
+import project1 from "../../assets/herobg.png";
+import project2 from "../../assets/herobg.png";
+import project3 from "../../assets/herobg.png";
 
 const projects = [
   {

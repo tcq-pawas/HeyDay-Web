@@ -1,20 +1,22 @@
 import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
 import ProjectHero from "../components/projects/ProjectsHero";
-import TestimonialSection from "../components/TestimonialSection";
-import PropertySection from "../components/PropertySection";
+import ProjectGallery from "../components/projects/ProjectGallery";
 import FeaturedProjects from "../components/projects/FeaturedProjects";
+import TestimonialSection from "../components/heropage/TestimonialSection";
+import Footer from "../components/Footer";
 
 const ProjectsPage = () => {
   return (
     <>
       <Navbar />
 
-      <ProjectHero/>
+      <ProjectHero />
 
-      <FeaturedProjects/>
+      <ProjectGallery />
 
-      <TestimonialSection/>
+      <FeaturedProjects />
+
+      <TestimonialSection />
 
       <Footer />
     </>

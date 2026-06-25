@@ -1,16 +1,14 @@
 import React from "react";
 import Navbar from "../components/Navbar";
-import HeroSection from "../components/HeroSection";
-import Features from "../components/Features";
-import Experience from "../components/Experiance";
-import PropertySection from "../components/PropertySection";
-import TestimonialSection from "../components/TestimonialSection";
-import Footer from "../components/Footer";
-import FamilyCardSection from "../components/FamilyCardSection";
+import HeroSection from "../components/heropage/HeroSection";
+import AboutSection from "../components/heropage/AboutSection";
+import PropertySection from "../components/heropage/PropertySection";
 import WorkflowSection from "../components/WorkflowSection";
+import TestimonialSection from "../components/heropage/TestimonialSection";
 import FAQSection from "../components/FAQSection";
-import OurTeamSection from "../components/OurTeamSection";
-import AboutSection from "../components/AboutSection";
+import Footer from "../components/Footer";
+
+
 
 const HomePage = () => {
   return (
@@ -21,7 +19,6 @@ const HomePage = () => {
       <PropertySection />
       <WorkflowSection />
       <TestimonialSection />
-      {/* <OurTeamSection /> */}
       <FAQSection />
       <Footer />
     </>

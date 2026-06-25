@@ -8,7 +8,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 
-import landImage from "../assets/herobg.png";
+import landImage from "../../assets/herobg.png";
 
 const features = [
   {

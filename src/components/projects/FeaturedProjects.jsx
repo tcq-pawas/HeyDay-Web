@@ -1,10 +1,12 @@
-import { FaMapMarkerAlt } from "react-icons/fa";
-import kushmi from "../../assets/project/kushmi.png"
-import nausad from "../../assets/project/nausad.png"
-import mohanapur from "../../assets/project/Mohanapur.png"
-import rustampur from "../../assets/project/rustampur.png"
-import madical from "../../assets/project/madicalroad.png"
-import taramandal from "../../assets/project/taramandal.png"
+import { FaMapMarkerAlt, FaArrowUp } from "react-icons/fa";
+import { BsGrid } from "react-icons/bs";
+
+import kushmi from "../../assets/project/kushmi.png";
+import nausad from "../../assets/project/nausad.png";
+import mohanapur from "../../assets/project/Mohanapur.png";
+import rustampur from "../../assets/project/rustampur.png";
+import madical from "../../assets/project/madicalroad.png";
+import taramandal from "../../assets/project/taramandal.png";
 
 const projects = [
   {
@@ -13,7 +15,8 @@ const projects = [
     title: "Medical College Road Plots",
     location: "Medical College Road, Gorakhpur",
     size: "1000 Sq.ft",
-    price: "₹14 Lakhs",
+    price: "₹14 Lac onwards",
+    badge: "Premium",
   },
   {
     id: 2,
@@ -21,7 +24,8 @@ const projects = [
     title: "Kusmhi Forest View Plots",
     location: "Kusmhi, Gorakhpur",
     size: "1200 Sq.ft",
-    price: "₹16 Lakhs",
+    price: "₹16 Lac onwards",
+    badge: "Premium",
   },
   {
     id: 3,
@@ -29,7 +33,8 @@ const projects = [
     title: "Nausad Highway Plots",
     location: "Nausad, Gorakhpur",
     size: "1500 Sq.ft",
-    price: "₹20 Lakhs",
+    price: "₹20 Lac onwards",
+    badge: "Best Value",
   },
   {
     id: 4,
@@ -37,7 +42,8 @@ const projects = [
     title: "Taramandal Premium Plots",
     location: "Taramandal, Gorakhpur",
     size: "1800 Sq.ft",
-    price: "₹28 Lakhs",
+    price: "₹28 Lac onwards",
+    badge: "Premium",
   },
   {
     id: 5,
@@ -45,7 +51,8 @@ const projects = [
     title: "Rustampur Garden Plots",
     location: "Rustampur, Gorakhpur",
     size: "1100 Sq.ft",
-    price: "₹15 Lakhs",
+    price: "₹15 Lac onwards",
+    badge: "Premium",
   },
   {
     id: 6,
@@ -53,81 +60,110 @@ const projects = [
     title: "Mohanapur Township Plots",
     location: "Mohanapur, Gorakhpur",
     size: "2000 Sq.ft",
-    price: "₹32 Lakhs",
+    price: "₹32 Lac onwards",
+    badge: "Premium",
   },
+];
+
+const tabs = [
+  "All Projects",
+  "Residential Plots",
+  "Farmhouse Plots",
+  "Investment Land",
+  "Gated Communities",
+  "Commercial Land",
 ];
 
 const FeaturedProjects = () => {
   return (
-    <section className="py-25 bg-white">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
-
+    <section className="py-16 bg-[#faf8f5]">
+      <div className="max-w-7xl mx-auto px-5">
         {/* Heading */}
-        <div className="text-center mb-14">
-          <p className="text-[#f47c20] uppercase tracking-[3px] text-sm font-semibold">
-            Our Projects
-          </p>
-
-          <h2 className="text-3xl md:text-4xl font-bold text-[#032349] mt-3">
-            Featured Properties
+        <div className="text-center mb-8">
+          <h2 className="text-3xl md:text-3xl font-bold text-[#032349]">
+            Our <span className="text-green-700">Projects</span>
           </h2>
-
-          <p className="text-gray-500 max-w-2xl mx-auto mt-4">
-            Explore premium plotted developments designed for future growth and secure investment.
-          </p>
-
-          <div className="w-20 h-1 bg-[#f47c20] mx-auto mt-5 rounded-full"></div>
         </div>
 
-        {/* Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* Tabs */}
+        {/* Intro Text */}
+        <div className="max-w-4xl mx-auto text-center mb-10">
+          <p className="text-gray-600 text-base md:text-medium leading-8">
+            Explore our carefully selected land investment opportunities across
+            Gorakhpur. From premium residential plots to high-growth investment
+            locations, every project is strategically chosen to offer excellent
+            connectivity, legal transparency, and long-term value for homeowners and
+            investors alike.
+          </p>
+        </div>
+
+        {/* Projects */}
+        <div className="space-y-5">
           {projects.map((project) => (
             <div
               key={project.id}
-              className="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+              className="grid lg:grid-cols-[35%_1fr] gap-6 items-stretch"
             >
-              <div className="overflow-hidden">
+              {/* Left Card */}
+              <div className="bg-white rounded-2xl p-5 border border-gray-100 shadow-sm h-full flex flex-col justify-between">
+                <div>
+                  <div className="flex items-start justify-between gap-2 mb-3">
+                    <h3 className="text-xl font-bold text-[#032349] leading-snug">
+                      {project.title}
+                    </h3>
+
+                    <span
+                      className={`text-[10px] px-2.5 py-1 rounded-full font-semibold whitespace-nowrap ${project.badge === "Best Value"
+                          ? "bg-green-100 text-green-700"
+                          : "bg-orange-100 text-orange-600"
+                        }`}
+                    >
+                      {project.badge}
+                    </span>
+                  </div>
+
+                  <p className="text-sm text-gray-500 mb-4">
+                    {project.location}
+                  </p>
+
+                  <div className="flex flex-wrap gap-5 text-sm text-gray-600 mb-4">
+                    <div className="flex items-center gap-2">
+                      <BsGrid className="text-[#c66b1d]" />
+                      Residential
+                    </div>
+
+                    <div className="flex items-center gap-2">
+                      <FaMapMarkerAlt className="text-[#c66b1d]" />
+                      {project.size}
+                    </div>
+                  </div>
+
+                  <p className="text-sm text-gray-500 leading-6">
+                    Premium plotted development with excellent connectivity,
+                    wide roads and excellent investment potential.
+                  </p>
+                </div>
+
+                <div className="flex items-center justify-between mt-6">
+                  <h4 className="text-1xl font-bold text-[#c66b1d]">
+                    {project.price}
+                  </h4>
+                </div>
+              </div>
+
+              {/* Right Image */}
+              <div className="relative h-[260px] rounded-2xl overflow-hidden group">
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-56 object-cover group-hover:scale-105 transition duration-700"
+                  className="w-full h-full object-cover transition duration-700 group-hover:scale-105"
                 />
-              </div>
 
-              <div className="p-5">
-
-                <div className="flex items-center gap-2 text-[#f47c20] text-sm mb-2">
-                  <FaMapMarkerAlt />
-                  <span>{project.location}</span>
-                </div>
-
-                <h3 className="text-lg font-medium text-[#032349]">
-                  {project.title}
-                </h3>
-
-                <div className="flex justify-between items-center mt-3 pt-2 border-t border-gray-100">
-
-                  <div>
-                    <p className="text-xs text-gray-400">Plot Size</p>
-                    <p className="font-semibold text-[#032349]">
-                      {project.size}
-                    </p>
-                  </div>
-
-                  <div className="text-right">
-                    <p className="text-xs text-gray-400">Starting Price</p>
-                    <p className="font-bold text-[#f47c20]">
-                      {project.price}
-                    </p>
-                  </div>
-
-                </div>
 
               </div>
             </div>
           ))}
         </div>
-
       </div>
     </section>
   );

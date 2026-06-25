@@ -1,5 +1,5 @@
 import React from "react";
-import landImage from "../assets/herobg.png";
+import landImage from "../../assets/herobg.png";
 import { Link } from "react-router-dom";
 import {
   MapPinned,
