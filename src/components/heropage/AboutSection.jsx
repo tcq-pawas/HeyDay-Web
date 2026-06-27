@@ -4,11 +4,11 @@ import {
   TrendingUp,
   Sprout,
   ShieldCheck,
-  ClipboardCheck,
+  ClipboardCheck,                                                                                                                                                                                                                                                                                                                                                                                 
   ArrowRight,
 } from "lucide-react";
 
-import landImage from "../../assets/herobg.png";
+import landImage from "../../assets/images/home/land-image.png";
 
 const features = [
   {

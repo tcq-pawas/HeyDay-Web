@@ -6,11 +6,12 @@ import {
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
-import mainImage from "../../assets/herobg.png";
-import thumb1 from "../../assets/herobg.png";
-import thumb2 from "../../assets/herobg.png";
-import thumb3 from "../../assets/herobg.png";
-import thumb4 from "../../assets/herobg.png";
+
+import mainImage from "../../assets/images/project/projectbg-image.png";
+import thumb1 from "../../assets/images/home/short3-image.png";
+import thumb2 from "../../assets/images/home/short2-image.png";
+import thumb3 from "../../assets/images/project/projectbg-image.png";
+import thumb4 from "../../assets/images/home/greencity-image.png";
 
 const ProjectsHero = () => {
   return (

@@ -1,9 +1,8 @@
 import { Link } from "react-router-dom";
-
-import clubHouse from "../../assets/herobg.png";
-import road from "../../assets/herobg.png";
-import gate from "../../assets/herobg.png";
-import park from "../../assets/herobg.png";
+import clubHouse from "../../assets/images/project/clubhouse.png";
+import road from "../../assets/images/project/internalroad.png";
+import gate from "../../assets/images/project/entrance.png";
+import park from "../../assets/images/project/park.png";
 
 const ProjectGallery = () => {
   return (

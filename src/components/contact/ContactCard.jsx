@@ -17,9 +17,9 @@ import {
 } from "react-icons/fa";
 
 import logo from "../../assets/logo.png";
-import property1 from "../../assets/herobg.png";
+import property1 from "../../assets/images/media/farmland.png";
 import property2 from "../../assets/herobg.png";
-import property3 from "../../assets/herobg.png";
+import property3 from "../../assets/media/bazar.png";
 
 const ContactCard = () => {
   const [formData, setFormData] = useState({

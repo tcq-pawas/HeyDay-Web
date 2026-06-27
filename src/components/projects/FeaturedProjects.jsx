@@ -1,12 +1,12 @@
 import { FaMapMarkerAlt, FaArrowUp } from "react-icons/fa";
 import { BsGrid } from "react-icons/bs";
 
-import kushmi from "../../assets/project/kushmi.png";
-import nausad from "../../assets/project/nausad.png";
-import mohanapur from "../../assets/project/Mohanapur.png";
-import rustampur from "../../assets/project/rustampur.png";
-import madical from "../../assets/project/madicalroad.png";
-import taramandal from "../../assets/project/taramandal.png";
+import kushmi from "../../assets/images/project/kushmi.png";
+import nausad from "../../assets/images/project/nausad.png";
+import mohanapur from "../../assets/images/project/Mohanapur.png";
+import rustampur from "../../assets/images/project/rustampur.png";
+import madical from "../../assets/images/project/madicalroad.png";
+import taramandal from "../../assets/images/project/taramandal.png";
 
 const projects = [
   {

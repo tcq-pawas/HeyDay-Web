@@ -1,12 +1,12 @@
 import React from "react";
 
 import bgImage from "../assets/herobg.png";
-import gallery1 from "../assets/herobg.png";
-import gallery2 from "../assets/herobg.png";
-import gallery3 from "../assets/herobg.png";
-import gallery4 from "../assets/herobg.png";
-import gallery5 from "../assets/herobg.png";
-import gallery6 from "../assets/herobg.png";
+import gallery1 from "../assets/images/home/short1-image.png";
+import gallery2 from "../assets/images/home/short2-image.png";
+import gallery3 from "../assets/images/home/short3-image.png";
+import gallery4 from "../assets/images/home/short4-image.png";
+import gallery5 from "../assets/images/home/short5-image.png";
+import gallery6 from "../assets/images/home/roshanbagh.png";
 
 const WorkflowSection = () => {
   const steps = [

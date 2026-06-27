@@ -1,8 +1,8 @@
 import heroImage from "../../assets/herobg.png";
 
-import roadImg from "../../assets/project/nausad.png";
-import gateImg from "../../assets/project/kushmi.png";
-import aerialImg from "../../assets/project/Mohanapur.png";
+import roadImg from "../../assets/images/project/madicalroad.png";
+import gateImg from "../../assets/images/project/internalroad.png";
+import aerialImg from "../../assets/images/project/Mohanapur.png";
 
 const AboutHero = () => {
   return (
@@ -78,7 +78,7 @@ const AboutHero = () => {
             {/* Left Bottom Image - Behind Middle */}
             <div className="absolute left-6 bottom-0 w-[300px] rounded-[24px] overflow-hidden border-[4px] border-white shadow-2xl z-10 mb-14">
               <img
-                src={aerialImg}
+                src={heroImage}
                 alt=""
                 className="w-full h-[180px] object-cover"
               />

@@ -1,5 +1,5 @@
 import { FaBullseye, FaGem, FaUsers } from "react-icons/fa";
-import missionImg from "../../assets/herobg.png";
+import missionImg from "../../assets/images/media/farmland.png";
 
 const MissionSection = () => {
   return (

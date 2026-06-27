@@ -1,37 +1,47 @@
 import { useState } from "react";
 import { FaChevronLeft, FaChevronRight, FaQuoteLeft } from "react-icons/fa";
 
-import profile from "../../assets/herobg.png";
+import avatar1 from "../../assets/images/home/avatar1.png";
+import avatar2 from "../../assets/images/home/avatar2.png";
+import avatar3 from "../../assets/images/home/avatar3.png";
+import avatar4 from "../../assets/images/home/avatar4.png";
+import avatar5 from "../../assets/images/home/avatar5.png";
+
 
 const TestimonialSection = () => {
   const testimonials = [
     {
       name: "Ramesh Singh",
       role: "Investor",
+      image: avatar1,
       comment:
         "Very transparent and professional team. The land I purchased has excellent appreciation potential.",
     },
     {
       name: "Ankit Verma",
       role: "NRI Investor",
+      image: avatar2,
       comment:
         "As an NRI, I needed a reliable partner. HeyDay Realty made the entire process smooth and trustworthy.",
     },
     {
       name: "Vivek Yadav",
       role: "Business Owner",
+      image: avatar3,
       comment:
         "Best agricultural plot buying experience. Clear documentation and peaceful location.",
     },
     {
       name: "Priya Sharma",
       role: "Investor",
+      image: avatar4,
       comment:
         "Very supportive team. Everything from site visit to registration was handled professionally.",
     },
     {
       name: "Amit Mishra",
       role: "Land Buyer",
+      image: avatar5,
       comment:
         "Excellent location options and transparent dealing. Highly recommended.",
     },
@@ -40,25 +50,17 @@ const TestimonialSection = () => {
   const [startIndex, setStartIndex] = useState(0);
 
   const nextSlide = () => {
-    setStartIndex((prev) =>
-      prev + 3 >= testimonials.length ? 0 : prev + 1
-    );
+    setStartIndex((prev) => (prev + 3 >= testimonials.length ? 0 : prev + 1));
   };
 
   const prevSlide = () => {
-    setStartIndex((prev) =>
-      prev === 0 ? testimonials.length - 3 : prev - 1
-    );
+    setStartIndex((prev) => (prev === 0 ? testimonials.length - 3 : prev - 1));
   };
 
-  const visibleTestimonials = testimonials.slice(
-    startIndex,
-    startIndex + 3
-  );
+  const visibleTestimonials = testimonials.slice(startIndex, startIndex + 3);
 
   return (
     <section className="py-16 bg-white">
-
       <div className="max-w-7xl mx-auto px-6">
 
         {/* Heading */}
@@ -89,25 +91,22 @@ const TestimonialSection = () => {
             <FaChevronRight size={12} />
           </button>
 
-          {/* Centered Cards */}
+          {/* Cards */}
           <div className="flex flex-wrap justify-center gap-6 px-14">
-
             {visibleTestimonials.map((item, index) => (
               <div
                 key={index}
                 className="w-full md:w-[320px] bg-white rounded-2xl border border-gray-100 shadow-md p-5"
               >
-
                 <FaQuoteLeft className="text-[#f4a300] text-xs mb-3" />
 
                 <p className="text-gray-600 text-sm leading-7 min-h-[90px] text-center">
                   {item.comment}
                 </p>
 
-                <div className="flex items-center gap-3 mt-5 text-center justify-center mr-14">
-
+                <div className="flex items-center justify-center gap-3 mt-5">
                   <img
-                    src={profile}
+                    src={item.image}
                     alt={item.name}
                     className="w-11 h-11 rounded-full object-cover"
                   />
@@ -121,18 +120,14 @@ const TestimonialSection = () => {
                       {item.role}
                     </p>
                   </div>
-
                 </div>
 
               </div>
             ))}
-
           </div>
 
         </div>
-
       </div>
-
     </section>
   );
 };

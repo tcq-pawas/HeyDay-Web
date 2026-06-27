@@ -8,15 +8,25 @@ import {
 } from "react-icons/fa";
 import { MdVilla } from "react-icons/md";
 
-import kushmi from "../../assets/project/kushmi.png";
-import nausad from "../../assets/project/nausad.png";
-import mohanapur from "../../assets/project/Mohanapur.png";
-import rustampur from "../../assets/project/rustampur.png";
-import madical from "../../assets/project/madicalroad.png";
-import taramandal from "../../assets/project/taramandal.png";
-import bhathat from "../../assets/project/taramandal.png";
-import swastik from "../../assets/project/rustampur.png";
-import roshanbag from "../../assets/project/kushmi.png";
+import agricultureLand from "../../assets/images/media/agriculture-land.png";
+import primiumland from "../../assets/images/media/internalroad.png";
+import gated from "../../assets/images/media/gated.png";
+import farm from "../../assets/images/media/farmland.png";
+
+
+
+import kushmi from "../../assets/images/project/kushmi.png";
+import nausad from "../../assets/images/project/nausad.png";
+import mohanapur from "../../assets/images/project/Mohanapur.png";
+import rustampur from "../../assets/images/project/rustampur.png";
+import madical from "../../assets/images/project/madicalroad.png";
+import taramandal from "../../assets/images/project/taramandal.png";
+import bhathat from "../../assets/images/project/taramandal.png";
+import swastik from "../../assets/images/project/rustampur.png";
+import roshanbag from "../../assets/images/project/kushmi.png";
+import residency from "../../assets/media/residency.png";
+import residency2 from "../../assets/images/home/residency-image.png";
+
 
 const categories = [
   {
@@ -47,22 +57,22 @@ const categories = [
 
 const gallery = [
   {
-    image: kushmi,
+    image: agricultureLand,
     title: "Agricultural Land",
     category: "Agricultural Land",
   },
   {
-    image: nausad,
-    title: "Residential Plots",
+    image: primiumland,
+    title: "Premium Plots",
     category: "Residential Plots",
   },
   {
-    image: mohanapur,
+    image: farm,
     title: "Farmhouse Plots",
     category: "Farmhouse Plots",
   },
   {
-    image: rustampur,
+    image: gated,
     title: "Gated Community",
     category: "Gated Projects",
   },
@@ -102,7 +112,7 @@ const gallery = [
     category: "Agricultural Land",
   },
   {
-    image: nausad,
+    image: residency2,
     title: "Residential Plots 2",
     category: "Residential Plots",
   },

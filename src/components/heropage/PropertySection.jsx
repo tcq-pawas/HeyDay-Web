@@ -9,13 +9,13 @@ import {
   Map,
 } from "lucide-react";
 
-import project1 from "../../assets/herobg.png";
-import project2 from "../../assets/herobg.png";
-import project3 from "../../assets/herobg.png";
+import roshanbagh from "../../assets/images/home/roshanbagh.png";
+import greencity from "../../assets/images/home/greencity-image.png";
+import sawastikpuram from "../../assets/images/home/sawastikpuram-image.png";
 
 const projects = [
   {
-    image: project1,
+    image: roshanbagh,
     badge: "PREMIUM",
     title: "Roushan Baag Residency",
     features: [
@@ -26,7 +26,7 @@ const projects = [
     ],
   },
   {
-    image: project2,
+    image: greencity,
     badge: "POPULAR",
     title: "Bhathat Green City",
     features: [
@@ -37,7 +37,7 @@ const projects = [
     ],
   },
   {
-    image: project3,
+    image: sawastikpuram,
     badge: "BEST VALUE",
     title: "Swastik Puram",
     features: [

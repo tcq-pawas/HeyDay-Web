@@ -1,5 +1,5 @@
 import React from "react";
-import landImage from "../../assets/herobg.png";
+import bgImage from "../../assets/images/home/herobg.png";
 import { Link } from "react-router-dom";
 import {
   MapPinned,
@@ -11,10 +11,10 @@ import {
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen overflow-hidden">
-
+  
       {/* Background Image */}
       <img
-        src={landImage}
+        src={bgImage}
         alt="Land Investment"
         className="absolute inset-0 w-full h-full object-cover object-center"
       />
