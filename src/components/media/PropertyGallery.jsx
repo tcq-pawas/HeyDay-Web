@@ -9,23 +9,21 @@ import {
 import { MdVilla } from "react-icons/md";
 
 import agricultureLand from "../../assets/images/media/agriculture-land.png";
+import agricultureLand2 from "../../assets/images/media/agriculture-land2.png";
+import agricultureLand3 from "../../assets/images/media/agriculture-land3.png";
 import primiumland from "../../assets/images/media/internalroad.png";
-import gated from "../../assets/images/media/gated.png";
-import farm from "../../assets/images/media/farmland.png";
+import primiumland2 from "../../assets/images/media/residency1.png";
+import primiumland3 from "../../assets/images/media/residency2.png";
+import primiumland4 from "../../assets/images/media/residency3.png";
+import primiumland5 from "../../assets/images/media/residency4.png";
+import gated from "../../assets/images/media/gated-land.png";
+import farm from "../../assets/images/media/farmland.png"
+import farm2 from "../../assets/images/media/farmhouse2.png"
+import farm3 from "../../assets/images/media/farmhouse3.png"
+import roadland from "../../assets/images/media/roadside.png";
+import roadland2 from "../../assets/images/media/roadside2.png";
+import roadland3 from "../../assets/images/media/roadside3.png";
 
-
-
-import kushmi from "../../assets/images/project/kushmi.png";
-import nausad from "../../assets/images/project/nausad.png";
-import mohanapur from "../../assets/images/project/Mohanapur.png";
-import rustampur from "../../assets/images/project/rustampur.png";
-import madical from "../../assets/images/project/madicalroad.png";
-import taramandal from "../../assets/images/project/taramandal.png";
-import bhathat from "../../assets/images/project/taramandal.png";
-import swastik from "../../assets/images/project/rustampur.png";
-import roshanbag from "../../assets/images/project/kushmi.png";
-import residency from "../../assets/media/residency.png";
-import residency2 from "../../assets/images/home/residency-image.png";
 
 
 const categories = [
@@ -77,57 +75,57 @@ const gallery = [
     category: "Gated Projects",
   },
   {
-    image: madical,
+    image: primiumland2,
     title: "Investment Plots",
     category: "Residential Plots",
   },
   {
-    image: taramandal,
+    image: roadland,
     title: "Roadside Land",
     category: "Roadside Land",
   },
   {
-    image: bhathat,
+    image: roadland2,
     title: "Bhathat Green City",
-    category: "Gated Projects",
+    category: "Roadside Land",
   },
   {
-    image: swastik,
+    image: primiumland3,
     title: "Swastik Puram",
     category: "Residential Plots",
   },
   {
-    image: roshanbag,
+    image: roadland3,
     title: "Roushan Baag Residency",
-    category: "Gated Projects",
+    category: "Roadside Land",
   },
   {
-    image: kushmi,
+    image: agricultureLand2,
     title: "Agricultural Land 2",
     category: "Agricultural Land",
   },
   {
-    image: kushmi,
+    image: agricultureLand3,
     title: "Agricultural Land 3",
     category: "Agricultural Land",
   },
   {
-    image: residency2,
+    image: primiumland4,
     title: "Residential Plots 2",
     category: "Residential Plots",
   },
   {
-    image: nausad,
+    image: primiumland5,
     title: "Residential Plots 3",
     category: "Residential Plots",
   },
   {
-    image: mohanapur,
+    image: farm2,
     title: "Farmhouse Plots 2",
     category: "Farmhouse Plots",
   },
   {
-    image: mohanapur,
+    image: farm3,
     title: "Farmhouse Plots 3",
     category: "Farmhouse Plots",
   },
@@ -141,8 +139,8 @@ const MediaHero = () => {
     activeCategory === "All Images"
       ? gallery // Show ALL images
       : gallery
-          .filter((item) => item.category === activeCategory)
-          .slice(0, 5); // Show only first 5 images of selected category
+        .filter((item) => item.category === activeCategory)
+        .slice(0, 5); // Show only first 5 images of selected category
 
   return (
     <section className="bg-[#faf8f5] py-24">
@@ -171,11 +169,10 @@ const MediaHero = () => {
             <button
               key={index}
               onClick={() => setActiveCategory(item.name)}
-              className={`flex items-center gap-2 px-6 py-3 rounded-full border transition-all duration-300 ${
-                activeCategory === item.name
+              className={`flex items-center gap-2 px-6 py-3 rounded-full border transition-all duration-300 ${activeCategory === item.name
                   ? "bg-[#b66a1d] text-white border-[#b66a1d]"
                   : "bg-white text-gray-700 border-gray-200 hover:border-[#b66a1d] hover:text-[#b66a1d]"
-              }`}
+                }`}
             >
               <span className="text-lg">{item.icon}</span>
               <span className="font-medium">{item.name}</span>

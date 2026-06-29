@@ -9,8 +9,8 @@ import {
 } from "react-icons/fa";
 
 import { Link } from "react-router-dom";
-import footerBg from "../assets/herobg.png";
-import logo from "../assets/logo.png";
+import footerBg from "../assets/images/footer/herobg.png";
+import logo from "../assets/images/footer/logo.png";
 
 const Footer = () => {
   return (

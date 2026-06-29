@@ -1,8 +1,9 @@
-import heroImage from "../../assets/herobg.png";
+import {Link} from "react-router-dom";
 
-import roadImg from "../../assets/images/project/madicalroad.png";
-import gateImg from "../../assets/images/project/internalroad.png";
-import aerialImg from "../../assets/images/project/Mohanapur.png";
+import heroImage from "../../assets/images/about/hero3.png";
+import roadImg from "../../assets/images/about/hero1.png";
+import gateImg from "../../assets/images/about/hero2.png";
+import aerialImg from "../../assets/images/about/hero3.png";
 
 const AboutHero = () => {
   return (
@@ -10,7 +11,7 @@ const AboutHero = () => {
       className="relative h-screen flex items-center overflow-hidden bg-cover bg-center"
       style={{
         backgroundImage: `url(${heroImage})`,
-      }}
+      }} 
     >
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/65"></div>
@@ -48,9 +49,12 @@ const AboutHero = () => {
               Gorakhpur's fastest-growing locations.
             </p>
 
-            <button className="mt-10 bg-[#c66b1d] hover:bg-[#aa5a17] duration-300 text-white font-semibold px-6 py-3 rounded-xl shadow-xl">
-              Explore Our Projects →
-            </button>
+           <Link to="/projects">
+              <button className="mt-10 bg-[#c66b1d] hover:bg-[#aa5a17] duration-300 text-white font-semibold px-6 py-3 rounded-xl shadow-xl">
+                Explore Our Projects →
+              </button>
+            </Link>
+            
 
           </div>
 

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
-import logo from "../assets/logo.png";
+import logo from "../assets/images/footer/logo.png";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -19,6 +19,7 @@ const Navbar = () => {
     { name: "PROJECTS", path: "/projects" },
     { name: "MEDIA", path: "/media" },
     { name: "ABOUT US", path: "/about" },
+    { name: "OUR TEAM", path: "/team" },
   ];
 
   return (
@@ -69,13 +70,9 @@ const Navbar = () => {
           {/* Right Side */}
           <div className="hidden lg:flex items-center gap-5">
 
-            <div className="text-[#08213f] text-sm font-medium">
-              +91 91615 54321
-            </div>
-
             <NavLink to="/contact">
               <button className="bg-[#c27a1d] hover:bg-[#ab6914] text-white px-6 py-3 rounded-full font-medium text-sm transition-all duration-300 shadow-md hover:shadow-lg">
-                Schedule Site Visit
+                Contact Us
               </button>
             </NavLink>
 

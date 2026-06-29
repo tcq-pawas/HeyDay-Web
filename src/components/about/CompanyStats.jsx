@@ -4,6 +4,8 @@ import {
   FaChartLine,
 } from "react-icons/fa";
 
+import handsheke from "../../assets/images/about/handshek.png";
+
 const CompanyStats = () => {
   return (
     <section className="bg-[#041d3b] py-16">
@@ -83,7 +85,7 @@ const CompanyStats = () => {
           {/* Right Image */}
           <div className="flex justify-center">
             <img
-              src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1200&q=80"
+              src={handsheke}
               alt="Happy Client"
               className="rounded-3xl shadow-2xl w-full max-w-[540px] h-[380px] object-cover border-2 border-[#7fa341]"
             />

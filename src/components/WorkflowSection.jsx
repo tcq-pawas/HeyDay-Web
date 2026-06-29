@@ -1,6 +1,6 @@
 import React from "react";
 
-import bgImage from "../assets/herobg.png";
+import bgImage from "../assets/images/home/herobg.png";
 import gallery1 from "../assets/images/home/short1-image.png";
 import gallery2 from "../assets/images/home/short2-image.png";
 import gallery3 from "../assets/images/home/short3-image.png";

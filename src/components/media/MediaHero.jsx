@@ -1,4 +1,4 @@
-import heroImage from "../../assets/herobg.png";
+import heroImage from "../../assets/images/home/herobg.png";
 import { FaImages, FaMapMarkerAlt } from "react-icons/fa";
 import { HiOutlineMap } from "react-icons/hi2";
 

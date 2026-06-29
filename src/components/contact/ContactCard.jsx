@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import {
   FaUser,
   FaEnvelope,
@@ -16,10 +17,10 @@ import {
   FaRegCommentDots,
 } from "react-icons/fa";
 
-import logo from "../../assets/logo.png";
-import property1 from "../../assets/images/media/farmland.png";
-import property2 from "../../assets/herobg.png";
-import property3 from "../../assets/media/bazar.png";
+import logo from "../../assets/images/footer/logo.png";
+import property1 from "../../assets/images/footer/card1.png";
+import property2 from "../../assets/images/footer/card2.png";
+import property3 from "../../assets/images/footer/card3.png";
 
 const ContactCard = () => {
   const [formData, setFormData] = useState({
@@ -334,12 +335,13 @@ const PropertyCard = ({ property }) => (
           {property.price}
         </span>
 
-        <button
+        <Link
+          to="/media"
           type="button"
           className="rounded border border-[#f47c20] px-3 py-1.5 text-[11px] font-bold text-[#c75c0d] transition hover:bg-[#f47c20] hover:text-white"
         >
           View Details
-        </button>
+        </Link>
       </div>
     </div>
   </article>

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { FaPlus, FaMinus } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const FAQSection = () => {
   const [openIndex, setOpenIndex] = useState(null);
@@ -104,9 +105,11 @@ const FAQSection = () => {
         {/* CTA Button */}
         <div className="mt-10 text-center">
 
-          <button className="bg-[#b66a1d] hover:bg-[#9f5b17] text-white px-8 py-3 rounded-full font-medium transition-all duration-300">
-            More Questions? Contact Us →
-          </button>
+          <Link to="/contact">
+            <button className="bg-[#b66a1d] hover:bg-[#9f5b17] text-white px-8 py-3 rounded-full font-medium transition-all duration-300">
+              More Questions? Contact Us →
+            </button>
+          </Link>
 
         </div>
 
