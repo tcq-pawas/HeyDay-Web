@@ -19,7 +19,7 @@ const Navbar = () => {
     { name: "PROJECTS", path: "/projects" },
     { name: "MEDIA", path: "/media" },
     { name: "ABOUT US", path: "/about" },
-    { name: "OUR TEAM", path: "/team" },
+    { name: "OUR EXPERT TEAM", path: "/team" },
   ];
 
   return (
