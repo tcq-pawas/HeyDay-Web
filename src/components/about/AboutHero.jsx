@@ -8,7 +8,7 @@ import aerialImg from "../../assets/images/about/hero3.png";
 const AboutHero = () => {
   return (
     <section
-      className="relative h-screen flex items-center overflow-hidden bg-cover bg-center"
+      className="relative h-[80vh] md:h-screen flex items-center overflow-hidden bg-cover bg-center"
       style={{
         backgroundImage: `url(${heroImage})`,
       }} 
@@ -19,7 +19,7 @@ const AboutHero = () => {
       {/* Left Gradient */}
       <div className="absolute inset-0 bg-gradient-to-r from-[#08141d]/95 via-[#08141d]/10 to-transparent"></div>
 
-      <div className="relative z-10 max-w-7xl mx-auto w-full px-6 lg:px-8 py-24 mt-20">
+      <div className="relative z-10 max-w-7xl mx-auto w-full px-6 lg:px-8 py-24 mt-1 md:mt-20 ">
         <div className="grid lg:grid-cols-2 gap-10 items-center">
 
           {/* LEFT CONTENT */}

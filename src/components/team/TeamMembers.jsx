@@ -48,11 +48,11 @@ const members = [
 
 const TeamMembers = () => {
   return (
-    <section className="bg-slate-50 py-20">
-      <div className="max-w-6xl mx-auto px-6">
+    <section className="bg-slate-50 py-20 overflow-hidden">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="text-center mb-14">
-          <h2 className="text-3xl md:text-3xl font-bold uppercase text-[#315d2f]">
-            Meet Our Professionals
+          <h2 className="text-2xl md:text-2xl font-bold uppercase ">
+            Meet <span className="text-[#7aac3b]">Our</span> Professionals
           </h2>
 
           <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
@@ -73,11 +73,11 @@ const TeamMembers = () => {
                 }`}
               >
                 {/* Image */}
-                <div className="lg:w-[30%]">
+                <div className="w-full lg:w-[30%]">
                   <img
                     src={member.image}
                     alt={member.name}
-                    className="w-full h-30 lg:h-full object-cover"
+                    className="w-full h-[320px] sm:h-[380px] lg:h-full object-cover object-top"
                   />
                 </div>
 
@@ -99,7 +99,7 @@ const TeamMembers = () => {
                     {member.description}
                   </p>
 
-                  <div className="grid grid-cols-3 gap-4 mt-6 border-t pt-5">
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-6 border-t pt-5">
                     <div>
                       <p className="text-xs uppercase text-gray-500">
                         Experience

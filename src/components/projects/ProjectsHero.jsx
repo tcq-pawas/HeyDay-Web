@@ -6,7 +6,6 @@ import {
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
-
 import mainImage from "../../assets/images/project/projectbg-image.png";
 import thumb1 from "../../assets/images/home/short3-image.png";
 import thumb2 from "../../assets/images/home/short2-image.png";
@@ -15,8 +14,18 @@ import thumb4 from "../../assets/images/home/greencity-image.png";
 
 const ProjectsHero = () => {
   return (
-    <section className="bg-[#faf8f5] pt-32 pb-20">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+    <section className="relative bg-[#faf8f5] pt-32 pb-20 overflow-hidden">
+      {/* Mobile Background Only */}
+      <div className="absolute inset-0 md:hidden">
+        <img
+          src={mainImage}
+          alt=""
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-[#faf8f5]/90"></div>
+      </div>
+
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-14 items-center">
           {/* Left Content */}
           <div>
@@ -24,11 +33,11 @@ const ProjectsHero = () => {
               Our Projects
             </span>
 
-            <h1 className="mt-4 text-5xl lg:text-5xl font-bold leading-tight text-[#1d1d1d]">
+            <h1 className="mt-4 text-4xl lg:text-5xl font-bold leading-tight text-[#1d1d1d]">
               Signature Land.
               <br />
               Timeless{" "}
-              <span className="text-green-700">Value.</span>
+              <span className="text-lime-600">Value.</span>
             </h1>
 
             <div className="w-14 h-1 bg-[#d16b1d] rounded-full mt-6"></div>
@@ -65,7 +74,7 @@ const ProjectsHero = () => {
             </div>
 
             {/* Thumbnails */}
-            <div className="flex gap-6 mt-8">
+            <div className="flex flex-wrap gap-4 sm:gap-6 mt-8">
               {[thumb1, thumb2, thumb3, thumb4].map((img, index) => (
                 <img
                   key={index}
@@ -75,10 +84,21 @@ const ProjectsHero = () => {
                 />
               ))}
             </div>
+
+            {/* Mobile Button */}
+            <div className="md:hidden mt-10">
+              <Link
+                to="/projects"
+                className="inline-flex items-center gap-3 bg-[#d16b1d] hover:bg-[#b95d16] text-white px-8 py-4 rounded-full font-semibold shadow-lg transition-all duration-300"
+              >
+                Explore Projects
+                <FaArrowRight />
+              </Link>
+            </div>
           </div>
 
-          {/* Right Image */}
-          <div className="flex justify-end">
+          {/* Desktop Right Image */}
+          <div className="hidden md:flex justify-end">
             <div className="relative w-[90%]">
               <img
                 src={mainImage}

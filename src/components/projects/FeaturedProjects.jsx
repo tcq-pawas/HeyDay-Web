@@ -1,4 +1,4 @@
-import { FaMapMarkerAlt, FaArrowUp } from "react-icons/fa";
+import { FaMapMarkerAlt } from "react-icons/fa";
 import { BsGrid } from "react-icons/bs";
 
 import kushmi from "../../assets/images/project/kushmi.png";
@@ -76,24 +76,23 @@ const tabs = [
 
 const FeaturedProjects = () => {
   return (
-    <section className="py-16 bg-[#faf8f5]">
-      <div className="max-w-7xl mx-auto px-5">
+    <section className="py-16 bg-[#faf8f5] overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-5">
         {/* Heading */}
         <div className="text-center mb-8">
-          <h2 className="text-3xl md:text-3xl font-bold text-[#032349]">
-            Our <span className="text-green-700">Projects</span>
+          <h2 className="text-3xl md:text-3xl font-bold text-[#032349] uppercase">
+            Our <span className="text-[#7aac3b]">Projects</span>
           </h2>
         </div>
 
-        {/* Tabs */}
         {/* Intro Text */}
         <div className="max-w-4xl mx-auto text-center mb-10">
           <p className="text-gray-600 text-base md:text-medium leading-8">
             Explore our carefully selected land investment opportunities across
             Gorakhpur. From premium residential plots to high-growth investment
             locations, every project is strategically chosen to offer excellent
-            connectivity, legal transparency, and long-term value for homeowners and
-            investors alike.
+            connectivity, legal transparency, and long-term value for homeowners
+            and investors alike.
           </p>
         </div>
 
@@ -113,10 +112,11 @@ const FeaturedProjects = () => {
                     </h3>
 
                     <span
-                      className={`text-[10px] px-2.5 py-1 rounded-full font-semibold whitespace-nowrap ${project.badge === "Best Value"
+                      className={`text-[10px] px-2.5 py-1 rounded-full font-semibold whitespace-nowrap ${
+                        project.badge === "Best Value"
                           ? "bg-green-100 text-green-700"
                           : "bg-orange-100 text-orange-600"
-                        }`}
+                      }`}
                     >
                       {project.badge}
                     </span>
@@ -158,8 +158,6 @@ const FeaturedProjects = () => {
                   alt={project.title}
                   className="w-full h-full object-cover transition duration-700 group-hover:scale-105"
                 />
-
-
               </div>
             </div>
           ))}

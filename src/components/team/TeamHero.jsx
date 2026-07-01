@@ -2,7 +2,6 @@ import {
   FaUsers,
   FaAward,
   FaHandshake,
-  FaArrowRight,
 } from "react-icons/fa";
 
 import heroBg from "../../assets/images/team/teambg.png";
@@ -10,7 +9,7 @@ import heroBg from "../../assets/images/team/teambg.png";
 const TeamHero = () => {
   return (
     <section
-      className="relative min-h-screen flex items-center overflow-hidden bg-cover bg-center"
+      className="relative min-h-[60vh] md:h-screen flex items-center overflow-hidden bg-cover bg-center"
       style={{
         backgroundImage: `url(${heroBg})`,
       }}
@@ -21,7 +20,7 @@ const TeamHero = () => {
       {/* Decorative Blur */}
       <div className="absolute top-20 right-20 w-72 h-72 rounded-full bg-[#315d2f]/30 blur-3xl"></div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 py-24 grid lg:grid-cols-2 gap-16 items-center mt-13">
+      <div className="relative z-10 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-24 grid lg:grid-cols-2 gap-16 items-center">
         {/* Left Content */}
         <div className="text-white">
           <span className="text-[#f2b321] uppercase tracking-[3px] font-semibold text-sm">
@@ -96,6 +95,7 @@ const TeamHero = () => {
             </div>
           </div>
         </div>
+
       </div>
     </section>
   );

@@ -37,8 +37,8 @@ const CompanyTimeline = () => {
       <div className="max-w-7xl mx-auto px-6">
         {/* Heading */}
         <div className="text-center mb-16">
-          <h2 className="text-2xl md:text-3xl font-bold uppercase text-[#315d2f]">
-            Our Journey
+          <h2 className="text-2xl md:text-3xl font-bold uppercase ">
+            Our <span className="text-[#7aac3b]">Journey</span>
           </h2>
 
           <p className="mt-5 text-gray-600 max-w-2xl mx-auto text-medium leading-8">

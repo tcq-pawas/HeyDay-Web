@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { FaChevronLeft, FaChevronRight, FaQuoteLeft } from "react-icons/fa";
 
 import avatar1 from "../../assets/images/home/avatar1.png";
@@ -6,7 +6,6 @@ import avatar2 from "../../assets/images/home/avatar2.png";
 import avatar3 from "../../assets/images/home/avatar3.png";
 import avatar4 from "../../assets/images/home/avatar4.png";
 import avatar5 from "../../assets/images/home/avatar5.png";
-
 
 const TestimonialSection = () => {
   const testimonials = [
@@ -48,37 +47,55 @@ const TestimonialSection = () => {
   ];
 
   const [startIndex, setStartIndex] = useState(0);
+  const [visibleCards, setVisibleCards] = useState(3);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setVisibleCards(window.innerWidth < 768 ? 1 : 3);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const nextSlide = () => {
-    setStartIndex((prev) => (prev + 3 >= testimonials.length ? 0 : prev + 1));
+    setStartIndex((prev) =>
+      prev + visibleCards >= testimonials.length ? 0 : prev + 1
+    );
   };
 
   const prevSlide = () => {
-    setStartIndex((prev) => (prev === 0 ? testimonials.length - 3 : prev - 1));
+    setStartIndex((prev) =>
+      prev === 0 ? testimonials.length - visibleCards : prev - 1
+    );
   };
 
-  const visibleTestimonials = testimonials.slice(startIndex, startIndex + 3);
+  const visibleTestimonials = [];
+
+  for (let i = 0; i < visibleCards; i++) {
+    visibleTestimonials.push(
+      testimonials[(startIndex + i) % testimonials.length]
+    );
+  }
 
   return (
     <section className="py-16 bg-white">
-      <div className="max-w-7xl mx-auto px-6">
-
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
         {/* Heading */}
         <div className="text-center mb-10">
           <h2 className="text-2xl md:text-2xl font-bold text-[#08213f]">
             ✓ WHAT OUR{" "}
-            <span className="text-[#7aac3b]">
-              INVESTORS SAY
-            </span>
+            <span className="text-[#7aac3b]">INVESTORS SAY</span>
           </h2>
         </div>
 
         <div className="relative">
-
           {/* Left Arrow */}
           <button
             onClick={prevSlide}
-            className="absolute left-0 top-1/2 -translate-y-1/2 z-20 w-8 h-8 rounded-full bg-[#3f372c] text-white flex items-center justify-center shadow-lg"
+            className="absolute left-2 sm:left-0 top-1/2 -translate-y-1/2 z-20 w-8 h-8 rounded-full bg-[#3f372c] text-white flex items-center justify-center shadow-lg"
           >
             <FaChevronLeft size={12} />
           </button>
@@ -86,13 +103,13 @@ const TestimonialSection = () => {
           {/* Right Arrow */}
           <button
             onClick={nextSlide}
-            className="absolute right-0 top-1/2 -translate-y-1/2 z-20 w-8 h-8 rounded-full bg-[#3f372c] text-white flex items-center justify-center shadow-lg"
+            className="absolute right-2 sm:right-0 top-1/2 -translate-y-1/2 z-20 w-8 h-8 rounded-full bg-[#3f372c] text-white flex items-center justify-center shadow-lg"
           >
             <FaChevronRight size={12} />
           </button>
 
           {/* Cards */}
-          <div className="flex flex-wrap justify-center gap-6 px-14">
+          <div className="flex flex-wrap justify-center gap-6 px-12 sm:px-14">
             {visibleTestimonials.map((item, index) => (
               <div
                 key={index}
@@ -116,16 +133,12 @@ const TestimonialSection = () => {
                       {item.name}
                     </h4>
 
-                    <p className="text-gray-500 text-xs">
-                      {item.role}
-                    </p>
+                    <p className="text-gray-500 text-xs">{item.role}</p>
                   </div>
                 </div>
-
               </div>
             ))}
           </div>
-
         </div>
       </div>
     </section>

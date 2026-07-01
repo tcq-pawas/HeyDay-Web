@@ -3,20 +3,20 @@ import missionImg from "../../assets/images/about/hero3.png";
 
 const MissionSection = () => {
   return (
-    <section className="py-16 bg-[#fdfbf8]">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+    <section className="py-16 bg-[#fdfbf8] overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Heading */}
         <div className="mb-8">
-          <h2 className="text-xl md:text-2xl font-bold text-[#315d2f] uppercase ml-20">
-            Our Mission & Values
+          <h2 className="text-xl md:text-2xl font-bold uppercase ml-0 lg:ml-20">
+            Our <span className="text-[#7aac3b]">Mission</span> & Values
           </h2>
 
-          <div className="mt-2 w-16 h-1 bg-[#d99b28] rounded-full" style={{ marginLeft: '5rem' }}></div>
+          <div className="mt-2 w-16 h-1 bg-[#d99b28] rounded-full ml-0 lg:ml-20"></div>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Image */}
-          <div className="flex justify-center lg:justify-start ml-20">
+          <div className="flex justify-center lg:justify-start ml-0 lg:ml-20">
             <img
               src={missionImg}
               alt="Mission"
@@ -74,7 +74,7 @@ const MissionSection = () => {
                   Our Values
                 </h3>
 
-                <div className="grid grid-cols-2 gap-x-6 gap-y-3">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3">
                   <div className="flex items-center gap-2">
                     <span className="w-2 h-2 rounded-full bg-[#d99b28]"></span>
                     <span className="text-sm text-gray-700">

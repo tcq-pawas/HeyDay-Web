@@ -56,8 +56,8 @@ const WhyChooseTeam = () => {
             Why Choose Us
           </span>
 
-          <h2 className="mt-6 text-3xl md:text-3xl font-bold text-[#315d2f]">
-            The Team Behind Every Successful Investment
+          <h2 className="mt-6 text-2xl md:text-2xl font-bold uppercase">
+            The Team Behind Every<span className="text-[#7aac3b]"> Successful Investment</span>
           </h2>
 
           <p className="mt-5 max-w-3xl mx-auto text-gray-600 leading-8">
@@ -67,8 +67,8 @@ const WhyChooseTeam = () => {
           </p>
         </div>
 
-        {/* Cards */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* Desktop Cards */}
+        <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((item, index) => (
             <div
               key={index}
@@ -87,6 +87,30 @@ const WhyChooseTeam = () => {
               </p>
             </div>
           ))}
+        </div>
+
+        {/* Mobile Slider */}
+        <div className="md:hidden -mx-6 px-6 overflow-x-auto snap-x snap-mandatory scrollbar-hide">
+          <div className="flex gap-5 pb-2">
+            {features.map((item, index) => (
+              <div
+                key={index}
+                className="snap-center shrink-0 w-[88%] group bg-white rounded-2xl p-8 shadow-md border border-gray-100"
+              >
+                <div className="w-12 h-12 rounded-2xl bg-[#315d2f]/10 text-[#315d2f] flex items-center justify-center">
+                  {item.icon}
+                </div>
+
+                <h3 className="mt-6 text-lg font-semibold text-gray-900">
+                  {item.title}
+                </h3>
+
+                <p className="mt-2 text-gray-600 leading-7">
+                  {item.description}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Stats */}
@@ -118,4 +142,4 @@ const WhyChooseTeam = () => {
   );
 };
 
-export default WhyChooseTeam;
+export default WhyChooseTeam; 

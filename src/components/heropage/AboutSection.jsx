@@ -4,7 +4,7 @@ import {
   TrendingUp,
   Sprout,
   ShieldCheck,
-  ClipboardCheck,                                                                                                                                                                                                                                                                                                                                                                                 
+  ClipboardCheck,
   ArrowRight,
 } from "lucide-react";
 
@@ -36,19 +36,16 @@ const features = [
 const AboutSection = () => {
   return (
     <section className="bg-white py-20">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
-
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Top Section */}
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-
           {/* Left Content */}
           <div>
-
             <p className="text-[#d58d33] font-semibold uppercase text-sm tracking-wider">
               About Heyday Realty
             </p>
 
-            <h2 className="mt-3 text-4xl lg:text-4xl font-bold leading-tight text-[#071b38]">
+            <h2 className="mt-3 text-2xl lg:text-3xl font-bold leading-tight text-[#071b38]">
               YOUR TRUSTED
               <br />
               LAND{" "}
@@ -79,7 +76,6 @@ const AboutSection = () => {
               Know More About Us
               <ArrowRight size={16} />
             </Link>
-
           </div>
 
           {/* Image */}
@@ -90,7 +86,6 @@ const AboutSection = () => {
               className="w-full h-[340px] lg:h-[400px] object-cover rounded-3xl shadow-lg"
             />
           </div>
-
         </div>
 
         {/* Divider */}
@@ -98,7 +93,6 @@ const AboutSection = () => {
 
         {/* Heading */}
         <div className="flex items-center justify-center gap-4 mt-12">
-
           <div className="h-[2px] w-16 bg-[#d8c28a]"></div>
 
           <h3 className="text-2xl font-bold text-[#071b38] text-center">
@@ -110,12 +104,10 @@ const AboutSection = () => {
           </h3>
 
           <div className="h-[2px] w-16 bg-[#d8c28a]"></div>
-
         </div>
 
         {/* Cards */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-5">
-
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-5">
           {features.map((item, index) => {
             const Icon = item.icon;
 
@@ -138,9 +130,7 @@ const AboutSection = () => {
               </div>
             );
           })}
-
         </div>
-
       </div>
     </section>
   );

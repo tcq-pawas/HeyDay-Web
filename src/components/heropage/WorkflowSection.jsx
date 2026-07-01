@@ -1,12 +1,12 @@
 import React from "react";
 
-import bgImage from "../assets/images/home/herobg.png";
-import gallery1 from "../assets/images/home/short1-image.png";
-import gallery2 from "../assets/images/home/short2-image.png";
-import gallery3 from "../assets/images/home/short3-image.png";
-import gallery4 from "../assets/images/home/short4-image.png";
-import gallery5 from "../assets/images/home/short5-image.png";
-import gallery6 from "../assets/images/home/roshanbagh.png";
+import bgImage from "../../assets/images/home/herobg.png";
+import gallery1 from "../../assets/images/home/short1-image.png";
+import gallery2 from "../../assets/images/home/short2-image.png";
+import gallery3 from "../../assets/images/home/short3-image.png";
+import gallery4 from "../../assets/images/home/short4-image.png";
+import gallery5 from "../../assets/images/home/short5-image.png";
+import gallery6 from "../../assets/images/home/roshanbagh.png";
 
 const WorkflowSection = () => {
   const steps = [
@@ -44,9 +44,9 @@ const WorkflowSection = () => {
 
   const gallery = [
     gallery1,
-    gallery2,
-    gallery3,
     gallery4,
+    gallery3,
+    gallery2,
     gallery5,
     gallery6,
   ];
@@ -98,9 +98,9 @@ const WorkflowSection = () => {
 
         <div className="flex items-center justify-center gap-4 mb-10">
 
-          <div className="h-[2px] w-16 bg-[#d8c28a]" />
+          <div className="h-[2px] w-16 bg-[#d8c28a] " />
 
-          <h2 className="text-2xl font-bold text-[#08213f]">
+          <h2 className="text-2xl font-bold text-[#08213f] text-center">
             WHY{" "}
             <span className="text-[#7aac3b]">
               HEYDAY REALTY
@@ -144,7 +144,7 @@ const WorkflowSection = () => {
           <div className="grid md:grid-cols-5 gap-8 items-center">
 
             <div>
-              <h2 className="text-2xl font-bold text-white leading-tight">
+              <h2 className="text-2xl font-bold text-white leading-tight text-center md:text-left">
                 LAND ISN'T JUST
                 <br />
                 PROPERTY.
@@ -157,7 +157,7 @@ const WorkflowSection = () => {
             </div>
 
             <div className="text-center">
-              <h3 className="text-4xl font-bold text-[#e66a10]">
+              <h3 className="text-2xl md:text-4xl font-bold text-[#e66a10]">
                 15%
               </h3>
               <p className="text-white mt-2">
@@ -168,7 +168,7 @@ const WorkflowSection = () => {
             </div>
 
             <div className="text-center">
-              <h3 className="text-4xl font-bold text-[#e66a10]">
+              <h3 className="text-2xl md:text-4xl font-bold text-[#e66a10]">
                 500+
               </h3>
               <p className="text-white mt-2">
@@ -177,7 +177,7 @@ const WorkflowSection = () => {
             </div>
 
             <div className="text-center">
-              <h3 className="text-4xl font-bold text-[#e66a10]">
+              <h3 className="text-2xl md:text-4xl font-bold text-[#e66a10]">
                 1000+
               </h3>
               <p className="text-white mt-2">
@@ -188,7 +188,7 @@ const WorkflowSection = () => {
             </div>
 
             <div className="text-center">
-              <h3 className="text-4xl font-bold text-[#e66a10]">
+              <h3 className="text-2xl md:text-4xl font-bold text-[#e66a10]">
                 100%
               </h3>
               <p className="text-white mt-2">

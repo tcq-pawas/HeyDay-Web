@@ -18,10 +18,10 @@ const TeamIntro = () => {
               Our Team
             </span>
 
-            <h2 className="mt-6 text-3xl md:text-3xl font-bold text-[#315d2f] leading-tight">
-              Driven by Trust.
+            <h2 className="mt-6 text-2xl md:text-2xl font-bold  leading-tight uppercase">
+              Driven by <span className="text-[#7aac3b]">Trust</span> .
               <br />
-              Built on Excellence.
+              <span className="text-[#7aac3b]">Built</span> on Excellence.
             </h2>
 
             <p className="mt-6 text-gray-600 leading-8">

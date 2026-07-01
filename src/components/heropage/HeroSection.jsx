@@ -23,10 +23,10 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-gradient-to-r from-[#041b35]/90 via-[#041b35]/65 to-transparent" />
 
       {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 min-h-[85vh] flex items-center mt-10">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 min-h-[85vh] flex items-center mt-7">
         <div className="max-w-3xl">
 
-          <h1 className="text-4xl md:text-6xl lg:text-5xl font-bold leading-tight text-white">
+          <h1 className="text-5xl md:text-6xl lg:text-5xl font-bold leading-tight text-white">
             INVEST IN LAND.
             <br />
             SECURE YOUR{" "}

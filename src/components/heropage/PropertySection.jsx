@@ -61,33 +61,30 @@ const categories = [
 const PropertySection = () => {
   return (
     <section className="py-20 bg-white">
-
-      <div className="max-w-7xl mx-auto px-6">
-
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
         {/* Heading */}
         <div className="flex items-center justify-center gap-4 mb-12">
           <div className="h-[2px] w-16 bg-[#d8c28a]" />
+
           <h2 className="text-2xl font-bold text-[#08213f] text-center">
             EXPLORE OUR{" "}
             <span className="text-[#7aac3b]">
               FEATURED PROJECTS
             </span>
           </h2>
+
           <div className="h-[2px] w-16 bg-[#d8c28a]" />
         </div>
 
         {/* Project Cards */}
-        <div className="grid lg:grid-cols-3 gap-8">
-
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <div
               key={index}
               className="bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-md hover:shadow-xl transition-all duration-300"
             >
-
               {/* Image */}
               <div className="relative">
-
                 <img
                   src={project.image}
                   alt={project.title}
@@ -97,18 +94,15 @@ const PropertySection = () => {
                 <span className="absolute top-3 left-3 bg-[#e66a10] text-white text-xs font-semibold px-3 py-1 rounded-md">
                   {project.badge}
                 </span>
-
               </div>
 
               {/* Content */}
               <div className="p-6">
-
                 <h3 className="text-lg font-bold text-[#08213f] mb-4">
                   {project.title}
                 </h3>
 
                 <ul className="space-y-2 mb-5">
-
                   {project.features.map((item, i) => (
                     <li
                       key={i}
@@ -118,7 +112,6 @@ const PropertySection = () => {
                       {item}
                     </li>
                   ))}
-
                 </ul>
 
                 <Link
@@ -127,17 +120,13 @@ const PropertySection = () => {
                 >
                   View Project →
                 </Link>
-
               </div>
-
             </div>
           ))}
-
         </div>
 
         {/* Second Heading */}
         <div className="flex items-center justify-center gap-4 mt-20 mb-12">
-
           <div className="h-[2px] w-16 bg-[#d8c28a]" />
 
           <h2 className="text-2xl font-bold text-[#08213f] text-center">
@@ -148,12 +137,10 @@ const PropertySection = () => {
           </h2>
 
           <div className="h-[2px] w-16 bg-[#d8c28a]" />
-
         </div>
 
         {/* Categories */}
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
-
           {categories.map((item, index) => {
             const Icon = item.icon;
 
@@ -172,11 +159,8 @@ const PropertySection = () => {
               </div>
             );
           })}
-
         </div>
-
       </div>
-
     </section>
   );
 };

@@ -17,14 +17,12 @@ import primiumland3 from "../../assets/images/media/residency2.png";
 import primiumland4 from "../../assets/images/media/residency3.png";
 import primiumland5 from "../../assets/images/media/residency4.png";
 import gated from "../../assets/images/media/gated-land.png";
-import farm from "../../assets/images/media/farmland.png"
-import farm2 from "../../assets/images/media/farmhouse2.png"
-import farm3 from "../../assets/images/media/farmhouse3.png"
+import farm from "../../assets/images/media/farmland.png";
+import farm2 from "../../assets/images/media/farmhouse2.png";
+import farm3 from "../../assets/images/media/farmhouse3.png";
 import roadland from "../../assets/images/media/roadside.png";
 import roadland2 from "../../assets/images/media/roadside2.png";
 import roadland3 from "../../assets/images/media/roadside3.png";
-
-
 
 const categories = [
   {
@@ -134,26 +132,26 @@ const gallery = [
 const MediaHero = () => {
   const [activeCategory, setActiveCategory] = useState("All Images");
 
-  // Filter Images
   const filteredGallery =
     activeCategory === "All Images"
-      ? gallery // Show ALL images
+      ? gallery
       : gallery
-        .filter((item) => item.category === activeCategory)
-        .slice(0, 5); // Show only first 5 images of selected category
+          .filter((item) => item.category === activeCategory)
+          .slice(0, 5);
 
   return (
-    <section className="bg-[#faf8f5] py-24">
-      <div className="max-w-7xl mx-auto px-6">
-
+    <section className="bg-[#faf8f5] py-24 overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
         {/* Heading */}
         <div className="text-center mb-14">
           <p className="text-[#b66a1d] uppercase tracking-[3px] font-semibold">
             Gallery
           </p>
 
-          <h2 className="text-4xl md:text-4xl font-bold text-[#1d1d1d] mt-3">
-            Explore Our Collection
+          <h2 className="text-2xl md:text-3xl font-bold text-[#1d1d1d] mt-3">
+            Explore
+             <span className="text-[#7aac3b] pl-1 pr-1">Our</span> 
+             Collection
           </h2>
 
           <p className="text-gray-500 mt-5 max-w-2xl mx-auto">
@@ -164,24 +162,27 @@ const MediaHero = () => {
         </div>
 
         {/* Categories */}
-        <div className="flex flex-wrap justify-center gap-4 mb-14">
-          {categories.map((item, index) => (
-            <button
-              key={index}
-              onClick={() => setActiveCategory(item.name)}
-              className={`flex items-center gap-2 px-6 py-3 rounded-full border transition-all duration-300 ${activeCategory === item.name
-                  ? "bg-[#b66a1d] text-white border-[#b66a1d]"
-                  : "bg-white text-gray-700 border-gray-200 hover:border-[#b66a1d] hover:text-[#b66a1d]"
+        <div className="mb-14">
+          <div className="flex gap-4 overflow-x-auto md:flex-wrap md:justify-center md:overflow-visible pb-2 scrollbar-hide">
+            {categories.map((item, index) => (
+              <button
+                key={index}
+                onClick={() => setActiveCategory(item.name)}
+                className={`flex items-center gap-2 px-6 py-3 rounded-full border transition-all duration-300 whitespace-nowrap flex-shrink-0 ${
+                  activeCategory === item.name
+                    ? "bg-[#b66a1d] text-white border-[#b66a1d]"
+                    : "bg-white text-gray-700 border-gray-200 hover:border-[#b66a1d] hover:text-[#b66a1d]"
                 }`}
-            >
-              <span className="text-lg">{item.icon}</span>
-              <span className="font-medium">{item.name}</span>
-            </button>
-          ))}
+              >
+                <span className="text-lg">{item.icon}</span>
+                <span className="font-medium">{item.name}</span>
+              </button>
+            ))}
+          </div>
         </div>
 
         {/* Gallery Grid */}
-        <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredGallery.length > 0 ? (
             filteredGallery.map((item, index) => (
               <div
@@ -204,14 +205,13 @@ const MediaHero = () => {
               </div>
             ))
           ) : (
-            <div className="col-span-3 text-center py-10">
+            <div className="col-span-full text-center py-10">
               <p className="text-gray-500 text-lg">
                 No images found.
               </p>
             </div>
           )}
         </div>
-
       </div>
     </section>
   );
