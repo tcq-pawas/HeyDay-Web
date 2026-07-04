@@ -1,124 +1,130 @@
 import {
   FaArrowRight,
+  FaShieldAlt,
   FaMapMarkerAlt,
-  FaFileAlt,
   FaChartLine,
+  FaHandshake,
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
-import mainImage from "../../assets/images/project/projectbg-image.png";
+import mainImage from "../../assets/images/project/project-hero.png";
 import thumb1 from "../../assets/images/home/short3-image.png";
 import thumb2 from "../../assets/images/home/short2-image.png";
-import thumb3 from "../../assets/images/project/projectbg-image.png";
+import thumb3 from "../../assets/images/project/project-bg.png";
 import thumb4 from "../../assets/images/home/greencity-image.png";
 
 const ProjectsHero = () => {
-  return (
-    <section className="relative bg-[#faf8f5] pt-32 pb-20 overflow-hidden">
-      {/* Mobile Background Only */}
-      <div className="absolute inset-0 md:hidden">
-        <img
-          src={mainImage}
-          alt=""
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-[#faf8f5]/90"></div>
-      </div>
+  const features = [
+    {
+      icon: <FaShieldAlt />,
+      title: "Legal & Verified",
+      text: "All our projects are legally verified and RERA compliant.",
+    },
+    {
+      icon: <FaMapMarkerAlt />,
+      title: "Premium Locations",
+      text: "Strategically located in high-growth corridors.",
+    },
+    {
+      icon: <FaChartLine />,
+      title: "High Investment Potential",
+      text: "Designed for long-term returns and future value appreciation.",
+    },
+    {
+      icon: <FaHandshake />,
+      title: "Trusted by 1000+ Families",
+      text: "Building trust through transparency and commitment.",
+    },
+  ];
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-14 items-center">
-          {/* Left Content */}
-          <div>
-            <span className="text-[#d16b1d] uppercase tracking-widest text-sm font-semibold">
+  return (
+    <section className="relative min-h-screen overflow-hidden">
+      {/* Hero Area */}
+      <div className="relative min-h-[78vh] flex items-center overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <img
+            src={mainImage}
+            alt="Projects Background"
+            className="w-full h-full object-cover"
+          />
+        </div>
+
+        {/* Same dark-left / light-right effect */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#081d35]/90 via-[#081d35]/50 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-black/10"></div>
+
+        {/* Content */}
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 pt-24 pb-16 md:pt-32 md:pb-20 flex flex-col lg:flex-row items-center gap-10">
+          <div className="max-w-xl">
+            <span className="text-[#d39b34] uppercase tracking-[4px] text-xs sm:text-sm ">
               Our Projects
             </span>
 
-            <h1 className="mt-4 text-4xl lg:text-5xl font-bold leading-tight text-[#1d1d1d]">
+            <h1 className="mt-3 text-3xl sm:text-4xl lg:text-5xl font-bold text-white">
               Signature Land.
               <br />
-              Timeless{" "}
-              <span className="text-lime-600">Value.</span>
+              Timeless <span className="text-[#74bd2b]">Value.</span>
             </h1>
 
-            <div className="w-14 h-1 bg-[#d16b1d] rounded-full mt-6"></div>
-
-            <p className="mt-7 text-gray-600 leading-8 text-lg max-w-lg">
-              Explore our premium land and plotted development projects
-              designed for a secure future and long-term growth. Every project
-              is carefully planned with legal clarity, infrastructure, and
-              exceptional investment potential.
+            <p className="mt-4 text-sm sm:text-base leading-7 text-white/90 max-w-lg">
+              Explore our premium land and plotted development projects designed
+              for a secure future and long-term growth.
             </p>
 
-            {/* Features */}
-            <div className="flex flex-wrap gap-10 mt-10">
-              <div className="flex items-center gap-3">
-                <FaMapMarkerAlt className="text-green-700 text-lg" />
-                <span className="font-medium text-gray-700">
-                  Prime Locations
-                </span>
-              </div>
-
-              <div className="flex items-center gap-3">
-                <FaFileAlt className="text-green-700 text-lg" />
-                <span className="font-medium text-gray-700">
-                  Legal Verified
-                </span>
-              </div>
-
-              <div className="flex items-center gap-3">
-                <FaChartLine className="text-green-700 text-lg" />
-                <span className="font-medium text-gray-700">
-                  Best Investment
-                </span>
-              </div>
+            <div className="mt-7">
+              <Link
+                to="/projects"
+                className="inline-flex items-center gap-3 rounded-full bg-[#f47c20] hover:bg-[#e66a10] px-7 py-3 text-sm font-bold text-white shadow-xl transition-all duration-300 hover:-translate-y-0.5"
+              >
+                Explore Projects
+                <FaArrowRight className="text-sm" />
+              </Link>
             </div>
 
-            {/* Thumbnails */}
-            <div className="flex flex-wrap gap-4 sm:gap-6 mt-8">
+            {/* Gallery */}
+            <div className="flex flex-wrap gap-4 mt-8">
               {[thumb1, thumb2, thumb3, thumb4].map((img, index) => (
                 <img
                   key={index}
                   src={img}
                   alt={`Thumbnail ${index + 1}`}
-                  className="w-24 h-16 rounded-xl object-cover shadow-md hover:scale-105 transition duration-300 cursor-pointer"
+                  className="w-24 h-16 sm:w-28 sm:h-20 rounded-lg object-cover border-2 border-white/60 shadow-xl transition-all duration-300 hover:scale-105"
                 />
               ))}
             </div>
-
-            {/* Mobile Button */}
-            <div className="md:hidden mt-10">
-              <Link
-                to="/projects"
-                className="inline-flex items-center gap-3 bg-[#d16b1d] hover:bg-[#b95d16] text-white px-8 py-4 rounded-full font-semibold shadow-lg transition-all duration-300"
-              >
-                Explore Projects
-                <FaArrowRight />
-              </Link>
-            </div>
           </div>
+        </div>
+      </div>
 
-          {/* Desktop Right Image */}
-          <div className="hidden md:flex justify-end">
-            <div className="relative w-[90%]">
-              <img
-                src={mainImage}
-                alt="Projects"
-                className="w-full h-[500px] object-cover rounded-[30px] shadow-2xl"
-              />
-
-              <Link
-                to="/projects"
-                className="absolute bottom-6 left-6 inline-flex items-center gap-3 bg-[#d16b1d] hover:bg-[#b95d16] text-white px-8 py-4 rounded-full font-semibold shadow-lg transition-all duration-300"
+      {/* Bottom Green Feature Bar */}
+      <div className="relative z-20 bg-opacity-20 bg-[#08213f]/95">
+        <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+            {features.map((item, index) => (
+              <div
+                key={index}
+                className="flex flex-col sm:flex-row items-center sm:items-center justify-center gap-3 sm:gap-2 py-5 sm:py-6 lg:py-6 px-4 sm:px-0 lg:px-6 border-white/15 border-b sm:odd:border-r lg:border-b-0 lg:border-r last:border-r-0 text-center sm:text-left"
               >
-                Explore Projects
-                <FaArrowRight />
-              </Link>
-            </div>
+                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-[#08213f] text-2xl shadow-lg text-[#a5c53b]">
+                  {item.icon}
+                </div>
+
+                <div className="ml-0 sm:ml-4">
+                  <h3 className="text-white text-sm font-semibold">
+                    {item.title}
+                  </h3>
+
+                  <p className="mt-2 text-white/85 text-xs leading-6 max-w-[260px] sm:max-w-none mx-auto sm:mx-0">
+                    {item.text}
+                  </p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
     </section>
   );
 };
-
 export default ProjectsHero;

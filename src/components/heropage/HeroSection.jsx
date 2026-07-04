@@ -11,13 +11,16 @@ import {
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen overflow-hidden">
-  
+
       {/* Background Image */}
-      <img
-        src={bgImage}
-        alt="Land Investment"
-        className="absolute inset-0 w-full h-full object-cover object-center"
-      />
+      <div className="absolute inset-0">
+        <img
+          src={bgImage}
+          alt="Land Investment"
+          className="absolute inset-0 w-full h-full object-cover object-center"
+        />
+      </div>
+
 
       {/* Dark Overlay */}
       <div className="absolute inset-0 bg-gradient-to-r from-[#041b35]/90 via-[#041b35]/65 to-transparent" />
@@ -26,7 +29,7 @@ const HeroSection = () => {
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 min-h-[85vh] flex items-center mt-7">
         <div className="max-w-3xl">
 
-          <h1 className="text-5xl md:text-6xl lg:text-5xl font-bold leading-tight text-white">
+          <h1 className="text-5xl md:text-4xl lg:text-5xl font-bold leading-tight text-white">
             INVEST IN LAND.
             <br />
             SECURE YOUR{" "}
@@ -34,8 +37,9 @@ const HeroSection = () => {
               FUTURE.
             </span>
           </h1>
+          <div className="w-24 h-1 rounded-full bg-[#f2b321] mt-7"></div>
 
-          <p className="mt-6 text-lg md:text-lg text-gray-200 max-w-2xl leading-relaxed font-semibold">
+          <p className="mt-6 text-lg md:text-lg text-gray-200 max-w-2xl leading-relaxed ">
             Verified Agricultural Lands, Residential Plots & <br />
             Premium Investment Opportunities Across <br /> Gorakhpur, Deoria, Maharajganj.
           </p>

@@ -55,35 +55,47 @@ const WorkflowSection = () => {
     <section className="bg-white">
 
       {/* Timeline Section */}
-      <div className="bg-[#041b35] py-12">
+      <div className="bg-[#041b35] py-16">
 
         <div className="max-w-7xl mx-auto px-6">
 
-          <h2 className="text-center text-2xl md:text-2xl font-bold text-white mb-12">
-            FROM SITE VISIT{" "}
-            <span className="text-[#e66a10]">
-              TO REGISTRATION
-            </span>
-          </h2>
+          <div className="text-center max-w-3xl mx-auto">
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+            <h2 className="text-2xl md:text-3xl font-bold text-white">
+              FROM SITE VISIT{" "}
+              <span className="text-[#e66a10]">
+                TO REGISTRATION
+              </span>
+            </h2>
+
+            <p className="text-gray-300 mt-4 text-sm md:text-base leading-7">
+              Experience a transparent and hassle-free land buying journey.
+              From selecting the right property to legal verification and
+              registration, every step is guided by our experienced team to
+              ensure complete peace of mind.
+            </p>
+
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 mt-14">
 
             {steps.map((step, index) => (
               <div
                 key={index}
-                className="text-center relative"
+                className="text-center relative group"
               >
-                <div className="w-10 h-10 mx-auto rounded-full bg-white text-[#f4a300] font-bold flex items-center justify-center shadow-md">
+                <div className="w-12 h-12 mx-auto rounded-full bg-white text-[#f4a300] font-bold flex items-center justify-center shadow-lg transition duration-300 group-hover:scale-110">
                   {step.no}
                 </div>
 
-                <h3 className="text-white text-sm font-semibold mt-4">
+                <h3 className="text-white text-[15px] font-semibold mt-5 min-h-[48px] flex items-center justify-center">
                   {step.title}
                 </h3>
 
-                <p className="text-gray-300 text-xs mt-2 leading-5">
+                <p className="text-gray-300 text-sm mt-3 leading-6">
                   {step.desc}
                 </p>
+
               </div>
             ))}
 
@@ -94,34 +106,44 @@ const WorkflowSection = () => {
       </div>
 
       {/* Why Heyday Realty */}
-      <div className="max-w-7xl mx-auto px-6 py-14">
+      <div className="max-w-7xl mx-auto px-6 py-16">
 
-        <div className="flex items-center justify-center gap-4 mb-10">
+        <div className="text-center max-w-3xl mx-auto">
 
-          <div className="h-[2px] w-16 bg-[#d8c28a] " />
+          <div className="flex items-center justify-center gap-4 mb-6">
 
-          <h2 className="text-2xl font-bold text-[#08213f] text-center">
-            WHY{" "}
-            <span className="text-[#7aac3b]">
-              HEYDAY REALTY
-            </span>
-          </h2>
+            <div className="h-[2px] w-16 bg-[#d8c28a]" />
 
-          <div className="h-[2px] w-16 bg-[#d8c28a]" />
+            <h2 className="text-2xl md:text-3xl font-bold text-[#08213f]">
+              WHY{" "}
+              <span className="text-[#7aac3b]">
+                HEYDAY REALTY
+              </span>
+            </h2>
+
+            <div className="h-[2px] w-16 bg-[#d8c28a]" />
+
+          </div>
+
+          <p className="text-gray-600 text-sm md:text-base leading-7">
+            We combine trusted legal expertise, premium locations, transparent
+            documentation, and customer-first service to make your land
+            investment secure, rewarding, and completely stress-free.
+          </p>
 
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-5 mt-12">
 
           {gallery.map((img, index) => (
             <div
               key={index}
-              className="overflow-hidden rounded-xl shadow-md"
+              className="overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-all duration-300"
             >
               <img
                 src={img}
                 alt=""
-                className="w-full h-28 object-cover hover:scale-105 transition duration-300"
+                className="w-full h-32 object-cover hover:scale-110 transition duration-500"
               />
             </div>
           ))}
@@ -137,14 +159,15 @@ const WorkflowSection = () => {
           backgroundImage: `url(${bgImage})`,
         }}
       >
-        <div className="absolute inset-0 bg-[#041b35]/70" />
+        <div className="absolute inset-0 bg-[#041b35]/75" />
 
-        <div className="relative max-w-7xl mx-auto px-6 py-14">
+        <div className="relative max-w-7xl mx-auto px-6 py-16">
 
-          <div className="grid md:grid-cols-5 gap-8 items-center">
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-10 items-center">
 
-            <div>
-              <h2 className="text-2xl font-bold text-white leading-tight text-center md:text-left">
+            <div className="col-span-2 md:col-span-1">
+
+              <h2 className="text-2xl md:text-3xl font-bold text-white leading-tight text-center md:text-left">
                 LAND ISN'T JUST
                 <br />
                 PROPERTY.
@@ -154,13 +177,19 @@ const WorkflowSection = () => {
                   LEGACY.
                 </span>
               </h2>
+
+              <p className="text-gray-300 text-sm leading-6 mt-5 text-center md:text-left">
+                Invest today in a future built on trust, growth, and lasting
+                value for generations to come.
+              </p>
+
             </div>
 
             <div className="text-center">
-              <h3 className="text-2xl md:text-4xl font-bold text-[#e66a10]">
+              <h3 className="text-3xl md:text-4xl font-bold text-[#e66a10]">
                 15%
               </h3>
-              <p className="text-white mt-2">
+              <p className="text-white mt-3 leading-6">
                 Average Annual
                 <br />
                 Appreciation
@@ -168,19 +197,19 @@ const WorkflowSection = () => {
             </div>
 
             <div className="text-center">
-              <h3 className="text-2xl md:text-4xl font-bold text-[#e66a10]">
+              <h3 className="text-3xl md:text-4xl font-bold text-[#e66a10]">
                 500+
               </h3>
-              <p className="text-white mt-2">
+              <p className="text-white mt-3 leading-6">
                 Acres Sold
               </p>
             </div>
 
             <div className="text-center">
-              <h3 className="text-2xl md:text-4xl font-bold text-[#e66a10]">
+              <h3 className="text-3xl md:text-4xl font-bold text-[#e66a10]">
                 1000+
               </h3>
-              <p className="text-white mt-2">
+              <p className="text-white mt-3 leading-6">
                 Satisfied
                 <br />
                 Buyers
@@ -188,10 +217,10 @@ const WorkflowSection = () => {
             </div>
 
             <div className="text-center">
-              <h3 className="text-2xl md:text-4xl font-bold text-[#e66a10]">
+              <h3 className="text-3xl md:text-4xl font-bold text-[#e66a10]">
                 100%
               </h3>
-              <p className="text-white mt-2">
+              <p className="text-white mt-3 leading-6">
                 Verified
                 <br />
                 Documentation
@@ -201,6 +230,7 @@ const WorkflowSection = () => {
           </div>
 
         </div>
+
       </div>
 
     </section>

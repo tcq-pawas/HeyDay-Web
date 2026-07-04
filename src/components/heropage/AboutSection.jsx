@@ -54,17 +54,17 @@ const AboutSection = () => {
               </span>
             </h2>
 
-            <p className="mt-4 text-gray-600 leading-8">
+            <p className="mt-4 text-gray-600 leading-8 text-sm">
               At HeyDay Realty, we specialize exclusively in agricultural
               land, farm plots, and long-term investment opportunities.
             </p>
 
-            <p className="mt-3 text-gray-600 leading-8">
+            <p className="mt-3 text-gray-600 leading-8 text-sm">
               Every property undergoes thorough legal and ownership
               verification before being offered to our clients.
             </p>
 
-            <p className="mt-3 text-gray-600 leading-8">
+            <p className="mt-3 text-gray-600 leading-8 text-sm">
               We help investors, families, NRIs, and future homeowners
               identify high-growth land opportunities with confidence.
             </p>
@@ -83,7 +83,7 @@ const AboutSection = () => {
             <img
               src={landImage}
               alt="Land Investment"
-              className="w-full h-[340px] lg:h-[400px] object-cover rounded-3xl shadow-lg"
+              className="w-full h-[300px] lg:h-[400px] object-cover rounded-3xl shadow-lg"
             />
           </div>
         </div>

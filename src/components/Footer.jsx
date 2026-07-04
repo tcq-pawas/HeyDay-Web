@@ -13,6 +13,13 @@ import footerBg from "../assets/images/footer/herobg.png";
 import logo from "../assets/images/footer/logo.png";
 
 const Footer = () => {
+  const whatsappMessage =
+    "Hello HeyDay Realty, I am interested in your land investment projects. Please share details about available plots and site visit.";
+
+  const whatsappUrl = `https://wa.me/919161554321?text=${encodeURIComponent(
+    whatsappMessage
+  )}`;
+
   return (
     <footer className="bg-[#041b35] text-white overflow-hidden">
       {/* CTA Banner */}
@@ -86,7 +93,7 @@ const Footer = () => {
                 <FaYoutube className="text-lg hover:text-[#f4a300] transition" />
               </a>
 
-              <a href="#">
+              <a href={whatsappUrl} target="_blank" rel="noreferrer">
                 <FaWhatsapp className="text-lg hover:text-[#f4a300] transition" />
               </a>
             </div>
@@ -167,7 +174,7 @@ const Footer = () => {
             </ul>
 
             <a
-              href="https://wa.me/919161554321"
+              href={whatsappUrl}
               target="_blank"
               rel="noreferrer"
               className="inline-flex justify-center items-center gap-2 mt-6 bg-[#6fa72d] hover:bg-[#5f9226] px-6 py-3 rounded-lg text-white text-sm transition"
@@ -180,7 +187,7 @@ const Footer = () => {
 
         {/* Bottom */}
         <div className="border-t border-white/10 mt-10 pt-6 text-center text-gray-500 text-sm">
-          © 2026 HeyDay Realty. All Rights Reserved.
+          &copy; 2026 HeyDay Realty. All Rights Reserved.
         </div>
       </div>
     </footer>

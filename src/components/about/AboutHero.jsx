@@ -8,7 +8,7 @@ import aerialImg from "../../assets/images/about/hero3.png";
 const AboutHero = () => {
   return (
     <section
-      className="relative h-[80vh] md:h-screen flex items-center overflow-hidden bg-cover bg-center"
+      className="relative h-[8 0vh] md:h-screen flex items-center overflow-hidden bg-cover bg-center"
       style={{
         backgroundImage: `url(${heroImage})`,
       }} 

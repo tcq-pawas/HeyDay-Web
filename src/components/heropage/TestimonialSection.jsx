@@ -86,7 +86,7 @@ const TestimonialSection = () => {
         {/* Heading */}
         <div className="text-center mb-10">
           <h2 className="text-2xl md:text-2xl font-bold text-[#08213f]">
-            ✓ WHAT OUR{" "}
+            WHAT OUR{" "}
             <span className="text-[#7aac3b]">INVESTORS SAY</span>
           </h2>
         </div>

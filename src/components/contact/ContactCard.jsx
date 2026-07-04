@@ -8,7 +8,7 @@ import property3 from "../../assets/images/footer/card3.png";
 const properties = [
   {
     image: property1,
-    title: "Raushan Baag Residency",
+    title: "Raushan Baag Residency", 
     location: "Bhathat Chowk, Gorakhpur",
     size: "699/- Per Sq.Ft.",
     price: "₹ 18.99 Lac onwards",
