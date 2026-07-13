@@ -159,17 +159,17 @@ const Footer = () => {
             <ul className="space-y-4 text-gray-400 text-sm">
               <li className="flex justify-center sm:justify-start items-center gap-3">
                 <FaPhoneAlt />
-                9161554321
+                +91-9161554321
               </li>
 
               <li className="flex justify-center sm:justify-start items-center gap-3 break-all">
                 <FaEnvelope />
-                info@heydayrealty.in
+                theheydayrealty@gmail.com
               </li>
 
               <li className="flex justify-center sm:justify-start gap-3">
                 <FaMapMarkerAlt className="mt-1 flex-shrink-0" />
-                <span>Gorakhpur, Uttar Pradesh, India</span>
+                <span>Nakaha No.1, 323-G, First Floor, Sports College, Chowk, Gorakhnath Rd, Gorakhpur, Uttar Pradesh 273004</span>
               </li>
             </ul>
 
