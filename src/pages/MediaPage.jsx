@@ -1,16 +1,20 @@
 import Navbar from "../components/Navbar";
+import MediaHero from "../components/media/MediaHero";
+import PropertyGallery from "../components/media/PropertyGallery";
 import Footer from "../components/Footer";
+
+
+
 
 const MediaPage = () => {
   return (
     <>
       <Navbar />
 
-      <div className="pt-40 min-h-screen">
-        <h1 className="text-center text-5xl font-bold">
-          Media Page
-        </h1>
-      </div>
+      <MediaHero />
+
+      <PropertyGallery />
+
 
       <Footer />
     </>

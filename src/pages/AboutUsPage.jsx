@@ -1,16 +1,29 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import AboutHero from "../components/about/AboutHero";
+import WhyChooseUs from "../components/about/WhyChooseUs";
+import CompanyStats from "../components/about/CompanyStats";
+import MissionSection from "../components/about/MissionSection";
+import TestimonialSection from "../components/heropage/TestimonialSection";
+import CompanyTimeline from "../components/about/CompanyTimeline";
+
 
 const AboutUsPage = () => {
   return (
     <>
       <Navbar />
 
-      <div className="pt-40 min-h-screen">
-        <h1 className="text-center text-5xl font-bold">
-          About Us Page
-        </h1>
-      </div>
+      <AboutHero/>
+
+      <MissionSection/>
+
+      <CompanyStats/>
+
+      <CompanyTimeline/>
+
+      <WhyChooseUs/>
+
+      <TestimonialSection/>
 
       <Footer />
     </>
