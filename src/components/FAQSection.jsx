@@ -7,29 +7,29 @@ const FAQSection = () => {
 
   const faqs = [
     {
-      question: "Is the land legally verified?",
+      question: "Is HeyDay Realty a real estate company in Gorakhpur?",
       answer:
-        "Yes. Every project offered by HeyDay Realty undergoes complete legal verification, ownership checks, and document validation before being presented to customers. We ensure transparency and provide all necessary documentation for a secure investment.",
+        "Yes, HeyDay Realty Pvt. Ltd. is a Gorakhpur-based real estate company specializing in agricultural land, residential plots, farm land, and investment properties with transparent documentation and professional consultation.",
     },
     {
-      question: "Can NRIs purchase these properties?",
+      question: "Does HeyDay Realty provide agricultural land?",
       answer:
-        "Yes. NRIs can purchase residential and investment plots in accordance with applicable Indian regulations. Our team also provides dedicated assistance throughout the documentation and registration process.",
+        "Yes, we specialize in agricultural land, farm plots, and investment properties across Gorakhpur, Deoria, Maharajganj, Kushinagar, Basti, and Sant Kabir Nagar. All properties undergo thorough legal verification.",
     },
     {
-      question: "Do you provide site visits?",
+      question: "Can I schedule a site visit?",
       answer:
         "Absolutely. We arrange guided site visits so you can personally inspect the location, road connectivity, surrounding developments, and future growth potential before making your investment decision.",
     },
     {
-      question: "Is financing available?",
+      question: "Does HeyDay Realty help with property documentation?",
       answer:
-        "Depending on the project and eligibility, financing options may be available through banking and financial partners. Our team can guide you through the available options and documentation requirements.",
+        "Yes, our team provides complete documentation support including legal verification, ownership checks, registration guidance, and end-to-end assistance throughout the property buying process.",
     },
     {
-      question: "How is ownership transferred?",
+      question: "What areas do you serve?",
       answer:
-        "Ownership is transferred through a legally registered sale deed and complete registration process. Our experts assist you at every step to ensure a smooth and hassle-free transfer of ownership.",
+        "HeyDay Realty serves customers across Gorakhpur, Deoria, Maharajganj, Kushinagar, Basti, and Sant Kabir Nagar in Eastern Uttar Pradesh, offering verified agricultural land and residential plots.",
     },
   ];
 

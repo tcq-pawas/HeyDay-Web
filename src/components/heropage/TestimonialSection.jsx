@@ -124,8 +124,11 @@ const TestimonialSection = () => {
                 <div className="flex items-center justify-center gap-3 mt-5">
                   <img
                     src={item.image}
-                    alt={item.name}
+                    alt={`${item.name} - HeyDay Realty Client Testimonial`}
                     className="w-11 h-11 rounded-full object-cover"
+                    loading="lazy"
+                    width="44"
+                    height="44"
                   />
 
                   <div>

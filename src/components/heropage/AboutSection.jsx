@@ -42,31 +42,28 @@ const AboutSection = () => {
           {/* Left Content */}
           <div>
             <p className="text-[#d58d33] font-semibold uppercase text-sm tracking-wider">
-              About Heyday Realty
+              About HeyDay Realty Pvt. Ltd.
             </p>
 
             <h2 className="mt-3 text-2xl lg:text-3xl font-bold leading-tight text-[#071b38]">
-              YOUR TRUSTED
+              Your Trusted Real Estate
               <br />
-              LAND{" "}
+              Partner in{" "}
               <span className="text-[#7aac3b]">
-                INVESTMENT PARTNER
+                Gorakhpur
               </span>
             </h2>
 
             <p className="mt-4 text-gray-600 leading-8 text-sm">
-              At HeyDay Realty, we specialize exclusively in agricultural
-              land, farm plots, and long-term investment opportunities.
+              HeyDay Realty Pvt. Ltd. is a Gorakhpur-based real estate company specializing in agricultural land, residential plots, farm land, and investment properties.
             </p>
 
             <p className="mt-3 text-gray-600 leading-8 text-sm">
-              Every property undergoes thorough legal and ownership
-              verification before being offered to our clients.
+              Our team helps buyers and investors identify legally verified properties while providing transparent documentation, professional consultation, and end-to-end support throughout the buying process.
             </p>
 
             <p className="mt-3 text-gray-600 leading-8 text-sm">
-              We help investors, families, NRIs, and future homeowners
-              identify high-growth land opportunities with confidence.
+              Whether you are investing for the future, purchasing your first plot, or expanding your land portfolio, we are committed to delivering reliable service backed by local market knowledge.
             </p>
 
             <Link
@@ -82,8 +79,11 @@ const AboutSection = () => {
           <div>
             <img
               src={landImage}
-              alt="Land Investment"
+              alt="HeyDay Realty Agricultural Land Investment Property"
               className="w-full h-[300px] lg:h-[400px] object-cover rounded-3xl shadow-lg"
+              loading="lazy"
+              width="600"
+              height="400"
             />
           </div>
         </div>

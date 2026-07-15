@@ -87,8 +87,11 @@ const PropertySection = () => {
               <div className="relative">
                 <img
                   src={project.image}
-                  alt={project.title}
+                  alt={`${project.title} - HeyDay Realty Property in Gorakhpur`}
                   className="w-full h-40 object-cover"
+                  loading="lazy"
+                  width="400"
+                  height="160"
                 />
 
                 <span className="absolute top-3 left-3 bg-[#e66a10] text-white text-xs font-semibold px-3 py-1 rounded-md">

@@ -15,13 +15,13 @@ const OurTeamPage = () => {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://heydayrealty.com"
+        "item": "https://heydayrealty.in"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Team",
-        "item": "https://heydayrealty.com/team"
+        "item": "https://heydayrealty.in/team"
       }
     ]
   };
@@ -29,10 +29,10 @@ const OurTeamPage = () => {
   return (
     <>
       <SEO
-        title="Meet Our Real Estate Experts"
-        description="Meet HeyDay Realty's experienced real estate consultants in Gorakhpur. Expert guidance for buying, selling & renting properties."
-        keywords="real estate team, property consultants, real estate experts Gorakhpur"
-        canonical="https://heydayrealty.com/team"
+        title="Our Team | HeyDay Realty Pvt. Ltd. Gorakhpur"
+        description="Meet the experienced real estate consultants at HeyDay Realty Pvt. Ltd. in Gorakhpur. Professional guidance for agricultural land, residential plots, and property investment."
+        keywords="real estate team Gorakhpur, property consultants, real estate experts, land investment team, agricultural land specialists"
+        canonical="https://heydayrealty.in/team"
         schema={breadcrumbSchema}
       />
       <Navbar />

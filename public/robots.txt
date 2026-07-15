@@ -1,5 +1,5 @@
-# robots.txt for HeyDay Realty
-# https://heydayrealty.com
+# robots.txt for HeyDay Realty Pvt. Ltd.
+# https://heydayrealty.in
 
 User-agent: *
 Allow: /
@@ -9,7 +9,7 @@ Allow: /
 # Disallow: /private/
 
 # Sitemap location
-Sitemap: https://heydayrealty.com/sitemap.xml
+Sitemap: https://heydayrealty.in/sitemap.xml
 
 # Crawl delay (optional)
 Crawl-delay: 1

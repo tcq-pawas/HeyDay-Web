@@ -13,13 +13,13 @@ const MediaPage = () => {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://heydayrealty.com"
+        "item": "https://heydayrealty.in"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Media",
-        "item": "https://heydayrealty.com/media"
+        "item": "https://heydayrealty.in/media"
       }
     ]
   };
@@ -27,10 +27,10 @@ const MediaPage = () => {
   return (
     <>
       <SEO
-        title="HeyDay Realty News & Media Coverage"
-        description="Latest news, updates & media coverage of HeyDay Realty. Stay informed about Gorakhpur's real estate market trends."
-        keywords="real estate news, property updates, media coverage, Gorakhpur real estate"
-        canonical="https://heydayrealty.com/media"
+        title="Media Gallery | HeyDay Realty Pvt. Ltd. Gorakhpur"
+        description="View property gallery and media coverage of HeyDay Realty Pvt. Ltd. - agricultural land, residential plots, and investment properties in Gorakhpur and Eastern Uttar Pradesh."
+        keywords="real estate media, property gallery, Gorakhpur real estate news, land investment updates, agricultural land gallery"
+        canonical="https://heydayrealty.in/media"
         schema={breadcrumbSchema}
       />
       <Navbar />

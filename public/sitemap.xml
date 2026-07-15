@@ -2,48 +2,48 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- Homepage -->
   <url>
-    <loc>https://heydayrealty.com/</loc>
-    <lastmod>2024-01-15</lastmod>
+    <loc>https://heydayrealty.in/</loc>
+    <lastmod>2025-07-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   
   <!-- About Us -->
   <url>
-    <loc>https://heydayrealty.com/about</loc>
-    <lastmod>2024-01-15</lastmod>
+    <loc>https://heydayrealty.in/about</loc>
+    <lastmod>2025-07-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <!-- Projects/Properties -->
   <url>
-    <loc>https://heydayrealty.com/projects</loc>
-    <lastmod>2024-01-15</lastmod>
+    <loc>https://heydayrealty.in/projects</loc>
+    <lastmod>2025-07-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
   
   <!-- Media -->
   <url>
-    <loc>https://heydayrealty.com/media</loc>
-    <lastmod>2024-01-15</lastmod>
+    <loc>https://heydayrealty.in/media</loc>
+    <lastmod>2025-07-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <!-- Contact -->
   <url>
-    <loc>https://heydayrealty.com/contact</loc>
-    <lastmod>2024-01-15</lastmod>
+    <loc>https://heydayrealty.in/contact</loc>
+    <lastmod>2025-07-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <!-- Team -->
   <url>
-    <loc>https://heydayrealty.com/team</loc>
-    <lastmod>2024-01-15</lastmod>
+    <loc>https://heydayrealty.in/team</loc>
+    <lastmod>2025-07-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -51,8 +51,8 @@
   <!-- Add property detail pages dynamically -->
   <!-- Example:
   <url>
-    <loc>https://heydayrealty.com/property/luxury-apartment-gorakhpur</loc>
-    <lastmod>2024-01-15</lastmod>
+    <loc>https://heydayrealty.in/property/agricultural-land-gorakhpur</loc>
+    <lastmod>2025-07-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -61,8 +61,8 @@
   <!-- Add blog posts dynamically -->
   <!-- Example:
   <url>
-    <loc>https://heydayrealty.com/blog/real-estate-investment-tips</loc>
-    <lastmod>2024-01-15</lastmod>
+    <loc>https://heydayrealty.in/blog/land-investment-tips-gorakhpur</loc>
+    <lastmod>2025-07-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -71,8 +71,8 @@
   <!-- Add local area pages dynamically -->
   <!-- Example:
   <url>
-    <loc>https://heydayrealty.com/areas/civil-lines-gorakhpur</loc>
-    <lastmod>2024-01-15</lastmod>
+    <loc>https://heydayrealty.in/areas/agricultural-land-deoria</loc>
+    <lastmod>2025-07-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

@@ -72,8 +72,11 @@ const Footer = () => {
           <div className="sm:col-span-2 lg:col-span-1 text-center sm:text-left">
             <img
               src={logo}
-              alt="HeyDay Realty"
+              alt="HeyDay Realty Pvt. Ltd. Logo"
               className="h-16 mx-auto sm:mx-0 mb-4"
+              loading="lazy"
+              width="200"
+              height="64"
             />
 
             <p className="text-[#e66a10] text-sm">
@@ -169,7 +172,7 @@ const Footer = () => {
 
               <li className="flex justify-center sm:justify-start gap-3">
                 <FaMapMarkerAlt className="mt-1 flex-shrink-0" />
-                <span>Nakaha No.1, 323-G, First Floor, Sports College, Chowk, Gorakhnath Rd, Gorakhpur, Uttar Pradesh 273004</span>
+                <span>Ramjanaki Nagar, Gorakhpur, Uttar Pradesh, India</span>
               </li>
             </ul>
 
@@ -187,7 +190,13 @@ const Footer = () => {
 
         {/* Bottom */}
         <div className="border-t border-white/10 mt-10 pt-6 text-center text-gray-500 text-sm">
-          &copy; 2026 HeyDay Realty. All Rights Reserved.
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-2 text-center text-gray-500 text-sm">
+          <span>&copy; 2026 HeyDay Realty Pvt. Ltd. All Rights Reserved.</span>
+          <span className="hidden sm:inline">|</span>
+          <Link to="/privacy" className="hover:text-white transition">Privacy Policy</Link>
+          <span className="hidden sm:inline">|</span>
+          <Link to="/terms" className="hover:text-white transition">Terms & Conditions</Link>
+        </div>
         </div>
       </div>
     </footer>

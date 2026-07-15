@@ -15,13 +15,13 @@ const ProjectsPage = () => {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://heydayrealty.com"
+        "item": "https://heydayrealty.in"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Projects",
-        "item": "https://heydayrealty.com/projects"
+        "item": "https://heydayrealty.in/projects"
       }
     ]
   };
@@ -29,10 +29,10 @@ const ProjectsPage = () => {
   return (
     <>
       <SEO
-        title="Premium Properties in Gorakhpur"
-        description="Explore premium residential & commercial properties in Gorakhpur. HeyDay Realty offers verified listings, great locations & best prices."
-        keywords="properties, real estate projects Gorakhpur, premium properties, residential property, commercial property"
-        canonical="https://heydayrealty.com/projects"
+        title="Property Projects | HeyDay Realty Pvt. Ltd. Gorakhpur"
+        description="Explore verified agricultural land, residential plots, farm land, and investment properties in Gorakhpur with HeyDay Realty. Transparent documentation and professional consultation."
+        keywords="property projects Gorakhpur, agricultural land projects, residential plot projects, farm land projects, investment properties, verified land Gorakhpur"
+        canonical="https://heydayrealty.in/projects"
         schema={breadcrumbSchema}
       />
       <Navbar />

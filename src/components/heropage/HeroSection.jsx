@@ -16,8 +16,11 @@ const HeroSection = () => {
       <div className="absolute inset-0">
         <img
           src={bgImage}
-          alt="Land Investment"
+          alt="HeyDay Realty Agricultural Land and Residential Plots in Gorakhpur"
           className="absolute inset-0 w-full h-full object-cover object-center"
+          loading="eager"
+          width="1920"
+          height="1080"
         />
       </div>
 
@@ -30,18 +33,17 @@ const HeroSection = () => {
         <div className="max-w-3xl">
 
           <h1 className="text-5xl md:text-4xl lg:text-5xl font-bold leading-tight text-white">
-            INVEST IN LAND.
+            Trusted Real Estate Company in Gorakhpur for{" "}
             <br />
-            SECURE YOUR{" "}
+            Agricultural Land &{" "}
             <span className="text-lime-400">
-              FUTURE.
+              Residential Plots
             </span>
           </h1>
           <div className="w-24 h-1 rounded-full bg-[#f2b321] mt-7"></div>
 
           <p className="mt-6 text-lg md:text-lg text-gray-200 max-w-2xl leading-relaxed ">
-            Verified Agricultural Lands, Residential Plots & <br />
-            Premium Investment Opportunities Across <br /> Gorakhpur, Deoria, Maharajganj.
+            HeyDay Realty Pvt. Ltd. helps customers discover verified agricultural land, residential plots, farm land, and investment properties in Gorakhpur and nearby districts. We focus on transparent documentation, trusted guidance, and a smooth property buying experience.
           </p>
 
           <div className="flex flex-wrap gap-4 mt-10">

@@ -28,11 +28,13 @@ const ContactInfoCard = () => {
             </p>
 
             <p className="mt-2 text-sm leading-6 text-[#556070]">
-              2nd Floor, Civil Lines,
+              Ramjanaki Nagar,
               <br />
-              Near City Center,
+              Gorakhpur,
               <br />
-              Gorakhpur, Uttar Pradesh – 273001
+              Uttar Pradesh,
+              <br />
+              India
             </p>
           </div>
         </div>
@@ -49,11 +51,11 @@ const ContactInfoCard = () => {
             </h3>
 
             <p className="mt-2 text-sm leading-7 text-[#556070]">
-              +91 98765 43210
+              +91 9161554321
             </p>
 
             <p className="text-sm leading-7 text-[#556070]">
-              +91 91234 56789
+              +91 9795633633
             </p>
           </div>
         </div>
@@ -70,11 +72,7 @@ const ContactInfoCard = () => {
             </h3>
 
             <p className="mt-2 text-sm leading-7 text-[#556070]">
-              info@heydayrealty.com
-            </p>
-
-            <p className="text-sm leading-7 text-[#556070]">
-              support@heydayrealty.com
+              theheydayrealty@gmail.com
             </p>
           </div>
         </div>
