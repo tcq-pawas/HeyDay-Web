@@ -28,9 +28,9 @@ const ContactInfoCard = () => {
             </p>
 
             <p className="mt-2 text-sm leading-6 text-[#556070]">
-              Ramjanaki Nagar,
+              Nakaha No.1, 323-G, First Floor,
               <br />
-              Gorakhpur,
+              Sports College, Gorakhnath Rd,
               <br />
               Uttar Pradesh,
               <br />
@@ -46,16 +46,20 @@ const ContactInfoCard = () => {
           </div>
 
           <div className="flex-1">
-            <h3 className="text-sm font-semibold text-[#071c3d]">
+            <h3 className="mt-2 text-sm leading-7 text-[#556070]">
               Call Us
             </h3>
 
-            <p className="mt-2 text-sm leading-7 text-[#556070]">
-              +91 9161554321
+            <p className="text-sm leading-7 text-[#556070]">
+              +91 97956 33633
             </p>
 
             <p className="text-sm leading-7 text-[#556070]">
-              +91 9795633633
+              +91 91615 54321
+            </p>
+
+            <p className="text-sm leading-7 text-[#556070]">
+              +91 95066 88688
             </p>
           </div>
         </div>
@@ -73,6 +77,10 @@ const ContactInfoCard = () => {
 
             <p className="mt-2 text-sm leading-7 text-[#556070]">
               theheydayrealty@gmail.com
+            </p>
+
+            <p className="text-sm leading-7 text-[#556070]">
+              grebaoffice@gmail.com
             </p>
           </div>
         </div>
