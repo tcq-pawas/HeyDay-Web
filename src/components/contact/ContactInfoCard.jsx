@@ -28,9 +28,9 @@ const ContactInfoCard = () => {
             </p>
 
             <p className="mt-2 text-sm leading-6 text-[#556070]">
-              2nd Floor, Civil Lines,
+              Nakaha No.1, 323-G, First Floor,
               <br />
-              Near City Center,
+              Sports College, Gorakhnath Rd,
               <br />
               Gorakhpur, Uttar Pradesh – 273001
             </p>
@@ -44,16 +44,20 @@ const ContactInfoCard = () => {
           </div>
 
           <div className="flex-1">
-            <h3 className="text-sm font-semibold text-[#071c3d]">
+            <h3 className="mt-2 text-sm leading-7 text-[#556070]">
               Call Us
             </h3>
 
-            <p className="mt-2 text-sm leading-7 text-[#556070]">
-              +91 98765 43210
+            <p className="text-sm leading-7 text-[#556070]">
+              +91 97956 33633
             </p>
 
             <p className="text-sm leading-7 text-[#556070]">
-              +91 91234 56789
+              +91 91615 54321
+            </p>
+
+            <p className="text-sm leading-7 text-[#556070]">
+              +91 95066 88688
             </p>
           </div>
         </div>
@@ -70,11 +74,11 @@ const ContactInfoCard = () => {
             </h3>
 
             <p className="mt-2 text-sm leading-7 text-[#556070]">
-              info@heydayrealty.com
+              theheydayrealty@gmail.com
             </p>
 
             <p className="text-sm leading-7 text-[#556070]">
-              support@heydayrealty.com
+              grebaoffice@gmail.com
             </p>
           </div>
         </div>
