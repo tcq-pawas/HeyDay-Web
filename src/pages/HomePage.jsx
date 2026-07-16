@@ -3,7 +3,6 @@ import SEO from "../components/SEO";
 import Navbar from "../components/Navbar";
 import HeroSection from "../components/heropage/HeroSection";
 import AboutSection from "../components/heropage/AboutSection";
-import WhyChooseUsSection from "../components/WhyChooseUsSection";
 import ServicesSection from "../components/ServicesSection";
 import PropertySection from "../components/heropage/PropertySection";
 import ServiceAreasSection from "../components/ServiceAreasSection";
@@ -101,8 +100,6 @@ const HomePage = () => {
       <Navbar />
       <HeroSection />
       <AboutSection/>
-      <WhyChooseUsSection />
-      <ServicesSection />
       <PropertySection />
       <ServiceAreasSection />
       <WorkflowSection />
