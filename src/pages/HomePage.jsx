@@ -101,7 +101,6 @@ const HomePage = () => {
       <HeroSection />
       <AboutSection/>
       <PropertySection />
-      <ServiceAreasSection />
       <WorkflowSection />
       <TestimonialSection />
       <FAQSection />

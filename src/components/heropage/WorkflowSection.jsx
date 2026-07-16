@@ -9,101 +9,41 @@ import gallery5 from "../../assets/images/home/short5-image.png";
 import gallery6 from "../../assets/images/home/roshanbagh.png";
 
 const WorkflowSection = () => {
-  const steps = [
-    {
-      no: "01",
-      title: "Verified Documentation",
-      desc: "Choose your preferred land that fits your needs.",
-    },
-    {
-      no: "02",
-      title: "Site Visit",
-      desc: "Visit the site and verify location & surroundings.",
-    },
-    {
-      no: "03",
-      title: "Legal Verification",
-      desc: "Our experts verify all documents and titles.",
-    },
-    {
-      no: "04",
-      title: "Documentation",
-      desc: "Preparation and review of required documents.",
-    },
-    {
-      no: "05",
-      title: "NRI Support",
-      desc: "Dedicated assistance for NRI investors.",
-    },
-    {
-      no: "06",
-      title: "Registry & Ownership",
-      desc: "Smooth registration and ownership transfer.",
-    },
-  ];
-
   const gallery = [
-    gallery1,
-    gallery4,
-    gallery3,
-    gallery2,
-    gallery5,
-    gallery6,
+    {
+      image: gallery1,
+      title: "Premium Township",
+      desc: "Well-planned residential plots",
+    },
+    {
+      image: gallery4,
+      title: "Green Environment",
+      desc: "Peaceful & pollution-free living",
+    },
+    {
+      image: gallery3,
+      title: "Wide Internal Roads",
+      desc: "Easy connectivity across the township",
+    },
+    {
+      image: gallery2,
+      title: "Modern Infrastructure",
+      desc: "Developed with future-ready amenities",
+    },
+    {
+      image: gallery5,
+      title: "Prime Location",
+      desc: "Excellent investment opportunity",
+    },
+    {
+      image: gallery6,
+      title: "Verified Documentation",
+      desc: "100% legally secure property",
+    },
   ];
 
   return (
     <section className="bg-white">
-
-      {/* Timeline Section */}
-      <div className="bg-[#041b35] py-16">
-
-        <div className="max-w-7xl mx-auto px-6">
-
-          <div className="text-center max-w-3xl mx-auto">
-
-            <h2 className="text-2xl md:text-3xl font-bold text-white">
-              FROM SITE VISIT{" "}
-              <span className="text-[#e66a10]">
-                TO REGISTRATION
-              </span>
-            </h2>
-
-            <p className="text-gray-300 mt-4 text-sm md:text-base leading-7">
-              Experience a transparent and hassle-free land buying journey.
-              From selecting the right property to legal verification and
-              registration, every step is guided by our experienced team to
-              ensure complete peace of mind.
-            </p>
-
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 mt-14">
-
-            {steps.map((step, index) => (
-              <div
-                key={index}
-                className="text-center relative group"
-              >
-                <div className="w-12 h-12 mx-auto rounded-full bg-white text-[#f4a300] font-bold flex items-center justify-center shadow-lg transition duration-300 group-hover:scale-110">
-                  {step.no}
-                </div>
-
-                <h3 className="text-white text-[15px] font-semibold mt-5 min-h-[48px] flex items-center justify-center">
-                  {step.title}
-                </h3>
-
-                <p className="text-gray-300 text-sm mt-3 leading-6">
-                  {step.desc}
-                </p>
-
-              </div>
-            ))}
-
-          </div>
-
-        </div>
-
-      </div>
 
       {/* Why Heyday Realty */}
       <div className="max-w-7xl mx-auto px-6 py-16">
@@ -134,20 +74,32 @@ const WorkflowSection = () => {
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-5 mt-12">
-
-          {gallery.map((img, index) => (
+          {gallery.map((item, index) => (
             <div
               key={index}
-              className="overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-all duration-300"
+              className="relative overflow-hidden rounded-xl shadow-lg group cursor-pointer"
             >
               <img
-                src={img}
-                alt=""
-                className="w-full h-32 object-cover hover:scale-110 transition duration-500"
+                src={item.image}
+                alt={item.title}
+                className="w-full h-40 object-cover transition-transform duration-500 group-hover:scale-110"
               />
+
+              {/* Gradient Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
+
+              {/* Bottom Content */}
+              <div className="absolute bottom-0 left-0 right-0 p-3">
+                <h3 className="text-white font-semibold text-sm leading-tight">
+                  {item.title}
+                </h3>
+
+                <p className="text-white/80 text-[11px] mt-1 leading-4">
+                  {item.desc}
+                </p>
+              </div>
             </div>
           ))}
-
         </div>
 
       </div>

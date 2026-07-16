@@ -28,6 +28,7 @@ const Navbar = () => {
 
   const menuItems = [
     { name: "HOME", path: "/" },
+    { name: "SERVICES", path: "/services" },
     { name: "PROJECTS", path: "/projects" },
     { name: "MEDIA", path: "/media" },
     { name: "ABOUT US", path: "/about" },
@@ -37,16 +38,14 @@ const Navbar = () => {
   return (
     <header className="fixed top-0 left-0 w-full z-50 px-3 sm:px-4 py-3 sm:py-4">
       <div
-        className={`max-w-7xl mx-auto transition-all duration-500 ${
-          scrolled ? "scale-[0.98]" : "scale-100"
-        }`}
+        className={`max-w-7xl mx-auto transition-all duration-500 ${scrolled ? "scale-[0.98]" : "scale-100"
+          }`}
       >
         <div
-          className={`rounded-full px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between transition-all duration-500 ${
-            scrolled
+          className={`rounded-full px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between transition-all duration-500 ${scrolled
               ? "bg-white/15 backdrop-blur-xl border border-white/20 shadow-lg"
               : "bg-white shadow-xl border border-white/30"
-          }`}
+            }`}
         >
           {/* Logo */}
           <NavLink to="/" onClick={() => setMenuOpen(false)}>
@@ -65,10 +64,9 @@ const Navbar = () => {
                   <NavLink
                     to={item.path}
                     className={({ isActive }) =>
-                      `px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${
-                        isActive
-                          ? "bg-[#c27a1d] text-white shadow-md"
-                          : "text-[#08213f] hover:bg-[#f7f2ea]"
+                      `px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${isActive
+                        ? "bg-[#c27a1d] text-white shadow-md"
+                        : "text-[#08213f] hover:bg-[#f7f2ea]"
                       }`
                     }
                   >
@@ -99,11 +97,10 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         <div
-          className={`lg:hidden overflow-hidden transition-all duration-300 ${
-            menuOpen
+          className={`lg:hidden overflow-hidden transition-all duration-300 ${menuOpen
               ? "max-h-[600px] opacity-100 mt-3"
               : "max-h-0 opacity-0 mt-0"
-          }`}
+            }`}
         >
           <div className="bg-white rounded-3xl shadow-2xl border border-gray-100 p-5">
             <ul className="flex flex-col gap-2">
@@ -113,10 +110,9 @@ const Navbar = () => {
                     to={item.path}
                     onClick={() => setMenuOpen(false)}
                     className={({ isActive }) =>
-                      `block rounded-xl px-5 py-3 text-base font-medium transition-all ${
-                        isActive
-                          ? "bg-[#c27a1d] text-white"
-                          : "text-[#08213f] hover:bg-[#f7f2ea]"
+                      `block rounded-xl px-5 py-3 text-base font-medium transition-all ${isActive
+                        ? "bg-[#c27a1d] text-white"
+                        : "text-[#08213f] hover:bg-[#f7f2ea]"
                       }`
                     }
                   >
