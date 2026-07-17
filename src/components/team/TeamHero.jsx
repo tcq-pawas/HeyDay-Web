@@ -9,7 +9,7 @@ import heroBg from "../../assets/images/team/teambg.png";
 const TeamHero = () => {
   return (
     <section
-      className="relative min-h-[60vh] md:h-screen flex items-center overflow-hidden bg-cover bg-center"
+      className="relative min-h-[60vh] md:h-[80vh] flex items-center overflow-hidden bg-cover bg-center"
       style={{
         backgroundImage: `url(${heroBg})`,
       }}

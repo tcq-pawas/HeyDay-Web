@@ -38,9 +38,9 @@ const ProjectsHero = () => {
   ];
 
   return (
-    <section className="relative min-h-screen overflow-hidden">
+    <section className="relative overflow-hidden">
       {/* Hero Area */}
-      <div className="relative min-h-[78vh] flex items-center overflow-hidden">
+      <div className="relative h-[60vh] md:h-[80vh] flex items-center overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0">
           <img
@@ -50,14 +50,14 @@ const ProjectsHero = () => {
           />
         </div>
 
-        {/* Same dark-left / light-right effect */}
+        {/* Overlays */}
         <div className="absolute inset-0 bg-gradient-to-r from-[#081d35]/90 via-[#081d35]/50 to-transparent"></div>
         <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-black/10"></div>
 
         {/* Content */}
-        <div className="relative z-10 w-full max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 pt-24 pb-16 md:pt-32 md:pb-20 flex flex-col lg:flex-row items-center gap-10">
-          <div className="max-w-xl">
-            <span className="text-[#d39b34] uppercase tracking-[4px] text-xs sm:text-sm ">
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 pt-20 md:pt-32 pb-12 md:pb-20 flex flex-col lg:flex-row items-center gap-10">
+          <div className="max-w-xl mt-10 md:mt-0">
+            <span className="text-[#d39b34] uppercase tracking-[4px] text-xs sm:text-sm">
               Our Projects
             </span>
 
@@ -66,13 +66,15 @@ const ProjectsHero = () => {
               <br />
               Timeless <span className="text-[#74bd2b]">Value.</span>
             </h1>
+            
 
             <p className="mt-4 text-sm sm:text-base leading-7 text-white/90 max-w-lg">
               Explore our premium land and plotted development projects designed
               for a secure future and long-term growth.
             </p>
 
-            <div className="mt-7">
+            {/* Button - Hidden on Mobile */}
+            <div className="hidden md:block mt-7">
               <Link
                 to="/projects"
                 className="inline-flex items-center gap-3 rounded-full bg-[#f47c20] hover:bg-[#e66a10] px-7 py-3 text-sm font-bold text-white shadow-xl transition-all duration-300 hover:-translate-y-0.5"
@@ -82,7 +84,7 @@ const ProjectsHero = () => {
               </Link>
             </div>
 
-            {/* Gallery */}
+            {/* Gallery - Visible on All Screens */}
             <div className="flex flex-wrap gap-4 mt-8">
               {[thumb1, thumb2, thumb3, thumb4].map((img, index) => (
                 <img
@@ -97,14 +99,14 @@ const ProjectsHero = () => {
         </div>
       </div>
 
-      {/* Bottom Green Feature Bar */}
-      <div className="relative z-20 bg-opacity-20 bg-[#08213f]/95">
+      {/* Bottom Feature Bar - Hidden on Mobile */}
+      <div className="hidden md:block relative z-20 bg-[#08213f]/95 bg-opacity-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
             {features.map((item, index) => (
               <div
                 key={index}
-                className="flex flex-col sm:flex-row items-center sm:items-center justify-center gap-3 sm:gap-2 py-5 sm:py-6 lg:py-6 px-4 sm:px-0 lg:px-6 border-white/15 border-b sm:odd:border-r lg:border-b-0 lg:border-r last:border-r-0 text-center sm:text-left"
+                className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-2 py-5 sm:py-6 lg:py-6 px-4 sm:px-0 lg:px-6 border-white/15 border-b sm:odd:border-r lg:border-b-0 lg:border-r last:border-r-0 text-center sm:text-left"
               >
                 <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-[#08213f] text-2xl shadow-lg text-[#a5c53b]">
                   {item.icon}
@@ -127,4 +129,5 @@ const ProjectsHero = () => {
     </section>
   );
 };
+
 export default ProjectsHero;

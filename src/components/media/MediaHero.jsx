@@ -4,33 +4,28 @@ import {
   FaMapMarkerAlt,
   FaShieldAlt,
   FaCamera,
-  FaArrowRight,
 } from "react-icons/fa";
 import { HiOutlineMap } from "react-icons/hi2";
 
 const MediaHero = () => {
   return (
-    <section
-      className="relative min-h-screen overflow-hidden bg-cover bg-center py-24 lg:min-h-[650px] lg:py-0 ">
+    <section className="relative h-[60vh] md:h-[80vh] overflow-hidden bg-cover bg-center py-16 md:py-24 lg:min-h-[650px] lg:py-0">
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
           src={heroImage}
           alt="Land Investment"
-          className="absolute inset-0 w-full h-full object-cover object-center"
+          className="absolute inset-0 h-full w-full object-cover object-center"
         />
       </div>
 
       {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-[#081826]/70"></div>
-
-      {/* Soft Right Highlight */}
-
+      <div className="absolute inset-0 bg-[#081826]/70 "></div>
 
       {/* Content */}
-      <div className="relative z-10 mx-auto grid min-h-[inherit] w-full max-w-7xl items-center gap-12 px-6 lg:grid-cols-[1fr_0.9fr] lg:px-8">
+      <div className="relative z-10 mx-auto grid h-full w-full max-w-7xl items-center gap-12 px-6 lg:grid-cols-[1fr_0.9fr] lg:px-8 ">
         {/* Left Content */}
-        <div className="max-w-2xl">
+        <div className="max-w-2xl mt-8 md:mt-0">
           <p className="mb-4 text-sm font-semibold uppercase tracking-[3px] text-[#d7a23a]">
             Gallery
           </p>
@@ -79,9 +74,9 @@ const MediaHero = () => {
           </div>
         </div>
 
-        {/* Right Premium Gallery Preview */}
-        <div className="relative mx-auto w-full max-w-[430px] lg:ml-auto">
-          <div className="relative rounded-xl border border-white/20  p-3 shadow-2xl backdrop-blur-md sm:p-4">
+        {/* Right Premium Gallery Preview - Desktop Only */}
+        <div className="relative mx-auto hidden w-full max-w-[430px] lg:ml-auto lg:block md:mt-10">
+          <div className="relative rounded-xl border border-white/20 p-3 shadow-2xl backdrop-blur-md sm:p-4">
             <div className="grid grid-cols-2 gap-3">
               <div
                 className="h-36 rounded-lg bg-cover bg-center shadow-lg sm:h-44"
@@ -89,12 +84,14 @@ const MediaHero = () => {
               ></div>
 
               <div className="space-y-3">
-                <div className="rounded-lg  border-white/15 bg-white/15 p-3 backdrop-blur-md">
+                <div className="rounded-lg border-white/15 bg-white/15 p-3 backdrop-blur-md">
                   <div className="mb-2 flex h-8 w-8 items-center justify-center rounded-md bg-[#d7a23a]/20 text-sm text-[#d7a23a]">
                     <FaShieldAlt />
                   </div>
 
-                  <h3 className="text-base font-bold text-white">Verified Land</h3>
+                  <h3 className="text-base font-bold text-white">
+                    Verified Land
+                  </h3>
 
                   <p className="mt-1 text-[11px] leading-4 text-gray-300">
                     Clear locations with trusted project details.
@@ -153,8 +150,6 @@ const MediaHero = () => {
               </div>
             </div>
           </div>
-
-
         </div>
       </div>
     </section>
