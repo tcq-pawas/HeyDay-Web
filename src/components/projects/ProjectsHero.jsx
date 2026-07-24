@@ -57,32 +57,23 @@ const ProjectsHero = () => {
         {/* Content */}
         <div className="relative z-10 w-full max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 pt-20 md:pt-32 pb-12 md:pb-20 flex flex-col lg:flex-row items-center gap-10">
           <div className="max-w-xl mt-10 md:mt-0">
-            <span className="text-[#d39b34] uppercase tracking-[4px] text-xs sm:text-sm">
+            <span className="text-[#d39b34] uppercase tracking-[4px] sm:tracking-[6px] text-[10px] font-semibold ">
               Our Projects
             </span>
 
-            <h1 className="mt-3 text-3xl sm:text-4xl lg:text-5xl font-bold text-white">
+            <h1 className="mt-3 text-3xl font-bold text-white">
               Signature Land.
               <br />
               Timeless <span className="text-[#74bd2b]">Value.</span>
             </h1>
             
 
-            <p className="mt-4 text-sm sm:text-base leading-7 text-white/90 max-w-lg">
+            <p className="mt-4 text-[12px] leading-7 text-white/90 max-w-lg">
               Explore our premium land and plotted development projects designed
               for a secure future and long-term growth.
             </p>
 
-            {/* Button - Hidden on Mobile */}
-            <div className="hidden md:block mt-7">
-              <Link
-                to="/projects"
-                className="inline-flex items-center gap-3 rounded-full bg-[#f47c20] hover:bg-[#e66a10] px-7 py-3 text-sm font-bold text-white shadow-xl transition-all duration-300 hover:-translate-y-0.5"
-              >
-                Explore Projects
-                <FaArrowRight className="text-sm" />
-              </Link>
-            </div>
+
 
             {/* Gallery - Visible on All Screens */}
             <div className="flex flex-wrap gap-4 mt-8">
@@ -108,16 +99,16 @@ const ProjectsHero = () => {
                 key={index}
                 className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-2 py-5 sm:py-6 lg:py-6 px-4 sm:px-0 lg:px-6 border-white/15 border-b sm:odd:border-r lg:border-b-0 lg:border-r last:border-r-0 text-center sm:text-left"
               >
-                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-[#08213f] text-2xl shadow-lg text-[#a5c53b]">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#08213f] text-xl shadow-lg text-[#a5c53b]">
                   {item.icon}
                 </div>
 
                 <div className="ml-0 sm:ml-4">
-                  <h3 className="text-white text-sm font-semibold">
+                  <h3 className="text-white text-[15px] font-semibold">
                     {item.title}
                   </h3>
 
-                  <p className="mt-2 text-white/85 text-xs leading-6 max-w-[260px] sm:max-w-none mx-auto sm:mx-0">
+                  <p className="mt-1 text-white/85 text-[12px] leading-6 max-w-[260px] sm:max-w-none mx-auto sm:mx-0">
                     {item.text}
                   </p>
                 </div>

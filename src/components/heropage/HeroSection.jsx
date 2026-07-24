@@ -34,7 +34,7 @@ const HeroSection = () => {
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex-1 flex items-center">
         <div className="max-w-3xl">
 
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight text-balance text-white">
+          <h1 className="text-3xl  font-bold leading-tight text-balance text-white">
             Trusted Real Estate Company in Gorakhpur for{" "}
             <br className="hidden sm:block" />
             Agricultural Land &{" "}
@@ -44,14 +44,14 @@ const HeroSection = () => {
           </h1>
           <div className="w-16 sm:w-24 h-1 rounded-full bg-[#f2b321] mt-5 sm:mt-7"></div>
 
-          <p className="mt-4 sm:mt-6 text-base sm:text-lg text-gray-200 max-w-2xl leading-relaxed text-pretty">
+          <p className="mt-4 sm:mt-6 text-[12px] text-gray-200 max-w-2xl leading-relaxed text-pretty">
             HeyDay Realty Pvt. Ltd. helps customers discover verified agricultural land, residential plots, farm land, and investment properties in Gorakhpur and nearby districts. We focus on transparent documentation, trusted guidance, and a smooth property buying experience.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-6 sm:mt-10">
             <Link
               to="/projects"
-              className="w-full sm:w-auto text-center bg-[#f47c20] hover:bg-[#e66a10] transition-all duration-300 text-white px-6 py-3 rounded-lg text-sm sm:text-base font-semibold shadow-md"
+              className="w-full sm:w-auto text-center bg-[#f47c20] hover:bg-[#e66a10] transition-all duration-300 text-white px-4 py-3 rounded-lg text-sm sm:text-base font-semibold shadow-md"
             >
               Explore Properties
             </Link>
@@ -73,48 +73,48 @@ const HeroSection = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-y-5 gap-x-4 sm:gap-6">
 
             <div className="flex items-center gap-3 sm:gap-4 justify-center">
-              <MapPinned className="w-6 h-6 sm:w-8 sm:h-8 text-lime-400 flex-shrink-0" />
+              <MapPinned className="w-6 h-6 sm:w-6 sm:h-6 text-lime-400 flex-shrink-0" />
               <div>
-                <h3 className="text-white font-bold text-lg sm:text-2xl">
+                <h3 className="text-white font-bold text-lg ">
                   500+
                 </h3>
-                <p className="text-gray-300 text-xs sm:text-sm">
+                <p className="text-gray-300 text-xs ">
                   Acres Managed
                 </p>
               </div>
             </div>
 
             <div className="flex items-center gap-3 sm:gap-4 justify-center">
-              <Users className="w-6 h-6 sm:w-8 sm:h-8 text-lime-400 flex-shrink-0" />
+              <Users className="w-6 h-6  text-lime-400 flex-shrink-0" />
               <div>
-                <h3 className="text-white font-bold text-lg sm:text-2xl">
+                <h3 className="text-white font-bold text-lg ">
                   1000+
                 </h3>
-                <p className="text-gray-300 text-xs sm:text-sm">
+                <p className="text-gray-300 text-xs">
                   Happy Investors
                 </p>
               </div>
             </div>
 
             <div className="flex items-center gap-3 sm:gap-4 justify-center">
-              <BadgeCheck className="w-6 h-6 sm:w-8 sm:h-8 text-lime-400 flex-shrink-0" />
+              <BadgeCheck className="w-6 h-6  text-lime-400 flex-shrink-0" />
               <div>
-                <h3 className="text-white font-bold text-lg sm:text-2xl">
+                <h3 className="text-white font-bold text-lg ">
                   50+
                 </h3>
-                <p className="text-gray-300 text-xs sm:text-sm">
+                <p className="text-gray-300 text-xs ">
                   Verified Projects
                 </p>
               </div>
             </div>
 
             <div className="flex items-center gap-3 sm:gap-4 justify-center">
-              <ShieldCheck className="w-6 h-6 sm:w-8 sm:h-8 text-lime-400 flex-shrink-0" />
+              <ShieldCheck className="w-6 h-6  text-lime-400 flex-shrink-0" />
               <div>
-                <h3 className="text-white font-bold text-lg sm:text-2xl">
+                <h3 className="text-white font-bold text-lg ">
                   100%
                 </h3>
-                <p className="text-gray-300 text-xs sm:text-sm">
+                <p className="text-gray-300 text-xs ">
                   Legal Verification
                 </p>
               </div>

@@ -27,7 +27,7 @@ const ContactInfoCard = () => {
               HeyDay Realty
             </p>
 
-            <p className="mt-2 text-sm leading-6 text-[#556070]">
+            <p className="mt-2 text-[12px] leading-6 text-[#556070]">
               Nakaha No.1, 323-G, First Floor,
               <br />
               Sports College, Gorakhnath Rd,
@@ -50,15 +50,15 @@ const ContactInfoCard = () => {
               Call Us
             </h3>
 
-            <p className="text-sm leading-7 text-[#556070]">
+            <p className="text-[12px] leading-7 text-[#556070]">
               +91 97956 33633
             </p>
 
-            <p className="text-sm leading-7 text-[#556070]">
+            <p className="text-[12px] leading-7 text-[#556070]">
               +91 91615 54321
             </p>
 
-            <p className="text-sm leading-7 text-[#556070]">
+            <p className="text-[12px] leading-7 text-[#556070]">
               +91 95066 88688
             </p>
           </div>
@@ -75,11 +75,11 @@ const ContactInfoCard = () => {
               Email Us
             </h3>
 
-            <p className="mt-2 text-sm leading-7 text-[#556070]">
+            <p className="mt-2 text-[12px] leading-7 text-[#556070]">
               theheydayrealty@gmail.com
             </p>
 
-            <p className="text-sm leading-7 text-[#556070]">
+            <p className="text-[12px] leading-7 text-[#556070]">
               grebaoffice@gmail.com
             </p>
           </div>
@@ -96,11 +96,11 @@ const ContactInfoCard = () => {
               Business Hours
             </h3>
 
-            <p className="mt-2 text-sm leading-7 text-[#556070]">
+            <p className="mt-2 text-[12px] leading-7 text-[#556070]">
               Mon – Sat : 9:30 AM – 7:00 PM
             </p>
 
-            <p className="text-sm leading-7 text-[#556070]">
+            <p className="text-[12px] leading-7 text-[#556070]">
               Sunday : Closed
             </p>
           </div>
@@ -118,20 +118,20 @@ const ContactInfoCard = () => {
             </h3>
           </div>
 
-          <div className="mt-5 grid grid-cols-2 gap-3">
-            <div className="rounded-lg bg-white px-3 py-2 text-center text-xs font-medium text-[#556070] shadow-sm">
+          <div className="mt-5 grid grid-cols-2 gap-3 ">
+            <div className="rounded-lg bg-white px-3 py-2 text-center text-[12px] font-medium text-[#556070] shadow-sm">
               Verified Plots
             </div>
 
-            <div className="rounded-lg bg-white px-3 py-2 text-center text-xs font-medium text-[#556070] shadow-sm">
+            <div className="rounded-lg bg-white px-3 py-2 text-center text-[12px] font-medium text-[#556070] shadow-sm">
               Prime Locations
             </div>
 
-            <div className="rounded-lg bg-white px-3 py-2 text-center text-xs font-medium text-[#556070] shadow-sm">
+            <div className="rounded-lg bg-white px-3 py-2 text-center text-[12px] font-medium text-[#556070] shadow-sm">
               Easy EMI
             </div>
 
-            <div className="rounded-lg bg-white px-3 py-2 text-center text-xs font-medium text-[#556070] shadow-sm">
+            <div className="rounded-lg bg-white px-3 py-2 text-center text-[12px] font-medium text-[#556070] shadow-sm">
               Trusted Support
             </div>
           </div>

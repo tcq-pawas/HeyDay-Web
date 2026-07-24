@@ -32,14 +32,14 @@ const QuotesSection = () => {
               } md:pr-8`}
             >
               <div className="flex items-start gap-3">
-                <FaQuoteLeft className="text-[#f8b400] text-medium mt-1 flex-shrink-0" />
+                <FaQuoteLeft className="text-[#f8b400] text-xs mt-1 flex-shrink-0" />
 
                 <div>
-                  <p className="text-white text-medium leading-relaxed text-center">
+                  <p className="text-white text-[12px] leading-relaxed text-center">
                     {item.text}
                   </p>
 
-                  <p className="mt-4 text-[#f8b400] font-semibold text-center">
+                  <p className="mt-4 text-[#f8b400] font-semibold text-center text-sm">
                     – {item.author}
                   </p>
                 </div>

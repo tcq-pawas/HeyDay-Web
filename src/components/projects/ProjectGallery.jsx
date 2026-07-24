@@ -11,7 +11,7 @@ const ProjectGallery = () => {
 
         {/* Heading */}
         <div className="text-center mb-12">
-          <h2 className="uppercase tracking-[2px] sm:tracking-[4px] text-2xl lg:text-2xl font-semibold text-[#222] bg-orange-100 py-2 px-4 flex flex-wrap items-center justify-center gap-2">
+          <h2 className="uppercase tracking-[2px] sm:tracking-[4px] text-xl  font-semibold text-[#222] bg-orange-100 py-2 px-4 flex flex-wrap items-center justify-center gap-2">
             <span>Premium Plotted Development</span>
             <span className="text-[#d97706]">+</span>
             <span>/</span>
@@ -34,7 +34,7 @@ const ProjectGallery = () => {
 
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent"></div>
 
-              <h3 className="absolute bottom-4 left-4 text-white font-semibold text-base">
+              <h3 className="absolute bottom-4 left-4 text-white font-semibold text-sm">
                 Club House
               </h3>
             </div>
@@ -49,7 +49,7 @@ const ProjectGallery = () => {
 
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent"></div>
 
-              <h3 className="absolute bottom-4 left-4 text-white font-semibold text-base">
+              <h3 className="absolute bottom-4 left-4 text-white font-semibold text-sm">
                 Gated Entrance
               </h3>
             </div>
@@ -64,7 +64,7 @@ const ProjectGallery = () => {
 
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent"></div>
 
-              <h3 className="absolute bottom-4 left-4 text-white font-semibold text-base">
+              <h3 className="absolute bottom-4 left-4 text-white font-semibold text-sm">
                 Wide Internal Roads
               </h3>
             </div>
@@ -84,11 +84,11 @@ const ProjectGallery = () => {
 
             <div className="mt-6">
 
-              <h2 className="text-2xl md:text-3xl font-bold text-[#2d3a22]">
+              <h2 className="text-lg font-bold text-[#2d3a22]">
                 Interior Collections
               </h2>
 
-              <p className="mt-4 text-gray-600 leading-7 max-w-lg">
+              <p className="mt-2 text-gray-600 leading-7 max-w-lg text-[14px]">
                 Discover well-planned layouts, lush green spaces, modern
                 amenities, and premium infrastructure.
               </p>

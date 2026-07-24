@@ -22,11 +22,11 @@ const AboutHero = () => {
         <div className="grid lg:grid-cols-2 gap-10 items-center">
           {/* LEFT CONTENT */}
           <div className="max-w-xl">
-            <p className="text-[#f2b321] uppercase tracking-widest font-semibold text-sm">
+            <p className="uppercase tracking-[4px] sm:tracking-[6px] text-[#F4B53F] text-[10px] font-semibold">
               ABOUT HEYDAY REALTY
             </p>
 
-            <h1 className="mt-5 text-3xl md:text-3xl lg:text-[45px] font-bold leading-[1.15] text-white">
+            <h1 className="mt-5 text-3xl  font-bold leading-[1.15] text-white">
               Building Trust.
               <br />
               Delivering Value.
@@ -36,7 +36,7 @@ const AboutHero = () => {
             </h1>
 
 
-            <p className="mt-8 text-gray-300 text-medium leading-8">
+            <p className="mt-8 text-gray-300 text-[12px] leading-8">
               At HeyDay Realty, we believe land is more than just property—
               it's an opportunity, a future, and a legacy. We help families
               and investors discover premium land opportunities in
@@ -44,7 +44,7 @@ const AboutHero = () => {
             </p>
 
             <Link to="/projects">
-              <button className="hidden md:inline-flex mt-10 bg-[#c66b1d] hover:bg-[#aa5a17] duration-300 text-white font-semibold px-6 py-3 rounded-xl shadow-xl">
+              <button className="hidden md:inline-flex mt-10 bg-[#c66b1d] hover:bg-[#aa5a17] duration-300 text-white font-semibold px-5 py-2 rounded-xl shadow-xl text-sm">
                 Explore Our Projects →
               </button>
             </Link>

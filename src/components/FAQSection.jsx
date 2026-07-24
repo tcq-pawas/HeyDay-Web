@@ -42,9 +42,9 @@ const FAQSection = () => {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Heading */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3 mb-8 sm:mb-10 text-center">
-          <span className="text-[#7aac3b] text-2xl">🌿</span>
+          <span className="text-[#7aac3b] text-xl">🌿</span>
 
-          <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-[#08213f]">
+          <h2 className="text-xl  font-bold text-[#08213f]">
             FREQUENTLY ASKED QUESTIONS
           </h2>
 
@@ -60,9 +60,9 @@ const FAQSection = () => {
             >
               <button
                 onClick={() => toggleFAQ(index)}
-                className="w-full px-4 sm:px-6 py-4 sm:py-5 flex items-center justify-between gap-4 text-left"
+                className="w-full px-4 py-4 flex items-center justify-between gap-4 text-left"
               >
-                <h3 className="text-[#08213f] font-semibold text-sm sm:text-base leading-6">
+                <h3 className="text-[#08213f] font-semibold text-sm  leading-6">
                   {faq.question}
                 </h3>
 
@@ -78,7 +78,7 @@ const FAQSection = () => {
                     : "max-h-0"
                 }`}
               >
-                <p className="text-gray-600 text-sm sm:text-base leading-7">
+                <p className="text-gray-600 text-[12px] leading-7">
                   {faq.answer}
                 </p>
               </div>
@@ -89,7 +89,7 @@ const FAQSection = () => {
         {/* CTA Button */}
         <div className="mt-8 sm:mt-10 text-center">
           <Link to="/contact">
-            <button className="w-full sm:w-auto bg-[#b66a1d] hover:bg-[#9f5b17] text-white px-6 sm:px-8 py-3 rounded-full font-medium transition-all duration-300">
+            <button className="w-full sm:w-auto bg-[#b66a1d] hover:bg-[#9f5b17] text-white px-6 sm:px-6 py-2 rounded-full font-medium transition-all duration-300 text-sm">
               More Questions? Contact Us →
             </button>
           </Link>

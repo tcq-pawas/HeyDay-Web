@@ -23,7 +23,7 @@ const ServicesSection = () => {
         {/* Heading */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3 mb-10 sm:mb-12 text-center">
           <div className="h-[2px] w-14 bg-[#d8c28a]" />
-          <h2 className="text-2xl sm:text-3xl font-bold text-[#08213f]">
+          <h2 className="text-xl font-bold text-[#08213f]">
             OUR{" "}
             <span className="text-[#7aac3b]">
               SERVICES
@@ -41,13 +41,13 @@ const ServicesSection = () => {
                 key={index}
                 className="bg-gray-50 rounded-xl p-6 hover:bg-[#08213f] group transition-all duration-300 cursor-pointer"
               >
-                <div className="w-12 h-12 rounded-lg bg-[#08213f] group-hover:bg-[#7aac3b] flex items-center justify-center mb-4 transition-colors duration-300">
-                  <Icon className="w-6 h-6 text-[#7aac3b] group-hover:text-white transition-colors duration-300" />
+                <div className="w-9 h-9 rounded-lg bg-[#08213f] group-hover:bg-[#7aac3b] flex items-center justify-center mb-4 transition-colors duration-300">
+                  <Icon className="w-4 h-4 text-[#7aac3b] group-hover:text-white transition-colors duration-300" />
                 </div>
-                <h3 className="text-[#08213f] group-hover:text-white font-semibold text-base mb-2 transition-colors duration-300">
+                <h3 className="text-[#08213f] group-hover:text-white font-semibold text-sm mb-2 transition-colors duration-300">
                   {service.title}
                 </h3>
-                <p className="text-gray-600 group-hover:text-gray-300 text-sm leading-6 transition-colors duration-300">
+                <p className="text-gray-600 group-hover:text-gray-300 text-[12px] leading-6 transition-colors duration-300">
                   {service.description}
                 </p>
               </div>

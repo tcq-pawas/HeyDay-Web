@@ -13,76 +13,122 @@ import {
   FaChevronDown,
   FaHome,
   FaExpandArrowsAlt,
+  FaCheckCircle,
 } from "react-icons/fa";
 
+import API_CONFIG from "../../config/api";
 import { Field, Feature } from "./ContactParts";
 
+const INITIAL_FORM_DATA = {
+  name: "",
+  phone: "",
+  email: "",
+  subject: "Property Inquiry",
+  contactMethod: "",
+  propertyType: "",
+  location: "",
+  budget: "",
+  area: "",
+  message: "I am interested in this property.",
+};
+
+const subjectOptions = [
+  "Inquiry About Property",
+  "Schedule Site Visit",
+  "Investment Consultation",
+  "Pricing Information",
+  "Property Documents",
+  "General Inquiry",
+];
+
+const contactOptions = ["Phone Call", "WhatsApp", "Email", "Video Call"];
+
+const propertyOptions = [
+  "Agricultural Land",
+  "Residential Plot",
+  "Commercial Plot",
+  "Farm House",
+  "Villa Plot",
+  "Industrial Land",
+];
+
+const locationOptions = [
+  "Gorakhpur, Uttar Pradesh",
+  "Lucknow, Uttar Pradesh",
+  "Ayodhya, Uttar Pradesh",
+  "Varanasi, Uttar Pradesh",
+  "Noida, Uttar Pradesh",
+  "Other",
+];
+
+const budgetOptions = [
+  "Below ₹10 Lakhs",
+  "₹10 Lakhs - ₹25 Lakhs",
+  "₹25 Lakhs - ₹50 Lakhs",
+  "₹50 Lakhs - ₹1 Crore",
+  "₹1 Crore - ₹2 Crore",
+  "Above ₹2 Crore",
+];
+
+const areaOptions = [
+  "Below 1 Bigha",
+  "1 - 2 Bigha",
+  "2 - 3 Bigha",
+  "3 - 5 Bigha",
+  "5+ Bigha",
+];
+
+const SelectField = ({
+  icon,
+  label,
+  name,
+  value,
+  onChange,
+  options,
+  placeholder,
+}) => (
+  <div>
+    <label className="mb-1 block text-xs font-semibold text-[#071c3d]">
+      {label}
+    </label>
+
+    <div className="flex items-center gap-3 rounded-lg border border-[#d9d9d9] bg-white px-3 focus-within:border-[#c75c0d]">
+      <span className="text-sm text-[#1e293b]">{icon}</span>
+
+      <select
+        name={name}
+        value={value}
+        onChange={onChange}
+        className="h-10 w-full appearance-none bg-transparent pl-2 pr-8 text-xs outline-none"
+      >
+        <option value="">{placeholder}</option>
+
+        {options.map((item) => (
+          <option key={item} value={item}>
+            {item}
+          </option>
+        ))}
+      </select>
+
+      <FaChevronDown className="text-xs text-gray-500" />
+    </div>
+  </div>
+);
+
+// Full-page loading overlay: blurs/dims the page and shows a centered spinner
+const LoadingOverlay = () => (
+  <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-white/40 backdrop-blur-sm transition-opacity duration-200">
+    <div className="flex flex-col items-center gap-3">
+      <div className="h-12 w-12 animate-spin rounded-full border-4 border-[#e7e2d8] border-t-[#c85b00]" />
+      <p className="text-xs font-semibold text-[#071c3d]">Sending your message...</p>
+    </div>
+  </div>
+);
+
 const ContactForm = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    phone: "",
-    email: "",
-
-    subject: "",
-    contactMethod: "",
-    propertyType: "",
-    location: "",
-    budget: "",
-    area: "",
-
-    message: "",
-  });
-
-  const subjectOptions = [
-    "Inquiry About Property",
-    "Schedule Site Visit",
-    "Investment Consultation",
-    "Pricing Information",
-    "Property Documents",
-    "General Inquiry",
-  ];
-
-  const contactOptions = [
-    "Phone Call",
-    "WhatsApp",
-    "Email",
-    "Video Call",
-  ];
-
-  const propertyOptions = [
-    "Agricultural Land",
-    "Residential Plot",
-    "Commercial Plot",
-    "Farm House",
-    "Villa Plot",
-    "Industrial Land",
-  ];
-
-  const locationOptions = [
-    "Gorakhpur, Uttar Pradesh",
-    "Lucknow, Uttar Pradesh",
-    "Ayodhya, Uttar Pradesh",
-    "Varanasi, Uttar Pradesh",
-    "Noida, Uttar Pradesh",
-    "Other",
-  ];
-
-  const budgetOptions = [
-    "Below ₹10 Lakhs",
-    "₹10 Lakhs - ₹25 Lakhs",
-    "₹25 Lakhs - ₹50 Lakhs",
-    "₹50 Lakhs - ₹1 Crore",
-    "₹1 Crore - ₹2 Crore",
-    "Above ₹2 Crore",
-  ];
-
-  const areaOptions = [
-    "Below 1 Bigha",
-    "1 - 2 Bigha",
-    "2 - 3 Bigha",
-    "3 - 5 Bigha",
-    "5+ Bigha",
-  ];
+  const [formData, setFormData] = useState(INITIAL_FORM_DATA);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -93,76 +139,108 @@ const ContactForm = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const msg = `*HEYDAY REALTY LEAD*
+    const name = formData.name.trim();
+    const phone = formData.phone.trim();
+    const email = formData.email.trim();
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const message = formData.message.trim();
 
-👤 Full Name: ${formData.name}
-
-📞 Phone Number: ${formData.phone}
-
-📧 Email Address: ${formData.email}
-
-📝 Subject: ${formData.subject}
-
-☎ Preferred Contact Method: ${formData.contactMethod}
-
-🏡 Property Type: ${formData.propertyType}
-
-📍 Preferred Location: ${formData.location}
-
-💰 Budget Range: ${formData.budget}
-
-📐 Area / Size: ${formData.area}
-
-💬 Message:
-${formData.message}`;
-
-    const encodedMsg = encodeURIComponent(msg);
-
-    const phoneNumber = "918423661222";
-
-    const isMobile =
-      /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
-
-    if (isMobile) {
-      window.location.href = `whatsapp://send?phone=${phoneNumber}&text=${encodedMsg}`;
-
-      setTimeout(() => {
-        window.location.href = `https://wa.me/${phoneNumber}?text=${encodedMsg}`;
-      }, 1200);
-    } else {
-      window.open(
-        `https://web.whatsapp.com/send?phone=${phoneNumber}&text=${encodedMsg}`,
-        "_blank",
-        "noopener,noreferrer"
-      );
+    if (!name) {
+      alert("Name is required");
+      return;
     }
 
-    setFormData({
-      name: "",
-      phone: "",
-      email: "",
+    if (!phone) {
+      alert("Phone number is required");
+      return;
+    }
 
-      subject: "",
-      contactMethod: "",
-      propertyType: "",
-      location: "",
-      budget: "",
-      area: "",
+    if (!/^\d{10}$/.test(phone)) {
+      alert("Phone number must be 10 digits");
+      return;
+    }
 
-      message: "",
-    });
+    if (!email) {
+      alert("Email is required");
+      return;
+    }
+
+    if (!emailRegex.test(email)) {
+      alert("Please enter a valid email address");
+      return;
+    }
+
+    if (!message) {
+      alert("Message is required");
+      return;
+    }
+
+    const url = `${API_CONFIG.BASE_URL.replace(/\/$/, "")}/admin-dashboard/api/contact/`;
+
+    try {
+      setIsSubmitting(true);
+
+      const response = await fetch(url, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "X-API-Key": API_CONFIG.API_KEY,
+        },
+        body: JSON.stringify({
+          website: "heyday",
+          full_name: name,
+          phone_number: phone,
+          email: email,
+          subject: formData.subject,
+          preferred_contact_method: formData.contactMethod,
+          property_type: formData.propertyType,
+          preferred_location: formData.location,
+          budget_range: formData.budget,
+          area_size: formData.area,
+          message: formData.message,
+        }),
+      });
+
+      const contentType = response.headers.get("content-type");
+
+      let data = {};
+      if (contentType && contentType.includes("application/json")) {
+        data = await response.json();
+      } else {
+        data = { message: await response.text() };
+      }
+
+      console.log("Status:", response.status);
+      console.log("Response:", data);
+
+      if (!response.ok) {
+        alert(JSON.stringify(data, null, 2));
+        return;
+      }
+
+      setFormData(INITIAL_FORM_DATA);
+      setIsSuccess(true);
+
+      // Revert the button back to normal after a couple of seconds
+      setTimeout(() => {
+        setIsSuccess(false);
+      }, 2500);
+    } catch (err) {
+      console.error("Submission failed:", err);
+      alert(err.message || "Something went wrong");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
-    <div className="pr-0 lg:border-r lg:border-[#e7e2d8] lg:pr-8  ">
-      <span className="text-xs font-semibold uppercase tracking-wide text-[#c75c0d]">
-        Contact HeyDay Realty
-      </span>
+    <div className="pr-0 lg:border-r lg:border-[#e7e2d8] lg:pr-8">
+      {isSubmitting && <LoadingOverlay />}
 
-      <h2 className="mt-3 text-2xl font-bold leading-tight text-[#071c3d] md:text-[32px]">
+      <h2 className="mt-3 text-xl font-bold leading-tight text-[#071c3d]]">
         We&apos;re Here to Help You
         <br />
         Find the <span className="text-[#4f6b39]">Perfect Land</span>
@@ -170,14 +248,12 @@ ${formData.message}`;
 
       <div className="mt-3 h-1 w-14 rounded-full bg-[#c75c0d]" />
 
-      <p className="mt-4 max-w-lg text-xs leading-6 text-[#556070]">
+      <p className="mt-4 max-w-lg text-[12px] leading-6 text-[#556070]">
         Have questions about our land investment opportunities or ready to
         schedule a site visit? Get in touch with our expert team today.
       </p>
 
       <form onSubmit={handleSubmit} className="mt-5 space-y-3">
-
-        {/* Row 1 */}
         <div className="grid gap-3 md:grid-cols-2">
           <Field
             icon={<FaUser />}
@@ -198,7 +274,6 @@ ${formData.message}`;
           />
         </div>
 
-        {/* Email */}
         <Field
           icon={<FaEnvelope />}
           type="email"
@@ -209,203 +284,78 @@ ${formData.message}`;
           onChange={handleChange}
         />
 
-        {/* Subject & Contact */}
         <div className="grid gap-3 md:grid-cols-2">
+          <SelectField
+            icon={<FaRegCommentDots />}
+            label="Subject"
+            name="subject"
+            value={formData.subject}
+            onChange={handleChange}
+            options={subjectOptions}
+            placeholder="Select Subject"
+          />
 
-          <div>
-            <label className="mb-1 block text-xs font-semibold text-[#071c3d]">
-              Subject
-            </label>
-
-            <div className="flex items-center gap-3 rounded-lg border border-[#d9d9d9] bg-white px-3 focus-within:border-[#c75c0d]">
-
-              <FaRegCommentDots className="text-sm text-[#1e293b]" />
-
-              <select
-                name="subject"
-                value={formData.subject}
-                onChange={handleChange}
-                className="h-10 w-full appearance-none bg-transparent text-xs outline-none"
-              >
-                <option value="">Select Subject</option>
-
-                {subjectOptions.map((item) => (
-                  <option key={item} value={item}>
-                    {item}
-                  </option>
-                ))}
-              </select>
-
-              <FaChevronDown className="text-xs text-gray-500" />
-
-            </div>
-          </div>
-
-          <div>
-            <label className="mb-1 block text-xs font-semibold text-[#071c3d]">
-              Preferred Contact Method
-            </label>
-
-            <div className="flex items-center gap-3 rounded-lg border border-[#d9d9d9] bg-white px-3 focus-within:border-[#c75c0d]">
-
-              <FaPhone className="text-sm text-[#1e293b]" />
-
-              <select
-                name="contactMethod"
-                value={formData.contactMethod}
-                onChange={handleChange}
-                className="h-10 w-full appearance-none bg-transparent text-xs outline-none"
-              >
-                <option value="">Select Contact Method</option>
-
-                {contactOptions.map((item) => (
-                  <option key={item} value={item}>
-                    {item}
-                  </option>
-                ))}
-              </select>
-
-              <FaChevronDown className="text-xs text-gray-500" />
-
-            </div>
-          </div>
-
+          <SelectField
+            icon={<FaPhone />}
+            label="Preferred Contact Method"
+            name="contactMethod"
+            value={formData.contactMethod}
+            onChange={handleChange}
+            options={contactOptions}
+            placeholder="Select Contact Method"
+          />
         </div>
 
-        {/* Property & Location */}
         <div className="grid gap-3 md:grid-cols-2">
+          <SelectField
+            icon={<FaHome />}
+            label="Property Type Interested In"
+            name="propertyType"
+            value={formData.propertyType}
+            onChange={handleChange}
+            options={propertyOptions}
+            placeholder="Select Property Type"
+          />
 
-          <div>
-            <label className="mb-1 block text-xs font-semibold text-[#071c3d]">
-              Property Type Interested In
-            </label>
-
-            <div className="flex items-center gap-3 rounded-lg border border-[#d9d9d9] bg-white px-3 focus-within:border-[#c75c0d]">
-
-              <FaHome className="text-sm text-[#1e293b]" />
-
-              <select
-                name="propertyType"
-                value={formData.propertyType}
-                onChange={handleChange}
-                className="h-10 w-full appearance-none bg-transparent text-xs outline-none"
-              >
-                <option value="">Select Property Type</option>
-
-                {propertyOptions.map((item) => (
-                  <option key={item} value={item}>
-                    {item}
-                  </option>
-                ))}
-              </select>
-
-              <FaChevronDown className="text-xs text-gray-500" />
-
-            </div>
-          </div>
-
-          <div>
-            <label className="mb-1 block text-xs font-semibold text-[#071c3d]">
-              Preferred Location / City
-            </label>
-
-            <div className="flex items-center gap-3 rounded-lg border border-[#d9d9d9] bg-white px-3 focus-within:border-[#c75c0d]">
-
-              <FaMapMarkerAlt className="text-sm text-[#1e293b]" />
-
-              <select
-                name="location"
-                value={formData.location}
-                onChange={handleChange}
-                className="h-10 w-full appearance-none bg-transparent text-xs outline-none"
-              >
-                <option value="">Select Location</option>
-
-                {locationOptions.map((item) => (
-                  <option key={item} value={item}>
-                    {item}
-                  </option>
-                ))}
-              </select>
-
-              <FaChevronDown className="text-xs text-gray-500" />
-
-            </div>
-          </div>
-
+          <SelectField
+            icon={<FaMapMarkerAlt />}
+            label="Preferred Location / City"
+            name="location"
+            value={formData.location}
+            onChange={handleChange}
+            options={locationOptions}
+            placeholder="Select Location"
+          />
         </div>
 
-        {/* Budget & Area */}
         <div className="grid gap-3 md:grid-cols-2">
+          <SelectField
+            icon={<FaMoneyBillWave />}
+            label="Budget Range (Optional)"
+            name="budget"
+            value={formData.budget}
+            onChange={handleChange}
+            options={budgetOptions}
+            placeholder="Select Budget"
+          />
 
-          <div>
-            <label className="mb-1 block text-xs font-semibold text-[#071c3d]">
-              Budget Range (Optional)
-            </label>
-
-            <div className="flex items-center gap-3 rounded-lg border border-[#d9d9d9] bg-white px-3 focus-within:border-[#c75c0d]">
-
-              <FaMoneyBillWave className="text-sm text-[#1e293b]" />
-
-              <select
-                name="budget"
-                value={formData.budget}
-                onChange={handleChange}
-                className="h-10 w-full appearance-none bg-transparent text-xs outline-none"
-              >
-                <option value="">Select Budget</option>
-
-                {budgetOptions.map((item) => (
-                  <option key={item} value={item}>
-                    {item}
-                  </option>
-                ))}
-              </select>
-
-              <FaChevronDown className="text-xs text-gray-500" />
-
-            </div>
-          </div>
-
-          <div>
-            <label className="mb-1 block text-xs font-semibold text-[#071c3d]">
-              Area / Size (Optional)
-            </label>
-
-            <div className="flex items-center gap-3 rounded-lg border border-[#d9d9d9] bg-white px-3 focus-within:border-[#c75c0d]">
-
-              <FaExpandArrowsAlt className="text-sm text-[#1e293b]" />
-
-              <select
-                name="area"
-                value={formData.area}
-                onChange={handleChange}
-                className="h-10 w-full appearance-none bg-transparent text-xs outline-none"
-              >
-                <option value="">Select Area</option>
-
-                {areaOptions.map((item) => (
-                  <option key={item} value={item}>
-                    {item}
-                  </option>
-                ))}
-              </select>
-
-              <FaChevronDown className="text-xs text-gray-500" />
-
-            </div>
-          </div>
-
+          <SelectField
+            icon={<FaExpandArrowsAlt />}
+            label="Area / Size (Optional)"
+            name="area"
+            value={formData.area}
+            onChange={handleChange}
+            options={areaOptions}
+            placeholder="Select Area"
+          />
         </div>
 
-        {/* Message */}
         <div>
           <label className="mb-1 block text-xs font-semibold text-[#071c3d]">
             Message
           </label>
 
           <div className="flex items-start gap-3 rounded-lg border border-[#d9d9d9] bg-white px-3 py-2 focus-within:border-[#c75c0d]">
-
             <FaRegCommentDots className="mt-1 text-sm text-[#1e293b]" />
 
             <textarea
@@ -416,19 +366,30 @@ ${formData.message}`;
               placeholder="Tell us about your requirements..."
               className="w-full resize-none bg-transparent text-xs outline-none placeholder:text-[#8a93a0]"
             />
-
           </div>
         </div>
 
-        {/* Submit Button */}
         <button
           type="submit"
-          className="flex h-11 w-full items-center justify-center gap-2 rounded-lg bg-[#c85b00] text-xs font-bold text-white shadow-[0_10px_20px_rgba(200,91,0,0.20)] transition hover:bg-[#a94900]"
+          disabled={isSubmitting}
+          className={`flex h-11 w-full items-center justify-center gap-2 rounded-lg text-xs font-bold text-white shadow-[0_10px_20px_rgba(200,91,0,0.20)] transition disabled:cursor-not-allowed ${
+            isSuccess
+              ? "bg-green-600 hover:bg-green-600"
+              : "bg-[#c85b00] hover:bg-[#a94900] disabled:opacity-70"
+          }`}
         >
-          Send Message
-          <FaPaperPlane />
+          {isSubmitting ? (
+            "Sending..."
+          ) : isSuccess ? (
+            <>
+              Submitted <FaCheckCircle />
+            </>
+          ) : (
+            <>
+              Send Message <FaPaperPlane />
+            </>
+          )}
         </button>
-
       </form>
 
       <div className="mt-5 grid grid-cols-3 gap-3">

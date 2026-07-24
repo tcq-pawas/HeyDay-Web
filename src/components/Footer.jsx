@@ -34,13 +34,13 @@ const Footer = () => {
         <div className="relative max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 py-12 md:py-16">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
             <div className="text-center lg:text-left">
-              <h2 className="text-2xl sm:text-2xl lg:text-2xl xl:text-3xl font-bold leading-tight">
+              <h2 className="text-xl  font-bold leading-tight">
                 FIND YOUR NEXT
                 <br />
                 <span className="text-[#f4a300]">LAND INVESTMENT</span> TODAY
               </h2>
 
-              <p className="text-gray-200 mt-4 max-w-lg mx-auto lg:mx-0 text-sm sm:text-base">
+              <p className="text-gray-200 mt-4 max-w-lg mx-auto lg:mx-0 text-[12px]">
                 Explore verified agricultural lands, premium plots, and
                 high-growth investment opportunities with HeyDay Realty.
               </p>
@@ -49,14 +49,14 @@ const Footer = () => {
             <div className="flex flex-col sm:flex-row w-full lg:w-auto gap-4">
               <Link
                 to="/projects"
-                className="text-center bg-[#b96d1d] hover:bg-[#9f5d18] px-8 py-4 rounded-full font-medium transition"
+                className="text-center border border-white/10 px-8 py-2 rounded-full font-medium bg-[#b96d1d]  transition duration-300 hover:bg-[#9f5d18]"
               >
                 Explore Properties
               </Link>
 
               <Link
                 to="/contact"
-                className="text-center border border-white/30 px-8 py-4 rounded-full font-medium hover:bg-white hover:text-[#041b35] transition"
+                className="text-center border border-white/30 px-8 py-2 rounded-full font-medium hover:bg-white hover:text-[#041b35] transition"
               >
                 Contact Advisor
               </Link>
@@ -79,7 +79,7 @@ const Footer = () => {
               height="64"
             />
 
-            <p className="text-[#e66a10] text-sm">
+            <p className="text-[#e66a10] text-xs">
               Land Investments | Gated Projects
             </p>
 
@@ -104,9 +104,9 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div className="text-center sm:text-left">
-            <h3 className="font-semibold text-lg mb-4">Quick Links</h3>
+            <h3 className="font-semibold text-lg mb-4 text-sm">Quick Links</h3>
 
-            <ul className="space-y-3 text-gray-400 text-sm">
+            <ul className="space-y-3 text-gray-400 text-xs">
               <li>
                 <Link to="/">Home</Link>
               </li>
@@ -131,9 +131,9 @@ const Footer = () => {
 
           {/* Helpful Links */}
           <div className="text-center sm:text-left">
-            <h3 className="font-semibold text-lg mb-4">Helpful Links</h3>
+            <h3 className="font-semibold text-sm mb-4">Helpful Links</h3>
 
-            <ul className="space-y-3 text-gray-400 text-sm">
+            <ul className="space-y-3 text-gray-400 text-xs">
               <li>Land Investment Guide</li>
               <li>Legal Documentation</li>
               <li>FAQ</li>
@@ -144,9 +144,9 @@ const Footer = () => {
 
           {/* Property Types */}
           <div className="text-center sm:text-left">
-            <h3 className="font-semibold text-lg mb-4">Property Types</h3>
+            <h3 className="font-semibold text-sm mb-4">Property Types</h3>
 
-            <ul className="space-y-3 text-gray-400 text-sm">
+            <ul className="space-y-3 text-gray-400 text-xs">
               <li>Agricultural Land</li>
               <li>Farmhouse Plots</li>
               <li>Residential Plots</li>
@@ -157,9 +157,9 @@ const Footer = () => {
 
           {/* Contact */}
           <div className="text-center sm:text-left">
-            <h3 className="font-semibold text-lg mb-4">Contact Us</h3>
+            <h3 className="font-semibold text-sm mb-4">Contact Us</h3>
 
-            <ul className="space-y-4 text-gray-400 text-sm">
+            <ul className="space-y-4 text-gray-400 text-xs">
               <li className="flex justify-center sm:justify-start items-center gap-3">
                 <FaPhoneAlt />
                 +91-9161554321
@@ -172,7 +172,10 @@ const Footer = () => {
 
               <li className="flex justify-center sm:justify-start gap-3">
                 <FaMapMarkerAlt className="mt-1 flex-shrink-0" />
-                <span>Ramjanaki Nagar, Gorakhpur, Uttar Pradesh, India</span>
+                <span>Nakaha No.1, 323-G, First Floor,
+                  Sports College, Gorakhnath Rd,
+                  Uttar Pradesh,
+                  India</span>
               </li>
             </ul>
 
@@ -191,12 +194,12 @@ const Footer = () => {
         {/* Bottom */}
         <div className="border-t border-white/10 mt-10 pt-6 text-center text-gray-500 text-sm">
           <div className="flex flex-col sm:flex-row items-center justify-center gap-2 text-center text-gray-500 text-sm">
-          <span>&copy; 2026 HeyDay Realty Pvt. Ltd. All Rights Reserved.</span>
-          <span className="hidden sm:inline">|</span>
-          <Link to="/privacy" className="hover:text-white transition">Privacy Policy</Link>
-          <span className="hidden sm:inline">|</span>
-          <Link to="/terms" className="hover:text-white transition">Terms & Conditions</Link>
-        </div>
+            <span>&copy; 2026 HeyDay Realty Pvt. Ltd. All Rights Reserved.</span>
+            <span className="hidden sm:inline">|</span>
+            <Link to="/privacy" className="hover:text-white transition">Privacy Policy</Link>
+            <span className="hidden sm:inline">|</span>
+            <Link to="/terms" className="hover:text-white transition">Terms & Conditions</Link>
+          </div>
         </div>
       </div>
     </footer>

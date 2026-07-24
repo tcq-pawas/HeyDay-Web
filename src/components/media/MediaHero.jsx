@@ -26,49 +26,48 @@ const MediaHero = () => {
       <div className="relative z-10 mx-auto grid h-full w-full max-w-7xl items-center gap-12 px-6 lg:grid-cols-[1fr_0.9fr] lg:px-8 ">
         {/* Left Content */}
         <div className="max-w-2xl mt-8 md:mt-0">
-          <p className="mb-4 text-sm font-semibold uppercase tracking-[3px] text-[#d7a23a]">
+          <p className="mb-4 uppercase tracking-[4px] sm:tracking-[6px] text-[#F4B53F] text-[10px] font-semibold">
             Gallery
           </p>
 
-          <h1 className="text-3xl font-bold leading-tight text-white md:text-4xl lg:text-5xl">
+          <h1 className="text-3xl font-bold leading-tight text-white ">
             Explore Our Land
             <br />
             & Plot <span className="text-lime-400">Gallery</span>
           </h1>
 
-          <p className="mt-6 max-w-xl text-sm leading-7 text-gray-300 md:text-base md:leading-8">
-            Discover a wide range of agricultural lands, premium plots, and
-            investment opportunities across prime locations.
+          <p className="mt-6 max-w-xl text-[12px] leading-7 text-gray-300  md:leading-8">
+            Discover a wide range of agricultural lands, premium residential plots, and high-potential investment opportunities across prime locations. Whether you're planning to build your dream home, expand your farming ventures, or secure your financial future, we offer legally verified properties.
           </p>
 
           <div className="mt-10 flex flex-wrap gap-7 sm:gap-10 lg:mt-14 lg:gap-14">
             <div className="flex items-center gap-4">
-              <FaImages className="text-3xl text-[#d7a23a] md:text-4xl" />
+              <FaImages className="text-xl text-[#d7a23a]" />
               <div>
-                <h3 className="text-xl font-bold text-white md:text-2xl">
+                <h3 className="text-lg font-bold text-white ">
                   200+
                 </h3>
-                <p className="text-sm text-gray-300 md:text-base">Photos</p>
+                <p className="text-[13px] text-gray-300 ">Photos</p>
               </div>
             </div>
 
             <div className="flex items-center gap-4">
-              <HiOutlineMap className="text-3xl text-[#d7a23a] md:text-4xl" />
+              <HiOutlineMap className="text-xl text-[#d7a23a] " />
               <div>
-                <h3 className="text-xl font-bold text-white md:text-2xl">
+                <h3 className="text-lg font-bold text-white ">
                   25+
                 </h3>
-                <p className="text-sm text-gray-300 md:text-base">Projects</p>
+                <p className="text-[13px] text-gray-300 ">Projects</p>
               </div>
             </div>
 
             <div className="flex items-center gap-4">
-              <FaMapMarkerAlt className="text-3xl text-[#d7a23a] md:text-4xl" />
+              <FaMapMarkerAlt className="text-xl text-[#d7a23a] " />
               <div>
-                <h3 className="text-xl font-bold text-white md:text-2xl">
+                <h3 className="text-lg font-bold text-white">
                   10+
                 </h3>
-                <p className="text-sm text-gray-300 md:text-base">Locations</p>
+                <p className="text-[13px] text-gray-300 ">Locations</p>
               </div>
             </div>
           </div>
@@ -89,11 +88,11 @@ const MediaHero = () => {
                     <FaShieldAlt />
                   </div>
 
-                  <h3 className="text-base font-bold text-white">
+                  <h3 className="text-sm font-bold text-white">
                     Verified Land
                   </h3>
 
-                  <p className="mt-1 text-[11px] leading-4 text-gray-300">
+                  <p className="mt-1 text-[10px] leading-4 text-gray-300">
                     Clear locations with trusted project details.
                   </p>
                 </div>
@@ -108,16 +107,16 @@ const MediaHero = () => {
             <div className="mt-3 rounded-lg border border-white/15 bg-[#081826]/55 p-3 backdrop-blur-md">
               <div className="flex items-center justify-between gap-3">
                 <div>
-                  <p className="text-[10px] font-semibold uppercase tracking-[1.5px] text-[#d7a23a]">
+                  <p className="text-[9px] font-semibold uppercase tracking-[1.5px] text-[#d7a23a]">
                     Featured Gallery
                   </p>
 
-                  <h3 className="mt-1 text-lg font-bold text-white">
+                  <h3 className="mt-1 text-sm font-bold text-white">
                     Premium Plot Views
                   </h3>
                 </div>
 
-                <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-lime-400 text-sm text-[#17341f]">
+                <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-lime-400 text-sm text-[#17341f]">
                   <FaCamera />
                 </div>
               </div>

@@ -85,7 +85,7 @@ const TestimonialSection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         {/* Heading */}
         <div className="text-center mb-10">
-          <h2 className="text-2xl md:text-2xl font-bold text-[#08213f]">
+          <h2 className="text-xl  font-bold text-[#08213f]">
             WHAT OUR{" "}
             <span className="text-[#7aac3b]">INVESTORS SAY</span>
           </h2>
@@ -115,9 +115,9 @@ const TestimonialSection = () => {
                 key={index}
                 className="w-full md:w-[320px] bg-white rounded-2xl border border-gray-100 shadow-md p-5"
               >
-                <FaQuoteLeft className="text-[#f4a300] text-xs mb-3" />
+                <FaQuoteLeft className="text-[#f4a300] text-[9px] mb-2" />
 
-                <p className="text-gray-600 text-sm leading-7 min-h-[90px] text-center">
+                <p className="text-gray-600 text-[12px] leading-7 min-h-[80px] text-center">
                   {item.comment}
                 </p>
 

@@ -7,7 +7,7 @@ const MissionSection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Heading */}
         <div className="mb-8">
-          <h2 className="text-xl md:text-2xl font-bold uppercase ml-0 lg:ml-20">
+          <h2 className="text-xl md:text-xl font-bold uppercase ml-0 lg:ml-20">
             Our <span className="text-[#7aac3b]">Mission</span> & Values
           </h2>
 
@@ -28,16 +28,16 @@ const MissionSection = () => {
           <div className="space-y-8">
             {/* Mission */}
             <div className="flex gap-4">
-              <div className="w-12 h-12 rounded-full bg-[#082548] flex items-center justify-center flex-shrink-0">
-                <FaBullseye className="text-[#d99b28] text-lg" />
+              <div className="w-10 h-10 rounded-full bg-[#082548] flex items-center justify-center flex-shrink-0">
+                <FaBullseye className="text-[#d99b28] " />
               </div>
 
               <div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                <h3 className="font-semibold text-gray-900 mb-2">
                   Our Mission
                 </h3>
 
-                <p className="text-sm text-gray-600 leading-6">
+                <p className="text-[12px] text-gray-600 leading-6">
                   To provide verified land investment opportunities and
                   exceptional service that help our clients build long-term
                   wealth and secure their future.
@@ -47,16 +47,16 @@ const MissionSection = () => {
 
             {/* Vision */}
             <div className="flex gap-4">
-              <div className="w-12 h-12 rounded-full bg-[#082548] flex items-center justify-center flex-shrink-0">
-                <FaGem className="text-[#d99b28] text-lg" />
+              <div className="w-10 h-10 rounded-full bg-[#082548] flex items-center justify-center flex-shrink-0">
+                <FaGem className="text-[#d99b28]" />
               </div>
 
               <div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                <h3 className="font-semibold text-gray-900 mb-2">
                   Our Vision
                 </h3>
 
-                <p className="text-sm text-gray-600 leading-6">
+                <p className="text-[12px] text-gray-600 leading-6">
                   To be the most trusted and preferred land investment company
                   known for transparency, reliability, and client success.
                 </p>
@@ -65,40 +65,40 @@ const MissionSection = () => {
 
             {/* Values */}
             <div className="flex gap-4">
-              <div className="w-12 h-12 rounded-full bg-[#082548] flex items-center justify-center flex-shrink-0">
-                <FaUsers className="text-[#d99b28] text-lg" />
+              <div className="w-10 h-10 rounded-full bg-[#082548] flex items-center justify-center flex-shrink-0">
+                <FaUsers className="text-[#d99b28]" />
               </div>
 
               <div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                <h3 className="font-semibold text-gray-900 mb-3">
                   Our Values
                 </h3>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3">
                   <div className="flex items-center gap-2">
-                    <span className="w-2 h-2 rounded-full bg-[#d99b28]"></span>
-                    <span className="text-sm text-gray-700">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#d99b28]"></span>
+                    <span className="text-[12px] text-gray-700">
                       Integrity & Transparency
                     </span>
                   </div>
 
                   <div className="flex items-center gap-2">
-                    <span className="w-2 h-2 rounded-full bg-[#d99b28]"></span>
-                    <span className="text-sm text-gray-700">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#d99b28]"></span>
+                    <span className="text-[12px] text-gray-700">
                       Commitment to Excellence
                     </span>
                   </div>
 
                   <div className="flex items-center gap-2">
-                    <span className="w-2 h-2 rounded-full bg-[#d99b28]"></span>
-                    <span className="text-sm text-gray-700">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#d99b28]"></span>
+                    <span className="text-[12px] text-gray-700">
                       Client First Approach
                     </span>
                   </div>
 
                   <div className="flex items-center gap-2">
-                    <span className="w-2 h-2 rounded-full bg-[#d99b28]"></span>
-                    <span className="text-sm text-gray-700">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#d99b28]"></span>
+                    <span className="text-[12px] text-gray-700">
                       Long-Term Relationships
                     </span>
                   </div>

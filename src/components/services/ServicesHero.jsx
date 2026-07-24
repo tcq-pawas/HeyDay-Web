@@ -63,27 +63,27 @@ const ServicesHero = () => {
           {/* ================= LEFT CONTENT ================= */}
           <div className="max-w-3xl mt-3 md:mt-0 text-left lg:text-left">
             {/* Small Heading */}
-            <span className="uppercase tracking-[4px] sm:tracking-[6px] text-[#F4B53F] text-xs font-semibold">
+            <span className="uppercase tracking-[4px] sm:tracking-[6px] text-[#F4B53F] text-[10px] font-semibold">
               OUR SERVICES
             </span>
 
-            <div className="w-20 sm:w-24 h-1 bg-[#F4B53F] rounded-full mt-4 mb-6 md:mt-3 md:mb-4 lg:mt-4 lg:mb-6"></div>
+            <div className="w-20 sm:w-24 h-1 bg-[#F4B53F] rounded-full mt-2 mb-6 "></div>
 
             {/* Main Heading */}
             <h1 className="text-white font-bold leading-tight">
-              <span className="block text-3xl md:text-3xl lg:text-5xl">
+              <span className="block text-3xl ">
                 Complete Property
               </span>
-              <span className="block text-3xl md:text-3xl lg:text-5xl">
+              <span className="block text-3xl">
                 <span className="text-[#9BEA00]">Solutions</span> for
               </span>
-              <span className="block text-3xl md:text-3xl lg:text-5xl">
+              <span className="block text-3xl">
                 Modern Investors.
               </span>
             </h1>
 
             {/* Description */}
-            <p className="mt-6 md:mt-4 lg:mt-6 text-sm md:text-sm lg:text-base leading-7 md:leading-6 lg:leading-9 text-white/85 max-w-2xl">
+            <p className="mt-6 md:mt-4 lg:mt-6 text-[12px] leading-7 md:leading-6 lg:leading-9 text-white/85 max-w-2xl">
               From verified agricultural land and residential plots to
               documentation, site visits, legal verification, and investment
               consulting, we make every property purchase simple, secure, and
@@ -103,20 +103,19 @@ const ServicesHero = () => {
                   >
                     <div className="flex items-center gap-3 lg:gap-4 min-w-0">
                       <div className="w-7 h-7 md:w-7 md:h-7 lg:w-9 lg:h-9 rounded-lg bg-[#2F6F2E] flex items-center justify-center flex-shrink-0 shadow-lg shadow-black/20 group-hover:scale-105 transition-transform duration-300">
-                        <Icon className="text-white text-[10px] md:text-[10px] lg:text-sm" />
+                        <Icon className="text-white text-[14px] " />
                       </div>
 
                       <div className="min-w-0">
-                        <h3 className="text-white text-sm md:text-sm lg:text-base font-semibold truncate">
+                        <h3 className="text-white text-[12px]  font-semibold truncate">
                           {title}
                         </h3>
-                        <p className="text-white/70 text-xs md:text-xs lg:text-sm mt-0.5 truncate">
+                        <p className="text-white/70 text-[10px] mt-0.5 truncate">
                           {desc}
                         </p>
                       </div>
                     </div>
 
-                    <FaArrowRight className="text-[#9BEA00] text-xs lg:text-sm flex-shrink-0 group-hover:translate-x-1 transition-transform duration-300" />
                   </div>
                 ))}
               </div>
@@ -125,11 +124,11 @@ const ServicesHero = () => {
               <div className="grid grid-cols-4 divide-x divide-white/10 border-t border-white/10 bg-black/10">
                 {statItems.map(({ icon: Icon, value, label }) => (
                   <div key={value} className="py-2.5 md:py-2.5 lg:py-4 text-center px-1">
-                    <Icon className="mx-auto text-[#9BEA00] text-sm lg:text-lg mb-1" />
+                    <Icon className="mx-auto text-[#9BEA00] text-sm mb-1" />
 
-                    <h3 className="text-white text-xs md:text-xs lg:text-base font-bold">{value}</h3>
+                    <h3 className="text-white text-[13px] font-bold">{value}</h3>
 
-                    <p className="text-white/70 text-[9px] md:text-[9px] lg:text-[11px] mt-1 leading-3 lg:leading-4">
+                    <p className="text-white/70 text-[10px] mt-1 leading-3 lg:leading-4">
                       {label[0]}
                       <br />
                       {label[1]}

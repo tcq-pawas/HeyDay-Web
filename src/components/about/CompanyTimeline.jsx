@@ -37,11 +37,11 @@ const CompanyTimeline = () => {
       <div className="max-w-7xl mx-auto px-6">
         {/* Heading */}
         <div className="text-center mb-16">
-          <h2 className="text-2xl md:text-3xl font-bold uppercase ">
+          <h2 className="text-xl md:text-3xl font-bold uppercase ">
             Our <span className="text-[#7aac3b]">Journey</span>
           </h2>
 
-          <p className="mt-5 text-gray-600 max-w-2xl mx-auto text-medium leading-8">
+          <p className="mt-5 text-gray-600 max-w-2xl mx-auto text-[12px] leading-8">
             Since 2022, HeyDay Realty has been committed to providing trusted,
             transparent, and value-driven real estate solutions. Every milestone
             reflects our dedication to helping families and investors build a
@@ -57,20 +57,19 @@ const CompanyTimeline = () => {
             {timelineData.map((item, index) => (
               <div
                 key={index}
-                className={`relative flex items-center ${
-                  index % 2 === 0
+                className={`relative flex items-center ${index % 2 === 0
                     ? "md:flex-row"
                     : "md:flex-row-reverse"
-                } flex-col`}
+                  } flex-col`}
               >
                 {/* Card */}
-                <div className="w-full md:w-4/12 flex justify-center">
-                  <div className="w-full max-w-sm bg-white rounded-xl shadow-lg p-5 border border-gray-100 hover:-translate-y-1 hover:shadow-2xl transition-all duration-300">
-                    <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                <div className="w-full md:w-5/12 flex justify-center">
+                  <div className="w-full max-w-md bg-white rounded-xl shadow-lg p-7 border border-gray-100 hover:-translate-y-1 hover:shadow-2xl transition-all duration-300">
+                    <h3 className="font-semibold text-gray-900 mb-2">
                       {item.title}
                     </h3>
 
-                    <p className="text-gray-600 leading-7 text-sm">
+                    <p className="text-gray-600 leading-7 text-[12px]">
                       {item.description}
                     </p>
                   </div>

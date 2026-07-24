@@ -24,21 +24,19 @@ const TeamHero = () => {
       <div className="relative z-10 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-24 grid lg:grid-cols-2 gap-16 items-center">
         {/* Left Content */}
         <div className="text-white">
-          <span className="text-[#f2b321] uppercase tracking-[3px] font-semibold text-sm">
+          <span className="uppercase tracking-[4px] sm:tracking-[6px] text-[#F4B53F] text-[10px] font-semibold">
             Meet Our Experts
           </span>
 
-          <h1 className="mt-8 text-3xl lg:text-5xl font-bold leading-tight">
+          <h1 className="mt-8 text-3xl  font-bold leading-tight">
             The People
             <br />
             Behind
             <span className="text-lime-400"> HeyDay Realty</span>
           </h1>
 
-          <p className="mt-8 text-sm text-gray-200 leading-8 max-w-xl">
-            Our experienced professionals are committed to helping every family
-            and investor make confident property decisions through transparency,
-            trust, and personalized guidance.
+          <p className="mt-8 text-[12px] text-gray-200 leading-8 max-w-xl">
+            Our experienced professionals are committed to helping every family and investor make confident property decisions through transparency, trust, and personalized guidance. We carefully understand your needs.
           </p>
         </div>
 
@@ -47,48 +45,48 @@ const TeamHero = () => {
           <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-10 w-full max-w-md">
             <div className="space-y-8">
               <div className="flex items-center gap-5">
-                <div className="w-16 h-16 rounded-2xl bg-[#315d2f] flex items-center justify-center text-white">
-                  <FaUsers size={28} />
+                <div className="w-14 h-14 rounded-2xl bg-[#315d2f] flex items-center justify-center text-white">
+                  <FaUsers size={25} />
                 </div>
 
                 <div>
-                  <h3 className="text-white text-medium font-semibold">
+                  <h3 className="text-white text-sm font-semibold">
                     Expert Team
                   </h3>
 
-                  <p className="text-gray-300 text-xs">
+                  <p className="text-gray-300 text-[12px]">
                     Skilled professionals dedicated to your success.
                   </p>
                 </div>
               </div>
 
               <div className="flex items-center gap-5">
-                <div className="w-16 h-16 rounded-2xl bg-[#315d2f] flex items-center justify-center text-white">
-                  <FaHandshake size={28} />
+                <div className="w-14 h-14 rounded-2xl bg-[#315d2f] flex items-center justify-center text-white">
+                  <FaHandshake size={25} />
                 </div>
 
                 <div>
-                  <h3 className="text-white text-medium font-semibold">
+                  <h3 className="text-white text-sm font-semibold">
                     Trusted Guidance
                   </h3>
 
-                  <p className="text-gray-300 text-xs">
+                  <p className="text-gray-300 text-[12px]">
                     Honest advice and transparent property solutions.
                   </p>
                 </div>
               </div>
 
               <div className="flex items-center gap-5">
-                <div className="w-16 h-16 rounded-2xl bg-[#315d2f] flex items-center justify-center text-white">
-                  <FaAward size={28} />
+                <div className="w-14 h-14 rounded-2xl bg-[#315d2f] flex items-center justify-center text-white">
+                  <FaAward size={25} />
                 </div>
 
                 <div>
-                  <h3 className="text-white text-medium font-semibold">
+                  <h3 className="text-white text-sm font-semibold">
                     Quality Commitment
                   </h3>
 
-                  <p className="text-gray-300 text-xs">
+                  <p className="text-gray-300 text-[12px]">
                     Delivering excellence in every project we undertake.
                   </p>
                 </div>

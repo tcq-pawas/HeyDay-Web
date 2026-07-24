@@ -46,7 +46,7 @@ const WhyChooseUs = () => {
       <div className="max-w-7xl mx-auto px-6">
 
         {/* Heading */}
-        <h2 className="text-center text-3xl md:text-2xl font-bold text-white uppercase mb-10">
+        <h2 className="text-center text-xl  font-bold text-white uppercase mb-10">
           Why Invest With Heyday Realty?
         </h2>
 
@@ -63,16 +63,16 @@ const WhyChooseUs = () => {
               }`}
             >
               <div className="flex justify-center mb-4">
-                <div className="text-[#d9a021] text-3xl">
+                <div className="text-[#d9a021] text-lg">
                   {item.icon}
                 </div>
               </div>
 
-              <h3 className="text-white font-semibold text-sm md:text-base lg:text-lg">
+              <h3 className="text-white font-semibold text-sm ">
                 {item.title}
               </h3>
 
-              <p className="text-gray-300 text-base mt-1">
+              <p className="text-gray-300 text-[12px] mt-1">
                 {item.subtitle}
               </p>
             </div>

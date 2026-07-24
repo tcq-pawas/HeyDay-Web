@@ -54,7 +54,7 @@ const WorkflowSection = () => {
 
             <div className="h-[2px] w-16 bg-[#d8c28a]" />
 
-            <h2 className="text-2xl md:text-3xl font-bold text-[#08213f]">
+            <h2 className="text-xl  font-bold text-[#08213f]">
               WHY{" "}
               <span className="text-[#7aac3b]">
                 HEYDAY REALTY
@@ -65,7 +65,7 @@ const WorkflowSection = () => {
 
           </div>
 
-          <p className="text-gray-600 text-sm md:text-base leading-7">
+          <p className="text-gray-600 text-[12px] leading-7">
             We combine trusted legal expertise, premium locations, transparent
             documentation, and customer-first service to make your land
             investment secure, rewarding, and completely stress-free.
@@ -90,11 +90,11 @@ const WorkflowSection = () => {
 
               {/* Bottom Content */}
               <div className="absolute bottom-0 left-0 right-0 p-3">
-                <h3 className="text-white font-semibold text-sm leading-tight">
+                <h3 className="text-white font-semibold text-xs leading-tight">
                   {item.title}
                 </h3>
 
-                <p className="text-white/80 text-[11px] mt-1 leading-4">
+                <p className="text-white/80 text-[9px] mt-1 leading-4">
                   {item.desc}
                 </p>
               </div>
@@ -113,13 +113,13 @@ const WorkflowSection = () => {
       >
         <div className="absolute inset-0 bg-[#041b35]/75" />
 
-        <div className="relative max-w-7xl mx-auto px-6 py-16">
+        <div className="relative max-w-7xl mx-auto px-6 py-12">
 
           <div className="grid grid-cols-2 md:grid-cols-5 gap-10 items-center">
 
             <div className="col-span-2 md:col-span-1">
 
-              <h2 className="text-2xl md:text-3xl font-bold text-white leading-tight text-center md:text-left">
+              <h2 className="text-xl font-bold text-white leading-tight text-center md:text-left">
                 LAND ISN'T JUST
                 <br />
                 PROPERTY.
@@ -130,7 +130,7 @@ const WorkflowSection = () => {
                 </span>
               </h2>
 
-              <p className="text-gray-300 text-sm leading-6 mt-5 text-center md:text-left">
+              <p className="text-gray-300 text-[12px] leading-6 mt-5 text-center md:text-left">
                 Invest today in a future built on trust, growth, and lasting
                 value for generations to come.
               </p>
@@ -138,10 +138,10 @@ const WorkflowSection = () => {
             </div>
 
             <div className="text-center">
-              <h3 className="text-3xl md:text-4xl font-bold text-[#e66a10]">
+              <h3 className="text-3xl font-bold text-[#e66a10]">
                 15%
               </h3>
-              <p className="text-white mt-3 leading-6">
+              <p className="text-white mt-3 leading-6 text-[12px]">
                 Average Annual
                 <br />
                 Appreciation
@@ -149,19 +149,19 @@ const WorkflowSection = () => {
             </div>
 
             <div className="text-center">
-              <h3 className="text-3xl md:text-4xl font-bold text-[#e66a10]">
+              <h3 className="text-3xl font-bold text-[#e66a10]">
                 500+
               </h3>
-              <p className="text-white mt-3 leading-6">
+              <p className="text-white mt-3 leading-6 text-[12px]">
                 Acres Sold
               </p>
             </div>
 
             <div className="text-center">
-              <h3 className="text-3xl md:text-4xl font-bold text-[#e66a10]">
+              <h3 className="text-3xl font-bold text-[#e66a10]">
                 1000+
               </h3>
-              <p className="text-white mt-3 leading-6">
+              <p className="text-white mt-3 leading-6 text-[12px]">
                 Satisfied
                 <br />
                 Buyers
@@ -169,10 +169,10 @@ const WorkflowSection = () => {
             </div>
 
             <div className="text-center">
-              <h3 className="text-3xl md:text-4xl font-bold text-[#e66a10]">
+              <h3 className="text-3xl font-bold text-[#e66a10]">
                 100%
               </h3>
-              <p className="text-white mt-3 leading-6">
+              <p className="text-white mt-3 leading-6 text-[12px]">
                 Verified
                 <br />
                 Documentation

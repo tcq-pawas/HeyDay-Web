@@ -20,7 +20,7 @@ const WhyChooseUsSection = () => {
         {/* Heading */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3 mb-10 sm:mb-12 text-center">
           <div className="h-[2px] w-14 bg-[#d8c28a]" />
-          <h2 className="text-2xl sm:text-3xl font-bold text-[#08213f]">
+          <h2 className="text-xl  font-bold text-[#08213f]">
             WHY CHOOSE{" "}
             <span className="text-[#7aac3b]">
               HEYDAY REALTY
@@ -37,9 +37,9 @@ const WhyChooseUsSection = () => {
               className="flex items-start gap-4 bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300"
             >
               <div className="flex-shrink-0">
-                <CheckCircle className="w-6 h-6 text-[#7aac3b]" />
+                <CheckCircle className="w-5 h-5 text-[#7aac3b]" />
               </div>
-              <p className="text-[#08213f] font-medium text-sm sm:text-base leading-6">
+              <p className="text-[#08213f] font-medium text-sm  leading-6">
                 {feature}
               </p>
             </div>

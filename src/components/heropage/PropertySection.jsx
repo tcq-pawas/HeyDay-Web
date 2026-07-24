@@ -66,7 +66,7 @@ const PropertySection = () => {
         <div className="flex items-center justify-center gap-4 mb-12">
           <div className="h-[2px] w-16 bg-[#d8c28a]" />
 
-          <h2 className="text-2xl font-bold text-[#08213f] text-center">
+          <h2 className="text-xl font-bold text-[#08213f] text-center">
             EXPLORE OUR{" "}
             <span className="text-[#7aac3b]">
               FEATURED PROJECTS
@@ -94,14 +94,14 @@ const PropertySection = () => {
                   height="160"
                 />
 
-                <span className="absolute top-3 left-3 bg-[#e66a10] text-white text-xs font-semibold px-3 py-1 rounded-md">
+                <span className="absolute top-3 left-3 bg-[#e66a10] text-white text-[9px] font-semibold px-3 py-1 rounded-md">
                   {project.badge}
                 </span>
               </div>
 
               {/* Content */}
               <div className="p-6">
-                <h3 className="text-lg font-bold text-[#08213f] mb-4">
+                <h3 className="text-sm font-bold text-[#08213f] mb-4">
                   {project.title}
                 </h3>
 
@@ -109,20 +109,13 @@ const PropertySection = () => {
                   {project.features.map((item, i) => (
                     <li
                       key={i}
-                      className="text-gray-600 text-sm flex items-center gap-2"
+                      className="text-gray-600 text-[12px] flex items-center gap-2"
                     >
                       <span className="text-[#f4a300]">•</span>
                       {item}
                     </li>
                   ))}
                 </ul>
-
-                <Link
-                  to="/projects"
-                  className="text-[#f4a300] font-semibold text-sm hover:underline"
-                >
-                  View Project →
-                </Link>
               </div>
             </div>
           ))}
@@ -132,7 +125,7 @@ const PropertySection = () => {
         <div className="flex items-center justify-center gap-4 mt-20 mb-12">
           <div className="h-[2px] w-16 bg-[#d8c28a]" />
 
-          <h2 className="text-2xl font-bold text-[#08213f] text-center">
+          <h2 className="text-xl font-bold text-[#08213f] text-center">
             LAND OPPORTUNITIES FOR{" "}
             <span className="text-[#7aac3b]">
               EVERY INVESTOR
@@ -152,11 +145,11 @@ const PropertySection = () => {
                 key={index}
                 className="text-center"
               >
-                <div className="w-10 h-10 mx-auto rounded-full bg-[#08213f] flex items-center justify-center">
-                  <Icon className="w-5 h-5 text-[#a5c53b]" />
+                <div className="w-8 h-8 mx-auto rounded-full bg-[#08213f] flex items-center justify-center">
+                  <Icon className="w-4 h-4 text-[#a5c53b]" />
                 </div>
 
-                <h4 className="mt-4 text-sm font-semibold text-[#08213f] leading-6">
+                <h4 className="mt-4 text-xs font-semibold text-[#08213f] leading-6">
                   {item.title}
                 </h4>
               </div>

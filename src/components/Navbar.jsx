@@ -64,7 +64,7 @@ const Navbar = () => {
                   <NavLink
                     to={item.path}
                     className={({ isActive }) =>
-                      `px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${isActive
+                      `px-5 py-2.5 rounded-full text-xs  font-medium transition-all duration-300 ${isActive
                         ? "bg-[#c27a1d] text-white shadow-md"
                         : "text-[#08213f] hover:bg-[#f7f2ea]"
                       }`
