@@ -2,6 +2,7 @@ import {
   FaFacebookF,
   FaInstagram,
   FaYoutube,
+  FaLinkedinIn,
   FaWhatsapp,
   FaPhoneAlt,
   FaEnvelope,
@@ -87,16 +88,20 @@ const Footer = () => {
             </p>
 
             <nav className="flex justify-center sm:justify-start gap-5 mt-6" aria-label="Social media links">
-              <a href="#" aria-label="Facebook" rel="noopener noreferrer">
+              <a href="https://www.facebook.com/HeyDayRealty/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                 <FaFacebookF className="text-lg hover:text-[#f4a300] transition" />
               </a>
 
-              <a href="#" aria-label="Instagram" rel="noopener noreferrer">
+              <a href="https://www.instagram.com/theheydayrealty/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                 <FaInstagram className="text-lg hover:text-[#f4a300] transition" />
               </a>
 
-              <a href="#" aria-label="YouTube" rel="noopener noreferrer">
+              <a href="https://www.youtube.com/@TheHeydayRealty" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
                 <FaYoutube className="text-lg hover:text-[#f4a300] transition" />
+              </a>
+
+              <a href="https://www.linkedin.com/in/heyday-realty-8b22663b0/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <FaLinkedinIn className="text-lg hover:text-[#f4a300] transition" />
               </a>
 
               <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
