@@ -60,7 +60,7 @@ const ContactUsPage = () => {
         description="Contact HeyDay Realty Pvt. Ltd. for agricultural land, residential plots, and property investment consultation in Gorakhpur. Call +91 9161554321 or email theheydayrealty@gmail.com."
         keywords="contact HeyDay Realty, real estate contact Gorakhpur, property consultation, land investment contact, agricultural land contact"
         canonical="https://heydayrealty.in/contact"
-        schema={{ ...contactSchema, ...breadcrumbSchema }}
+        schema={[contactSchema, breadcrumbSchema]}
       />
       <Navbar />
 

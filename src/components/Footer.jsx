@@ -21,13 +21,14 @@ const Footer = () => {
   )}`;
 
   return (
-    <footer className="bg-[#041b35] text-white overflow-hidden">
+    <footer className="bg-[#041b35] text-white overflow-hidden" role="contentinfo">
       {/* CTA Banner */}
       <div
         className="relative bg-cover bg-center"
         style={{
           backgroundImage: `url(${footerBg})`,
         }}
+        aria-hidden="true"
       >
         <div className="absolute inset-0 bg-[#041b35]/75"></div>
 
@@ -50,6 +51,7 @@ const Footer = () => {
               <Link
                 to="/projects"
                 className="text-center border border-white/10 px-8 py-2 rounded-full font-medium bg-[#b96d1d]  transition duration-300 hover:bg-[#9f5d18]"
+                aria-label="Explore our properties"
               >
                 Explore Properties
               </Link>
@@ -57,6 +59,7 @@ const Footer = () => {
               <Link
                 to="/contact"
                 className="text-center border border-white/30 px-8 py-2 rounded-full font-medium hover:bg-white hover:text-[#041b35] transition"
+                aria-label="Contact our advisor"
               >
                 Contact Advisor
               </Link>
@@ -83,109 +86,118 @@ const Footer = () => {
               Land Investments | Gated Projects
             </p>
 
-            <div className="flex justify-center sm:justify-start gap-5 mt-6">
-              <a href="#">
+            <nav className="flex justify-center sm:justify-start gap-5 mt-6" aria-label="Social media links">
+              <a href="#" aria-label="Facebook" rel="noopener noreferrer">
                 <FaFacebookF className="text-lg hover:text-[#f4a300] transition" />
               </a>
 
-              <a href="#">
+              <a href="#" aria-label="Instagram" rel="noopener noreferrer">
                 <FaInstagram className="text-lg hover:text-[#f4a300] transition" />
               </a>
 
-              <a href="#">
+              <a href="#" aria-label="YouTube" rel="noopener noreferrer">
                 <FaYoutube className="text-lg hover:text-[#f4a300] transition" />
               </a>
 
-              <a href={whatsappUrl} target="_blank" rel="noreferrer">
+              <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
                 <FaWhatsapp className="text-lg hover:text-[#f4a300] transition" />
               </a>
-            </div>
+            </nav>
           </div>
 
           {/* Quick Links */}
           <div className="text-center sm:text-left">
             <h3 className="font-semibold text-lg mb-4 text-sm">Quick Links</h3>
 
-            <ul className="space-y-3 text-gray-400 text-xs">
-              <li>
-                <Link to="/">Home</Link>
-              </li>
+            <nav aria-label="Quick links">
+              <ul className="space-y-3 text-gray-400 text-xs">
+                <li>
+                  <Link to="/">Home</Link>
+                </li>
 
-              <li>
-                <Link to="/about">About Us</Link>
-              </li>
+                <li>
+                  <Link to="/about">About Us</Link>
+                </li>
 
-              <li>
-                <Link to="/projects">Projects</Link>
-              </li>
+                <li>
+                  <Link to="/projects">Projects</Link>
+                </li>
 
-              <li>
-                <Link to="/contact">Contact</Link>
-              </li>
+                <li>
+                  <Link to="/contact">Contact</Link>
+                </li>
 
-              <li>
-                <Link to="/faq">FAQ</Link>
-              </li>
-            </ul>
+                <li>
+                  <Link to="/faq">FAQ</Link>
+                </li>
+              </ul>
+            </nav>
           </div>
 
           {/* Helpful Links */}
           <div className="text-center sm:text-left">
             <h3 className="font-semibold text-sm mb-4">Helpful Links</h3>
 
-            <ul className="space-y-3 text-gray-400 text-xs">
-              <li>Land Investment Guide</li>
-              <li>Legal Documentation</li>
-              <li>FAQ</li>
-              <li>Blog</li>
-              <li>Site Visit</li>
-            </ul>
+            <nav aria-label="Helpful links">
+              <ul className="space-y-3 text-gray-400 text-xs">
+                <li>Land Investment Guide</li>
+                <li>Legal Documentation</li>
+                <li>FAQ</li>
+                <li>Blog</li>
+                <li>Site Visit</li>
+              </ul>
+            </nav>
           </div>
 
           {/* Property Types */}
           <div className="text-center sm:text-left">
             <h3 className="font-semibold text-sm mb-4">Property Types</h3>
 
-            <ul className="space-y-3 text-gray-400 text-xs">
-              <li>Agricultural Land</li>
-              <li>Farmhouse Plots</li>
-              <li>Residential Plots</li>
-              <li>Investment Lands</li>
-              <li>Commercial Land</li>
-            </ul>
+            <nav aria-label="Property types">
+              <ul className="space-y-3 text-gray-400 text-xs">
+                <li>Agricultural Land</li>
+                <li>Farmhouse Plots</li>
+                <li>Residential Plots</li>
+                <li>Investment Lands</li>
+                <li>Commercial Land</li>
+              </ul>
+            </nav>
           </div>
 
           {/* Contact */}
           <div className="text-center sm:text-left">
             <h3 className="font-semibold text-sm mb-4">Contact Us</h3>
 
-            <ul className="space-y-4 text-gray-400 text-xs">
-              <li className="flex justify-center sm:justify-start items-center gap-3">
-                <FaPhoneAlt />
-                +91-9161554321
-              </li>
+            <address className="not-italic">
+              <ul className="space-y-4 text-gray-400 text-xs">
+                <li className="flex justify-center sm:justify-start items-center gap-3">
+                  <FaPhoneAlt aria-hidden="true" />
+                  <a href="tel:+919161554321" className="hover:text-white transition">+91-9161554321</a>
+                </li>
 
-              <li className="flex justify-center sm:justify-start items-center gap-3 break-all">
-                <FaEnvelope />
-                theheydayrealty@gmail.com
-              </li>
+                <li className="flex justify-center sm:justify-start items-center gap-3 break-all">
+                  <FaEnvelope aria-hidden="true" />
+                  <a href="mailto:theheydayrealty@gmail.com" className="hover:text-white transition">theheydayrealty@gmail.com</a>
+                </li>
 
-              <li className="flex justify-center sm:justify-start gap-3">
-                <FaMapMarkerAlt className="mt-1 flex-shrink-0" />
-                <span>Nakaha No.1, 323-G, First Floor,
-                  Sports College, Gorakhnath Rd,
-                  Uttar Pradesh,
-                  India</span>
-              </li>
-            </ul>
+                <li className="flex justify-center sm:justify-start gap-3">
+                  <FaMapMarkerAlt className="mt-1 flex-shrink-0" aria-hidden="true" />
+                  <span>Nakaha No.1, 323-G, First Floor,
+                    Sports College, Gorakhnath Rd,
+                    Uttar Pradesh,
+                    India</span>
+                </li>
+              </ul>
+            </address>
 
             <a
               href={whatsappUrl}
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               className="inline-flex justify-center items-center gap-2 mt-6 bg-[#6fa72d] hover:bg-[#5f9226] px-6 py-3 rounded-lg text-white text-sm transition"
+              aria-label="Chat on WhatsApp"
             >
-              <FaWhatsapp />
+              <FaWhatsapp aria-hidden="true" />
               Chat on WhatsApp
             </a>
           </div>
@@ -193,13 +205,13 @@ const Footer = () => {
 
         {/* Bottom */}
         <div className="border-t border-white/10 mt-10 pt-6 text-center text-gray-500 text-sm">
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-2 text-center text-gray-500 text-sm">
+          <nav className="flex flex-col sm:flex-row items-center justify-center gap-2 text-center text-gray-500 text-sm" aria-label="Legal links">
             <span>&copy; 2026 HeyDay Realty Pvt. Ltd. All Rights Reserved.</span>
             <span className="hidden sm:inline">|</span>
             <Link to="/privacy" className="hover:text-white transition">Privacy Policy</Link>
             <span className="hidden sm:inline">|</span>
             <Link to="/terms" className="hover:text-white transition">Terms & Conditions</Link>
-          </div>
+          </nav>
         </div>
       </div>
     </footer>

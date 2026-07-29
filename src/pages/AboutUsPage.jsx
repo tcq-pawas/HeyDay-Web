@@ -66,7 +66,7 @@ const AboutUsPage = () => {
         description="HeyDay Realty Pvt. Ltd. is a Gorakhpur-based real estate company specializing in agricultural land, residential plots, farm land, and investment properties with transparent documentation and professional consultation."
         keywords="about HeyDay Realty, real estate company Gorakhpur, agricultural land specialists, property consultation, land investment experts"
         canonical="https://heydayrealty.in/about"
-        schema={{ ...aboutSchema, ...breadcrumbSchema }}
+        schema={[aboutSchema, breadcrumbSchema]}
       />
       <Navbar />
 
