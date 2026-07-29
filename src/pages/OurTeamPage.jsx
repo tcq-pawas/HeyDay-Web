@@ -26,14 +26,40 @@ const OurTeamPage = () => {
     ]
   };
 
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "HeyDay Realty Pvt. Ltd.",
+    "url": "https://heydayrealty.in/team",
+    "description": "Meet our experienced real estate consultants and property experts providing professional guidance for agricultural land, residential plots, and investment properties in Gorakhpur and Eastern Uttar Pradesh",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Nakaha No.1, 323-G, First Floor, Sports College, Gorakhnath Rd",
+      "addressLocality": "Gorakhpur",
+      "addressRegion": "Uttar Pradesh",
+      "postalCode": "273015",
+      "addressCountry": "IN"
+    },
+    "telephone": "+91 9161554321",
+    "areaServed": [
+      "Gorakhpur",
+      "Deoria",
+      "Maharajganj",
+      "Kushinagar",
+      "Basti",
+      "Sant Kabir Nagar",
+      "Siddharthnagar"
+    ]
+  };
+
   return (
     <>
       <SEO
-        title="Our Team | HeyDay Realty Pvt. Ltd. Gorakhpur"
-        description="Meet the experienced real estate consultants at HeyDay Realty Pvt. Ltd. in Gorakhpur. Professional guidance for agricultural land, residential plots, and property investment."
-        keywords="real estate team Gorakhpur, property consultants, real estate experts, land investment team, agricultural land specialists"
+        title="Our Real Estate Team | Property Consultants in Gorakhpur - HeyDay Realty"
+        description="Meet HeyDay Realty's experienced real estate consultants and property experts in Gorakhpur. Professional guidance for agricultural land, residential plots, and property investment across Eastern Uttar Pradesh."
+        keywords="real estate team Gorakhpur, property consultants Gorakhpur, real estate experts Gorakhpur, land investment team, agricultural land specialists, property advisors, real estate professionals Uttar Pradesh"
         canonical="https://heydayrealty.in/team"
-        schema={breadcrumbSchema}
+        schema={[breadcrumbSchema, organizationSchema]}
       />
       <Navbar />
       <TeamHero />

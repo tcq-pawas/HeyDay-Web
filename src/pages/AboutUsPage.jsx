@@ -15,7 +15,8 @@ const AboutUsPage = () => {
     "name": "HeyDay Realty Pvt. Ltd.",
     "url": "https://heydayrealty.in/about",
     "logo": "https://heydayrealty.in/logo.png",
-    "description": "HeyDay Realty Pvt. Ltd. is a Gorakhpur-based real estate company specializing in agricultural land, residential plots, farm land, and investment properties with transparent documentation and professional consultation.",
+    "description": "HeyDay Realty Pvt. Ltd. is a Gorakhpur-based real estate company specializing in agricultural land, residential plots, farm land, and investment properties with transparent documentation and professional consultation since 2022.",
+    "foundingDate": "2022",
     "contactPoint": {
       "@type": "ContactPoint",
       "telephone": "+91 9161554321",
@@ -25,9 +26,10 @@ const AboutUsPage = () => {
     },
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Ramjanaki Nagar",
+      "streetAddress": "Nakaha No.1, 323-G, First Floor, Sports College, Gorakhnath Rd",
       "addressLocality": "Gorakhpur",
       "addressRegion": "Uttar Pradesh",
+      "postalCode": "273015",
       "addressCountry": "IN"
     },
     "areaServed": [
@@ -36,7 +38,19 @@ const AboutUsPage = () => {
       "Maharajganj",
       "Kushinagar",
       "Basti",
-      "Sant Kabir Nagar"
+      "Sant Kabir Nagar",
+      "Siddharthnagar"
+    ],
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "26.7606",
+      "longitude": "83.3732"
+    },
+    "sameAs": [
+      "https://www.facebook.com/HeyDayRealty/",
+      "https://www.instagram.com/theheydayrealty/",
+      "https://www.youtube.com/@TheHeydayRealty",
+      "https://www.linkedin.com/in/heyday-realty-8b22663b0/"
     ]
   };
 
@@ -62,9 +76,9 @@ const AboutUsPage = () => {
   return (
     <>
       <SEO
-        title="About HeyDay Realty Pvt. Ltd. | Real Estate Company in Gorakhpur"
-        description="HeyDay Realty Pvt. Ltd. is a Gorakhpur-based real estate company specializing in agricultural land, residential plots, farm land, and investment properties with transparent documentation and professional consultation."
-        keywords="about HeyDay Realty, real estate company Gorakhpur, agricultural land specialists, property consultation, land investment experts"
+        title="About HeyDay Realty | Leading Real Estate Company in Gorakhpur Since 2022"
+        description="Learn about HeyDay Realty Pvt. Ltd., Gorakhpur's trusted real estate company since 2022. We specialize in agricultural land, residential plots, farm land, and investment properties with transparent documentation across Eastern Uttar Pradesh."
+        keywords="about HeyDay Realty, real estate company Gorakhpur, agricultural land specialists Gorakhpur, property consultation Gorakhpur, land investment experts Uttar Pradesh, best real estate company Gorakhpur, property dealer Gorakhpur"
         canonical="https://heydayrealty.in/about"
         schema={[aboutSchema, breadcrumbSchema]}
       />

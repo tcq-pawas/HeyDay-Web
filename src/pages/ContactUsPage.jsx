@@ -17,9 +17,10 @@ const ContactUsPage = () => {
       "email": "theheydayrealty@gmail.com",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Ramjanaki Nagar",
+        "streetAddress": "Nakaha No.1, 323-G, First Floor, Sports College, Gorakhnath Rd",
         "addressLocality": "Gorakhpur",
         "addressRegion": "Uttar Pradesh",
+        "postalCode": "273015",
         "addressCountry": "IN"
       },
       "openingHours": "Mo-Sa 09:30-19:00",
@@ -29,8 +30,15 @@ const ContactUsPage = () => {
         "Maharajganj",
         "Kushinagar",
         "Basti",
-        "Sant Kabir Nagar"
-      ]
+        "Sant Kabir Nagar",
+        "Siddharthnagar"
+      ],
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "26.7606",
+        "longitude": "83.3732"
+      },
+      "priceRange": "₹₹"
     }
   };
 
@@ -56,9 +64,9 @@ const ContactUsPage = () => {
   return (
     <>
       <SEO
-        title="Contact HeyDay Realty Pvt. Ltd. | Real Estate Consultation in Gorakhpur"
-        description="Contact HeyDay Realty Pvt. Ltd. for agricultural land, residential plots, and property investment consultation in Gorakhpur. Call +91 9161554321 or email theheydayrealty@gmail.com."
-        keywords="contact HeyDay Realty, real estate contact Gorakhpur, property consultation, land investment contact, agricultural land contact"
+        title="Contact HeyDay Realty | Real Estate Consultation in Gorakhpur - Call +91 9161554321"
+        description="Contact HeyDay Realty Pvt. Ltd. for agricultural land, residential plots, and property investment consultation in Gorakhpur. Visit our office or call +91 9161554321 for expert guidance."
+        keywords="contact HeyDay Realty, real estate contact Gorakhpur, property consultation Gorakhpur, land investment contact, agricultural land contact Gorakhpur, property dealer contact, real estate company contact"
         canonical="https://heydayrealty.in/contact"
         schema={[contactSchema, breadcrumbSchema]}
       />
