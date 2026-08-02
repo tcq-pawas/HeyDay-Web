@@ -117,39 +117,92 @@ const Footer = () => {
             <nav aria-label="Quick links">
               <ul className="space-y-3 text-gray-400 text-xs">
                 <li>
-                  <Link to="/">Home</Link>
+                  <Link to="/" className="hover:text-white transition">
+                    Home
+                  </Link>
                 </li>
 
                 <li>
-                  <Link to="/about">About Us</Link>
+                  <Link to="/about" className="hover:text-white transition">
+                    About Us
+                  </Link>
                 </li>
 
                 <li>
-                  <Link to="/projects">Projects</Link>
+                  <Link to="/services" className="hover:text-white transition">
+                    Services
+                  </Link>
                 </li>
 
                 <li>
-                  <Link to="/contact">Contact</Link>
+                  <Link to="/projects" className="hover:text-white transition">
+                    Projects
+                  </Link>
                 </li>
 
                 <li>
-                  <Link to="/faq">FAQ</Link>
+                  <Link to="/media" className="hover:text-white transition">
+                    Media
+                  </Link>
+                </li>
+
+                <li>
+                  <Link to="/team" className="hover:text-white transition">
+                    Our Team
+                  </Link>
+                </li>
+
+                <li>
+                  <Link to="/contact" className="hover:text-white transition">
+                    Contact
+                  </Link>
+                </li>
+
+                <li>
+                  <Link to="/#faq" className="hover:text-white transition">
+                    FAQ
+                  </Link>
                 </li>
               </ul>
             </nav>
           </div>
 
-          {/* Helpful Links */}
+          {/* Services */}
           <div className="text-center sm:text-left">
-            <h3 className="font-semibold text-sm mb-4">Helpful Links</h3>
+            <h3 className="font-semibold text-sm mb-4">Services</h3>
 
-            <nav aria-label="Helpful links">
+            <nav aria-label="Services">
               <ul className="space-y-3 text-gray-400 text-xs">
-                <li>Land Investment Guide</li>
-                <li>Legal Documentation</li>
-                <li>FAQ</li>
-                <li>Blog</li>
-                <li>Site Visit</li>
+                <li>
+                  <Link to="/services" className="hover:text-white transition">
+                    Agricultural Land
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/services" className="hover:text-white transition">
+                    Residential Plots
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/services" className="hover:text-white transition">
+                    Property Consultation
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/services" className="hover:text-white transition">
+                    Documentation Support
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/services" className="hover:text-white transition">
+                    Site Visit Assistance
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/services" className="hover:text-white transition">
+                    Investment Advisory
+                  </Link>
+                </li>
               </ul>
             </nav>
           </div>
@@ -160,11 +213,31 @@ const Footer = () => {
 
             <nav aria-label="Property types">
               <ul className="space-y-3 text-gray-400 text-xs">
-                <li>Agricultural Land</li>
-                <li>Farmhouse Plots</li>
-                <li>Residential Plots</li>
-                <li>Investment Lands</li>
-                <li>Commercial Land</li>
+                <li>
+                  <Link to="/projects" className="hover:text-white transition">
+                    Agricultural Land
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/projects" className="hover:text-white transition">
+                    Farmhouse Plots
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/projects" className="hover:text-white transition">
+                    Residential Plots
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/projects" className="hover:text-white transition">
+                    Investment Lands
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/services" className="hover:text-white transition">
+                    Commercial Land
+                  </Link>
+                </li>
               </ul>
             </nav>
           </div>
@@ -213,9 +286,9 @@ const Footer = () => {
           <nav className="flex flex-col sm:flex-row items-center justify-center gap-2 text-center text-gray-500 text-sm" aria-label="Legal links">
             <span>&copy; 2026 HeyDay Realty Pvt. Ltd. All Rights Reserved.</span>
             <span className="hidden sm:inline">|</span>
-            <Link to="/privacy" className="hover:text-white transition">Privacy Policy</Link>
+            <Link to="/contact" className="hover:text-white transition">Privacy Policy</Link>
             <span className="hidden sm:inline">|</span>
-            <Link to="/terms" className="hover:text-white transition">Terms & Conditions</Link>
+            <Link to="/contact" className="hover:text-white transition">Terms & Conditions</Link>
           </nav>
         </div>
       </div>

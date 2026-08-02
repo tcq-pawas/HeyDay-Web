@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
+import LandAtmosphere from "./components/background/LandAtmosphere";
 
 import HomePage from "./pages/HomePage";
 import ProjectsPage from "./pages/ProjectsPage";
@@ -13,6 +14,7 @@ function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
+      <LandAtmosphere />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/services" element={<ServicesPage />} />

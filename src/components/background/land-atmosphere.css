@@ -1,0 +1,260 @@
+/* Premium 3D land atmosphere — fixed, non-interactive */
+
+.land-atmosphere {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.land-atmosphere,
+.land-atmosphere *,
+.land-atmosphere canvas {
+  pointer-events: none !important;
+}
+
+.land-atmosphere__canvas,
+.land-atmosphere__fallback {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.land-atmosphere__canvas {
+  opacity: 0.85;
+}
+
+.land-atmosphere__canvas canvas {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* ── CSS / SVG fallback ── */
+.land-fallback {
+  background: transparent;
+}
+
+.land-fallback__glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  will-change: transform;
+}
+
+.land-fallback__glow--a {
+  width: 55vmax;
+  height: 55vmax;
+  top: -18%;
+  left: -16%;
+  background: radial-gradient(circle, rgba(12, 36, 24, 0.7) 0%, transparent 68%);
+  opacity: 0.7;
+  animation: land-float-a 55s ease-in-out infinite;
+}
+
+.land-fallback__glow--b {
+  width: 48vmax;
+  height: 48vmax;
+  bottom: -14%;
+  right: -12%;
+  background: radial-gradient(circle, rgba(47, 61, 28, 0.55) 0%, transparent 68%);
+  opacity: 0.65;
+  animation: land-float-b 70s ease-in-out infinite;
+}
+
+.land-fallback__glow--c {
+  width: 40vmax;
+  height: 40vmax;
+  top: 32%;
+  left: 38%;
+  background: radial-gradient(circle, rgba(138, 115, 80, 0.35) 0%, transparent 68%);
+  opacity: 0.5;
+  animation: land-float-c 48s ease-in-out infinite;
+}
+
+.land-fallback__glow--d {
+  width: 36vmax;
+  height: 36vmax;
+  top: 8%;
+  right: 18%;
+  background: radial-gradient(circle, rgba(13, 18, 24, 0.65) 0%, transparent 68%);
+  opacity: 0.55;
+  animation: land-float-d 62s ease-in-out infinite;
+}
+
+.land-fallback__waves {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.35;
+}
+
+.land-fallback__wave {
+  transform-origin: center;
+  will-change: transform;
+}
+
+.land-fallback__wave--1 {
+  animation: land-wave-drift 80s ease-in-out infinite;
+}
+
+.land-fallback__wave--2 {
+  animation: land-wave-drift-alt 65s ease-in-out infinite;
+}
+
+.land-fallback__wave--3 {
+  animation: land-wave-drift 90s ease-in-out infinite reverse;
+}
+
+.land-fallback__fog {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: rgba(212, 180, 131, 0.55);
+  opacity: 0.18;
+  will-change: transform;
+}
+
+.land-fallback__fog:nth-child(1) {
+  left: 14%;
+  top: 24%;
+  animation: land-fog-a 52s ease-in-out infinite;
+}
+.land-fallback__fog:nth-child(2) {
+  left: 42%;
+  top: 68%;
+  animation: land-fog-b 61s ease-in-out infinite;
+}
+.land-fallback__fog:nth-child(3) {
+  left: 72%;
+  top: 18%;
+  animation: land-fog-c 47s ease-in-out infinite;
+}
+.land-fallback__fog:nth-child(4) {
+  left: 88%;
+  top: 52%;
+  animation: land-fog-a 58s ease-in-out infinite reverse;
+}
+.land-fallback__fog:nth-child(5) {
+  left: 28%;
+  top: 82%;
+  animation: land-fog-b 54s ease-in-out infinite;
+}
+.land-fallback__fog:nth-child(6) {
+  left: 58%;
+  top: 38%;
+  animation: land-fog-c 66s ease-in-out infinite reverse;
+}
+.land-fallback__fog:nth-child(7) {
+  left: 8%;
+  top: 48%;
+  animation: land-fog-a 49s ease-in-out infinite;
+}
+.land-fallback__fog:nth-child(8) {
+  left: 78%;
+  top: 78%;
+  animation: land-fog-b 57s ease-in-out infinite reverse;
+}
+
+@keyframes land-float-a {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(28px, -22px, 0) scale(1.03);
+  }
+}
+
+@keyframes land-float-b {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(-24px, 18px, 0) scale(1.025);
+  }
+}
+
+@keyframes land-float-c {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(18px, 26px, 0) scale(1.03);
+  }
+}
+
+@keyframes land-float-d {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(-20px, -16px, 0) scale(1.02);
+  }
+}
+
+@keyframes land-wave-drift {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(30px, -12px, 0) scale(1.02);
+  }
+}
+
+@keyframes land-wave-drift-alt {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(-26px, 16px, 0) scale(1.015);
+  }
+}
+
+@keyframes land-fog-a {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(22px, -28px, 0);
+  }
+}
+
+@keyframes land-fog-b {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(-26px, 18px, 0);
+  }
+}
+
+@keyframes land-fog-c {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(16px, 24px, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .land-fallback__glow,
+  .land-fallback__wave,
+  .land-fallback__fog {
+    animation: none !important;
+    transform: none !important;
+  }
+}
