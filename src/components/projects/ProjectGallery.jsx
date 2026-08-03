@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
-import clubHouse from "../../assets/images/project/clubhouse.png";
-import road from "../../assets/images/project/internalroad.png";
-import gate from "../../assets/images/project/entrance.png";
-import park from "../../assets/images/project/park.png";
+import clubHouse from "../../assets/images/media/project/image1.png";
+import road from "../../assets/images/media/project/image2.png";
+import gate from "../../assets/images/media/project/image3.png";
+import park from "../../assets/images/media/project/image4.png";
 
 const ProjectGallery = () => {
   return (
@@ -35,7 +35,7 @@ const ProjectGallery = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent"></div>
 
               <h3 className="absolute bottom-4 left-4 text-white font-semibold text-sm">
-                Club House
+                Landscaped Green Zone
               </h3>
             </div>
 
@@ -50,7 +50,7 @@ const ProjectGallery = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent"></div>
 
               <h3 className="absolute bottom-4 left-4 text-white font-semibold text-sm">
-                Gated Entrance
+                Premium Township View
               </h3>
             </div>
 

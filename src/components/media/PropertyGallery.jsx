@@ -26,7 +26,7 @@ import bhathat7 from "../../assets/images/media/bhathat/7.jpeg";
 import bhathat8 from "../../assets/images/media/bhathat/8.jpeg";
 import bhathat9 from "../../assets/images/media/bhathat/9.jpeg";
 import bhathat10 from "../../assets/images/media/bhathat/10.jpeg";
-import bhathatVideo1 from "../../assets/images/media/bhathat/video1.mp4";
+import roushanVideo1 from "../../assets/images/media/bhathat/video1.mp4";
 
 // ----------------------------------------------------
 // Top-level categories (same button styling as before)
@@ -90,7 +90,7 @@ const videoProjects = [
     id: "bhathat",
     title: "Bhathat Greencity",
     cover: bhathat10,
-    videos: [{ url: bhathatVideo1, poster: roadland2 }],
+    videos: [{ url: "", poster: roadland2 }],
   },
   {
     id: "swastik",
@@ -106,9 +106,7 @@ const videoProjects = [
     title: "Roushan Baag Residency",
     cover: roadland3,
     videos: [
-      { url: "", poster: roadland3 },
-      { url: "", poster: farm2 },
-      { url: "", poster: farm3 },
+      { url: roushanVideo1, poster: farm3 },
     ],
   },
 ];
@@ -364,11 +362,10 @@ const MediaHero = () => {
               <button
                 key={index}
                 onClick={() => handleTabChange(item.name)}
-                className={`flex items-center gap-2 px-6 py-3 rounded-full border transition-all duration-300 whitespace-nowrap flex-shrink-0 ${
-                  activeTab === item.name
+                className={`flex items-center gap-2 px-6 py-3 rounded-full border transition-all duration-300 whitespace-nowrap flex-shrink-0 ${activeTab === item.name
                     ? "bg-[#b66a1d] text-white border-[#b66a1d]"
                     : "bg-white text-gray-700 border-gray-200 hover:border-[#b66a1d] hover:text-[#b66a1d]"
-                }`}
+                  }`}
               >
                 <span className="text-sm">{item.icon}</span>
                 <span className="font-medium text-[15px]">{item.name}</span>

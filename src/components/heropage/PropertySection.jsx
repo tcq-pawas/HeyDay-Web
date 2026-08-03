@@ -7,17 +7,20 @@ import {
   Landmark,
   Factory,
   Map,
+  Check,
+  X,
 } from "lucide-react";
 
-import roshanbagh from "../../assets/images/home/roshanbagh.png";
-import greencity from "../../assets/images/home/greencity-image.png";
-import sawastikpuram from "../../assets/images/home/sawastikpuram-image.png";
+import roshanbagh from "../../assets/images/home/card1.png";
+import greencity from "../../assets/images/media/project/bhathat.png";
+import sawastikpuram from "../../assets/images/home/card3.png";
 
 const projects = [
   {
     image: roshanbagh,
     badge: "PREMIUM",
     title: "Roushan Baag Residency",
+    status: "available",
     features: [
       "Premium Residential Plots",
       "Near Gorakhpur City",
@@ -29,6 +32,7 @@ const projects = [
     image: greencity,
     badge: "POPULAR",
     title: "Bhathat Green City",
+    status: "available",
     features: [
       "Agricultural Farm Plots",
       "Plantation Ready",
@@ -40,6 +44,7 @@ const projects = [
     image: sawastikpuram,
     badge: "BEST VALUE",
     title: "Swastik Puram",
+    status: "soldout",
     features: [
       "Investment Plots",
       "Highway Connectivity",
@@ -81,7 +86,7 @@ const PropertySection = () => {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-md hover:shadow-xl transition-all duration-300"
+              className="bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-md hover:shadow-xl transition-all duration-300 group"
             >
               {/* Image */}
               <div className="relative">
@@ -97,6 +102,30 @@ const PropertySection = () => {
                 <span className="absolute top-3 left-3 bg-[#e66a10] text-white text-[9px] font-semibold px-3 py-1 rounded-md">
                   {project.badge}
                 </span>
+
+                {/* Availability Status Indicator */}
+                <div className="absolute top-3 right-5">
+                  <div className="relative">
+                    <div
+                      className={`w-8 h-8 rounded-full flex items-center justify-center border-2 border-white shadow-lg scale-75 group-hover:scale-100 transition-all duration-300 ease-out ${
+                        project.status === "available" ? "bg-green-600" : "bg-red-600"
+                      }`}
+                    >
+                      {project.status === "available" ? (
+                        <Check className="w-4 h-4 text-white" />
+                      ) : (
+                        <X className="w-4 h-4 text-white" />
+                      )}
+                    </div>
+                    {/* Tooltip */}
+                    <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 flex flex-col items-center opacity-0 scale-90 translate-y-2 group-hover:opacity-100 group-hover:scale-100 group-hover:translate-y-0 transition-all duration-300 ease-out">
+                      <div className="w-2 h-2 bg-black rotate-45 mb-[-4px]"></div>
+                      <div className="px-2 py-1 bg-black text-white text-[10px] font-semibold rounded-md whitespace-nowrap">
+                        {project.status === "available" ? "Available" : "Sold Out"}
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
 
               {/* Content */}

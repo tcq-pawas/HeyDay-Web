@@ -10,10 +10,12 @@ import {
   FaTint,
   FaTree,
   FaEllipsisV,
+  FaCheck,
+  FaTimes,
 } from "react-icons/fa";
 import { BsBoundingBoxCircles } from "react-icons/bs";
 
-import kushmi from "../../assets/images/project/kushmi.png";
+import bhathat from "../../assets/images/media/project/bhathat.png";
 import nausad from "../../assets/images/project/nausad.png";
 import mohanapur from "../../assets/images/project/Mohanapur.png";
 import rustampur from "../../assets/images/project/rustampur.png";
@@ -22,28 +24,13 @@ import taramandal from "../../assets/images/project/taramandal.png";
 
 const projects = [
   {
-    id: 1,
-    image: madical,
-    title: "Swastik Puram Plots",
-    location: "Near by Fartilizer Factory",
-    price: "₹14 Lac",
-    badge: "Premium",
-    description:
-      "Strategically located on Fartilizer Factory, these plots offer excellent connectivity to prime destinations, educational institutes, and healthcare facilities. Ideal for residential investment with high appreciation potential.",
-    features: [
-      { icon: FaHome, title: "Residential", text: "Plot Type" },
-      { icon: BsBoundingBoxCircles, title: "1799 Sq.ft", text: "Plot Size" },
-      { icon: FaRoad, title: "Wide Roads", text: "Road Access" },
-      { icon: FaShieldAlt, title: "Secured Community", text: "24x7 Security" },
-    ],
-  },
-  {
     id: 2,
-    image: kushmi,
+    image: bhathat,
     title: "Bhathat GreenCity View Plots",
     location: "Bhathat, Gorakhpur",
     price: "₹16 Lac",
     badge: "Premium",
+    status: "available",
     description:
       "Surrounded by lush greenery and a peaceful environment, Kushmi offers the perfect blend of nature and modern living. A great choice for those seeking serenity and strong returns.",
     features: [
@@ -54,12 +41,30 @@ const projects = [
     ],
   },
   {
+    id: 1,
+    image: madical,
+    title: "Swastik Puram Plots",
+    location: "Near by Fartilizer Factory",
+    price: "₹14 Lac",
+    badge: "Premium",
+    status: "soldout",
+    description:
+      "Strategically located on Fartilizer Factory, these plots offer excellent connectivity to prime destinations, educational institutes, and healthcare facilities. Ideal for residential investment with high appreciation potential.",
+    features: [
+      { icon: FaHome, title: "Residential", text: "Plot Type" },
+      { icon: BsBoundingBoxCircles, title: "1799 Sq.ft", text: "Plot Size" },
+      { icon: FaRoad, title: "Wide Roads", text: "Road Access" },
+      { icon: FaShieldAlt, title: "Secured Community", text: "24x7 Security" },
+    ],
+  },
+  {
     id: 3,
     image: nausad,
     title: "Roshan Baag Residency",
     location: "Bhathat Chowk, Gorakhpur",
     price: "₹20 Lac",
     badge: "Best Value",
+    status: "available",
     description:
       "Located near the main highway for unmatched connectivity and future growth. Perfect for investors looking for high value appreciation and easy accessibility.",
     features: [
@@ -96,7 +101,7 @@ const FeaturedProjects = () => {
             return (
               <div
                 key={project.id}
-                className="overflow-hidden rounded-xl border border-gray-200 bg-white shadow-[0_3px_14px_rgba(15,23,42,0.06)] transition duration-300 hover:-translate-y-0.5 hover:shadow-[0_8px_22px_rgba(15,23,42,0.1)]"
+                className="overflow-hidden rounded-xl border border-gray-200 bg-white shadow-[0_3px_14px_rgba(15,23,42,0.06)] transition duration-300 hover:-translate-y-0.5 hover:shadow-[0_8px_22px_rgba(15,23,42,0.1)] group"
               >
                 <div className="grid lg:grid-cols-[36%_1fr]">
                   <div className="relative h-[220px] lg:h-auto lg:min-h-[210px]">
@@ -113,6 +118,30 @@ const FeaturedProjects = () => {
                     >
                       <BadgeIcon className="text-[8px]" />
                       {project.badge}
+                    </div>
+
+                    {/* Availability Status Indicator */}
+                    <div className="absolute top-3 right-5">
+                      <div className="relative">
+                        <div
+                          className={`w-8 h-8 rounded-full flex items-center justify-center border-2 border-white shadow-lg scale-75 group-hover:scale-100 transition-all duration-300 ease-out ${
+                            project.status === "available" ? "bg-green-600" : "bg-red-600"
+                          }`}
+                        >
+                          {project.status === "available" ? (
+                            <FaCheck className="w-4 h-4 text-white" />
+                          ) : (
+                            <FaTimes className="w-4 h-4 text-white" />
+                          )}
+                        </div>
+                        {/* Tooltip */}
+                        <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 flex flex-col items-center opacity-0 scale-90 translate-y-2 group-hover:opacity-100 group-hover:scale-100 group-hover:translate-y-0 transition-all duration-300 ease-out">
+                          <div className="w-2 h-2 bg-black rotate-45 mb-[-4px]"></div>
+                          <div className="px-2 py-1 bg-black text-white text-[10px] font-semibold rounded-md whitespace-nowrap">
+                            {project.status === "available" ? "Available" : "Sold Out"}
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
 
