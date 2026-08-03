@@ -5,8 +5,14 @@ User-agent: *
 Allow: /
 
 # Disallow admin or private areas if any
-# Disallow: /admin/
-# Disallow: /private/
+Disallow: /admin/
+Disallow: /dashboard/
+Disallow: /login/
+Disallow: /register/
+Disallow: /profile/
+Disallow: /api/
+Disallow: /search/
+Disallow: /preview/
 
 # Sitemap location
 Sitemap: https://heydayrealty.in/sitemap.xml

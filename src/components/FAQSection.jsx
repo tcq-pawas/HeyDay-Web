@@ -38,7 +38,7 @@ const FAQSection = () => {
   };
 
   return (
-    <section className="bg-white py-12 sm:py-16 lg:py-20">
+    <section id="faq" className="bg-white py-12 sm:py-16 lg:py-20">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Heading */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3 mb-8 sm:mb-10 text-center">

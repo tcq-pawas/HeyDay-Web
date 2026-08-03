@@ -24,15 +24,22 @@ const ServicesPage = () => {
         "Maharajganj",
         "Kushinagar",
         "Basti",
-        "Sant Kabir Nagar"
+        "Sant Kabir Nagar",
+        "Siddharthnagar"
       ],
       "telephone": "+91 9161554321",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Ramjanaki Nagar",
+        "streetAddress": "Nakaha No.1, 323-G, First Floor, Sports College, Gorakhnath Rd",
         "addressLocality": "Gorakhpur",
         "addressRegion": "Uttar Pradesh",
+        "postalCode": "273015",
         "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "26.7606",
+        "longitude": "83.3732"
       }
     },
     {
@@ -58,9 +65,9 @@ const ServicesPage = () => {
   return (
     <>
       <SEO
-        title="Our Services | HeyDay Realty Pvt. Ltd."
-        description="Explore HeyDay Realty's professional real estate services including agricultural land, residential plots, farm land, investment consultation, documentation, and property verification in Gorakhpur."
-        keywords="real estate services Gorakhpur, agricultural land, residential plots, farm land, property consultation, property verification, land investment"
+        title="Real Estate Services in Gorakhpur | Property Consultation & Documentation"
+        description="HeyDay Realty offers comprehensive real estate services in Gorakhpur including agricultural land, residential plots, farm land, investment consultation, property verification, documentation, and legal support across Eastern Uttar Pradesh."
+        keywords="real estate services Gorakhpur, property consultation Gorakhpur, property verification Gorakhpur, land documentation Gorakhpur, agricultural land services, residential plot services, farm land services, property investment consultation, legal verification services"
         canonical="https://heydayrealty.in/services"
         schema={serviceSchema}
       />

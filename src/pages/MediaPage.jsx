@@ -24,14 +24,40 @@ const MediaPage = () => {
     ]
   };
 
+  const realEstateAgentSchema = {
+    "@context": "https://schema.org",
+    "@type": "RealEstateAgent",
+    "name": "HeyDay Realty Pvt. Ltd.",
+    "description": "Property gallery showcasing agricultural land, residential plots, farm land, and investment properties in Gorakhpur and Eastern Uttar Pradesh",
+    "url": "https://heydayrealty.in/media",
+    "telephone": "+91 9161554321",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Nakaha No.1, 323-G, First Floor, Sports College, Gorakhnath Rd",
+      "addressLocality": "Gorakhpur",
+      "addressRegion": "Uttar Pradesh",
+      "postalCode": "273015",
+      "addressCountry": "IN"
+    },
+    "areaServed": [
+      "Gorakhpur",
+      "Deoria",
+      "Maharajganj",
+      "Kushinagar",
+      "Basti",
+      "Sant Kabir Nagar",
+      "Siddharthnagar"
+    ]
+  };
+
   return (
     <>
       <SEO
-        title="Media Gallery | HeyDay Realty Pvt. Ltd. Gorakhpur"
-        description="View property gallery and media coverage of HeyDay Realty Pvt. Ltd. - agricultural land, residential plots, and investment properties in Gorakhpur and Eastern Uttar Pradesh."
-        keywords="real estate media, property gallery, Gorakhpur real estate news, land investment updates, agricultural land gallery"
+        title="Property Gallery & Media | HeyDay Realty Gorakhpur - Agricultural Land & Plots"
+        description="Explore HeyDay Realty's property gallery showcasing agricultural land, residential plots, farm land, and investment properties in Gorakhpur and Eastern Uttar Pradesh. View our latest projects and developments."
+        keywords="property gallery Gorakhpur, real estate media Gorakhpur, agricultural land gallery, residential plots gallery, farm land images, investment property photos, Gorakhpur real estate news, land investment updates"
         canonical="https://heydayrealty.in/media"
-        schema={breadcrumbSchema}
+        schema={[breadcrumbSchema, realEstateAgentSchema]}
       />
       <Navbar />
 
