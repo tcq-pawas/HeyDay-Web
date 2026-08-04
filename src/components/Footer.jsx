@@ -286,9 +286,11 @@ const Footer = () => {
           <nav className="flex flex-col sm:flex-row items-center justify-center gap-2 text-center text-gray-500 text-sm" aria-label="Legal links">
             <span>&copy; 2026 HeyDay Realty Pvt. Ltd. All Rights Reserved.</span>
             <span className="hidden sm:inline">|</span>
-            <Link to="/contact" className="hover:text-white transition">Privacy Policy</Link>
+            <Link to="/privacy-policy" className="hover:text-white transition">Privacy Policy</Link>
             <span className="hidden sm:inline">|</span>
-            <Link to="/contact" className="hover:text-white transition">Terms & Conditions</Link>
+            <Link to="/terms-condition" className="hover:text-white transition">
+              Terms & Conditions
+            </Link>
           </nav>
         </div>
       </div>
