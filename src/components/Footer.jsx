@@ -1,108 +1,298 @@
 import {
-  FaFacebook,
+  FaFacebookF,
   FaInstagram,
-  FaLinkedin,
-  FaTwitter,
+  FaYoutube,
+  FaLinkedinIn,
+  FaWhatsapp,
+  FaPhoneAlt,
+  FaEnvelope,
+  FaMapMarkerAlt,
 } from "react-icons/fa";
+import { Link } from "react-router-dom";
+
+import footerBg from "../assets/images/footer/herobg.png";
+import logo from "../assets/images/footer/logo.png";
 
 const Footer = () => {
+  const whatsappMessage =
+    "Hello HeyDay Realty, I am interested in your land investment projects. Please share details about available plots and site visit.";
+
+  const whatsappUrl = `https://wa.me/919161554321?text=${encodeURIComponent(
+    whatsappMessage
+  )}`;
+
   return (
-    <footer className="bg-gradient-to-r from-[#01152d] via-[#032349] to-[#01152d] text-white mt-24">
-      <div className="max-w-7xl mx-auto px-6 lg:px-10 py-16">
+    <footer className="bg-[#041b35] text-white overflow-hidden" role="contentinfo">
+      {/* CTA Banner */}
+      <div
+        className="relative bg-cover bg-center"
+        style={{
+          backgroundImage: `url(${footerBg})`,
+        }}
+        aria-hidden="true"
+      >
+        <div className="absolute inset-0 bg-[#041b35]/75"></div>
 
-        <div className="grid md:grid-cols-5 gap-6 items-start">
+        <div className="relative max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 py-12 md:py-16">
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
+            <div className="text-center lg:text-left">
+              <h2 className="text-xl  font-bold leading-tight">
+                FIND YOUR NEXT
+                <br />
+                <span className="text-[#f4a300]">LAND INVESTMENT</span> TODAY
+              </h2>
 
-          <div>
-            <h1 className="text-4xl font-bold text-orange-500 leading-none">
-              HEYDAY
-            </h1>
+              <p className="text-gray-200 mt-4 max-w-lg mx-auto lg:mx-0 text-[12px]">
+                Explore verified agricultural lands, premium plots, and
+                high-growth investment opportunities with HeyDay Realty.
+              </p>
+            </div>
 
-            <p className="text-blue-400 tracking-[5px] text-sm">
-              REALTY
-            </p>
+            <div className="flex flex-col sm:flex-row w-full lg:w-auto gap-4">
+              <Link
+                to="/projects"
+                className="text-center border border-white/10 px-8 py-2 rounded-full font-medium bg-[#b96d1d]  transition duration-300 hover:bg-[#9f5d18]"
+                aria-label="Explore our properties"
+              >
+                Explore Properties
+              </Link>
 
-            <p className="text-gray-300 mt-6 text-[15px] leading-7 max-w-sm">
-              HeyDay Realty is a premium real estate agency dedicated
-              to finding your dream home. We pride ourselves on
-              transparency, integrity, and excellence.
-            </p>
-
-            <div className="flex gap-4 text-2xl mt-6">
-              <FaFacebook className="cursor-pointer hover:text-orange-400 duration-300" />
-              <FaInstagram className="cursor-pointer hover:text-orange-400 duration-300" />
-              <FaLinkedin className="cursor-pointer hover:text-orange-400 duration-300" />
-              <FaTwitter className="cursor-pointer hover:text-orange-400 duration-300" />
+              <Link
+                to="/contact"
+                className="text-center border border-white/30 px-8 py-2 rounded-full font-medium hover:bg-white hover:text-[#041b35] transition"
+                aria-label="Contact our advisor"
+              >
+                Contact Advisor
+              </Link>
             </div>
           </div>
+        </div>
+      </div>
 
-          <div>
-            <h1 className="text-2xl font-semibold mb-5">
-              Quick Links
-            </h1>
-
-            <ul className="space-y-3 text-gray-300 text-[16px]">
-              <li className="hover:text-orange-400 cursor-pointer">
-                Home
-              </li>
-              <li className="hover:text-orange-400 cursor-pointer">
-                About Us
-              </li>
-              <li className="hover:text-orange-400 cursor-pointer">
-                Contact Us
-              </li>
-              <li className="hover:text-orange-400 cursor-pointer">
-                Terms & Conditions
-              </li>
-              <li className="hover:text-orange-400 cursor-pointer">
-                Privacy Policy
-              </li>
-            </ul>
-          </div>
-
-          <div className="max-w-[180px]">
-            <h1 className="text-2xl font-semibold mb-5">
-              Our Services
-            </h1>
-
-            <ul className="space-y-2 text-gray-300 text-[15px]">
-              <li>Residential Properties</li>
-              <li>Commercial Properties</li>
-              <li>Lands & Plots</li>
-              <li>Property Management</li>
-              <li>Investment Consulting</li>
-            </ul>
-          </div>
-
-          <div className="md:col-span-2">
-
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7122.616181334892!2d83.37578599999998!3d26.798317!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1781258593204!5m2!1sen!2sin"
-              width="100%"
-              height="320"
-              style={{ border: 0 }}
-              allowFullScreen
+      {/* Footer Main */}
+      <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 py-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10">
+          {/* Logo */}
+          <div className="sm:col-span-2 lg:col-span-1 text-center sm:text-left">
+            <img
+              src={logo}
+              alt="HeyDay Realty Pvt. Ltd. Logo"
+              className="h-16 mx-auto sm:mx-0 mb-4"
               loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              className="rounded-2xl w-full"
-            ></iframe>
+              width="200"
+              height="64"
+            />
+
+            <p className="text-[#e66a10] text-xs">
+              Land Investments | Gated Projects
+            </p>
+
+            <nav className="flex justify-center sm:justify-start gap-5 mt-6" aria-label="Social media links">
+              <a href="https://www.facebook.com/HeyDayRealty/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                <FaFacebookF className="text-lg hover:text-[#f4a300] transition" />
+              </a>
+
+              <a href="https://www.instagram.com/theheydayrealty/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <FaInstagram className="text-lg hover:text-[#f4a300] transition" />
+              </a>
+
+              <a href="https://www.youtube.com/@TheHeydayRealty" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                <FaYoutube className="text-lg hover:text-[#f4a300] transition" />
+              </a>
+
+              <a href="https://www.linkedin.com/in/heyday-realty-8b22663b0/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <FaLinkedinIn className="text-lg hover:text-[#f4a300] transition" />
+              </a>
+
+              <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                <FaWhatsapp className="text-lg hover:text-[#f4a300] transition" />
+              </a>
+            </nav>
           </div>
 
-        </div>
+          {/* Quick Links */}
+          <div className="text-center sm:text-left">
+            <h3 className="font-semibold text-lg mb-4 text-sm">Quick Links</h3>
 
-        <div className="mt-10 flex justify-center">
-          <div className="w-full max-w-2xl bg-gradient-to-r from-gray-100 to-[#35557f] rounded-full px-6 py-3 border border-orange-500 flex flex-col md:flex-row gap-4 justify-between items-center">
+            <nav aria-label="Quick links">
+              <ul className="space-y-3 text-gray-400 text-xs">
+                <li>
+                  <Link to="/" className="hover:text-white transition">
+                    Home
+                  </Link>
+                </li>
 
-            <h1 className="text-blue-700 text-lg font-semibold text-center md:text-left">
-              Ready to find your dream home?
-            </h1>
+                <li>
+                  <Link to="/about" className="hover:text-white transition">
+                    About Us
+                  </Link>
+                </li>
 
-            <button className="bg-gradient-to-r from-[#f15b47] to-[#c83e31] px-8 py-3 rounded-full text-lg font-semibold hover:scale-105 duration-300">
-              BOOK A VISIT
-            </button>
+                <li>
+                  <Link to="/services" className="hover:text-white transition">
+                    Services
+                  </Link>
+                </li>
 
+                <li>
+                  <Link to="/projects" className="hover:text-white transition">
+                    Projects
+                  </Link>
+                </li>
+
+                <li>
+                  <Link to="/media" className="hover:text-white transition">
+                    Media
+                  </Link>
+                </li>
+
+                <li>
+                  <Link to="/team" className="hover:text-white transition">
+                    Our Team
+                  </Link>
+                </li>
+
+                <li>
+                  <Link to="/contact" className="hover:text-white transition">
+                    Contact
+                  </Link>
+                </li>
+
+                <li>
+                  <Link to="/#faq" className="hover:text-white transition">
+                    FAQ
+                  </Link>
+                </li>
+              </ul>
+            </nav>
+          </div>
+
+          {/* Services */}
+          <div className="text-center sm:text-left">
+            <h3 className="font-semibold text-sm mb-4">Services</h3>
+
+            <nav aria-label="Services">
+              <ul className="space-y-3 text-gray-400 text-xs">
+                <li>
+                  <Link to="/services" className="hover:text-white transition">
+                    Agricultural Land
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/services" className="hover:text-white transition">
+                    Residential Plots
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/services" className="hover:text-white transition">
+                    Property Consultation
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/services" className="hover:text-white transition">
+                    Documentation Support
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/services" className="hover:text-white transition">
+                    Site Visit Assistance
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/services" className="hover:text-white transition">
+                    Investment Advisory
+                  </Link>
+                </li>
+              </ul>
+            </nav>
+          </div>
+
+          {/* Property Types */}
+          <div className="text-center sm:text-left">
+            <h3 className="font-semibold text-sm mb-4">Property Types</h3>
+
+            <nav aria-label="Property types">
+              <ul className="space-y-3 text-gray-400 text-xs">
+                <li>
+                  <Link to="/projects" className="hover:text-white transition">
+                    Agricultural Land
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/projects" className="hover:text-white transition">
+                    Farmhouse Plots
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/projects" className="hover:text-white transition">
+                    Residential Plots
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/projects" className="hover:text-white transition">
+                    Investment Lands
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/services" className="hover:text-white transition">
+                    Commercial Land
+                  </Link>
+                </li>
+              </ul>
+            </nav>
+          </div>
+
+          {/* Contact */}
+          <div className="text-center sm:text-left">
+            <h3 className="font-semibold text-sm mb-4">Contact Us</h3>
+
+            <address className="not-italic">
+              <ul className="space-y-4 text-gray-400 text-xs">
+                <li className="flex justify-center sm:justify-start items-center gap-3">
+                  <FaPhoneAlt aria-hidden="true" />
+                  <a href="tel:+919161554321" className="hover:text-white transition">+91-9161554321</a>
+                </li>
+
+                <li className="flex justify-center sm:justify-start items-center gap-3 break-all">
+                  <FaEnvelope aria-hidden="true" />
+                  <a href="mailto:theheydayrealty@gmail.com" className="hover:text-white transition">theheydayrealty@gmail.com</a>
+                </li>
+
+                <li className="flex justify-center sm:justify-start gap-3">
+                  <FaMapMarkerAlt className="mt-1 flex-shrink-0" aria-hidden="true" />
+                  <span>Nakaha No.1, 323-G, First Floor,
+                    Sports College, Gorakhnath Rd,
+                    Uttar Pradesh,
+                    India</span>
+                </li>
+              </ul>
+            </address>
+
+            <a
+              href={whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex justify-center items-center gap-2 mt-6 bg-[#6fa72d] hover:bg-[#5f9226] px-6 py-3 rounded-lg text-white text-sm transition"
+              aria-label="Chat on WhatsApp"
+            >
+              <FaWhatsapp aria-hidden="true" />
+              Chat on WhatsApp
+            </a>
           </div>
         </div>
 
+        {/* Bottom */}
+        <div className="border-t border-white/10 mt-10 pt-6 text-center text-gray-500 text-sm">
+          <nav className="flex flex-col sm:flex-row items-center justify-center gap-2 text-center text-gray-500 text-sm" aria-label="Legal links">
+            <span>&copy; 2026 HeyDay Realty Pvt. Ltd. All Rights Reserved.</span>
+            <span className="hidden sm:inline">|</span>
+            <Link to="/privacy-policy" className="hover:text-white transition">Privacy Policy</Link>
+            <span className="hidden sm:inline">|</span>
+            <Link to="/terms-condition" className="hover:text-white transition">
+              Terms & Conditions
+            </Link>
+          </nav>
+        </div>
       </div>
     </footer>
   );

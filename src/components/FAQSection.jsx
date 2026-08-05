@@ -1,33 +1,35 @@
 import { useState } from "react";
+import { FaPlus, FaMinus } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const FAQSection = () => {
   const [openIndex, setOpenIndex] = useState(null);
 
   const faqs = [
     {
-      question: "How do I book a property visit?",
+      question: "Is HeyDay Realty a real estate company in Gorakhpur?",
       answer:
-        "You can easily schedule a visit by clicking the 'Book A Visit' button and selecting your preferred date and time.",
+        "Yes, HeyDay Realty Pvt. Ltd. is a Gorakhpur-based real estate company specializing in agricultural land, residential plots, farm land, and investment properties with transparent documentation and professional consultation.",
     },
     {
-      question: "Do you provide free property consultation?",
+      question: "Does HeyDay Realty provide agricultural land?",
       answer:
-        "Yes! We offer a completely free consultation to help you choose the perfect property based on your needs and budget.",
+        "Yes, we specialize in agricultural land, farm plots, and investment properties across Gorakhpur, Deoria, Maharajganj, Kushinagar, Basti, and Sant Kabir Nagar. All properties undergo thorough legal verification.",
     },
     {
-      question: "Can I visit multiple properties?",
+      question: "Can I schedule a site visit?",
       answer:
-        "Absolutely! You can explore multiple homes and compare them before making your final decision.",
+        "Absolutely. We arrange guided site visits so you can personally inspect the location, road connectivity, surrounding developments, and future growth potential before making your investment decision.",
     },
     {
-      question: "What documents are required?",
+      question: "Does HeyDay Realty help with property documentation?",
       answer:
-        "Basic identity proof, address proof, and financial documents may be required depending on the property type.",
+        "Yes, our team provides complete documentation support including legal verification, ownership checks, registration guidance, and end-to-end assistance throughout the property buying process.",
     },
     {
-      question: "Why choose HeyDay Realty?",
+      question: "What areas do you serve?",
       answer:
-        "We provide trusted guidance, premium listings, transparent pricing, and expert support to help you find your dream home.",
+        "HeyDay Realty serves customers across Gorakhpur, Deoria, Maharajganj, Kushinagar, Basti, and Sant Kabir Nagar in Eastern Uttar Pradesh, offering verified agricultural land and residential plots.",
     },
   ];
 
@@ -36,60 +38,47 @@ const FAQSection = () => {
   };
 
   return (
-    <section className="bg-gradient-to-br from-[#dbeafe] via-[#bfdbfe] to-[#93c5fd] py-28 rounded-[50px] mx-4 lg:mx-10 my-28">
-      <div className="max-w-7xl mx-auto px-6 lg:px-10">
+    <section id="faq" className="bg-white py-12 sm:py-16 lg:py-20">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Heading */}
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3 mb-8 sm:mb-10 text-center">
+          <span className="text-[#7aac3b] text-xl">🌿</span>
 
-        <div className="text-center mb-14">
-          <p className="text-orange-500 font-semibold uppercase tracking-[3px]">
-            FAQ
-          </p>
+          <h2 className="text-xl  font-bold text-[#08213f]">
+            FREQUENTLY ASKED QUESTIONS
+          </h2>
 
-          <h1 className="text-5xl font-bold text-[#032349] mt-4">
-            Frequently Asked Questions
-          </h1>
-
-          <p className="text-slate-600 mt-5 max-w-2xl mx-auto leading-7">
-            Have questions? We are here to help you with
-            everything you need to know about finding your
-            perfect property.
-          </p>
+          <div className="hidden sm:block h-[2px] w-14 bg-[#d8c28a]" />
         </div>
 
-        <div className="max-w-4xl mx-auto space-y-5">
+        {/* FAQ List */}
+        <div className="space-y-4">
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="bg-white/90 backdrop-blur-md rounded-[25px]
-              shadow-md border border-white/40 overflow-hidden
-              hover:shadow-2xl duration-300"
+              className="bg-white rounded-xl sm:rounded-2xl shadow-sm border border-gray-100 overflow-hidden"
             >
               <button
                 onClick={() => toggleFAQ(index)}
-                className="w-full flex justify-between items-center p-6 text-left"
+                className="w-full px-4 py-4 flex items-center justify-between gap-4 text-left"
               >
-                <h1 className="text-lg md:text-xl font-semibold text-[#032349]">
+                <h3 className="text-[#08213f] font-semibold text-sm  leading-6">
                   {faq.question}
-                </h1>
+                </h3>
 
-                <span
-                  className={`text-3xl font-light duration-300 ${
-                    openIndex === index
-                      ? "rotate-180 text-blue-600"
-                      : "text-orange-500"
-                  }`}
-                >
-                  {openIndex === index ? "−" : "+"}
+                <span className="text-[#08213f] text-sm flex-shrink-0">
+                  {openIndex === index ? <FaMinus /> : <FaPlus />}
                 </span>
               </button>
 
               <div
-                className={`transition-all duration-500 overflow-hidden ${
+                className={`overflow-hidden transition-all duration-300 ${
                   openIndex === index
-                    ? "max-h-40 p-6 pt-0"
+                    ? "max-h-60 px-4 sm:px-6 pb-4 sm:pb-5"
                     : "max-h-0"
                 }`}
               >
-                <p className="text-slate-600 leading-7">
+                <p className="text-gray-600 text-[12px] leading-7">
                   {faq.answer}
                 </p>
               </div>
@@ -97,6 +86,14 @@ const FAQSection = () => {
           ))}
         </div>
 
+        {/* CTA Button */}
+        <div className="mt-8 sm:mt-10 text-center">
+          <Link to="/contact">
+            <button className="w-full sm:w-auto bg-[#b66a1d] hover:bg-[#9f5b17] text-white px-6 sm:px-6 py-2 rounded-full font-medium transition-all duration-300 text-sm">
+              More Questions? Contact Us →
+            </button>
+          </Link>
+        </div>
       </div>
     </section>
   );
