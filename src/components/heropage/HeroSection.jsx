@@ -10,7 +10,7 @@ import {
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen overflow-hidden flex flex-col">
+    <section className="relative h-screen overflow-hidden flex flex-col">
 
       {/* Background Image */}
       <div className="absolute inset-0">

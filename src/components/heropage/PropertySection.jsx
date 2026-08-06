@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import {
   Sprout,
   Home,
@@ -11,21 +10,64 @@ import {
   X,
 } from "lucide-react";
 
+import {
+  FaMapMarkerAlt,
+  FaWater,
+  FaStore,
+  FaRoad,
+  FaSchool,
+  FaBuilding,
+  FaArrowCircleUp,
+  FaUniversity,
+  FaShieldAlt,
+  FaHospital,
+  FaTrain,
+  FaIndustry,
+} from "react-icons/fa";
+
 import roshanbagh from "../../assets/images/home/card1.png";
 import greencity from "../../assets/images/media/project/bhathat.png";
 import sawastikpuram from "../../assets/images/home/card3.png";
 
 const projects = [
   {
-    image: roshanbagh,
-    badge: "PREMIUM",
-    title: "Roushan Baag Residency",
-    status: "available",
-    features: [
-      "Premium Residential Plots",
-      "Near Gorakhpur City",
-      "Blacktop Roads",
-      "Gated Entry",
+    image: sawastikpuram,
+    badge: "BEST VALUE",
+    title: "Swastik Puram",
+    status: "soldout",
+    locationAdvantages: [
+      {
+        icon: FaIndustry,
+        text: "Fertilizer Factory (1 km)",
+      },
+      {
+        icon: FaSchool,
+        text: "Aadharshila Inter CBSE Inter College (1 km)",
+      },
+      {
+        icon: FaRoad,
+        text: "Outer Ring Road (500 mtr)",
+      },
+      {
+        icon: FaWater,
+        text: "Chilua Lake Front (Nauka Vihar 3.0) (2.5 km)",
+      },
+      {
+        icon: FaSchool,
+        text: "Sainik School (1 km)",
+      },
+      {
+        icon: FaHospital,
+        text: "BRD Medical College (3 km)",
+      },
+      {
+        icon: FaHospital,
+        text: "Mini PGI (4 km)",
+      },
+      {
+        icon: FaTrain,
+        text: "Gorakhpur Railway Station (10 km)",
+      },
     ],
   },
   {
@@ -33,23 +75,47 @@ const projects = [
     badge: "POPULAR",
     title: "Bhathat Green City",
     status: "available",
-    features: [
-      "Agricultural Farm Plots",
-      "Plantation Ready",
-      "High Appreciation Zone",
-      "Peaceful Environment",
+    locationAdvantages: [
+      {
+        icon: FaUniversity,
+        text: "Mahayogi Guru Gorakhnath AYUSH University (2.5 km)",
+      },
+      {
+        icon: FaRoad,
+        text: "On Highway (Medical To Bhathat)",
+      },
+      {
+        icon: FaShieldAlt,
+        text: "Bhathat Police Station (200 mtr)",
+      },
+      {
+        icon: FaHospital,
+        text: "Al-Amin Hospital (100 mtr)",
+      },
+      {
+        icon: FaHospital,
+        text: "BRD Medical College (10 km)",
+      },
+      {
+        icon: FaTrain,
+        text: "Gorakhpur Railway Station (18 km)",
+      },
+      {
+        icon: FaRoad,
+        text: "Transportation & Highway Connectivity (2 mins only)",
+      },
     ],
   },
   {
-    image: sawastikpuram,
-    badge: "BEST VALUE",
-    title: "Swastik Puram",
-    status: "soldout",
-    features: [
-      "Investment Plots",
-      "Highway Connectivity",
-      "Legal Documentation",
-      "Developing Corridor",
+    image: roshanbagh,
+    badge: "PREMIUM",
+    title: "Roushan Baag Residency",
+    status: "available",
+    locationAdvantages: [
+      { icon: FaWater, text: "Government Developed Pond" },
+      { icon: FaStore, text: "Bhathat Chowk (4 km)" },
+      { icon: FaRoad, text: "Bhathat Bazaar to Pipraich Link Road (3 km)" },
+      { icon: FaSchool, text: "HP Children Academy (1 km)" },
     ],
   },
 ];
@@ -86,7 +152,7 @@ const PropertySection = () => {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-md hover:shadow-xl transition-all duration-300 group"
+              className="bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-md hover:shadow-xl transition-all duration-300 group flex flex-col h-full"
             >
               {/* Image */}
               <div className="relative">
@@ -107,9 +173,8 @@ const PropertySection = () => {
                 <div className="absolute top-3 right-5">
                   <div className="relative">
                     <div
-                      className={`w-8 h-8 rounded-full flex items-center justify-center border-2 border-white shadow-lg scale-75 group-hover:scale-100 transition-all duration-300 ease-out ${
-                        project.status === "available" ? "bg-green-600" : "bg-red-600"
-                      }`}
+                      className={`w-8 h-8 rounded-full flex items-center justify-center border-2 border-white shadow-lg scale-75 group-hover:scale-100 transition-all duration-300 ease-out ${project.status === "available" ? "bg-green-600" : "bg-red-600"
+                        }`}
                     >
                       {project.status === "available" ? (
                         <Check className="w-4 h-4 text-white" />
@@ -129,22 +194,39 @@ const PropertySection = () => {
               </div>
 
               {/* Content */}
-              <div className="p-6">
+              <div className="p-6 flex-1 flex flex-col">
                 <h3 className="text-sm font-bold text-[#08213f] mb-4">
                   {project.title}
                 </h3>
 
-                <ul className="space-y-2 mb-5">
-                  {project.features.map((item, i) => (
-                    <li
-                      key={i}
-                      className="text-gray-600 text-[12px] flex items-center gap-2"
-                    >
-                      <span className="text-[#f4a300]">•</span>
-                      {item}
-                    </li>
-                  ))}
-                </ul>
+                {/* Location Advantages */}
+                <div className="flex-1">
+                  <div className="flex items-center gap-2 mb-4">
+                    <FaMapMarkerAlt className="text-[#f59e0b]" />
+                    <h4 className="font-semibold text-[#08213f] text-[15px]">
+                      Location Advantages
+                    </h4>
+                  </div>
+
+                  <div className="flex flex-col">
+                    {project.locationAdvantages.map((item, i) => {
+                      const Icon = item.icon;
+                      const isLast = i === project.locationAdvantages.length - 1;
+                      return (
+                        <div
+                          key={i}
+                          className={`py-2.5 flex items-center gap-3 ${isLast ? "" : "border-b border-gray-100"
+                            }`}
+                        >
+                          <Icon className="text-[#f59e0b]" size={16} />
+                          <span className="text-gray-700 text-[13px] font-medium">
+                            {item.text}
+                          </span>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
               </div>
             </div>
           ))}

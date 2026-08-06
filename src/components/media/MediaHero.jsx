@@ -9,7 +9,7 @@ import { HiOutlineMap } from "react-icons/hi2";
 
 const MediaHero = () => {
   return (
-    <section className="relative h-[60vh] md:h-[80vh] overflow-hidden bg-cover bg-center py-16 md:py-24 lg:min-h-[650px] lg:py-0">
+    <section className="relative flex h-[60vh] md:h-[80vh] items-center overflow-hidden bg-cover bg-center">
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
@@ -25,7 +25,7 @@ const MediaHero = () => {
       {/* Content */}
       <div className="relative z-10 mx-auto grid h-full w-full max-w-7xl items-center gap-12 px-6 lg:grid-cols-[1fr_0.9fr] lg:px-8 ">
         {/* Left Content */}
-        <div className="max-w-2xl mt-8 md:mt-0">
+        <div className="max-w-2xl ">
           <p className="mb-4 uppercase tracking-[4px] sm:tracking-[6px] text-[#F4B53F] text-[10px] font-semibold">
             Gallery
           </p>
@@ -74,7 +74,7 @@ const MediaHero = () => {
         </div>
 
         {/* Right Premium Gallery Preview - Desktop Only */}
-        <div className="relative mx-auto hidden w-full max-w-[430px] lg:ml-auto lg:block md:mt-10">
+        <div className="relative mx-auto hidden w-full max-w-[430px] lg:ml-auto lg:block ">
           <div className="relative rounded-xl border border-white/20 p-3 shadow-2xl backdrop-blur-md sm:p-4">
             <div className="grid grid-cols-2 gap-3">
               <div

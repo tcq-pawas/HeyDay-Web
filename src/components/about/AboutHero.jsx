@@ -18,7 +18,7 @@ const AboutHero = () => {
       {/* Left Gradient */}
       <div className="absolute inset-0 bg-gradient-to-r from-[#08141d]/95 via-[#08141d]/10 to-transparent"></div>
 
-      <div className="relative z-10 max-w-7xl mx-auto w-full px-6 lg:px-8 py-20 md:py-24 mt-14 md:mt-20">
+      <div className="relative z-10 max-w-7xl mx-auto w-full px-6 lg:px-8 py-20 md:py-24 items-center">
         <div className="grid lg:grid-cols-2 gap-10 items-center">
           {/* LEFT CONTENT */}
           <div className="max-w-xl">

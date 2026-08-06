@@ -45,7 +45,7 @@ const statItems = [
 
 const ServicesHero = () => {
   return (
-    <section className="relative h-[60vh] md:h-[80vh] overflow-hidden">
+    <section className="relative h-[50vh] md:h-[80vh] overflow-hidden items-center">
       {/* Background */}
       <div
         className="absolute inset-0 bg-cover bg-center"
@@ -58,7 +58,7 @@ const ServicesHero = () => {
       </div>
 
       {/* Hero Content */}
-      <div className="relative z-10 w-full h-full max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 pt-24 md:pt-8 lg:pt-24 pb-8 md:pb-8 lg:pb-16 flex flex-col justify-center">
+      <div className="relative z-10 w-full h-full max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 pb-8 md:pb-8 lg:pb-16 flex flex-col justify-center">
         <div className="grid md:grid-cols-2 gap-12 md:gap-6 lg:gap-16 items-center w-full">
           {/* ================= LEFT CONTENT ================= */}
           <div className="max-w-3xl mt-3 md:mt-0 text-left lg:text-left">

@@ -55,8 +55,8 @@ const ProjectsHero = () => {
         <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-black/10"></div>
 
         {/* Content */}
-        <div className="relative z-10 w-full max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 pt-20 md:pt-32 pb-12 md:pb-20 flex flex-col lg:flex-row items-center gap-10">
-          <div className="max-w-xl mt-10 md:mt-0">
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 pt-10 md:pt-22 pb-12 md:pb-20 flex flex-col lg:flex-row items-center gap-10">
+          <div className="max-w-xl flex flex-col justify-center text-center lg:text-left items-center lg:items-start">
             <span className="text-[#d39b34] uppercase tracking-[4px] sm:tracking-[6px] text-[10px] font-semibold ">
               Our Projects
             </span>

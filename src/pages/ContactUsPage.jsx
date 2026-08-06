@@ -1,6 +1,7 @@
 import SEO from "../components/SEO";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import ContactHero from "../components/contact/ContactHero";
 import ContactCard from "../components/contact/ContactCard";
 import QuotesSection from "../components/contact/QuotesSection";
 import ContactMapLocation from "../components/contact/ContactMapLocation";
@@ -71,6 +72,8 @@ const ContactUsPage = () => {
         schema={[contactSchema, breadcrumbSchema]}
       />
       <Navbar />
+
+      <ContactHero />
 
       <ContactCard />
 

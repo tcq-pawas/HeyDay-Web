@@ -4,7 +4,7 @@ import {
   FaHandshake,
 } from "react-icons/fa";
 
-import heroBg from "../../assets/images/team/teambg.png";
+import heroBg from "../../assets/images/team/image.png";
 
 const TeamHero = () => {
   return (
