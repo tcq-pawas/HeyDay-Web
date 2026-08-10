@@ -20,6 +20,7 @@ import {
   FaUndoAlt,
   FaUserShield,
 } from "react-icons/fa";
+import bg3 from "../../assets/backgrounds/bg3.png";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 28 },
@@ -228,7 +229,13 @@ const terms = [
 export default function PoliciesContent() {
 
   return (
-    <div id="policies" className="relative bg-white">
+    <div 
+      id="policies" 
+      className="relative bg-cover bg-center bg-no-repeat"
+      style={{
+        backgroundImage: `url(${bg3})`,
+      }}
+    >
       <section className="mx-auto max-w-7xl px-4 pb-10 pt-4 sm:px-6 lg:px-8">
         <motion.div
           variants={fadeUp}

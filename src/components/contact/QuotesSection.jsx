@@ -1,5 +1,6 @@
 import { FaQuoteLeft } from "react-icons/fa";
 import { GiLotus } from "react-icons/gi";
+import bg5 from "../../assets/backgrounds/bg5.png";
 
 const QuotesSection = () => {
   const quotes = [
@@ -18,7 +19,12 @@ const QuotesSection = () => {
   ];
 
   return (
-    <section className="relative bg-gradient-to-r from-[#071b35] to-[#0b2446] py-10 overflow-hidden">
+    <section 
+      className="bg-cover bg-center bg-no-repeat py-10 overflow-hidden"
+      style={{
+        backgroundImage: `url(${bg5})`,
+      }}
+    >
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid md:grid-cols-3 gap-8 relative">
 

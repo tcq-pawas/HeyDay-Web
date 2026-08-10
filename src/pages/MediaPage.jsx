@@ -1,5 +1,6 @@
 import SEO from "../components/SEO";
 import Navbar from "../components/Navbar";
+import BackgroundPattern from "../components/BackgroundPattern";
 import MediaHero from "../components/media/MediaHero";
 import PropertyGallery from "../components/media/PropertyGallery";
 import Footer from "../components/Footer";
@@ -52,6 +53,7 @@ const MediaPage = () => {
 
   return (
     <>
+      <BackgroundPattern variants={["contour"]} />
       <SEO
         title="Property Gallery & Media | HeyDay Realty Gorakhpur - Agricultural Land & Plots"
         description="Explore HeyDay Realty's property gallery showcasing agricultural land, residential plots, farm land, and investment properties in Gorakhpur and Eastern Uttar Pradesh. View our latest projects and developments."

@@ -1,5 +1,6 @@
 import SEO from "../components/SEO";
 import Navbar from "../components/Navbar";
+import BackgroundPattern from "../components/BackgroundPattern";
 import Footer from "../components/Footer";
 import ServicesHero from "../components/services/ServicesHero";
 import WhyChooseUsSection from "../components/WhyChooseUsSection";
@@ -64,6 +65,7 @@ const ServicesPage = () => {
 
   return (
     <>
+      <BackgroundPattern variants={["blueprint", "grid"]} />
       <SEO
         title="Real Estate Services in Gorakhpur | Property Consultation & Documentation"
         description="HeyDay Realty offers comprehensive real estate services in Gorakhpur including agricultural land, residential plots, farm land, investment consultation, property verification, documentation, and legal support across Eastern Uttar Pradesh."

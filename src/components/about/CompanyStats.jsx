@@ -5,10 +5,16 @@ import {
 } from "react-icons/fa";
 
 import handsheke from "../../assets/images/about/handshek.png";
+import bg4 from "../../assets/backgrounds/bg4.png";
 
 const CompanyStats = () => {
   return (
-    <section className="bg-[#041d3b] py-16">
+    <section 
+      className="bg-cover bg-center bg-no-repeat py-16"
+      style={{
+        backgroundImage: `url(${bg4})`,
+      }}
+    >
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">

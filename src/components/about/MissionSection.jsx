@@ -1,9 +1,15 @@
 import { FaBullseye, FaGem, FaUsers } from "react-icons/fa";
 import missionImg from "../../assets/images/about/hero3.png";
+import bg4 from "../../assets/backgrounds/bg4.png";
 
 const MissionSection = () => {
   return (
-    <section className="py-16 bg-[#fdfbf8] overflow-hidden">
+    <section 
+      className="bg-cover bg-center bg-no-repeat py-16 overflow-hidden"
+      style={{
+        backgroundImage: `url(${bg4})`,
+      }}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Heading */}
         <div className="mb-8">

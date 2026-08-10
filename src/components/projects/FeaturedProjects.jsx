@@ -30,8 +30,6 @@ import {
 
 import { BsBoundingBoxCircles } from "react-icons/bs";
 
-
-
 import bhathat from "../../assets/images/media/project/bhathat.png";
 
 import nausad from "../../assets/images/project/nausad.png";
@@ -43,6 +41,8 @@ import rustampur from "../../assets/images/project/rustampur.png";
 import madical from "../../assets/images/project/madicalroad.png";
 
 import taramandal from "../../assets/images/project/taramandal.png";
+
+import bg3 from "../../assets/backgrounds/bg3.png";
 
 
 
@@ -161,7 +161,12 @@ const FeaturedProjects = () => {
 
   return (
 
-    <section className="overflow-hidden bg-[#faf8f5] py-14">
+    <section 
+      className="bg-cover bg-center bg-no-repeat overflow-hidden py-14"
+      style={{
+        backgroundImage: `url(${bg3})`,
+      }}
+    >
 
       <div className="mx-auto max-w-6xl px-4 sm:px-5">
 

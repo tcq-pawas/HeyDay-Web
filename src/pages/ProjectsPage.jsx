@@ -1,5 +1,6 @@
 import SEO from "../components/SEO";
 import Navbar from "../components/Navbar";
+import BackgroundPattern from "../components/BackgroundPattern";
 import ProjectHero from "../components/projects/ProjectsHero";
 import ProjectGallery from "../components/projects/ProjectGallery";
 import FeaturedProjects from "../components/projects/FeaturedProjects";
@@ -59,6 +60,7 @@ const ProjectsPage = () => {
 
   return (
     <>
+      <BackgroundPattern variants={["masterplan", "contour", "grid"]} />
       <SEO
         title="Property Projects in Gorakhpur | Agricultural Land, Residential Plots & Investment Properties"
         description="Browse verified property projects in Gorakhpur including agricultural land, residential plots, farm land, and investment properties. HeyDay Realty offers transparent documentation and professional consultation across Eastern Uttar Pradesh."

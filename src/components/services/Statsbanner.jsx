@@ -1,4 +1,5 @@
 import React from "react";
+import bg2 from "../../assets/backgrounds/bg2.png";
 
 const StatsBanner = () => {
     const steps = [
@@ -35,9 +36,14 @@ const StatsBanner = () => {
     ];
 
     return (
-        <section className="bg-white">
+        <section 
+            className="bg-cover bg-center bg-no-repeat"
+            style={{
+                backgroundImage: `url(${bg2})`,
+            }}
+        >
             {/* Timeline Section */}
-            <div className="bg-white py-16">
+            <div className="py-16">
                 <div className="max-w-7xl mx-auto px-6">
                     <div className="text-center max-w-3xl mx-auto">
                         <h2 className="text-xl font-bold text-[#0b1f3a]">

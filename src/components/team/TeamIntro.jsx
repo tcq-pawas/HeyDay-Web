@@ -6,10 +6,16 @@ import {
   FaAward,
   FaMapMarkerAlt,
 } from "react-icons/fa";
+import bg2 from "../../assets/backgrounds/bg2.png";
 
 const TeamIntro = () => {
   return (
-    <section className="py-24 bg-white">
+    <section 
+      className="bg-cover bg-center bg-no-repeat py-24"
+      style={{
+        backgroundImage: `url(${bg2})`,
+      }}
+    >
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left Content */}

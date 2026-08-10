@@ -1,5 +1,6 @@
 import React from "react";
 import { CheckCircle } from "lucide-react";
+import bg2 from "../assets/backgrounds/bg2.png";
 
 const WhyChooseUsSection = () => {
   const features = [
@@ -15,7 +16,12 @@ const WhyChooseUsSection = () => {
   ];
 
   return (
-    <section className="bg-gray-50 py-16 sm:py-20">
+    <section 
+      className="bg-cover bg-center bg-no-repeat py-16 sm:py-20"
+      style={{
+        backgroundImage: `url(${bg2})`,
+      }}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Heading */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3 mb-10 sm:mb-12 text-center">

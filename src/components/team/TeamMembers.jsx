@@ -13,6 +13,7 @@ import member1 from "../../assets/images/team/rahul.png";
 import member2 from "../../assets/images/team/amit.png";
 import member3 from "../../assets/images/team/priya.png";
 import member4 from "../../assets/images/team/rohit.png";
+import bg2 from "../../assets/backgrounds/bg2.png";
 
 const members = [
   {
@@ -89,7 +90,12 @@ const StatItem = ({ icon: Icon, label, value, color = "green" }) => {
 
 const TeamMembers = () => {
   return (
-    <section className="overflow-hidden bg-[#f6f8f7] py-14">
+    <section 
+      className="bg-cover bg-center bg-no-repeat overflow-hidden py-14"
+      style={{
+        backgroundImage: `url(${bg2})`,
+      }}
+    >
       <div className="mx-auto w-full max-w-5xl px-4 sm:px-6">
         <div className="mb-10 text-center">
           <h2 className="text-xl font-bold uppercase">

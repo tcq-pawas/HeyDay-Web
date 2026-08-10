@@ -28,6 +28,7 @@ import {
 import roshanbagh from "../../assets/images/home/card1.png";
 import greencity from "../../assets/images/media/project/bhathat.png";
 import sawastikpuram from "../../assets/images/home/card3.png";
+import bg1 from "../../assets/backgrounds/bg1.png";
 
 const projects = [
   {
@@ -131,7 +132,12 @@ const categories = [
 
 const PropertySection = () => {
   return (
-    <section className="py-20 bg-white">
+    <section 
+      className="bg-cover bg-center bg-no-repeat py-20"
+      style={{
+        backgroundImage: `url(${bg1})`,
+      }}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         {/* Heading */}
         <div className="flex items-center justify-center gap-4 mb-12">
@@ -201,9 +207,9 @@ const PropertySection = () => {
 
                 {/* Location Advantages */}
                 <div className="flex-1">
-                  <div className="flex items-center gap-2 mb-4">
-                    <FaMapMarkerAlt className="text-[#f59e0b]" />
-                    <h4 className="font-semibold text-[#08213f] text-[15px]">
+                  <div className="flex items-center gap-2 mb-3">
+                    <FaMapMarkerAlt className="text-[#f59e0b]" size={13} />
+                    <h4 className="font-semibold text-[#08213f] text-[13px]">
                       Location Advantages
                     </h4>
                   </div>
@@ -215,11 +221,11 @@ const PropertySection = () => {
                       return (
                         <div
                           key={i}
-                          className={`py-2.5 flex items-center gap-3 ${isLast ? "" : "border-b border-gray-100"
+                          className={`py-1.5 flex items-center gap-2 ${isLast ? "" : "border-b border-gray-100"
                             }`}
                         >
-                          <Icon className="text-[#f59e0b]" size={16} />
-                          <span className="text-gray-700 text-[13px] font-medium">
+                          <Icon className="text-[#f59e0b]" size={13} />
+                          <span className="text-gray-700 text-[12px] ">
                             {item.text}
                           </span>
                         </div>

@@ -1,6 +1,7 @@
 import React from "react";
 import SEO from "../components/SEO";
 import Navbar from "../components/Navbar";
+import BackgroundPattern from "../components/BackgroundPattern";
 import HeroSection from "../components/heropage/HeroSection";
 import AboutSection from "../components/heropage/AboutSection";
 import ServicesSection from "../components/ServicesSection";
@@ -131,6 +132,7 @@ const HomePage = () => {
 
   return (
     <>
+      <BackgroundPattern variants={["blueprint", "contour", "landscape"]} />
       <SEO
         title="Best Real Estate Company in Gorakhpur | Agricultural Land, Residential Plots & Property Investment"
         description="HeyDay Realty Pvt. Ltd. - Trusted real estate company in Gorakhpur since 2022. Buy verified agricultural land, residential plots, farm land & investment properties in Gorakhpur, Deoria, Maharajganj, Kushinagar, Basti & Sant Kabir Nagar with transparent documentation."

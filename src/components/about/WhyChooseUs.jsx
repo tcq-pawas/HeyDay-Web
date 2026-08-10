@@ -6,6 +6,7 @@ import {
   FaShieldAlt,
   FaHandshake,
 } from "react-icons/fa";
+import bg4 from "../../assets/backgrounds/bg4.png";
 
 const WhyChooseUs = () => {
   const features = [
@@ -42,7 +43,12 @@ const WhyChooseUs = () => {
   ];
 
   return (
-    <section className="bg-[#041d3b] py-12">
+    <section 
+      className="bg-cover bg-center bg-no-repeat py-12"
+      style={{
+        backgroundImage: `url(${bg4})`,
+      }}
+    >
       <div className="max-w-7xl mx-auto px-6">
 
         {/* Heading */}

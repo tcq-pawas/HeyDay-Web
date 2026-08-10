@@ -27,6 +27,7 @@ import bhathat8 from "../../assets/images/media/bhathat/8.jpeg";
 import bhathat9 from "../../assets/images/media/bhathat/9.jpeg";
 import bhathat10 from "../../assets/images/media/bhathat/10.jpeg";
 import roushanVideo1 from "../../assets/images/media/bhathat/video1.mp4";
+import bg1 from "../../assets/backgrounds/bg1.png";
 
 // ----------------------------------------------------
 // Top-level categories (same button styling as before)
@@ -338,7 +339,12 @@ const MediaHero = () => {
   }, [selectedMedia.length]);
 
   return (
-    <section className="bg-[#faf8f5] py-24 overflow-hidden">
+    <section 
+      className="bg-cover bg-center bg-no-repeat py-24 overflow-hidden"
+      style={{
+        backgroundImage: `url(${bg1})`,
+      }}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         {/* Heading */}
         <div className="text-center mb-14">

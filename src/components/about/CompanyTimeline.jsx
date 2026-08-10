@@ -1,3 +1,5 @@
+import bg4 from "../../assets/backgrounds/bg4.png";
+
 const timelineData = [
   {
     year: "2022",
@@ -33,7 +35,12 @@ const timelineData = [
 
 const CompanyTimeline = () => {
   return (
-    <section className="bg-slate-50 py-20">
+    <section 
+      className="bg-cover bg-center bg-no-repeat py-20"
+      style={{
+        backgroundImage: `url(${bg4})`,
+      }}
+    >
       <div className="max-w-7xl mx-auto px-6">
         {/* Heading */}
         <div className="text-center mb-16">

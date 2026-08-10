@@ -6,6 +6,7 @@ import avatar2 from "../../assets/images/home/avatar2.png";
 import avatar3 from "../../assets/images/home/avatar3.png";
 import avatar4 from "../../assets/images/home/avatar4.png";
 import avatar5 from "../../assets/images/home/avatar5.png";
+import bg4 from "../../assets/backgrounds/bg4.png";
 
 const TestimonialSection = () => {
   const testimonials = [
@@ -81,7 +82,12 @@ const TestimonialSection = () => {
   }
 
   return (
-    <section className="py-16 bg-white">
+    <section 
+      className="bg-cover bg-center bg-no-repeat py-16"
+      style={{
+        backgroundImage: `url(${bg4})`,
+      }}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         {/* Heading */}
         <div className="text-center mb-10">

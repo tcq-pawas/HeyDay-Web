@@ -3,6 +3,7 @@ import TeamHero from "../components/team/TeamHero";
 import TeamIntro from "../components/team/TeamIntro";
 import TeamMembers from "../components/team/TeamMembers";
 import Navbar from "../components/Navbar";
+import BackgroundPattern from "../components/BackgroundPattern";
 import Footer from "../components/Footer";
 import WhyChooseUs from "../components/team/WhyChooseTeam";
 
@@ -54,6 +55,7 @@ const OurTeamPage = () => {
 
   return (
     <>
+      <BackgroundPattern variants={["city", "blueprint"]} />
       <SEO
         title="Our Real Estate Team | Property Consultants in Gorakhpur - HeyDay Realty"
         description="Meet HeyDay Realty's experienced real estate consultants and property experts in Gorakhpur. Professional guidance for agricultural land, residential plots, and property investment across Eastern Uttar Pradesh."

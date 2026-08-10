@@ -9,6 +9,7 @@ import {
 } from "lucide-react";
 
 import landImage from "../../assets/images/home/land-image.png";
+import bg1 from "../../assets/backgrounds/bg1.png";
 
 const features = [
   {
@@ -35,7 +36,12 @@ const features = [
 
 const AboutSection = () => {
   return (
-    <section className="bg-white py-20">
+    <section 
+      className="bg-cover bg-center bg-no-repeat py-20"
+      style={{
+        backgroundImage: `url(${bg1})`,
+      }}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Top Section */}
         <div className="grid lg:grid-cols-2 gap-16 items-center">

@@ -6,6 +6,7 @@ import {
   FaChartLine,
   FaHeadset,
 } from "react-icons/fa";
+import bg2 from "../../assets/backgrounds/bg2.png";
 
 const features = [
   {
@@ -48,7 +49,12 @@ const features = [
 
 const WhyChooseTeam = () => {
   return (
-    <section className="py-24 bg-gradient-to-b from-slate-50 to-white">
+    <section 
+      className="bg-cover bg-center bg-no-repeat py-24"
+      style={{
+        backgroundImage: `url(${bg2})`,
+      }}
+    >
       <div className="max-w-7xl mx-auto px-6">
         {/* Heading */}
         <div className="text-center mb-16">

@@ -3,10 +3,16 @@ import clubHouse from "../../assets/images/media/project/image1.png";
 import road from "../../assets/images/media/project/image2.png";
 import gate from "../../assets/images/media/project/image3.png";
 import park from "../../assets/images/media/project/image4.png";
+import bg3 from "../../assets/backgrounds/bg3.png";
 
 const ProjectGallery = () => {
   return (
-    <section className="py-16 bg-[#faf8f5] overflow-hidden">
+    <section 
+      className="bg-cover bg-center bg-no-repeat py-16 overflow-hidden"
+      style={{
+        backgroundImage: `url(${bg3})`,
+      }}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
 
         {/* Heading */}

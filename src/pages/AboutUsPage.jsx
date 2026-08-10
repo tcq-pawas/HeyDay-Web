@@ -1,5 +1,6 @@
 import SEO from "../components/SEO";
 import Navbar from "../components/Navbar";
+import BackgroundPattern from "../components/BackgroundPattern";
 import Footer from "../components/Footer";
 import AboutHero from "../components/about/AboutHero";
 import WhyChooseUs from "../components/about/WhyChooseUs";
@@ -75,6 +76,7 @@ const AboutUsPage = () => {
 
   return (
     <>
+      <BackgroundPattern variants={["blueprint", "city"]} />
       <SEO
         title="About HeyDay Realty | Leading Real Estate Company in Gorakhpur Since 2022"
         description="Learn about HeyDay Realty Pvt. Ltd., Gorakhpur's trusted real estate company since 2022. We specialize in agricultural land, residential plots, farm land, and investment properties with transparent documentation across Eastern Uttar Pradesh."

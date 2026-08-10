@@ -1,5 +1,6 @@
 import SEO from "../components/SEO";
 import Navbar from "../components/Navbar";
+import BackgroundPattern from "../components/BackgroundPattern";
 import Footer from "../components/Footer";
 import ContactHero from "../components/contact/ContactHero";
 import ContactCard from "../components/contact/ContactCard";
@@ -64,6 +65,7 @@ const ContactUsPage = () => {
 
   return (
     <>
+      <BackgroundPattern variants={["city", "grid", "contour"]} />
       <SEO
         title="Contact HeyDay Realty | Real Estate Consultation in Gorakhpur - Call +91 9161554321"
         description="Contact HeyDay Realty Pvt. Ltd. for agricultural land, residential plots, and property investment consultation in Gorakhpur. Visit our office or call +91 9161554321 for expert guidance."
