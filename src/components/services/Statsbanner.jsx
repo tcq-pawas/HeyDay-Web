@@ -48,7 +48,7 @@ const StatsBanner = () => {
                     <div className="text-center max-w-3xl mx-auto">
                         <h2 className="text-xl font-bold text-[#0b1f3a]">
                             FROM SITE VISIT{" "}
-                            <span className="text-[#e66a10]">TO REGISTRATION</span>
+                            <span className="text-[#7aac3b]">TO REGISTRATION</span>
                         </h2>
 
                         <p className="text-gray-600 mt-4 text-[12px] leading-7">

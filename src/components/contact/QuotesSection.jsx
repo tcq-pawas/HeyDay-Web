@@ -31,21 +31,17 @@ const QuotesSection = () => {
           {quotes.map((item, index) => (
             <div
               key={index}
-              className={`relative ${
-                index !== quotes.length - 1
-                  ? "md:border-r border-white/20"
-                  : ""
-              } md:pr-8`}
+              className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300"
             >
               <div className="flex items-start gap-3">
                 <FaQuoteLeft className="text-[#f8b400] text-xs mt-1 flex-shrink-0" />
 
                 <div>
-                  <p className="text-white text-[12px] leading-relaxed text-center">
+                  <p className="text-[#08213f] text-[12px] leading-relaxed text-center">
                     {item.text}
                   </p>
 
-                  <p className="mt-4 text-[#f8b400] font-semibold text-center text-sm">
+                  <p className="mt-4 text-gray-600 font-semibold text-center text-sm">
                     – {item.author}
                   </p>
                 </div>

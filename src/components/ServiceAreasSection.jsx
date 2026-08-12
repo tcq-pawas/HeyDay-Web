@@ -41,7 +41,7 @@ const ServiceAreasSection = () => {
         {/* Heading */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3 mb-10 sm:mb-12 text-center">
           <div className="h-[2px] w-14 bg-[#d8c28a]" />
-          <h2 className="text-xl  font-bold text-white">
+          <h2 className="text-xl  font-bold text-[#08213f]">
             OUR{" "}
             <span className="text-[#7aac3b]">
               SERVICE AREAS
@@ -51,7 +51,7 @@ const ServiceAreasSection = () => {
         </div>
 
         {/* Description */}
-        <p className="text-center text-gray-300 max-w-3xl mx-auto mb-10 sm:mb-12 text-[12px] leading-7">
+        <p className="text-center text-gray-600 max-w-3xl mx-auto mb-10 sm:mb-12 text-[12px] leading-7">
           HeyDay Realty serves customers across Eastern Uttar Pradesh, bringing local expertise and verified property listings to each district we operate in. Our team understands the unique characteristics of each market and provides tailored guidance for your property investment needs.
         </p>
 
@@ -60,15 +60,15 @@ const ServiceAreasSection = () => {
           {areas.map((area, index) => (
             <div
               key={index}
-              className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"
+              className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300"
             >
               <div className="flex items-center gap-3 mb-3">
                 <MapPin className="w-4 h-4 text-[#7aac3b]" />
-                <h3 className="text-white font-semibold text-sm">
+                <h3 className="text-[#08213f] font-semibold text-sm">
                   {area.name}
                 </h3>
               </div>
-              <p className="text-gray-300 text-[12px] leading-6">
+              <p className="text-gray-600 text-[12px] leading-6">
                 {area.description}
               </p>
             </div>
@@ -77,7 +77,7 @@ const ServiceAreasSection = () => {
 
         {/* CTA */}
         <div className="text-center mt-10 sm:mt-12">
-          <p className="text-gray-400 text-[12px] mb-4">
+          <p className="text-gray-600 text-[12px] mb-4">
             Looking for properties in these areas?
           </p>
           <a
