@@ -30,7 +30,7 @@ export const Field = ({
 );
 
 export const Feature = ({ icon, title, sub }) => (
-  <div className="flex items-center gap-2">
+  <div className="flex items-center gap-2 max-sm:flex-col max-sm:items-center max-sm:text-center">
     <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#eef3e8] text-base text-[#4f6b39]">
       {icon}
     </div>

@@ -1,47 +1,36 @@
 import { useState, useEffect } from "react";
-import { FaChevronLeft, FaChevronRight, FaQuoteLeft } from "react-icons/fa";
-
-import avatar1 from "../../assets/images/home/avatar1.png";
-import avatar2 from "../../assets/images/home/avatar2.png";
-import avatar3 from "../../assets/images/home/avatar3.png";
-import avatar4 from "../../assets/images/home/avatar4.png";
-import avatar5 from "../../assets/images/home/avatar5.png";
+import { FaChevronLeft, FaChevronRight, FaQuoteLeft, FaUserCircle } from "react-icons/fa";
 import bg4 from "../../assets/backgrounds/bg4.png";
 
 const TestimonialSection = () => {
   const testimonials = [
     {
       name: "Ramesh Singh",
-      role: "Investor",
-      image: avatar1,
+      role: "Owner",
       comment:
         "Very transparent and professional team. The land I purchased has excellent appreciation potential.",
     },
     {
       name: "Ankit Verma",
-      role: "NRI Investor",
-      image: avatar2,
+      role: "Owner",
       comment:
         "As an NRI, I needed a reliable partner. HeyDay Realty made the entire process smooth and trustworthy.",
     },
     {
       name: "Vivek Yadav",
-      role: "Business Owner",
-      image: avatar3,
+      role: "Owner",
       comment:
         "Best agricultural plot buying experience. Clear documentation and peaceful location.",
     },
     {
       name: "Priya Sharma",
-      role: "Investor",
-      image: avatar4,
+      role: "Owner",
       comment:
         "Very supportive team. Everything from site visit to registration was handled professionally.",
     },
     {
       name: "Amit Mishra",
-      role: "Land Buyer",
-      image: avatar5,
+      role: "Owner",
       comment:
         "Excellent location options and transparent dealing. Highly recommended.",
     },
@@ -128,13 +117,9 @@ const TestimonialSection = () => {
                 </p>
 
                 <div className="flex items-center justify-center gap-3 mt-5">
-                  <img
-                    src={item.image}
-                    alt={`${item.name} - HeyDay Realty Client Testimonial`}
-                    className="w-11 h-11 rounded-full object-cover"
-                    loading="lazy"
-                    width="44"
-                    height="44"
+                  <FaUserCircle
+                    className="w-11 h-11 text-[#7aac3b]"
+                    aria-label={`${item.name} - HeyDay Realty Client Testimonial`}
                   />
 
                   <div>
