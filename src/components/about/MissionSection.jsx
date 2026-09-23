@@ -10,7 +10,7 @@ const MissionSection = () => {
         backgroundImage: `url(${bg4})`,
       }}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="wide-container px-4 sm:px-6 lg:px-8 2xl:px-10">
         {/* Heading */}
         <div className="mb-8">
           <h2 className="text-xl md:text-xl font-bold uppercase ml-0 lg:ml-20">
@@ -20,18 +20,18 @@ const MissionSection = () => {
           <div className="mt-2 w-16 h-1 bg-[#d99b28] rounded-full ml-0 lg:ml-20"></div>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-12 2xl:gap-20 items-center">
           {/* Left Image */}
-          <div className="flex justify-center lg:justify-start ml-0 lg:ml-20">
+          <div className="flex justify-center lg:justify-start ml-0 lg:ml-20 2xl:ml-28">
             <img
               src={missionImg}
               alt="Mission"
-              className="rounded-3xl shadow-xl w-full max-w-[430px] h-[300px] object-cover"
+              className="rounded-3xl shadow-xl w-full max-w-[430px] 2xl:max-w-[560px] h-[300px] 2xl:h-[380px] object-cover"
             />
           </div>
 
           {/* Right Content */}
-          <div className="space-y-8">
+          <div className="space-y-8 2xl:max-w-3xl">
             {/* Mission */}
             <div className="flex gap-4">
               <div className="w-10 h-10 rounded-full bg-[#082548] flex items-center justify-center flex-shrink-0">

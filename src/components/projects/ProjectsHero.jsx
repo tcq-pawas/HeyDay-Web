@@ -55,7 +55,7 @@ const ProjectsHero = () => {
         <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-black/10"></div>
 
         {/* Content */}
-        <div className="relative z-10 w-full max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 pt-10 md:pt-22 pb-12 md:pb-20 flex flex-col lg:flex-row items-center gap-10">
+        <div className="relative z-10 w-full wide-container px-4 sm:px-6 lg:px-8 2xl:px-10 pt-10 md:pt-22 pb-12 md:pb-20 flex flex-col lg:flex-row items-center gap-10">
           <div className="max-w-xl flex flex-col justify-center text-center lg:text-left items-center lg:items-start">
             <span className="text-[#d39b34] uppercase tracking-[4px] sm:tracking-[6px] text-[10px] font-semibold ">
               Our Projects
@@ -92,7 +92,7 @@ const ProjectsHero = () => {
 
       {/* Bottom Feature Bar - Hidden on Mobile */}
       <div className="hidden md:block relative z-20 bg-[#08213f]/95 bg-opacity-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
+        <div className="wide-container px-4 sm:px-6 lg:px-8 2xl:px-10">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
             {features.map((item, index) => (
               <div

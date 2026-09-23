@@ -31,10 +31,10 @@ const HeroSection = () => {
       <div className="absolute inset-0 hidden sm:block bg-gradient-to-r from-[#041b35]/90 via-[#041b35]/65 to-transparent" />
 
       {/* Content */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex-1 flex items-center">
-        <div className="max-w-3xl">
+      <div className="relative z-10 w-full wide-container px-4 sm:px-6 lg:px-8 2xl:px-10 flex-1 flex items-center">
+        <div className="max-w-3xl 2xl:max-w-4xl">
 
-          <h1 className="text-3xl  font-bold leading-tight text-balance text-white">
+          <h1 className="text-3xl 2xl:text-5xl font-bold leading-tight text-balance text-white">
             Trusted Real Estate Company in Gorakhpur for{" "}
             <br className="hidden sm:block" />
             Agricultural Land &{" "}
@@ -44,7 +44,7 @@ const HeroSection = () => {
           </h1>
           <div className="w-16 sm:w-24 h-1 rounded-full bg-[#f2b321] mt-5 sm:mt-7"></div>
 
-          <p className="mt-4 sm:mt-6 text-[12px] text-gray-200 max-w-2xl leading-relaxed text-pretty">
+          <p className="mt-4 sm:mt-6 text-[12px] 2xl:text-sm text-gray-200 max-w-2xl 2xl:max-w-3xl leading-relaxed text-pretty">
             HeyDay Realty Pvt. Ltd. helps customers discover verified agricultural land, residential plots, farm land, and investment properties in Gorakhpur and nearby districts. We focus on transparent documentation, trusted guidance, and a smooth property buying experience.
           </p>
 
@@ -68,9 +68,9 @@ const HeroSection = () => {
 
       {/* Bottom Stats Bar */}
       <div className="relative z-20 bg-[#041b35]/70 sm:bg-[#041b35]/50 border-t border-white/10 backdrop-blur-md">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-5 sm:py-6">
+        <div className="wide-container px-4 sm:px-6 lg:px-8 2xl:px-10 py-5 sm:py-6">
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-y-5 gap-x-4 sm:gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-y-5 gap-x-4 sm:gap-6 2xl:gap-10">
 
             <div className="flex items-center gap-3 sm:gap-4 justify-center">
               <MapPinned className="w-6 h-6 sm:w-6 sm:h-6 text-lime-400 flex-shrink-0" />

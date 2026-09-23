@@ -25,7 +25,7 @@ const ServicesSection = () => {
         backgroundImage: `url(${bg2})`,
       }}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="wide-container px-4 sm:px-6 lg:px-8 2xl:px-10">
         {/* Heading */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3 mb-10 sm:mb-12 text-center">
           <div className="h-[2px] w-14 bg-[#d8c28a]" />

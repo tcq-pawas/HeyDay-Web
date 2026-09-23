@@ -12,16 +12,18 @@ export default function ContactMapLocation() {
         backgroundImage: `url(${bg5})`,
       }}
     >
-      <div className="mx-auto h-[400px] w-[70%] min-w-[280px] overflow-hidden rounded-lg ">
-        <iframe
-          src={mapSrc}
-          title="HeyDay Realty Private Limited Location"
-          className="h-full w-full"
-          style={{ border: 0 }}
-          allowFullScreen
-          loading="lazy"
-          referrerPolicy="strict-origin-when-cross-origin"
-        />
+      <div className="wide-container">
+        <div className="mx-auto h-[400px] w-full overflow-hidden rounded-lg">
+          <iframe
+            src={mapSrc}
+            title="HeyDay Realty Private Limited Location"
+            className="h-full w-full"
+            style={{ border: 0 }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="strict-origin-when-cross-origin"
+          />
+        </div>
       </div>
     </section>
   );

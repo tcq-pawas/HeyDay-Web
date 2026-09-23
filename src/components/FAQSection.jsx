@@ -46,7 +46,7 @@ const FAQSection = () => {
         backgroundImage: `url(${bg1})`,
       }}
     >
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="balanced-container px-4 sm:px-6 lg:px-8">
         {/* Heading */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3 mb-8 sm:mb-10 text-center">
           <span className="text-[#7aac3b] text-xl">🌿</span>

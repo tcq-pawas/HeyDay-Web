@@ -77,7 +77,7 @@ const TestimonialSection = () => {
         backgroundImage: `url(${bg4})`,
       }}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+      <div className="wide-container px-4 sm:px-6 lg:px-8 2xl:px-10">
         {/* Heading */}
         <div className="text-center mb-10">
           <h2 className="text-xl  font-bold text-[#08213f]">
@@ -104,11 +104,11 @@ const TestimonialSection = () => {
           </button>
 
           {/* Cards */}
-          <div className="flex flex-wrap justify-center gap-6 px-12 sm:px-14">
+          <div className="flex flex-wrap justify-center gap-6 2xl:gap-8 px-12 sm:px-14">
             {visibleTestimonials.map((item, index) => (
               <div
                 key={index}
-                className="w-full md:w-[320px] bg-white rounded-2xl border border-gray-100 shadow-md p-5"
+                className="w-full md:w-[320px] 2xl:w-[380px] bg-white rounded-2xl border border-gray-100 shadow-md p-5 2xl:p-6"
               >
                 <FaQuoteLeft className="text-[#f4a300] text-[9px] mb-2" />
 

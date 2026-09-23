@@ -44,7 +44,7 @@ const StatsBanner = () => {
         >
             {/* Timeline Section */}
             <div className="py-16">
-                <div className="max-w-7xl mx-auto px-6">
+                <div className="wide-container px-4 sm:px-6 lg:px-8 2xl:px-10">
                     <div className="text-center max-w-3xl mx-auto">
                         <h2 className="text-xl font-bold text-[#0b1f3a]">
                             FROM SITE VISIT{" "}

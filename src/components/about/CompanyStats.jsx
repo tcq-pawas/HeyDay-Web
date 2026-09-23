@@ -15,12 +15,12 @@ const CompanyStats = () => {
         backgroundImage: `url(${bg4})`,
       }}
     >
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+      <div className="wide-container px-6 lg:px-8 2xl:px-10">
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-[0.95fr_1.05fr] gap-12 2xl:gap-20 items-center">
 
           {/* Left Content */}
-          <div>
+          <div className="2xl:max-w-2xl">
 
             <h2 className="text-xl font-bold text-[#08213f] leading-tight uppercase">
               Our Success Is Rooted In
@@ -30,14 +30,14 @@ const CompanyStats = () => {
 
             <div className="w-20 h-1 bg-[#d9a021] rounded-full mt-2 mb-4"></div>
 
-            <p className="text-gray-600 text-[12px] leading-8 max-w-xl">
+            <p className="text-gray-600 text-[12px] 2xl:text-sm leading-8 max-w-xl 2xl:max-w-2xl">
               We measure our growth by the growth of our clients.
               Every plot we sell is a step towards someone's dream,
               security, and prosperity.
             </p>
 
             {/* Stats */}
-            <div className="grid grid-cols-3 mt-12 gap-4">
+            <div className="grid grid-cols-3 mt-12 gap-4 2xl:gap-6">
 
               {/* Stat 1 */}
               <div className="text-center bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300">
@@ -93,7 +93,7 @@ const CompanyStats = () => {
             <img
               src={handsheke}
               alt="Happy Client"
-              className="rounded-3xl shadow-2xl w-full max-w-[540px] h-[340px] object-cover border-2 border-[#7fa341]"
+              className="rounded-3xl shadow-2xl w-full max-w-[540px] 2xl:max-w-[680px] h-[340px] 2xl:h-[420px] object-cover border-2 border-[#7fa341]"
             />
           </div>
 

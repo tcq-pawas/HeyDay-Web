@@ -41,7 +41,7 @@ const CompanyTimeline = () => {
         backgroundImage: `url(${bg4})`,
       }}
     >
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="wide-container px-6 lg:px-8 2xl:px-10">
         {/* Heading */}
         <div className="text-center mb-16">
           <h2 className="text-xl font-bold uppercase ">

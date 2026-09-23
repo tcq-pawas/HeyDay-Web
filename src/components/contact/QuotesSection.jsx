@@ -25,7 +25,7 @@ const QuotesSection = () => {
         backgroundImage: `url(${bg5})`,
       }}
     >
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="wide-container px-4 sm:px-6 lg:px-8 2xl:px-10">
         <div className="grid md:grid-cols-3 gap-8 relative">
 
           {quotes.map((item, index) => (

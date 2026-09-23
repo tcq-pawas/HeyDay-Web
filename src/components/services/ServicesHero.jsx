@@ -58,7 +58,7 @@ const ServicesHero = () => {
       </div>
 
       {/* Hero Content */}
-      <div className="relative z-10 w-full h-full max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 pb-8 md:pb-8 lg:pb-16 flex flex-col justify-center">
+      <div className="relative z-10 w-full h-full wide-container px-4 sm:px-6 lg:px-8 2xl:px-10 pb-8 md:pb-8 lg:pb-16 flex flex-col justify-center">
         <div className="grid md:grid-cols-2 gap-12 md:gap-6 lg:gap-16 items-center w-full">
           {/* ================= LEFT CONTENT ================= */}
           <div className="max-w-3xl mt-3 md:mt-0 text-left lg:text-left">

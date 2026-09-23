@@ -138,7 +138,7 @@ const PropertySection = () => {
         backgroundImage: `url(${bg1})`,
       }}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+      <div className="wide-container px-4 sm:px-6 lg:px-8 2xl:px-10">
         {/* Heading */}
         <div className="flex items-center justify-center gap-4 mb-12">
           <div className="h-[2px] w-16 bg-[#d8c28a]" />
@@ -154,7 +154,7 @@ const PropertySection = () => {
         </div>
 
         {/* Project Cards */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 2xl:gap-10">
           {projects.map((project, index) => (
             <div
               key={index}
@@ -165,7 +165,7 @@ const PropertySection = () => {
                 <img
                   src={project.image}
                   alt={`${project.title} - HeyDay Realty Property in Gorakhpur`}
-                  className="w-full h-40 object-cover"
+                  className="w-full h-40 2xl:h-52 object-cover"
                   loading="lazy"
                   width="400"
                   height="160"
@@ -200,7 +200,7 @@ const PropertySection = () => {
               </div>
 
               {/* Content */}
-              <div className="p-6 flex-1 flex flex-col">
+              <div className="p-6 2xl:p-7 flex-1 flex flex-col">
                 <h3 className="text-sm font-bold text-[#08213f] mb-4">
                   {project.title}
                 </h3>
@@ -253,7 +253,7 @@ const PropertySection = () => {
         </div>
 
         {/* Categories */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 2xl:gap-12">
           {categories.map((item, index) => {
             const Icon = item.icon;
 

@@ -1,7 +1,7 @@
 const TeamCTA = () => {
   return (
     <section className="py-13 bg-[#082548]">
-      <div className="max-w-4xl mx-auto px-6 text-center text-white">
+      <div className="wide-container px-4 sm:px-6 lg:px-8 2xl:px-10 text-center text-white">
 
         <h2 className="text-3xl font-bold">
           Let's Build Your Future Together

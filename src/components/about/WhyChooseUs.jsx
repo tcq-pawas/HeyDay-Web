@@ -49,7 +49,7 @@ const WhyChooseUs = () => {
         backgroundImage: `url(${bg4})`,
       }}
     >
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="wide-container px-6 lg:px-8 2xl:px-10">
 
         {/* Heading */}
         <h2 className="text-center text-xl  font-bold text-[#08213f] uppercase mb-10">
@@ -57,7 +57,7 @@ const WhyChooseUs = () => {
         </h2>
 
         {/* Features */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 2xl:gap-6">
 
           {features.map((item, index) => (
             <div

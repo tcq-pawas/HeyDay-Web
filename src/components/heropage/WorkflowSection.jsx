@@ -52,9 +52,9 @@ const WorkflowSection = () => {
     >
 
       {/* Why Heyday Realty */}
-      <div className="max-w-7xl mx-auto px-6 py-16">
+      <div className="wide-container px-4 sm:px-6 lg:px-8 2xl:px-10 py-16">
 
-        <div className="text-center max-w-3xl mx-auto">
+        <div className="text-center balanced-container">
 
           <div className="flex items-center justify-center gap-4 mb-6">
 
@@ -79,7 +79,7 @@ const WorkflowSection = () => {
 
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-5 mt-12">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-5 2xl:gap-7 mt-12">
           {gallery.map((item, index) => (
             <div
               key={index}
@@ -88,7 +88,7 @@ const WorkflowSection = () => {
               <img
                 src={item.image}
                 alt={item.title}
-                className="w-full h-40 object-cover transition-transform duration-500 group-hover:scale-110"
+                className="w-full h-40 2xl:h-48 object-cover transition-transform duration-500 group-hover:scale-110"
               />
 
               {/* Gradient Overlay */}
@@ -119,9 +119,9 @@ const WorkflowSection = () => {
       >
         <div className="absolute inset-0 bg-[#041b35]/75" />
 
-        <div className="relative max-w-7xl mx-auto px-6 py-12">
+        <div className="relative wide-container px-4 sm:px-6 lg:px-8 2xl:px-10 py-12 2xl:py-16">
 
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-10 items-center">
+          <div className="grid grid-cols-2 md:grid-cols-[1.2fr_repeat(4,1fr)] gap-10 2xl:gap-14 items-center">
 
             <div className="col-span-2 md:col-span-1">
 

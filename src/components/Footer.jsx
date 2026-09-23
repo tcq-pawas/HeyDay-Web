@@ -33,7 +33,7 @@ const Footer = () => {
       >
         <div className="absolute inset-0 bg-[#041b35]/75"></div>
 
-        <div className="relative max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 py-12 md:py-16">
+        <div className="relative wide-container px-5 sm:px-6 lg:px-8 2xl:px-10 py-12 md:py-16">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
             <div className="text-center lg:text-left">
               <h2 className="text-xl  font-bold leading-tight">
@@ -70,8 +70,8 @@ const Footer = () => {
       </div>
 
       {/* Footer Main */}
-      <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10">
+      <div className="wide-container px-5 sm:px-6 lg:px-8 2xl:px-10 py-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 2xl:gap-14">
           {/* Logo */}
           <div className="sm:col-span-2 lg:col-span-1 text-center sm:text-left">
             <img

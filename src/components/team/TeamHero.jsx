@@ -21,7 +21,7 @@ const TeamHero = () => {
       {/* Decorative Blur */}
       <div className="absolute top-20 right-20 w-72 h-72 rounded-full bg-[#315d2f]/30 blur-3xl"></div>
 
-      <div className="relative z-10 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-24 grid lg:grid-cols-2 gap-16 items-center">
+      <div className="relative z-10 w-full wide-container px-4 sm:px-6 lg:px-8 2xl:px-10 py-24 grid lg:grid-cols-2 gap-16 items-center">
         {/* Left Content */}
         <div className="text-white">
           <span className="uppercase tracking-[4px] sm:tracking-[6px] text-[#F4B53F] text-[10px] font-semibold">

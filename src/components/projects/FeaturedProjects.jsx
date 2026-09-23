@@ -168,7 +168,7 @@ const FeaturedProjects = () => {
       }}
     >
 
-      <div className="mx-auto max-w-6xl px-4 sm:px-5">
+      <div className="wide-container px-4 sm:px-6 lg:px-8 2xl:px-10">
 
         <div className="mb-8 text-center">
 

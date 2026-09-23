@@ -16,7 +16,7 @@ const TeamIntro = () => {
         backgroundImage: `url(${bg2})`,
       }}
     >
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="wide-container px-4 sm:px-6 lg:px-8 2xl:px-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left Content */}
           <div>

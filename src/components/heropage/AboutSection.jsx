@@ -42,16 +42,16 @@ const AboutSection = () => {
         backgroundImage: `url(${bg1})`,
       }}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="wide-container px-4 sm:px-6 lg:px-8 2xl:px-10">
         {/* Top Section */}
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-16 2xl:gap-24 items-center">
           {/* Left Content */}
-          <div>
+          <div className="2xl:max-w-2xl">
             <p className="text-[#d58d33] font-semibold uppercase text-[10px] tracking-wider">
               About HeyDay Realty Pvt. Ltd.
             </p>
 
-            <h2 className="mt-3 text-xl  font-bold leading-tight text-[#071b38]">
+            <h2 className="mt-3 text-xl 2xl:text-3xl font-bold leading-tight text-[#071b38]">
               Your Trusted Real Estate
               <br />
               Partner in{" "}
@@ -60,15 +60,15 @@ const AboutSection = () => {
               </span>
             </h2>
 
-            <p className="mt-4 text-gray-600 leading-8 text-[12px]">
+            <p className="mt-4 text-gray-600 leading-8 text-[12px] 2xl:text-sm">
               HeyDay Realty Pvt. Ltd. is a Gorakhpur-based real estate company specializing in agricultural land, residential plots, farm land, and investment properties.
             </p>
 
-            <p className="mt-3 text-gray-600 leading-8 text-[12px]">
+            <p className="mt-3 text-gray-600 leading-8 text-[12px] 2xl:text-sm">
               Our team helps buyers and investors identify legally verified properties while providing transparent documentation, professional consultation, and end-to-end support throughout the buying process.
             </p>
 
-            <p className="mt-3 text-gray-600 leading-8 text-[12px]">
+            <p className="mt-3 text-gray-600 leading-8 text-[12px] 2xl:text-sm">
               Whether you are investing for the future, purchasing your first plot, or expanding your land portfolio, we are committed to delivering reliable service backed by local market knowledge.
             </p>
 
@@ -86,7 +86,7 @@ const AboutSection = () => {
             <img
               src={landImage}
               alt="HeyDay Realty Agricultural Land Investment Property"
-              className="w-full h-[300px] lg:h-[400px] object-cover rounded-3xl shadow-lg"
+              className="w-full h-[300px] lg:h-[400px] 2xl:h-[460px] object-cover rounded-3xl shadow-lg"
               loading="lazy"
               width="600"
               height="400"
@@ -113,7 +113,7 @@ const AboutSection = () => {
         </div>
 
         {/* Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 2xl:gap-10 mt-5">
           {features.map((item, index) => {
             const Icon = item.icon;
 

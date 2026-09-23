@@ -21,3 +21,55 @@ html {
 .animate-zoom {
   animation: zoomInOut 12s ease-in-out infinite;
 }
+
+@layer components {
+  .wide-container {
+    width: 100%;
+    max-width: 80rem;
+    margin-inline: auto;
+  }
+
+  .balanced-container {
+    width: 100%;
+    max-width: 64rem;
+    margin-inline: auto;
+  }
+
+  @media (min-width: 1024px) {
+    .wide-container {
+      max-width: 90rem;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .wide-container {
+      max-width: 110rem;
+    }
+
+    .balanced-container {
+      max-width: 75rem;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .wide-container {
+      max-width: 120rem;
+    }
+  }
+
+  @media (min-width: 1536px) {
+    .wide-container {
+      max-width: 128rem;
+    }
+
+    .balanced-container {
+      max-width: 85rem;
+    }
+  }
+
+  @media (min-width: 1920px) {
+    .wide-container {
+      max-width: 140rem;
+    }
+  }
+}

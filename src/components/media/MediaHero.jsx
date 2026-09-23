@@ -23,7 +23,7 @@ const MediaHero = () => {
       <div className="absolute inset-0 bg-[#081826]/70 "></div>
 
       {/* Content */}
-      <div className="relative z-10 mx-auto grid h-full w-full max-w-7xl items-center gap-12 px-6 lg:grid-cols-[1fr_0.9fr] lg:px-8 ">
+      <div className="relative z-10 w-full wide-container px-4 sm:px-6 lg:px-8 2xl:px-10 grid h-full items-center gap-12 lg:grid-cols-[1fr_0.9fr]">
         {/* Left Content */}
         <div className="max-w-2xl ">
           <p className="mb-4 uppercase tracking-[4px] sm:tracking-[6px] text-[#F4B53F] text-[10px] font-semibold">
