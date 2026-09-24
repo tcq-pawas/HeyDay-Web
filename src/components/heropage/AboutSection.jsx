@@ -60,15 +60,15 @@ const AboutSection = () => {
               </span>
             </h2>
 
-            <p className="mt-4 text-gray-600 leading-8 text-[12px] 2xl:text-sm">
+            <p className="mt-4 text-gray-800 leading-8 text-[13px] 2xl:text-sm">
               HeyDay Realty Pvt. Ltd. is a Gorakhpur-based real estate company specializing in agricultural land, residential plots, farm land, and investment properties.
             </p>
 
-            <p className="mt-3 text-gray-600 leading-8 text-[12px] 2xl:text-sm">
+            <p className="mt-3 text-gray-800 leading-8 text-[13px] 2xl:text-sm">
               Our team helps buyers and investors identify legally verified properties while providing transparent documentation, professional consultation, and end-to-end support throughout the buying process.
             </p>
 
-            <p className="mt-3 text-gray-600 leading-8 text-[12px] 2xl:text-sm">
+            <p className="mt-3 text-gray-800 leading-8 text-[13px] 2xl:text-sm">
               Whether you are investing for the future, purchasing your first plot, or expanding your land portfolio, we are committed to delivering reliable service backed by local market knowledge.
             </p>
 
@@ -130,7 +130,7 @@ const AboutSection = () => {
                   {item.title}
                 </h4>
 
-                <p className="mt-2 text-gray-600 leading-7 text-[12px]">
+                <p className="mt-2 text-gray-800 leading-7 text-[13px]">
                   {item.desc}
                 </p>
               </div>

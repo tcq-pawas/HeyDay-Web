@@ -51,7 +51,7 @@ const ServiceAreasSection = () => {
         </div>
 
         {/* Description */}
-        <p className="text-center text-gray-600 max-w-3xl mx-auto mb-10 sm:mb-12 text-[12px] leading-7">
+        <p className="text-center text-gray-800 max-w-3xl mx-auto mb-10 sm:mb-12 text-[13px] leading-7">
           HeyDay Realty serves customers across Eastern Uttar Pradesh, bringing local expertise and verified property listings to each district we operate in. Our team understands the unique characteristics of each market and provides tailored guidance for your property investment needs.
         </p>
 
@@ -68,7 +68,7 @@ const ServiceAreasSection = () => {
                   {area.name}
                 </h3>
               </div>
-              <p className="text-gray-600 text-[12px] leading-6">
+              <p className="text-gray-800 text-[13px] leading-6">
                 {area.description}
               </p>
             </div>
@@ -77,7 +77,7 @@ const ServiceAreasSection = () => {
 
         {/* CTA */}
         <div className="text-center mt-10 sm:mt-12">
-          <p className="text-gray-600 text-[12px] mb-4">
+          <p className="text-gray-800 text-[13px] mb-4">
             Looking for properties in these areas?
           </p>
           <a

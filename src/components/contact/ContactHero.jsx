@@ -38,7 +38,7 @@ const ContactHero = () => {
             </div>
 
             {/* Description */}
-            <p className="mt-5 max-w-2xl text-[12px] leading-7 text-white/85 sm:mx-0 mx-auto">
+            <p className="mt-5 max-w-2xl text-[13px] leading-7 text-white/85 sm:mx-0 mx-auto">
               Have questions about our properties or investment opportunities?
               Reach out to our expert team for personalized guidance, site
               visits, and professional real estate consultation in Gorakhpur.

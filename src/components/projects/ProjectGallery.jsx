@@ -94,7 +94,7 @@ const ProjectGallery = () => {
                 Interior Collections
               </h2>
 
-              <p className="mt-2 text-gray-600 leading-7 max-w-lg text-[14px]">
+              <p className="mt-2 text-gray-800 leading-7 max-w-lg text-[14px]">
                 Discover well-planned layouts, lush green spaces, modern
                 amenities, and premium infrastructure.
               </p>

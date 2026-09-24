@@ -41,7 +41,7 @@ const QuotesSection = () => {
                     {item.text}
                   </p>
 
-                  <p className="mt-4 text-gray-600 font-semibold text-center text-sm">
+                  <p className="mt-4 text-gray-800 font-semibold text-center text-sm">
                     – {item.author}
                   </p>
                 </div>

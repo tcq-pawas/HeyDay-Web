@@ -38,7 +38,7 @@ const WorkflowSection = () => {
             Your Dream Home Journey ✨
           </h1>
 
-          <p className="text-gray-600 mt-5 max-w-2xl mx-auto leading-8 text-lg">
+          <p className="text-gray-800 mt-5 max-w-2xl mx-auto leading-8 text-lg">
             Buying your dream home has never been easier. Follow these simple
             steps and move into your perfect property stress-free.
           </p>

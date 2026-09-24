@@ -68,7 +68,7 @@ const ProjectsHero = () => {
             </h1>
             
 
-            <p className="mt-4 text-[12px] leading-7 text-white/90 max-w-lg">
+            <p className="mt-4 text-[13px] leading-7 text-white/90 max-w-lg">
               Explore our premium land and plotted development projects designed
               for a secure future and long-term growth.
             </p>
@@ -108,7 +108,7 @@ const ProjectsHero = () => {
                     {item.title}
                   </h3>
 
-                  <p className="mt-1 text-white/85 text-[12px] leading-6 max-w-[260px] sm:max-w-none mx-auto sm:mx-0">
+                  <p className="mt-1 text-white/85 text-[13px] leading-6 max-w-[260px] sm:max-w-none mx-auto sm:mx-0">
                     {item.text}
                   </p>
                 </div>

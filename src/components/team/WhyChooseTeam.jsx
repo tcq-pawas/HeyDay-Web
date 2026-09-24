@@ -62,7 +62,7 @@ const WhyChooseTeam = () => {
             The Team Behind Every<span className="text-[#7aac3b]"> Successful Investment</span>
           </h2>
 
-          <p className="mt-5 max-w-3xl mx-auto text-gray-600 leading-8 text-[12px]">
+          <p className="mt-5 max-w-3xl mx-auto text-gray-800 leading-8 text-[13px]">
             Our dedicated professionals combine industry expertise, local market
             knowledge, and customer-first values to deliver a seamless property
             buying experience.
@@ -84,7 +84,7 @@ const WhyChooseTeam = () => {
                 {item.title}
               </h3>
 
-              <p className="mt-2 text-gray-600 leading-7 text-[12px]">
+              <p className="mt-2 text-gray-800 leading-7 text-[13px]">
                 {item.description}
               </p>
             </div>
@@ -107,7 +107,7 @@ const WhyChooseTeam = () => {
                   {item.title}
                 </h3>
 
-                <p className="mt-2 text-gray-600 leading-7">
+                <p className="mt-2 text-gray-800 leading-7">
                   {item.description}
                 </p>
               </div>

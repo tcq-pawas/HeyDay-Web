@@ -35,7 +35,7 @@ const TeamHero = () => {
             <span className="text-lime-400"> HeyDay Realty</span>
           </h1>
 
-          <p className="mt-8 text-[12px] text-gray-200 leading-8 max-w-xl">
+          <p className="mt-8 text-[13px] text-gray-200 leading-8 max-w-xl">
             Our experienced professionals are committed to helping every family and investor make confident property decisions through transparency, trust, and personalized guidance. We carefully understand your needs.
           </p>
         </div>
@@ -54,7 +54,7 @@ const TeamHero = () => {
                     Expert Team
                   </h3>
 
-                  <p className="text-gray-300 text-[12px]">
+                  <p className="text-gray-300 text-[13px]">
                     Skilled professionals dedicated to your success.
                   </p>
                 </div>
@@ -70,7 +70,7 @@ const TeamHero = () => {
                     Trusted Guidance
                   </h3>
 
-                  <p className="text-gray-300 text-[12px]">
+                  <p className="text-gray-300 text-[13px]">
                     Honest advice and transparent property solutions.
                   </p>
                 </div>
@@ -86,7 +86,7 @@ const TeamHero = () => {
                     Quality Commitment
                   </h3>
 
-                  <p className="text-gray-300 text-[12px]">
+                  <p className="text-gray-300 text-[13px]">
                     Delivering excellence in every project we undertake.
                   </p>
                 </div>

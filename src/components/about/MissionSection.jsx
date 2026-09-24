@@ -43,7 +43,7 @@ const MissionSection = () => {
                   Our Mission
                 </h3>
 
-                <p className="text-[12px] text-gray-600 leading-6">
+                <p className="text-[13px] text-gray-800 leading-6">
                   To provide verified land investment opportunities and
                   exceptional service that help our clients build long-term
                   wealth and secure their future.
@@ -62,7 +62,7 @@ const MissionSection = () => {
                   Our Vision
                 </h3>
 
-                <p className="text-[12px] text-gray-600 leading-6">
+                <p className="text-[13px] text-gray-800 leading-6">
                   To be the most trusted and preferred land investment company
                   known for transparency, reliability, and client success.
                 </p>

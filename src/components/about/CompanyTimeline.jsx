@@ -48,7 +48,7 @@ const CompanyTimeline = () => {
             Our <span className="text-[#7aac3b]">Journey</span>
           </h2>
 
-          <p className="mt-5 text-gray-600 max-w-2xl mx-auto text-[12px] leading-8">
+          <p className="mt-5 text-gray-800 max-w-2xl mx-auto text-[13px] leading-8">
             Since 2022, HeyDay Realty has been committed to providing trusted,
             transparent, and value-driven real estate solutions. Every milestone
             reflects our dedication to helping families and investors build a
@@ -76,7 +76,7 @@ const CompanyTimeline = () => {
                       {item.title}
                     </h3>
 
-                    <p className="text-gray-600 leading-7 text-[12px]">
+                    <p className="text-gray-800 leading-7 text-[13px]">
                       {item.description}
                     </p>
                   </div>

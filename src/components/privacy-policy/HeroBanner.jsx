@@ -45,7 +45,7 @@ export default function HeroBanner() {
           <h1 className="text-3xl font-bold leading-tight tracking-normal text-white">
             Our <span className="text-[#6DAA2C]">Policies</span>
           </h1>
-          <p className="mx-auto mt-5 max-w-xl text-[12px] font-medium leading-6 text-white/82">
+          <p className="mx-auto mt-5 max-w-xl text-[13px] font-medium leading-6 text-white/82">
             Clear rules, transparent decisions, and dependable support for every customer interaction with HeyDay Realty. We are committed to maintaining the highest standards of honesty, legal compliance, and customer care, ensuring every property transaction is handled with integrity, clarity, and complete peace of mind from inquiry to ownership.
           </p>
 

@@ -51,7 +51,7 @@ const StatsBanner = () => {
                             <span className="text-[#7aac3b]">TO REGISTRATION</span>
                         </h2>
 
-                        <p className="text-gray-600 mt-4 text-[12px] leading-7">
+                        <p className="text-gray-800 mt-4 text-[13px] leading-7">
                             Experience a transparent and hassle-free land buying journey.
                             From selecting the right property to legal verification and
                             registration, every step is guided by our experienced team to
@@ -77,7 +77,7 @@ const StatsBanner = () => {
                                     {step.title}
                                 </h3>
 
-                                <p className="text-gray-600 text-[11px]  leading-6">
+                                <p className="text-gray-800 text-[11px]  leading-6">
                                     {step.desc}
                                 </p>
                             </div>

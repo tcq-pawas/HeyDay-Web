@@ -180,7 +180,7 @@ const FeaturedProjects = () => {
 
 
 
-          <p className="mx-auto mt-4 max-w-4xl leading-7 text-gray-600 text-[12px] md:leading-8">
+          <p className="mx-auto mt-4 max-w-4xl leading-7 text-gray-800 text-[13px] md:leading-8">
 
             Explore our carefully selected land investment opportunities across
 
@@ -218,16 +218,11 @@ const FeaturedProjects = () => {
 
                 <div className="grid lg:grid-cols-[36%_1fr]">
 
-                  <div className="relative h-[220px] lg:h-auto lg:min-h-[210px]">
-
+                  <div className="relative h-[220px] lg:h-auto">
                     <img
-
                       src={project.image}
-
                       alt={project.title}
-
-                      className="h-full w-full object-cover"
-
+                      className="absolute inset-0 h-full w-full object-cover"
                     />
 
                     <div
@@ -265,7 +260,7 @@ const FeaturedProjects = () => {
                     </div>
                   </div>
 
-                  <div className="flex flex-col justify-between p-4 sm:p-5">
+                  <div className="flex flex-col p-4 sm:p-5">
                     <div>
 
                       <div className="flex items-start justify-between gap-4">
@@ -280,7 +275,7 @@ const FeaturedProjects = () => {
 
 
 
-                          <p className="mt-2 flex items-center gap-1.5 text-[12px] font-medium text-gray-600">
+                          <p className="mt-2 flex items-center gap-1.5 text-[13px] font-medium text-gray-800">
 
                             <FaMapMarkerAlt className="text-[#3f8b65]" />
 
@@ -320,7 +315,7 @@ const FeaturedProjects = () => {
 
 
 
-                      <p className="mt-4 max-w-3xl text-[12px] leading-6 text-gray-600">
+                      <p className="mt-4 max-w-3xl text-[13px] leading-6 text-gray-800">
 
                         {project.description}
 

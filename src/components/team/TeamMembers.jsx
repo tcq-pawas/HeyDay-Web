@@ -102,7 +102,7 @@ const TeamMembers = () => {
             Meet <span className="text-[#7aac3b]">Our</span> Professionals
           </h2>
 
-          <p className="mx-auto mt-3 max-w-2xl text-[12px] text-gray-600">
+          <p className="mx-auto mt-3 max-w-2xl text-[13px] text-gray-800">
             Our experienced team is committed to helping you make confident real
             estate decisions with trust, transparency, and personalized support.
           </p>
@@ -179,7 +179,7 @@ const TeamMembers = () => {
 
                     <div className="mt-2 h-[2px] w-10 bg-[#d49a42]" />
 
-                    <p className="mt-4 max-w-2xl text-[12px] leading-6 text-gray-600">
+                    <p className="mt-4 max-w-2xl text-[13px] leading-6 text-gray-800">
                       {member.description}
                     </p>
 

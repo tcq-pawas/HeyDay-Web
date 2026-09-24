@@ -30,7 +30,7 @@ const CompanyStats = () => {
 
             <div className="w-20 h-1 bg-[#d9a021] rounded-full mt-2 mb-4"></div>
 
-            <p className="text-gray-600 text-[12px] 2xl:text-sm leading-8 max-w-xl 2xl:max-w-2xl">
+            <p className="text-gray-800 text-[13px] 2xl:text-sm leading-8 max-w-xl 2xl:max-w-2xl">
               We measure our growth by the growth of our clients.
               Every plot we sell is a step towards someone's dream,
               security, and prosperity.
@@ -49,7 +49,7 @@ const CompanyStats = () => {
                   120+
                 </h3>
 
-                <p className="text-gray-600 mt-1 text-sm">
+                <p className="text-gray-800 mt-1 text-sm">
                   Happy Families
                 </p>
               </div>
@@ -64,7 +64,7 @@ const CompanyStats = () => {
                   500+
                 </h3>
 
-                <p className="text-gray-600 mt-1 text-sm">
+                <p className="text-gray-800 mt-1 text-sm">
                   Acres Sold
                 </p>
               </div>
@@ -79,7 +79,7 @@ const CompanyStats = () => {
                   1000+
                 </h3>
 
-                <p className="text-gray-600 mt-1 text-sm">
+                <p className="text-gray-800 mt-1 text-sm">
                   Satisfied Investors
                 </p>
               </div>

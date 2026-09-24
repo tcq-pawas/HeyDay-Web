@@ -45,7 +45,7 @@ export default function HeroBanner() {
           </h1>
 
           {/* Description */}
-          <p className="mx-auto mt-5 max-w-xl text-[12px] font-medium leading-6 text-white/82">
+          <p className="mx-auto mt-5 max-w-xl text-[13px] font-medium leading-6 text-white/82">
             These Terms & Conditions define the rights, responsibilities, and
             obligations governing your relationship with HeyDay Realty. By
             accessing our website, booking a property, or using any of our

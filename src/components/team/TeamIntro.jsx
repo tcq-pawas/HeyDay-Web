@@ -27,7 +27,7 @@ const TeamIntro = () => {
               <span className="text-[#7aac3b]">Built</span> on Excellence.
             </h2>
 
-            <p className="mt-6 text-gray-600 leading-8 text-[12px]">
+            <p className="mt-6 text-gray-800 leading-8 text-[13px]">
               At HeyDay Realty, our team is passionate about helping families
               and investors find secure, valuable, and legally verified
               properties. Every member is committed to delivering honest advice,
@@ -43,7 +43,7 @@ const TeamIntro = () => {
                   Our Mission
                 </h3>
 
-                <p className="mt-3 text-gray-600 leading-7 text-[12px]">
+                <p className="mt-3 text-gray-800 leading-7 text-[13px]">
                   Deliver trusted real estate solutions with complete
                   transparency and long-term value.
                 </p>
@@ -56,7 +56,7 @@ const TeamIntro = () => {
                   Our Vision
                 </h3>
 
-                <p className="mt-3 text-gray-600 leading-7 text-[12px]">
+                <p className="mt-3 text-gray-800 leading-7 text-[13px]">
                   Become the most trusted plotted development company in Eastern
                   Uttar Pradesh.
                 </p>

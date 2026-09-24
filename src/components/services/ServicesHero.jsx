@@ -83,7 +83,7 @@ const ServicesHero = () => {
             </h1>
 
             {/* Description */}
-            <p className="mt-6 md:mt-4 lg:mt-6 text-[12px] leading-7 md:leading-6 lg:leading-9 text-white/85 max-w-2xl">
+            <p className="mt-6 md:mt-4 lg:mt-6 text-[13px] leading-7 md:leading-6 lg:leading-9 text-white/85 max-w-2xl">
               From verified agricultural land and residential plots to
               documentation, site visits, legal verification, and investment
               consulting, we make every property purchase simple, secure, and

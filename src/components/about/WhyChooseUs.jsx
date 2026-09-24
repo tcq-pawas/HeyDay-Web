@@ -74,7 +74,7 @@ const WhyChooseUs = () => {
                 {item.title}
               </h3>
 
-              <p className="text-gray-600 text-[12px] mt-1">
+              <p className="text-gray-800 text-[13px] mt-1">
                 {item.subtitle}
               </p>
             </div>

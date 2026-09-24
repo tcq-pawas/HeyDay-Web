@@ -112,7 +112,7 @@ const TestimonialSection = () => {
               >
                 <FaQuoteLeft className="text-[#f4a300] text-[9px] mb-2" />
 
-                <p className="text-gray-600 text-[12px] leading-7 min-h-[80px] text-center">
+                <p className="text-gray-800 text-[13px] leading-7 min-h-[80px] text-center">
                   {item.comment}
                 </p>
 

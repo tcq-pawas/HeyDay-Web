@@ -31,12 +31,10 @@ const AboutHero = () => {
               <br />
               Delivering Value.
               <br />
-              Growing{" "}
-              <span className="text-lime-400">Together.</span>
+              Growing <span className="text-lime-400">Together.</span>
             </h1>
 
-
-            <p className="mt-8 text-gray-300 text-[12px] 2xl:text-sm leading-8">
+            <p className="mt-8 text-gray-300 text-[13px] 2xl:text-sm leading-8">
               At HeyDay Realty, we believe land is more than just property—
               it's an opportunity, a future, and a legacy. We help families
               and investors discover premium land opportunities in
@@ -50,33 +48,62 @@ const AboutHero = () => {
             </Link>
           </div>
 
-          {/* RIGHT IMAGES */}
-          <div className="relative hidden lg:block h-[500px] 2xl:h-[560px] mt-20">
-            {/* Top Image */}
-            <div className="absolute right-0 top-0 w-[350px] 2xl:w-[430px] rounded-[24px] overflow-hidden border-[4px] border-white shadow-2xl z-20 mr-35 mt-5">
-              <img
-                src={roadImg}
-                alt=""
-                className="w-full h-[150px] 2xl:h-[190px] object-cover"
-              />
-            </div>
+          {/* RIGHT IMAGES (proportional collage - same on every screen size) */}
+          <div className="hidden lg:block w-full">
+            <div
+              className="relative w-full max-w-[560px] 2xl:max-w-[680px] ml-auto"
+              style={{ aspectRatio: "901 / 667" }}
+            >
+              {/* Top Image */}
+              <div
+                className="absolute z-20 overflow-hidden rounded-[24px] border-[4px] border-white shadow-2xl"
+                style={{
+                  left: "17.76%",
+                  top: "12.74%",
+                  width: "54.38%",
+                  height: "32.5%",
+                }}
+              >
+                <img
+                  src={roadImg}
+                  alt=""
+                  className="w-full h-full object-cover"
+                />
+              </div>
 
-            {/* Middle Image */}
-            <div className="absolute right-10 top-[140px] 2xl:top-[175px] w-[350px] 2xl:w-[430px] rounded-[24px] overflow-hidden border-[4px] border-white shadow-2xl z-30 ">
-              <img
-                src={gateImg}
-                alt=""
-                className="w-full h-[150px] 2xl:h-[190px] object-cover"
-              />
-            </div>
+              {/* Middle Image */}
+              <div
+                className="absolute z-30 overflow-hidden rounded-[24px] border-[4px] border-white shadow-2xl"
+                style={{
+                  left: "33.3%",
+                  top: "38.2%",
+                  width: "54.4%",
+                  height: "32.7%",
+                }}
+              >
+                <img
+                  src={gateImg}
+                  alt=""
+                  className="w-full h-full object-cover"
+                />
+              </div>
 
-            {/* Bottom Image */}
-            <div className="absolute left-6 bottom-0 w-[250px] 2xl:w-[320px] rounded-[24px] overflow-hidden border-[4px] border-white shadow-2xl z-10 mb-30">
-              <img
-                src={heroImage}
-                alt=""
-                className="w-full h-[150px] 2xl:h-[190px] object-cover"
-              />
+              {/* Bottom Image */}
+              <div
+                className="absolute z-10 overflow-hidden rounded-[24px] border-[4px] border-white shadow-2xl"
+                style={{
+                  left: "6.1%",
+                  top: "55.5%",
+                  width: "38.85%",
+                  height: "33%",
+                }}
+              >
+                <img
+                  src={heroImage}
+                  alt=""
+                  className="w-full h-full object-cover"
+                />
+              </div>
             </div>
           </div>
         </div>

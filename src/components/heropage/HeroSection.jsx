@@ -44,7 +44,7 @@ const HeroSection = () => {
           </h1>
           <div className="w-16 sm:w-24 h-1 rounded-full bg-[#f2b321] mt-5 sm:mt-7"></div>
 
-          <p className="mt-4 sm:mt-6 text-[12px] 2xl:text-sm text-gray-200 max-w-2xl 2xl:max-w-3xl leading-relaxed text-pretty">
+          <p className="mt-4 sm:mt-6 text-[13px] 2xl:text-sm text-gray-200 max-w-2xl 2xl:max-w-3xl leading-relaxed text-pretty">
             HeyDay Realty Pvt. Ltd. helps customers discover verified agricultural land, residential plots, farm land, and investment properties in Gorakhpur and nearby districts. We focus on transparent documentation, trusted guidance, and a smooth property buying experience.
           </p>
 

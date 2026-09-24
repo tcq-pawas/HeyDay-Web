@@ -354,7 +354,7 @@ const MediaHero = () => {
             Collection
           </h2>
 
-          <p className="text-gray-500 mt-5 max-w-2xl mx-auto text-[12px]">
+          <p className="text-gray-800 mt-5 max-w-2xl mx-auto text-[13px]">
             Browse our premium collection of agricultural lands,
             residential plots, gated communities, farmhouse plots,
             and investment opportunities.

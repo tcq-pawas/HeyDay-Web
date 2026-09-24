@@ -85,7 +85,7 @@ const FAQSection = () => {
                     : "max-h-0"
                 }`}
               >
-                <p className="text-gray-600 text-[12px] leading-7">
+                <p className="text-gray-800 text-[13px] leading-7">
                   {faq.answer}
                 </p>
               </div>

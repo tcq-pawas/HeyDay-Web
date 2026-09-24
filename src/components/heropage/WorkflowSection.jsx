@@ -71,7 +71,7 @@ const WorkflowSection = () => {
 
           </div>
 
-          <p className="text-gray-600 text-[12px] leading-7">
+          <p className="text-gray-800 text-[13px] leading-7">
             We combine trusted legal expertise, premium locations, transparent
             documentation, and customer-first service to make your land
             investment secure, rewarding, and completely stress-free.

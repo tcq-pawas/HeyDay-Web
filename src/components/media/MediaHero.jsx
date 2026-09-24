@@ -36,7 +36,7 @@ const MediaHero = () => {
             & Plot <span className="text-lime-400">Gallery</span>
           </h1>
 
-          <p className="mt-6 max-w-xl text-[12px] leading-7 text-gray-300  md:leading-8">
+          <p className="mt-6 max-w-xl text-[13px] leading-7 text-gray-300  md:leading-8">
             Discover a wide range of agricultural lands, premium residential plots, and high-potential investment opportunities across prime locations. Whether you're planning to build your dream home, expand your farming ventures, or secure your financial future, we offer legally verified properties.
           </p>
 

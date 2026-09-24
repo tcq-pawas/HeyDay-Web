@@ -248,7 +248,7 @@ const ContactForm = () => {
 
       <div className="mt-3 h-1 w-14 rounded-full bg-[#c75c0d]" />
 
-      <p className="mt-4 max-w-lg text-[12px] leading-6 text-[#556070]">
+      <p className="mt-4 max-w-lg text-[13px] leading-6 text-[#556070]">
         Have questions about our land investment opportunities or ready to
         schedule a site visit? Get in touch with our expert team today.
       </p>
