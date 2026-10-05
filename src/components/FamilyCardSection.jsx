@@ -24,7 +24,7 @@ const FamilyCardSection = () => {
             A Better Place <br /> For Your Happy Family
           </h1>
 
-          <p className="text-gray-600 mt-5 leading-7 text-[15px]">
+          <p className="text-gray-800 mt-5 leading-7 text-[15px]">
             Create beautiful memories in a home filled with comfort, safety and
             modern living. Find the perfect place where happiness begins.
           </p>
@@ -32,24 +32,24 @@ const FamilyCardSection = () => {
           <div className="grid grid-cols-2 gap-4 mt-6">
             <div className="bg-orange-50 rounded-2xl p-4 text-center">
               <h1 className="text-2xl font-bold text-[#032349]">4+</h1>
-              <p className="text-gray-600 text-sm">Bedrooms</p>
+              <p className="text-gray-800 text-sm">Bedrooms</p>
             </div>
 
             <div className="bg-orange-50 rounded-2xl p-4 text-center">
               <h1 className="text-2xl font-bold text-[#032349]">24/7</h1>
-              <p className="text-gray-600 text-sm">Security</p>
+              <p className="text-gray-800 text-sm">Security</p>
             </div>
 
             <div className="bg-orange-50 rounded-2xl p-4 text-center">
               <h1 className="text-2xl font-bold text-[#032349]">100%</h1>
-              <p className="text-gray-600 text-sm">Family Comfort</p>
+              <p className="text-gray-800 text-sm">Family Comfort</p>
             </div>
 
             <div className="bg-orange-50 rounded-2xl p-4 text-center">
               <h1 className="text-2xl font-bold text-[#032349]">
                 Premium
               </h1>
-              <p className="text-gray-600 text-sm">Interior</p>
+              <p className="text-gray-800 text-sm">Interior</p>
             </div>
           </div>
 

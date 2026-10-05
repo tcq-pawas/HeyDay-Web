@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" fill="none">
+  <g stroke="#E5E7EB" stroke-width="1.2" fill="none">
+    <path d="M0 400 Q 200 380 400 420 T 800 400 T 1200 430 T 1600 410 T 1920 440" opacity="0.6"/>
+    <path d="M0 450 Q 250 430 500 470 T 900 450 T 1300 480 T 1700 460 T 1920 490" opacity="0.5"/>
+    <path d="M0 500 Q 300 480 600 520 T 1000 500 T 1400 530 T 1800 510 T 1920 540" opacity="0.4"/>
+    <path d="M0 550 Q 350 530 700 570 T 1100 550 T 1500 580 T 1920 590" opacity="0.5"/>
+    <path d="M0 600 Q 400 580 800 620 T 1200 600 T 1600 630 T 1920 640" opacity="0.6"/>
+    <path d="M0 650 Q 450 630 900 670 T 1300 650 T 1700 680 T 1920 690" opacity="0.5"/>
+    <path d="M0 700 Q 500 680 1000 720 T 1400 700 T 1800 730 T 1920 740" opacity="0.4"/>
+    <path d="M0 750 Q 550 730 1100 770 T 1500 750 T 1920 790" opacity="0.5"/>
+    <path d="M0 800 Q 600 780 1200 820 T 1600 800 T 1920 840" opacity="0.6"/>
+    <path d="M0 850 Q 650 830 1300 870 T 1700 850 T 1920 890" opacity="0.5"/>
+    <path d="M0 900 Q 700 880 1400 920 T 1800 900 T 1920 940" opacity="0.4"/>
+    <path d="M0 950 Q 750 930 1500 970 T 1920 990" opacity="0.5"/>
+  </g>
+  <g stroke="#E5E7EB" stroke-width="0.8" fill="none" opacity="0.3">
+    <path d="M0 420 Q 150 400 300 440 T 600 420 T 900 450 T 1200 430 T 1500 460 T 1800 440 T 1920 470"/>
+    <path d="M0 520 Q 200 500 400 540 T 800 520 T 1200 550 T 1600 530 T 1920 560"/>
+    <path d="M0 620 Q 250 600 500 640 T 900 620 T 1300 650 T 1700 630 T 1920 660"/>
+    <path d="M0 720 Q 300 700 600 740 T 1000 720 T 1400 750 T 1800 730 T 1920 760"/>
+    <path d="M0 820 Q 350 800 700 840 T 1100 820 T 1500 850 T 1920 860"/>
+    <path d="M0 920 Q 400 900 800 940 T 1200 920 T 1600 950 T 1920 960"/>
+  </g>
+  <g stroke="#E5E7EB" stroke-width="0.5" fill="none" opacity="0.2">
+    <ellipse cx="400" cy="500" rx="150" ry="40"/>
+    <ellipse cx="800" cy="550" rx="200" ry="50"/>
+    <ellipse cx="1200" cy="520" rx="180" ry="45"/>
+    <ellipse cx="1600" cy="580" rx="160" ry="42"/>
+    <ellipse cx="500" cy="700" rx="140" ry="38"/>
+    <ellipse cx="900" cy="750" rx="190" ry="48"/>
+    <ellipse cx="1400" cy="720" rx="170" ry="44"/>
+    <ellipse cx="600" cy="850" rx="130" ry="36"/>
+    <ellipse cx="1100" cy="880" rx="185" ry="47"/>
+    <ellipse cx="1500" cy="860" rx="155" ry="40"/>
+  </g>
+</svg>

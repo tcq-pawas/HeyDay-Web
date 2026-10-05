@@ -1,0 +1,35 @@
+{
+  "name": "HeyDay Realty Pvt. Ltd. - Best Real Estate in Gorakhpur",
+  "short_name": "HeyDay Realty",
+  "description": "HeyDay Realty - Best Real Estate in Gorakhpur. Trusted property experts since 2022. Buy, sell & rent properties with confidence.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1e40af",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon"
+    }
+  ],
+  "categories": ["real estate", "property", "business"],
+  "screenshots": [],
+  "shortcuts": [
+    {
+      "name": "View Properties",
+      "short_name": "Properties",
+      "description": "Browse our available properties",
+      "url": "/projects",
+      "icons": [{ "src": "/favicon.ico", "sizes": "48x48" }]
+    },
+    {
+      "name": "Contact Us",
+      "short_name": "Contact",
+      "description": "Get in touch with us",
+      "url": "/contact",
+      "icons": [{ "src": "/favicon.ico", "sizes": "48x48" }]
+    }
+  ]
+}

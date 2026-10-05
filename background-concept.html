@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Concept Preview - HeyDay Realty</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            width: 100%;
+            background: #F5F3ED;
+            font-family: Arial, sans-serif;
+        }
+        
+        .preview-container {
+            width: 100%;
+            max-width: 1920px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .section-label {
+            position: absolute;
+            left: 20px;
+            font-size: 12px;
+            color: #999;
+            background: rgba(255,255,255,0.8);
+            padding: 4px 8px;
+            border-radius: 4px;
+            z-index: 100;
+        }
+    </style>
+</head>
+<body>
+    <div class="preview-container">
+        <!-- Full SVG Composition - 7000px tall -->
+        <svg width="100%" viewBox="0 0 1920 7000" preserveAspectRatio="xMidYMin slice" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <!-- Paper texture filter -->
+                <filter id="paperTexture">
+                    <feTurbulence type="fractalNoise" baseFrequency="0.95" numOctaves="4" result="noise"/>
+                    <feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 0.015 0" in="noise" result="coloredNoise"/>
+                </filter>
+            </defs>
+            
+            <!-- Layer 1: Paper Base (Global) -->
+            <rect width="1920" height="7000" fill="#F5F3ED"/>
+            <rect width="1920" height="7000" fill="transparent" filter="url(#paperTexture)" opacity="0.5"/>
+            
+            <!-- Layer 2: Land Masses -->
+            <!-- Hero→About Transition (800-1200px) -->
+            <path d="M0,800 L1920,800 L1920,1200 C 1400,1100 1000,1250 600,1150 C 200,1050 0,1100 0,1100 Z" fill="#E8E4DC" opacity="0.035"/>
+            
+            <!-- About Section (1200-2000px) -->
+            <path d="M0,1200 L1920,1200 L1920,2000 C 1500,1850 1100,2100 700,1950 C 300,1800 0,1900 0,1900 Z" fill="#E0DCD4" opacity="0.05"/>
+            <path d="M0,1400 L1920,1400 L1920,2000 C 1550,1900 1150,2150 750,2000 C 350,1850 0,1950 0,1950 Z" fill="#D8D4CC" opacity="0.04"/>
+            
+            <!-- About→Projects Transition (2000-2400px) -->
+            <path d="M0,2000 L1920,2000 L1920,2400 C 1600,2250 1200,2500 800,2350 C 400,2200 0,2300 0,2300 Z" fill="#E8E4DC" opacity="0.055"/>
+            <path d="M0,2100 L1920,2100 L1920,2400 C 1650,2300 1250,2550 850,2400 C 450,2250 0,2350 0,2350 Z" fill="#E0DCD4" opacity="0.045"/>
+            <path d="M0,2200 L1920,2200 L1920,2400 C 1700,2350 1300,2600 900,2450 C 500,2300 0,2400 0,2400 Z" fill="#D8D4CC" opacity="0.035"/>
+            
+            <!-- Projects Section (2400-3200px) - Peak presence -->
+            <path d="M0,2400 L1920,2400 L1920,3200 C 1500,3000 1100,3300 700,3100 C 300,2900 0,3000 0,3000 Z" fill="#E8E4DC" opacity="0.065"/>
+            <path d="M0,2500 L1920,2500 L1920,3200 C 1550,3050 1150,3350 750,3150 C 350,2950 0,3050 0,3050 Z" fill="#E0DCD4" opacity="0.055"/>
+            <path d="M0,2600 L1920,2600 L1920,3200 C 1600,3100 1200,3400 800,3200 C 400,3000 0,3100 0,3100 Z" fill="#D8D4CC" opacity="0.045"/>
+            <path d="M0,2700 L1920,2700 L1920,3200 C 1650,3150 1250,3450 850,3250 C 450,3050 0,3150 0,3150 Z" fill="#E8E4DC" opacity="0.035"/>
+            
+            <!-- Projects→Workflow Transition (3200-3600px) -->
+            <path d="M0,3200 L1920,3200 L1920,3600 C 1500,3450 1100,3700 700,3550 C 300,3400 0,3500 0,3500 Z" fill="#E8E4DC" opacity="0.05"/>
+            <path d="M0,3300 L1920,3300 L1920,3600 C 1550,3500 1150,3750 750,3600 C 350,3450 0,3550 0,3550 Z" fill="#E0DCD4" opacity="0.04"/>
+            <path d="M0,3400 L1920,3400 L1920,3600 C 1600,3550 1200,3800 800,3650 C 400,3500 0,3600 0,3600 Z" fill="#D8D4CC" opacity="0.03"/>
+            
+            <!-- Workflow Section (3600-4200px) -->
+            <path d="M0,3600 L1920,3600 L1920,4200 C 1500,4050 1100,4300 700,4150 C 300,4000 0,4100 0,4100 Z" fill="#E8E4DC" opacity="0.045"/>
+            <path d="M0,3700 L1920,3700 L1920,4200 C 1550,4100 1150,4350 750,4200 C 350,4050 0,4150 0,4150 Z" fill="#E0DCD4" opacity="0.035"/>
+            <path d="M0,3800 L1920,3800 L1920,4200 C 1600,4150 1200,4400 800,4250 C 400,4100 0,4200 0,4200 Z" fill="#D8D4CC" opacity="0.025"/>
+            
+            <!-- Workflow→Testimonials Transition (4200-4600px) -->
+            <path d="M0,4200 L1920,4200 L1920,4600 C 1500,4450 1100,4700 700,4550 C 300,4400 0,4500 0,4500 Z" fill="#E8E4DC" opacity="0.035"/>
+            <path d="M0,4300 L1920,4300 L1920,4600 C 1550,4500 1150,4750 750,4600 C 350,4450 0,4550 0,4550 Z" fill="#E0DCD4" opacity="0.025"/>
+            
+            <!-- Testimonials Section (4600-5200px) -->
+            <path d="M0,4600 L1920,4600 L1920,5200 C 1500,5050 1100,5300 700,5150 C 300,5000 0,5100 0,5100 Z" fill="#E8E4DC" opacity="0.03"/>
+            <path d="M0,4700 L1920,4700 L1920,5200 C 1550,5100 1150,5350 750,5200 C 350,5050 0,5150 0,5150 Z" fill="#E0DCD4" opacity="0.02"/>
+            
+            <!-- Testimonials→FAQ Transition (5200-5600px) -->
+            <path d="M0,5200 L1920,5200 L1920,5600 C 1500,5450 1100,5700 700,5550 C 300,5400 0,5500 0,5500 Z" fill="#E8E4DC" opacity="0.025"/>
+            
+            <!-- FAQ Section (5600-6200px) -->
+            <path d="M0,5600 L1920,5600 L1920,6200 C 1500,6050 1100,6300 700,6150 C 300,6000 0,6100 0,6100 Z" fill="#E8E4DC" opacity="0.02"/>
+            
+            <!-- FAQ→Footer Transition (6200-6400px) -->
+            <path d="M0,6200 L1920,6200 L1920,6400 C 1500,6300 1100,6500 700,6400 C 300,6300 0,6350 0,6350 Z" fill="#E8E4DC" opacity="0.015"/>
+            
+            <!-- Layer 3: Contour Lines -->
+            <!-- About Section (1200-2000px) - 10-12 contours -->
+            <path d="M0,1250 C 400,1230 800,1270 1200,1250 C 1600,1230 1920,1270 1920,1270" fill="none" stroke="#D4D0C8" stroke-width="0.8" opacity="0.09"/>
+            <path d="M0,1300 C 400,1280 800,1320 1200,1300 C 1600,1280 1920,1320 1920,1320" fill="none" stroke="#E0DCD4" stroke-width="0.8" opacity="0.085"/>
+            <path d="M0,1350 C 400,1330 800,1370 1200,1350 C 1600,1330 1920,1370 1920,1370" fill="none" stroke="#ECE8E0" stroke-width="0.8" opacity="0.08"/>
+            <path d="M0,1400 C 400,1380 800,1420 1200,1400 C 1600,1380 1920,1420 1920,1420" fill="none" stroke="#D4D0C8" stroke-width="0.8" opacity="0.09"/>
+            <path d="M0,1450 C 400,1430 800,1470 1200,1450 C 1600,1430 1920,1470 1920,1470" fill="none" stroke="#E0DCD4" stroke-width="0.8" opacity="0.085"/>
+            <path d="M0,1500 C 400,1480 800,1520 1200,1500 C 1600,1480 1920,1520 1920,1520" fill="none" stroke="#ECE8E0" stroke-width="0.8" opacity="0.08"/>
+            <path d="M0,1550 C 400,1530 800,1570 1200,1550 C 1600,1530 1920,1570 1920,1570" fill="none" stroke="#D4D0C8" stroke-width="0.8" opacity="0.09"/>
+            <path d="M0,1600 C 400,1580 800,1620 1200,1600 C 1600,1580 1920,1620 1920,1620" fill="none" stroke="#E0DCD4" stroke-width="0.8" opacity="0.085"/>
+            <path d="M0,1650 C 400,1630 800,1670 1200,1650 C 1600,1630 1920,1670 1920,1670" fill="none" stroke="#ECE8E0" stroke-width="0.8" opacity="0.08"/>
+            <path d="M0,1700 C 400,1680 800,1720 1200,1700 C 1600,1680 1920,1720 1920,1720" fill="none" stroke="#D4D0C8" stroke-width="0.8" opacity="0.09"/>
+            <path d="M0,1750 C 400,1730 800,1770 1200,1750 C 1600,1730 1920,1770 1920,1770" fill="none" stroke="#E0DCD4" stroke-width="0.8" opacity="0.085"/>
+            
+            <!-- About→Projects Transition (2000-2400px) - 15-18 contours -->
+            <path d="M0,2050 C 500,2000 1000,2100 1500,2050 C 1700,2030 1920,2070 1920,2070" fill="none" stroke="#ECE8E0" stroke-width="0.8" opacity="0.08"/>
+            <path d="M0,2100 C 500,2050 1000,2150 1500,2100 C 1700,2080 1920,2120 1920,2120" fill="none" stroke="#D4D0C8" stroke-width="0.8" opacity="0.09"/>
+            <path d="M0,2150 C 500,2100 1000,2200 1500,2150 C 1700,2130 1920,2170 1920,2170" fill="none" stroke="#E0DCD4" stroke-width="0.8" opacity="0.085"/>
+            <path d="M0,2200 C 500,2150 1000,2250 1500,2200 C 1700,2180 1920,2220 1920,2220" fill="none" stroke="#ECE8E0" stroke-width="0.8" opacity="0.08"/>
+            <path d="M0,2250 C 500,2200 1000,2300 1500,2250 C 1700,2230 1920,2270 1920,2270" fill="none" stroke="#D4D0C8" stroke-width="0.8" opacity="0.09"/>
+            <path d="M0,2300 C 500,2250 1000,2350 1500,2300 C 1700,2280 1920,2320 1920,2320" fill="none" stroke="#E0DCD4" stroke-width="0.8" opacity="0.085"/>
+            <path d="M0,2350 C 500,2300 1000,2400 1500,2350 C 1700,2330 1920,2370 1920,2370" fill="none" stroke="#ECE8E0" stroke-width="0.8" opacity="0.08"/>
+            
+            <!-- Projects Section (2400-3200px) - 25-30 contours -->
+            <path d="M0,2450 C 600,2400 1200,2500 1800,2450 C 1900,2440 1920,2460 1920,2460" fill="none" stroke="#D4D0C8" stroke-width="0.8" opacity="0.09"/>
+            <path d="M0,2500 C 600,2450 1200,2550 1800,2500 C 1900,2490 1920,2510 1920,2510" fill="none" stroke="#E0DCD4" stroke-width="0.8" opacity="0.085"/>
+            <path d="M0,2550 C 600,2500 1200,2600 1800,2550 C 1900,2540 1920,2560 1920,2560" fill="none" stroke="#ECE8E0" stroke-width="0.8" opacity="0.08"/>
+            <path d="M0,2600 C 600,2550 1200,2650 1800,2600 C 1900,2590 1920,2610 1920,2610" fill="none" stroke="#D4D0C8" stroke-width="0.8" opacity="0.09"/>
+            <path d="M0,2650 C 600,2600 1200,2700 1800,2650 C 1900,2640 1920,2660 1920,2660" fill="none" stroke="#E0DCD4" stroke-width="0.8" opacity="0.085"/>
+            <path d="M0,2700 C 600,2650 1200,2750 1800,2700 C 1900,2690 1920,2710 1920,2710" fill="none" stroke="#ECE8E0" stroke-width="0.8" opacity="0.08"/>
+            <path d="M0,2750 C 600,2700 1200,2800 1800,2750 C 1900,2740 1920,2760 1920,2760" fill="none" stroke="#D4D0C8" stroke-width="0.8" opacity="0.09"/>
+            <path d="M0,2800 C 600,2750 1200,2850 1800,2800 C 1900,2790 1920,2810 1920,2810" fill="none" stroke="#E0DCD4" stroke-width="0.8" opacity="0.085"/>
+            <path d="M0,2850 C 600,2800 1200,2900 1800,2850 C 1900,2840 1920,2860 1920,2860" fill="none" stroke="#ECE8E0" stroke-width="0.8" opacity="0.08"/>
+            <path d="M0,2900 C 600,2850 1200,2950 1800,2900 C 1900,2890 1920,2910 1920,2910" fill="none" stroke="#D4D0C8" stroke-width="0.8" opacity="0.09"/>
+            <path d="M0,2950 C 600,2900 1200,3000 1800,2950 C 1900,2940 1920,2960 1920,2960" fill="none" stroke="#E0DCD4" stroke-width="0.8" opacity="0.085"/>
+            <path d="M0,3000 C 600,2950 1200,3050 1800,3000 C 1900,2990 1920,3010 1920,3010" fill="none" stroke="#ECE8E0" stroke-width="0.8" opacity="0.08"/>
+            <path d="M0,3050 C 600,3000 1200,3100 1800,3050 C 1900,3040 1920,3060 1920,3060" fill="none" stroke="#D4D0C8" stroke-width="0.8" opacity="0.09"/>
+            <path d="M0,3100 C 600,3050 1200,3150 1800,3100 C 1900,3090 1920,3110 1920,3110" fill="none" stroke="#E0DCD4" stroke-width="0.8" opacity="0.085"/>
+            <path d="M0,3150 C 600,3100 1200,3200 1800,3150 C 1900,3140 1920,3160 1920,3160" fill="none" stroke="#ECE8E0" stroke-width="0.8" opacity="0.08"/>
+            
+            <!-- Projects→Workflow Transition (3200-3600px) - 30-35 contours -->
+            <path d="M0,3250 C 500,3200 1000,3300 1500,3250 C 1700,3230 1920,3270 1920,3270" fill="none" stroke="#D4D0C8" stroke-width="0.8" opacity="0.09"/>
+            <path d="M0,3300 C 500,3250 1000,3350 1500,3300 C 1700,3280 1920,3320 1920,3320" fill="none" stroke="#E0DCD4" stroke-width="0.8" opacity="0.085"/>
+            <path d="M0,3350 C 500,3300 1000,3400 1500,3350 C 1700,3330 1920,3370 1920,3370" fill="none" stroke="#ECE8E0" stroke-width="0.8" opacity="0.08"/>
+            <path d="M0,3400 C 500,3350 1000,3450 1500,3400 C 1700,3380 1920,3420 1920,3420" fill="none" stroke="#D4D0C8" stroke-width="0.8" opacity="0.09"/>
+            <path d="M0,3450 C 500,3400 1000,3500 1500,3450 C 1700,3430 1920,3470 1920,3470" fill="none" stroke="#E0DCD4" stroke-width="0.8" opacity="0.085"/>
+            <path d="M0,3500 C 500,3450 1000,3550 1500,3500 C 1700,3480 1920,3520 1920,3520" fill="none" stroke="#ECE8E0" stroke-width="0.8" opacity="0.08"/>
+            <path d="M0,3550 C 500,3500 1000,3600 1500,3550 C 1700,3530 1920,3570 1920,3570" fill="none" stroke="#D4D0C8" stroke-width="0.8" opacity="0.09"/>
+            
+            <!-- Workflow Section (3600-4200px) - 35-40 contours -->
+            <path d="M0,3650 C 400,3630 800,3670 1200,3650 C 1600,3630 1920,3670 1920,3670" fill="none" stroke="#E0DCD4" stroke-width="0.8" opacity="0.085"/>
+            <path d="M0,3700 C 400,3680 800,3720 1200,3700 C 1600,3680 1920,3720 1920,3720" fill="none" stroke="#ECE8E0" stroke-width="0.8" opacity="0.08"/>
+            <path d="M0,3750 C 400,3730 800,3770 1200,3750 C 1600,3730 1920,3770 1920,3770" fill="none" stroke="#D4D0C8" stroke-width="0.8" opacity="0.09"/>
+            <path d="M0,3800 C 400,3780 800,3820 1200,3800 C 1600,3780 1920,3820 1920,3820" fill="none" stroke="#E0DCD4" stroke-width="0.8" opacity="0.085"/>
+            <path d="M0,3850 C 400,3830 800,3870 1200,3850 C 1600,3830 1920,3870 1920,3870" fill="none" stroke="#ECE8E0" stroke-width="0.8" opacity="0.08"/>
+            <path d="M0,3900 C 400,3880 800,3920 1200,3900 C 1600,3880 1920,3920 1920,3920" fill="none" stroke="#D4D0C8" stroke-width="0.8" opacity="0.09"/>
+            <path d="M0,3950 C 400,3930 800,3970 1200,3950 C 1600,3930 1920,3970 1920,3970" fill="none" stroke="#E0DCD4" stroke-width="0.8" opacity="0.085"/>
+            <path d="M0,4000 C 400,3980 800,4020 1200,4000 C 1600,3980 1920,4020 1920,4020" fill="none" stroke="#ECE8E0" stroke-width="0.8" opacity="0.08"/>
+            <path d="M0,4050 C 400,4030 800,4070 1200,4050 C 1600,4030 1920,4070 1920,4070" fill="none" stroke="#D4D0C8" stroke-width="0.8" opacity="0.09"/>
+            <path d="M0,4100 C 400,4080 800,4120 1200,4100 C 1600,4080 1920,4120 1920,4120" fill="none" stroke="#E0DCD4" stroke-width="0.8" opacity="0.085"/>
+            <path d="M0,4150 C 400,4130 800,4170 1200,4150 C 1600,4130 1920,4170 1920,4170" fill="none" stroke="#ECE8E0" stroke-width="0.8" opacity="0.08"/>
+            
+            <!-- Workflow→Testimonials Transition (4200-4600px) - 40-45 contours -->
+            <path d="M0,4250 C 600,4200 1200,4300 1800,4250 C 1900,4240 1920,4260 1920,4260" fill="none" stroke="#D4D0C8" stroke-width="0.8" opacity="0.09"/>
+            <path d="M0,4300 C 600,4250 1200,4350 1800,4300 C 1900,4290 1920,4310 1920,4310" fill="none" stroke="#E0DCD4" stroke-width="0.8" opacity="0.085"/>
+            <path d="M0,4350 C 600,4300 1200,4400 1800,4350 C 1900,4340 1920,4360 1920,4360" fill="none" stroke="#ECE8E0" stroke-width="0.8" opacity="0.08"/>
+            <path d="M0,4400 C 600,4350 1200,4450 1800,4400 C 1900,4390 1920,4410 1920,4410" fill="none" stroke="#D4D0C8" stroke-width="0.8" opacity="0.09"/>
+            <path d="M0,4450 C 600,4400 1200,4500 1800,4450 C 1900,4440 1920,4460 1920,4460" fill="none" stroke="#E0DCD4" stroke-width="0.8" opacity="0.085"/>
+            <path d="M0,4500 C 600,4450 1200,4550 1800,4500 C 1900,4490 1920,4510 1920,4510" fill="none" stroke="#ECE8E0" stroke-width="0.8" opacity="0.08"/>
+            <path d="M0,4550 C 600,4500 1200,4600 1800,4550 C 1900,4540 1920,4560 1920,4560" fill="none" stroke="#D4D0C8" stroke-width="0.8" opacity="0.09"/>
+            
+            <!-- Testimonials Section (4600-5200px) - 45-50 contours -->
+            <path d="M0,4650 C 400,4630 800,4670 1200,4650 C 1600,4630 1920,4670 1920,4670" fill="none" stroke="#E0DCD4" stroke-width="0.8" opacity="0.085"/>
+            <path d="M0,4700 C 400,4680 800,4720 1200,4700 C 1600,4680 1920,4720 1920,4720" fill="none" stroke="#ECE8E0" stroke-width="0.8" opacity="0.08"/>
+            <path d="M0,4750 C 400,4730 800,4770 1200,4750 C 1600,4730 1920,4770 1920,4770" fill="none" stroke="#D4D0C8" stroke-width="0.8" opacity="0.09"/>
+            <path d="M0,4800 C 400,4780 800,4820 1200,4800 C 1600,4780 1920,4820 1920,4820" fill="none" stroke="#E0DCD4" stroke-width="0.8" opacity="0.085"/>
+            <path d="M0,4850 C 400,4830 800,4870 1200,4850 C 1600,4830 1920,4870 1920,4870" fill="none" stroke="#ECE8E0" stroke-width="0.8" opacity="0.08"/>
+            <path d="M0,4900 C 400,4880 800,4920 1200,4900 C 1600,4880 1920,4920 1920,4920" fill="none" stroke="#D4D0C8" stroke-width="0.8" opacity="0.09"/>
+            <path d="M0,4950 C 400,4930 800,4970 1200,4950 C 1600,4930 1920,4970 1920,4970" fill="none" stroke="#E0DCD4" stroke-width="0.8" opacity="0.085"/>
+            <path d="M0,5000 C 400,4980 800,5020 1200,5000 C 1600,4980 1920,5020 1920,5020" fill="none" stroke="#ECE8E0" stroke-width="0.8" opacity="0.08"/>
+            <path d="M0,5050 C 400,5030 800,5070 1200,5050 C 1600,5030 1920,5070 1920,5070" fill="none" stroke="#D4D0C8" stroke-width="0.8" opacity="0.09"/>
+            <path d="M0,5100 C 400,5080 800,5120 1200,5100 C 1600,5080 1920,5120 1920,5120" fill="none" stroke="#E0DCD4" stroke-width="0.8" opacity="0.085"/>
+            <path d="M0,5150 C 400,5130 800,5170 1200,5150 C 1600,5130 1920,5170 1920,5170" fill="none" stroke="#ECE8E0" stroke-width="0.8" opacity="0.08"/>
+            
+            <!-- Testimonials→FAQ Transition (5200-5600px) - 50-55 contours -->
+            <path d="M0,5250 C 600,5200 1200,5300 1800,5250 C 1900,5240 1920,5260 1920,5260" fill="none" stroke="#D4D0C8" stroke-width="0.8" opacity="0.09"/>
+            <path d="M0,5300 C 600,5250 1200,5350 1800,5300 C 1900,5290 1920,5310 1920,5310" fill="none" stroke="#E0DCD4" stroke-width="0.8" opacity="0.085"/>
+            <path d="M0,5350 C 600,5300 1200,5400 1800,5350 C 1900,5340 1920,5360 1920,5360" fill="none" stroke="#ECE8E0" stroke-width="0.8" opacity="0.08"/>
+            <path d="M0,5400 C 600,5350 1200,5450 1800,5400 C 1900,5390 1920,5410 1920,5410" fill="none" stroke="#D4D0C8" stroke-width="0.8" opacity="0.09"/>
+            <path d="M0,5450 C 600,5400 1200,5500 1800,5450 C 1900,5440 1920,5460 1920,5460" fill="none" stroke="#E0DCD4" stroke-width="0.8" opacity="0.085"/>
+            <path d="M0,5500 C 600,5450 1200,5550 1800,5500 C 1900,5490 1920,5510 1920,5510" fill="none" stroke="#ECE8E0" stroke-width="0.8" opacity="0.08"/>
+            <path d="M0,5550 C 600,5500 1200,5600 1800,5550 C 1900,5540 1920,5560 1920,5560" fill="none" stroke="#D4D0C8" stroke-width="0.8" opacity="0.09"/>
+            
+            <!-- FAQ Section (5600-6200px) - 55-60 contours -->
+            <path d="M0,5650 C 400,5630 800,5670 1200,5650 C 1600,5630 1920,5670 1920,5670" fill="none" stroke="#E0DCD4" stroke-width="0.8" opacity="0.085"/>
+            <path d="M0,5700 C 400,5680 800,5720 1200,5700 C 1600,5680 1920,5720 1920,5720" fill="none" stroke="#ECE8E0" stroke-width="0.8" opacity="0.08"/>
+            <path d="M0,5750 C 400,5730 800,5770 1200,5750 C 1600,5730 1920,5770 1920,5770" fill="none" stroke="#D4D0C8" stroke-width="0.8" opacity="0.09"/>
+            <path d="M0,5800 C 400,5780 800,5820 1200,5800 C 1600,5780 1920,5820 1920,5820" fill="none" stroke="#E0DCD4" stroke-width="0.8" opacity="0.085"/>
+            <path d="M0,5850 C 400,5830 800,5870 1200,5850 C 1600,5830 1920,5870 1920,5870" fill="none" stroke="#ECE8E0" stroke-width="0.8" opacity="0.08"/>
+            <path d="M0,5900 C 400,5880 800,5920 1200,5900 C 1600,5880 1920,5920 1920,5920" fill="none" stroke="#D4D0C8" stroke-width="0.8" opacity="0.09"/>
+            <path d="M0,5950 C 400,5930 800,5970 1200,5950 C 1600,5930 1920,5970 1920,5970" fill="none" stroke="#E0DCD4" stroke-width="0.8" opacity="0.085"/>
+            <path d="M0,6000 C 400,5980 800,6020 1200,6000 C 1600,5980 1920,6020 1920,6020" fill="none" stroke="#ECE8E0" stroke-width="0.8" opacity="0.08"/>
+            <path d="M0,6050 C 400,6030 800,6070 1200,6050 C 1600,6030 1920,6070 1920,6070" fill="none" stroke="#D4D0C8" stroke-width="0.8" opacity="0.09"/>
+            <path d="M0,6100 C 400,6080 800,6120 1200,6100 C 1600,6080 1920,6120 1920,6120" fill="none" stroke="#E0DCD4" stroke-width="0.8" opacity="0.085"/>
+            <path d="M0,6150 C 400,6130 800,6170 1200,6150 C 1600,6130 1920,6170 1920,6170" fill="none" stroke="#ECE8E0" stroke-width="0.8" opacity="0.08"/>
+            
+            <!-- Layer 4: Parcel Boundaries -->
+            <!-- About→Projects Transition (2000-2400px) -->
+            <line x1="300" y1="2100" x2="700" y2="2100" stroke="#C8C4BC" stroke-width="0.6" opacity="0.035"/>
+            <line x1="900" y1="2200" x2="1300" y2="2200" stroke="#C8C4BC" stroke-width="0.6" opacity="0.035"/>
+            <line x1="500" y1="2300" x2="900" y2="2300" stroke="#C8C4BC" stroke-width="0.6" opacity="0.035"/>
+            
+            <!-- Projects Section (2400-3200px) -->
+            <line x1="400" y1="2500" x2="800" y2="2500" stroke="#C8C4BC" stroke-width="0.6" opacity="0.04"/>
+            <line x1="1000" y1="2600" x2="1400" y2="2600" stroke="#C8C4BC" stroke-width="0.6" opacity="0.04"/>
+            <line x1="600" y1="2700" x2="1000" y2="2700" stroke="#C8C4BC" stroke-width="0.6" opacity="0.04"/>
+            <line x1="1200" y1="2800" x2="1600" y2="2800" stroke="#C8C4BC" stroke-width="0.6" opacity="0.04"/>
+            <line x1="500" y1="2900" x2="900" y2="2900" stroke="#C8C4BC" stroke-width="0.6" opacity="0.04"/>
+            <line x1="1100" y1="3000" x2="1500" y2="3000" stroke="#C8C4BC" stroke-width="0.6" opacity="0.04"/>
+            
+            <!-- Projects→Workflow Transition (3200-3600px) -->
+            <line x1="400" y1="3300" x2="800" y2="3300" stroke="#C8C4BC" stroke-width="0.6" opacity="0.035"/>
+            <line x1="900" y1="3400" x2="1300" y2="3400" stroke="#C8CBC" stroke-width="0.6" opacity="0.035"/>
+            <line x1="500" y1="3500" x2="900" y2="3500" stroke="#C8C4BC" stroke-width="0.6" opacity="0.035"/>
+            
+            <!-- Workflow Section (3600-4200px) -->
+            <line x1="600" y1="3700" x2="1000" y2="3700" stroke="#C8C4BC" stroke-width="0.6" opacity="0.035"/>
+            <line x1="1100" y1="3800" x2="1500" y2="3800" stroke="#C8C4BC" stroke-width="0.6" opacity="0.035"/>
+            <line x1="700" y1="3900" x2="1100" y2="3900" stroke="#C8C4BC" stroke-width="0.6" opacity="0.035"/>
+            <line x1="1200" y1="4000" x2="1600" y2="4000" stroke="#C8C4BC" stroke-width="0.6" opacity="0.035"/>
+            <line x1="600" y1="4100" x2="1000" y2="4100" stroke="#C8C4BC" stroke-width="0.6" opacity="0.035"/>
+            
+            <!-- Workflow→Testimonials Transition (4200-4600px) -->
+            <line x1="500" y1="4300" x2="900" y2="4300" stroke="#C8C4BC" stroke-width="0.6" opacity="0.035"/>
+            <line x1="1000" y1="4400" x2="1400" y2="4400" stroke="#C8C4BC" stroke-width="0.6" opacity="0.035"/>
+            <line x1="600" y1="4500" x2="1000" y2="4500" stroke="#C8C4BC" stroke-width="0.6" opacity="0.035"/>
+            
+            <!-- Testimonials Section (4600-5200px) -->
+            <line x1="700" y1="4700" x2="1100" y2="4700" stroke="#C8C4BC" stroke-width="0.6" opacity="0.035"/>
+            <line x1="1200" y1="4800" x2="1600" y2="4800" stroke="#C8C4BC" stroke-width="0.6" opacity="0.035"/>
+            <line x1="600" y1="4900" x2="1000" y2="4900" stroke="#C8C4BC" stroke-width="0.6" opacity="0.035"/>
+            <line x1="1100" y1="5000" x2="1500" y2="5000" stroke="#C8C4BC" stroke-width="0.6" opacity="0.035"/>
+            
+            <!-- Testimonials→FAQ Transition (5200-5600px) -->
+            <line x1="500" y1="5300" x2="900" y2="5300" stroke="#C8C4BC" stroke-width="0.6" opacity="0.035"/>
+            <line x1="1000" y1="5400" x2="1400" y2="5400" stroke="#C8C4BC" stroke-width="0.6" opacity="0.035"/>
+            
+            <!-- FAQ Section (5600-6200px) -->
+            <line x1="600" y1="5700" x2="1000" y2="5700" stroke="#C8C4BC" stroke-width="0.6" opacity="0.03"/>
+            <line x1="1100" y1="5800" x2="1500" y2="5800" stroke="#C8C4BC" stroke-width="0.6" opacity="0.03"/>
+            <line x1="500" y1="5900" x2="900" y2="5900" stroke="#C8C4BC" stroke-width="0.6" opacity="0.03"/>
+            
+            <!-- Layer 5: Gold Survey Lines -->
+            <!-- Projects Section (2400-3200px) - First gold line -->
+            <path d="M0,2800 C 600,2750 1200,2850 1920,2800" fill="none" stroke="#C9A030" stroke-width="0.6" opacity="0.06"/>
+            
+            <!-- Projects→Workflow Transition (3200-3600px) - Second gold line appears -->
+            <path d="M0,2800 C 600,2750 1200,2850 1920,2800" fill="none" stroke="#C9A030" stroke-width="0.6" opacity="0.06"/>
+            <path d="M0,3400 C 600,3350 1200,3450 1920,3400" fill="none" stroke="#C9A030" stroke-width="0.6" opacity="0.06"/>
+            
+            <!-- Workflow Section (3600-4200px) - Both gold lines, reduced -->
+            <path d="M0,2800 C 600,2750 1200,2850 1920,2800" fill="none" stroke="#C9A030" stroke-width="0.6" opacity="0.05"/>
+            <path d="M0,3400 C 600,3350 1200,3450 1920,3400" fill="none" stroke="#C9A030" stroke-width="0.6" opacity="0.05"/>
+            
+            <!-- Workflow→Testimonials Transition (4200-4600px) - Very subtle -->
+            <path d="M0,2800 C 600,2750 1200,2850 1920,2800" fill="none" stroke="#C9A030" stroke-width="0.6" opacity="0.04"/>
+            <path d="M0,3400 C 600,3350 1200,3450 1920,3400" fill="none" stroke="#C9A030" stroke-width="0.6" opacity="0.04"/>
+            
+            <!-- Testimonials Section (4600-5200px) - One fades out -->
+            <path d="M0,3400 C 600,3350 1200,3450 1920,3400" fill="none" stroke="#C9A030" stroke-width="0.6" opacity="0.03"/>
+            
+            <!-- Testimonials→FAQ Transition (5200-5600px) - One line, extremely subtle -->
+            <path d="M0,3400 C 600,3350 1200,3450 1920,3400" fill="none" stroke="#C9A030" stroke-width="0.6" opacity="0.02"/>
+            
+            <!-- FAQ Section (5600-6200px) - Almost invisible -->
+            <path d="M0,3400 C 600,3350 1200,3450 1920,3400" fill="none" stroke="#C9A030" stroke-width="0.6" opacity="0.015"/>
+            
+            <!-- FAQ→Footer Transition (6200-6400px) - Fading out -->
+            <path d="M0,3400 C 600,3350 1200,3450 1920,3400" fill="none" stroke="#C9A030" stroke-width="0.6" opacity="0.01"/>
+            
+            <!-- Section Labels (for design review only) -->
+            <text x="20" y="400" font-size="12" fill="#999" font-family="Arial">Hero (0-800px)</text>
+            <text x="20" y="1000" font-size="12" fill="#999" font-family="Arial">Hero→About (800-1200px)</text>
+            <text x="20" y="1600" font-size="12" fill="#999" font-family="Arial">About (1200-2000px)</text>
+            <text x="20" y="2200" font-size="12" fill="#999" font-family="Arial">About→Projects (2000-2400px)</text>
+            <text x="20" y="2800" font-size="12" fill="#999" font-family="Arial">Projects (2400-3200px)</text>
+            <text x="20" y="3400" font-size="12" fill="#999" font-family="Arial">Projects→Workflow (3200-3600px)</text>
+            <text x="20" y="3900" font-size="12" fill="#999" font-family="Arial">Workflow (3600-4200px)</text>
+            <text x="20" y="4400" font-size="12" fill="#999" font-family="Arial">Workflow→Testimonials (4200-4600px)</text>
+            <text x="20" y="4900" font-size="12" fill="#999" font-family="Arial">Testimonials (4600-5200px)</text>
+            <text x="20" y="5400" font-size="12" fill="#999" font-family="Arial">Testimonials→FAQ (5200-5600px)</text>
+            <text x="20" y="5900" font-size="12" fill="#999" font-family="Arial">FAQ (5600-6200px)</text>
+            <text x="20" y="6300" font-size="12" fill="#999" font-family="Arial">FAQ→Footer (6200-6400px)</text>
+            <text x="20" y="6600" font-size="12" fill="#999" font-family="Arial">Footer (6400-6800px)</text>
+        </svg>
+    </div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+# robots.txt for HeyDay Realty Pvt. Ltd.
+# https://heydayrealty.in
+
+User-agent: *
+Allow: /
+
+# Disallow admin or private areas if any
+Disallow: /admin/
+Disallow: /dashboard/
+Disallow: /login/
+Disallow: /register/
+Disallow: /profile/
+Disallow: /api/
+Disallow: /search/
+Disallow: /preview/
+
+# Sitemap location
+Sitemap: https://heydayrealty.in/sitemap.xml
+
+# Crawl delay (optional)
+Crawl-delay: 1
