@@ -87,7 +87,7 @@ const SelectField = ({
   options,
   placeholder,
 }) => (
-  <div>
+  <div className="min-w-0">
     <label className="mb-1 block text-xs font-semibold text-[#071c3d]">
       {label}
     </label>
@@ -99,7 +99,7 @@ const SelectField = ({
         name={name}
         value={value}
         onChange={onChange}
-        className="h-10 w-full appearance-none bg-transparent pl-2 pr-8 text-xs outline-none"
+        className="h-10 w-full min-w-0 appearance-none bg-transparent pl-2 pr-8 text-xs outline-none"
       >
         <option value="">{placeholder}</option>
 
@@ -237,7 +237,7 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="pr-0 lg:border-r lg:border-[#e7e2d8] lg:pr-8">
+    <div className="flex flex-1 flex-col">
       {isSubmitting && <LoadingOverlay />}
 
       <h2 className="mt-3 text-xl font-bold leading-tight text-[#071c3d]]">
@@ -253,7 +253,7 @@ const ContactForm = () => {
         schedule a site visit? Get in touch with our expert team today.
       </p>
 
-      <form onSubmit={handleSubmit} className="mt-5 space-y-3">
+      <form onSubmit={handleSubmit} className="mt-5 flex-1 space-y-3">
         <div className="grid gap-3 md:grid-cols-2">
           <Field
             icon={<FaUser />}
@@ -392,7 +392,7 @@ const ContactForm = () => {
         </button>
       </form>
 
-      <div className="mt-5 grid grid-cols-3 gap-3">
+      <div className="mt-auto grid grid-cols-3 gap-3 pt-5">
         <Feature
           icon={<FaShieldAlt />}
           title="100% Secure"

@@ -260,7 +260,7 @@ const PropertySection = () => {
             return (
               <div
                 key={index}
-                className="text-center"
+                className="text-center bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-lg transition duration-300 p-8 text-center"
               >
                 <div className="w-8 h-8 mx-auto rounded-full bg-[#08213f] flex items-center justify-center">
                   <Icon className="w-4 h-4 text-[#a5c53b]" />

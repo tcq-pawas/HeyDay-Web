@@ -89,7 +89,7 @@ const CompanyStats = () => {
           </div>
 
           {/* Right Image */}
-          <div className="flex justify-center">
+          <div className="flex justify-center lg:justify-end">
             <img
               src={handsheke}
               alt="Happy Client"

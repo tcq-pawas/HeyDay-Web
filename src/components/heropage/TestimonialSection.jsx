@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react";
-import { FaChevronLeft, FaChevronRight, FaQuoteLeft, FaUserCircle } from "react-icons/fa";
+import { useState, useEffect, useRef } from "react";
+import { FaQuoteLeft, FaUserCircle } from "react-icons/fa";
 import bg4 from "../../assets/backgrounds/bg4.png";
 
 const TestimonialSection = () => {
@@ -36,12 +36,24 @@ const TestimonialSection = () => {
     },
   ];
 
-  const [startIndex, setStartIndex] = useState(0);
+  const [dragDistance, setDragDistance] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(0);
   const [visibleCards, setVisibleCards] = useState(3);
+  const [isDragging, setIsDragging] = useState(false);
+  const [isTransitioning, setIsTransitioning] = useState(false);
+  const carouselRef = useRef(null);
+  const trackRef = useRef(null);
+  const [cardStep, setCardStep] = useState(0);
 
   useEffect(() => {
     const handleResize = () => {
-      setVisibleCards(window.innerWidth < 768 ? 1 : 3);
+      if (window.innerWidth < 700) {
+        setVisibleCards(1);
+      } else if (window.innerWidth < 1100) {
+        setVisibleCards(2);
+      } else {
+        setVisibleCards(3);
+      }
     };
 
     handleResize();
@@ -50,25 +62,125 @@ const TestimonialSection = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const nextSlide = () => {
-    setStartIndex((prev) =>
-      prev + visibleCards >= testimonials.length ? 0 : prev + 1
-    );
+  // Calculate card step dynamically
+  useEffect(() => {
+    const updateCardStep = () => {
+      if (trackRef.current) {
+        const cards = trackRef.current.querySelectorAll('[data-card="true"]');
+        if (cards.length >= 2) {
+          const firstRect = cards[0].getBoundingClientRect();
+          const secondRect = cards[1].getBoundingClientRect();
+          setCardStep(secondRect.left - firstRect.left);
+        }
+      }
+    };
+
+    updateCardStep();
+    window.addEventListener("resize", updateCardStep);
+    return () => window.removeEventListener("resize", updateCardStep);
+  }, [visibleCards]);
+
+  // Create infinite loop by cloning testimonials
+  const extendedTestimonials = [
+    ...testimonials.slice(-visibleCards),
+    ...testimonials,
+    ...testimonials.slice(0, visibleCards),
+  ];
+
+  const totalSlides = testimonials.length;
+
+  // Pointer event handlers
+  const handlePointerDown = (e) => {
+    setIsDragging(true);
+    setDragDistance(0);
+    setIsTransitioning(false);
+    carouselRef.current?.setPointerCapture(e.pointerId);
   };
 
-  const prevSlide = () => {
-    setStartIndex((prev) =>
-      prev === 0 ? testimonials.length - visibleCards : prev - 1
-    );
+  const handlePointerMove = (e) => {
+    if (!isDragging) return;
+    setDragDistance((prev) => prev + e.movementX);
   };
 
-  const visibleTestimonials = [];
+  const handlePointerUp = (e) => {
+    setIsDragging(false);
+    setIsTransitioning(true);
+    carouselRef.current?.releasePointerCapture(e.pointerId);
 
-  for (let i = 0; i < visibleCards; i++) {
-    visibleTestimonials.push(
-      testimonials[(startIndex + i) % testimonials.length]
-    );
-  }
+    const threshold = cardStep * 0.2;
+
+    if (dragDistance < -threshold) {
+      // Dragged left - go to next
+      setCurrentIndex((prev) => {
+        const newIndex = prev + 1;
+        if (newIndex >= totalSlides + visibleCards) {
+          setTimeout(() => {
+            setIsTransitioning(false);
+            setCurrentIndex(visibleCards);
+          }, 500);
+          return newIndex;
+        }
+        return newIndex;
+      });
+    } else if (dragDistance > threshold) {
+      // Dragged right - go to previous
+      setCurrentIndex((prev) => {
+        const newIndex = prev - 1;
+        if (newIndex < visibleCards - 1) {
+          setTimeout(() => {
+            setIsTransitioning(false);
+            setCurrentIndex(totalSlides + visibleCards - 1);
+          }, 500);
+          return newIndex;
+        }
+        return newIndex;
+      });
+    }
+
+    // Always reset drag distance after release to snap to exact position
+    setDragDistance(0);
+  };
+
+  const handlePointerCancel = (e) => {
+    setIsDragging(false);
+    setIsTransitioning(true);
+    carouselRef.current?.releasePointerCapture(e.pointerId);
+    setDragDistance(0);
+  };
+
+  // Keyboard navigation
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === "ArrowLeft") {
+        setCurrentIndex((prev) => {
+          const newIndex = prev - 1;
+          if (newIndex < visibleCards - 1) {
+            setTimeout(() => {
+              setIsTransitioning(false);
+              setCurrentIndex(totalSlides + visibleCards - 1);
+            }, 500);
+            return newIndex;
+          }
+          return newIndex;
+        });
+      } else if (e.key === "ArrowRight") {
+        setCurrentIndex((prev) => {
+          const newIndex = prev + 1;
+          if (newIndex >= totalSlides + visibleCards) {
+            setTimeout(() => {
+              setIsTransitioning(false);
+              setCurrentIndex(visibleCards);
+            }, 500);
+            return newIndex;
+          }
+          return newIndex;
+        });
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [totalSlides, visibleCards]);
 
   return (
     <section 
@@ -87,51 +199,55 @@ const TestimonialSection = () => {
         </div>
 
         <div className="relative">
-          {/* Left Arrow */}
-          <button
-            onClick={prevSlide}
-            className="absolute left-2 sm:left-0 top-1/2 -translate-y-1/2 z-20 w-8 h-8 rounded-full bg-[#3f372c] text-white flex items-center justify-center shadow-lg"
+          {/* Carousel Viewport */}
+          <div
+            ref={carouselRef}
+            className="w-full max-w-none min-[700px]:max-w-[664px] min-[1100px]:max-w-[1008px] 2xl:max-w-[1204px] mx-auto overflow-hidden cursor-grab active:cursor-grabbing select-none touch-pan-y"
+            onPointerDown={handlePointerDown}
+            onPointerMove={handlePointerMove}
+            onPointerUp={handlePointerUp}
+            onPointerCancel={handlePointerCancel}
           >
-            <FaChevronLeft size={12} />
-          </button>
+            {/* Carousel Track */}
+            <div
+              ref={trackRef}
+              className="flex gap-6 2xl:gap-8"
+              style={{
+                transform: `translate3d(${-(currentIndex * cardStep) + dragDistance}px, 0, 0)`,
+                transition: isTransitioning ? 'transform 500ms ease-in-out' : 'none',
+              }}
+            >
+              {extendedTestimonials.map((item, index) => (
+                <div
+                  key={`${item.name}-${index}`}
+                  className="flex-shrink-0 w-full min-[700px]:w-[320px] 2xl:w-[380px]"
+                  data-card="true"
+                >
+                  <div className="bg-white rounded-2xl border border-gray-100 shadow-md p-5 2xl:p-6">
+                    <FaQuoteLeft className="text-[#f4a300] text-[9px] mb-2" />
 
-          {/* Right Arrow */}
-          <button
-            onClick={nextSlide}
-            className="absolute right-2 sm:right-0 top-1/2 -translate-y-1/2 z-20 w-8 h-8 rounded-full bg-[#3f372c] text-white flex items-center justify-center shadow-lg"
-          >
-            <FaChevronRight size={12} />
-          </button>
+                    <p className="text-gray-800 text-[13px] leading-7 min-h-[80px] text-center">
+                      {item.comment}
+                    </p>
 
-          {/* Cards */}
-          <div className="flex flex-wrap justify-center gap-6 2xl:gap-8 px-12 sm:px-14">
-            {visibleTestimonials.map((item, index) => (
-              <div
-                key={index}
-                className="w-full md:w-[320px] 2xl:w-[380px] bg-white rounded-2xl border border-gray-100 shadow-md p-5 2xl:p-6"
-              >
-                <FaQuoteLeft className="text-[#f4a300] text-[9px] mb-2" />
+                    <div className="flex items-center justify-center gap-3 mt-5">
+                      <FaUserCircle
+                        className="w-11 h-11 text-[#7aac3b]"
+                        aria-label={`${item.name} - HeyDay Realty Client Testimonial`}
+                      />
 
-                <p className="text-gray-800 text-[13px] leading-7 min-h-[80px] text-center">
-                  {item.comment}
-                </p>
+                      <div>
+                        <h4 className="font-bold text-[#08213f] text-sm">
+                          {item.name}
+                        </h4>
 
-                <div className="flex items-center justify-center gap-3 mt-5">
-                  <FaUserCircle
-                    className="w-11 h-11 text-[#7aac3b]"
-                    aria-label={`${item.name} - HeyDay Realty Client Testimonial`}
-                  />
-
-                  <div>
-                    <h4 className="font-bold text-[#08213f] text-sm">
-                      {item.name}
-                    </h4>
-
-                    <p className="text-gray-500 text-xs">{item.role}</p>
+                        <p className="text-gray-500 text-xs">{item.role}</p>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </div>

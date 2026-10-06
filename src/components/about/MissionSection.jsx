@@ -13,20 +13,20 @@ const MissionSection = () => {
       <div className="wide-container px-4 sm:px-6 lg:px-8 2xl:px-10">
         {/* Heading */}
         <div className="mb-8">
-          <h2 className="text-xl md:text-xl font-bold uppercase ml-0 lg:ml-20">
+          <h2 className="text-xl md:text-xl font-bold uppercase">
             Our <span className="text-[#7aac3b]">Mission</span> & Values
           </h2>
 
-          <div className="mt-2 w-16 h-1 bg-[#d99b28] rounded-full ml-0 lg:ml-20"></div>
+          <div className="mt-2 w-16 h-1 bg-[#d99b28] rounded-full"></div>
         </div>
 
-        <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-12 2xl:gap-20 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 2xl:gap-20 items-center">
           {/* Left Image */}
-          <div className="flex justify-center lg:justify-start ml-0 lg:ml-20 2xl:ml-28">
+          <div className="flex justify-center lg:justify-start">
             <img
               src={missionImg}
               alt="Mission"
-              className="rounded-3xl shadow-xl w-full max-w-[430px] 2xl:max-w-[560px] h-[300px] 2xl:h-[380px] object-cover"
+              className="rounded-3xl shadow-xl w-full max-w-[430px] lg:max-w-[520px] 2xl:max-w-[640px] h-[300px] 2xl:h-[400px] object-cover"
             />
           </div>
 

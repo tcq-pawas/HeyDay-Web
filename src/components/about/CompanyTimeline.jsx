@@ -56,42 +56,54 @@ const CompanyTimeline = () => {
           </p>
         </div>
 
-        <div className="relative">
+        {/* Timeline: width capped so cards stay close to the center line on big screens */}
+        <div className="relative mx-auto max-w-5xl 2xl:max-w-6xl">
           {/* Center Line */}
-          <div className="absolute left-1/2 top-0 h-full w-1 bg-blue-100 -translate-x-1/2 hidden md:block"></div>
+          <div className="absolute bottom-8 left-1/2 top-8 hidden w-[3px] -translate-x-1/2 rounded-full bg-gradient-to-b from-blue-100 via-blue-200 to-blue-100 md:block"></div>
 
-          <div className="space-y-16">
-            {timelineData.map((item, index) => (
+          {timelineData.map((item, index) => {
+            const isLeft = index % 2 === 0;
+
+            return (
               <div
                 key={index}
-                className={`relative flex items-center ${index % 2 === 0
-                    ? "md:flex-row"
-                    : "md:flex-row-reverse"
-                  } flex-col`}
+                className={`grid grid-cols-1 justify-items-center gap-4 md:grid-cols-[1fr_4rem_1fr] md:items-center md:justify-items-stretch md:gap-x-8 ${
+                  index === 0 ? "" : "mt-9 md:-mt-4"
+                }`}
               >
-                {/* Card */}
-                <div className="w-full md:w-5/12 flex justify-center">
-                  <div className="w-full max-w-md bg-white rounded-xl shadow-lg p-7 border border-gray-100 hover:-translate-y-1 hover:shadow-2xl transition-all duration-300">
-                    <h3 className="font-semibold text-gray-900 mb-2">
+                {/* Timeline Circle */}
+                <div className="relative z-10 order-first flex h-16 w-16 shrink-0 items-center justify-center rounded-full border-4 border-white bg-[#082548] font-bold text-white shadow-xl md:order-none md:col-start-2 md:row-start-1">
+                  {item.year}
+                </div>
+
+                {/* Card (sits right next to the line, left or right) */}
+                <div
+                  className={`relative w-full max-w-md 2xl:max-w-lg md:row-start-1 ${
+                    isLeft
+                      ? "md:col-start-1 md:justify-self-end"
+                      : "md:col-start-3 md:justify-self-start"
+                  }`}
+                >
+                  {/* Connector to the circle */}
+                  <span
+                    className={`absolute top-1/2 hidden h-0.5 w-8 bg-blue-200 md:block ${
+                      isLeft ? "-right-8" : "-left-8"
+                    }`}
+                  ></span>
+
+                  <div className="rounded-xl border border-t-[3px] border-gray-100 border-t-[#7aac3b] bg-white px-[30px] py-8 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl max-sm:px-5 max-sm:py-5">
+                    <h3 className="mb-2.5 font-semibold text-gray-900">
                       {item.title}
                     </h3>
 
-                    <p className="text-gray-800 leading-7 text-[13px]">
+                    <p className="text-[13px] leading-7 text-gray-800 2xl:text-sm 2xl:leading-8">
                       {item.description}
                     </p>
                   </div>
                 </div>
-
-                {/* Timeline Circle */}
-                <div className="relative z-10 my-6 md:my-0 flex items-center justify-center w-16 h-16 rounded-full bg-[#082548] text-white font-bold shadow-xl border-4 border-white shrink-0">
-                  {item.year}
-                </div>
-
-                {/* Empty Space */}
-                <div className="hidden md:block md:w-4/12"></div>
               </div>
-            ))}
-          </div>
+            );
+          })}
         </div>
       </div>
     </section>

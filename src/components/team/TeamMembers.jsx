@@ -64,23 +64,23 @@ const members = [
 
 const StatItem = ({ icon: Icon, label, value, color = "green" }) => {
   const colors = {
-    green: "bg-[#eef7eb] text-[#315d2f]",
-    gold: "bg-[#fff4df] text-[#c58a2d]",
+    green: "bg-[#eaf5e5] text-[#315d2f]",
+    gold: "bg-[#fff1d6] text-[#c58a2d]",
   };
 
   return (
-    <div className="flex min-w-0 items-center gap-2.5">
+    <div className="flex min-w-0 items-center gap-3 rounded-xl border border-[#edf1ea] bg-[#f7faf6] px-3 py-2.5">
       <div
-        className={`grid h-9 w-9 shrink-0 place-items-center rounded-lg ${colors[color]}`}
+        className={`grid h-10 w-10 shrink-0 place-items-center rounded-[10px] ${colors[color]}`}
       >
         <Icon className="text-base" />
       </div>
 
       <div className="min-w-0">
-        <p className="text-[9px] font-semibold uppercase tracking-wide text-gray-500">
+        <p className="text-[9px] font-semibold uppercase tracking-wider text-gray-500">
           {label}
         </p>
-        <h4 className="mt-0.5 break-words text-[13px] font-bold text-[#244b31]">
+        <h4 className="mt-0.5 break-words text-[13.5px] font-bold text-[#244b31] 2xl:text-[15px]">
           {value}
         </h4>
       </div>
@@ -90,13 +90,14 @@ const StatItem = ({ icon: Icon, label, value, color = "green" }) => {
 
 const TeamMembers = () => {
   return (
-    <section 
+    <section
       className="bg-cover bg-center bg-no-repeat overflow-hidden py-14"
       style={{
         backgroundImage: `url(${bg2})`,
       }}
     >
-      <div className="mx-auto w-full max-w-5xl px-4 sm:px-6">
+      {/* Full container width (same as other sections) so it scales on laptop / large screens */}
+      <div className="wide-container w-full px-4 sm:px-6 lg:px-8 2xl:px-10">
         <div className="mb-10 text-center">
           <h2 className="text-xl font-bold uppercase">
             Meet <span className="text-[#7aac3b]">Our</span> Professionals
@@ -108,7 +109,7 @@ const TeamMembers = () => {
           </p>
         </div>
 
-        <div className="space-y-8">
+        <div className="space-y-7 2xl:space-y-9">
           {members.map((member, index) => {
             const RoleIcon = member.roleIcon;
             const reverse = index % 2 !== 0;
@@ -116,27 +117,30 @@ const TeamMembers = () => {
             return (
               <div
                 key={index}
-                className={`relative mx-auto flex w-full max-w-[950px] flex-col overflow-hidden rounded-xl bg-white shadow-[0_8px_28px_rgba(16,24,40,0.08)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_14px_36px_rgba(16,24,40,0.12)] md:flex-row ${
+                className={`relative flex w-full flex-col overflow-hidden rounded-2xl bg-white shadow-[0_8px_28px_rgba(16,24,40,0.08)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_16px_38px_rgba(16,24,40,0.13)] md:flex-row ${
                   reverse ? "md:flex-row-reverse" : ""
                 }`}
               >
-                <div className="relative flex w-full justify-center bg-[#f5f9f6] p-4 sm:p-5 md:w-[34%] md:items-center">
-                  <div
-                    className={`absolute top-0 h-20 w-24 bg-[#17472b] ${
-                      reverse
-                        ? "right-0 rounded-bl-3xl"
-                        : "left-0 rounded-br-3xl"
-                    }`}
-                  />
+                {/* Photo panel */}
+                <div className="relative flex w-full justify-center bg-gradient-to-br from-[#f5f9f6] to-[#e6efe8] px-4 py-6 sm:px-5 md:w-[34%] md:items-center md:py-7 lg:w-[30%] 2xl:w-[28%]">
+                  <div className="relative z-10 w-full max-w-[260px] sm:max-w-[290px] md:max-w-[250px] lg:max-w-[290px] 2xl:max-w-[340px]">
+                    {/* Green corner accent: anchored to the photo itself so it stays aligned at every screen size */}
+                    <div
+                      className={`absolute -top-4 h-24 w-28 bg-[#17472b] 2xl:h-28 2xl:w-32 ${
+                        reverse
+                          ? "-right-4 rounded-tr-[28px]"
+                          : "-left-4 rounded-tl-[28px]"
+                      }`}
+                    />
 
-                  <div
-                    className={`absolute bottom-7 hidden h-16 w-16 bg-[radial-gradient(#d5ded7_1px,transparent_1px)] [background-size:7px_7px] sm:block ${
-                      reverse ? "right-3" : "left-3"
-                    }`}
-                  />
+                    {/* Dotted pattern, also anchored to the photo */}
+                    <div
+                      className={`absolute -bottom-5 hidden h-16 w-16 bg-[radial-gradient(#b4c4b9_1.3px,transparent_1.3px)] [background-size:8px_8px] md:block ${
+                        reverse ? "-right-5" : "-left-5"
+                      }`}
+                    />
 
-                  <div className="relative z-10 w-full max-w-[260px] sm:max-w-[300px] md:max-w-[235px]">
-                    <div className="aspect-[4/5] overflow-hidden rounded-xl border-[3px] border-white shadow-lg">
+                    <div className="relative z-10 aspect-[4/5] overflow-hidden rounded-2xl border-4 border-white shadow-xl">
                       <img
                         src={member.image}
                         alt={member.name}
@@ -145,45 +149,46 @@ const TeamMembers = () => {
                     </div>
 
                     <div
-                      className={`absolute bottom-2 z-20 max-w-[calc(100%-1rem)] rounded-lg bg-[#17472b] px-3 py-2.5 text-white shadow-lg left-1/2 -translate-x-1/2 ${
+                      className={`absolute bottom-3 z-20 max-w-[calc(100%-1.5rem)] rounded-[10px] bg-[#17472b] px-3 py-2 text-white shadow-lg left-1/2 -translate-x-1/2 ${
                         reverse
                           ? "md:left-auto md:right-3 md:translate-x-0"
                           : "md:left-3 md:translate-x-0"
                       }`}
                     >
-                      <p className="text-[9px] font-bold leading-none">
+                      <p className="text-[11px] font-bold leading-tight">
                         {member.role}
                       </p>
-                      <p className="mt-1 text-[8px] text-white/80">
+                      <p className="mt-0.5 text-[9.5px] text-white/80">
                         HeyDay Realty
                       </p>
                     </div>
                   </div>
                 </div>
 
-                <div className="relative flex min-w-0 flex-1 flex-col justify-center px-5 py-6 md:px-7">
+                {/* Content */}
+                <div className="relative flex min-w-0 flex-1 flex-col justify-center px-5 py-6 sm:px-[30px] sm:py-7 lg:px-11 lg:py-9 2xl:px-14 2xl:py-10">
                   <div className="relative z-10">
                     <span className="inline-flex w-fit items-center gap-2 rounded-full bg-[#edf7e9] px-3 py-1 text-[10px] font-bold uppercase tracking-wide text-[#315d2f]">
                       <FaLeaf className="text-[#7aac3b]" />
                       HeyDay Realty Team
                     </span>
 
-                    <h3 className="mt-3 font-serif text-xl font-bold text-[#244b31]">
+                    <h3 className="mt-3 font-serif text-[22px] font-bold text-[#244b31] lg:text-[25px] 2xl:text-[30px]">
                       {member.name}
                     </h3>
 
-                    <p className="mt-1 flex flex-wrap items-center gap-2 text-xs font-semibold text-[#b98230]">
+                    <p className="mt-1 flex flex-wrap items-center gap-2 text-[12.5px] font-semibold text-[#b98230] 2xl:text-sm">
                       <RoleIcon className="text-xs" />
                       {member.role}
                     </p>
 
-                    <div className="mt-2 h-[2px] w-10 bg-[#d49a42]" />
+                    <div className="mb-3.5 mt-3 h-[3px] w-11 rounded-full bg-[#d49a42]" />
 
-                    <p className="mt-4 max-w-2xl text-[13px] leading-6 text-gray-800">
+                    <p className="max-w-3xl text-[13px] leading-7 text-gray-800 lg:text-sm 2xl:text-[15px]">
                       {member.description}
                     </p>
 
-                    <div className="mt-5 grid gap-4 border-t border-gray-200 pt-4 sm:grid-cols-2 xl:grid-cols-3">
+                    <div className="mt-5 grid grid-cols-1 gap-3 border-t border-gray-200 pt-4 sm:grid-cols-2 lg:grid-cols-3">
                       <StatItem
                         icon={FaUserTie}
                         label="Experience"

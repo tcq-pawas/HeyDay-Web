@@ -7,7 +7,7 @@ export const Field = ({
   value,
   onChange,
 }) => (
-  <div>
+  <div className="min-w-0">
     <label
       htmlFor={name}
       className="mb-1 block text-xs font-semibold text-[#071c3d]"
@@ -23,7 +23,7 @@ export const Field = ({
         placeholder={placeholder}
         value={value}
         onChange={onChange}
-        className="h-10 w-full bg-transparent text-xs text-[#071c3d] outline-none placeholder:text-[#8a93a0]"
+        className="h-10 w-full min-w-0 bg-transparent text-xs text-[#071c3d] outline-none placeholder:text-[#8a93a0]"
       />
     </div>
   </div>

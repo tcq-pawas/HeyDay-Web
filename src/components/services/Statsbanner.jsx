@@ -63,7 +63,7 @@ const StatsBanner = () => {
                         {steps.map((step, index) => (
                             <div
                                 key={index}
-                                className="text-center relative group"
+                                className="text-center relative group bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-lg transition duration-300 p-8 text-center"
                             >
                                 {/* Number Circle */}
                                 {/* Number Box */}
