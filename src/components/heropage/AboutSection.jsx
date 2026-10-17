@@ -9,7 +9,7 @@ import {
 } from "lucide-react";
 
 import landImage from "../../assets/images/home/land-image.png";
-import bg1 from "../../assets/backgrounds/bg1.png";
+import bg1 from "../../assets/backgrounds/image1.png";
 
 const features = [
   {

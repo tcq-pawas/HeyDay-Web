@@ -13,7 +13,7 @@ import member1 from "../../assets/images/team/rahul.png";
 import member2 from "../../assets/images/team/amit.png";
 import member3 from "../../assets/images/team/priya.png";
 import member4 from "../../assets/images/team/rohit.png";
-import bg2 from "../../assets/backgrounds/bg2.png";
+import bg2 from "../../assets/backgrounds/image.png";
 
 const members = [
   {

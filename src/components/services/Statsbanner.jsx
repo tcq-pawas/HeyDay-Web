@@ -1,5 +1,5 @@
 import React from "react";
-import bg2 from "../../assets/backgrounds/bg2.png";
+import bg2 from "../../assets/backgrounds/image.png";
 
 const StatsBanner = () => {
     const steps = [

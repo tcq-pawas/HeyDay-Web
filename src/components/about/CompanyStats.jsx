@@ -5,7 +5,7 @@ import {
 } from "react-icons/fa";
 
 import handsheke from "../../assets/images/about/handshek.png";
-import bg4 from "../../assets/backgrounds/bg4.png";
+import bg4 from "../../assets/backgrounds/image3.png";
 
 const CompanyStats = () => {
   return (

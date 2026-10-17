@@ -28,7 +28,7 @@ import {
 import roshanbagh from "../../assets/images/home/card1.png";
 import greencity from "../../assets/images/media/project/bhathat.png";
 import sawastikpuram from "../../assets/images/home/card3.png";
-import bg1 from "../../assets/backgrounds/bg1.png";
+import "../../assets/backgrounds/section-bg.css";
 
 const projects = [
   {
@@ -133,10 +133,7 @@ const categories = [
 const PropertySection = () => {
   return (
     <section 
-      className="bg-cover bg-center bg-no-repeat py-20"
-      style={{
-        backgroundImage: `url(${bg1})`,
-      }}
+      className="sec-bg sec-bg--featured py-20"
     >
       <div className="wide-container px-4 sm:px-6 lg:px-8 2xl:px-10">
         {/* Heading */}

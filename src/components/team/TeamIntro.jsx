@@ -6,7 +6,7 @@ import {
   FaAward,
   FaMapMarkerAlt,
 } from "react-icons/fa";
-import bg2 from "../../assets/backgrounds/bg2.png";
+import bg2 from "../../assets/backgrounds/image3.png";
 
 const TeamIntro = () => {
   return (

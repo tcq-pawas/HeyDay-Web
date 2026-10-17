@@ -1,0 +1,29 @@
+/* HeyDay Realty - aligned section backgrounds
+   Har section ki bg ek alag layer (::before) me hai: cover + center, upar/neeche soft fade,
+   taaki sections ke beech seam na dikhe aur content ke upar dots/lines na aayein. */
+
+.sec-bg {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.sec-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 18%, #000 82%, transparent 100%);
+  mask-image: linear-gradient(to bottom, transparent 0, #000 18%, #000 82%, transparent 100%);
+}
+
+.sec-bg--featured::before  { background-image: url("./bg2.png"); }
+.sec-bg--why::before       { background-image: url("./bg1.png"); }
+.sec-bg--investors::before { background-image: url("./bg3.png"); }
+.sec-bg--faq::before       { background-image: url("./bg4.png"); }
+/* bg5.png abhi unused: footer/CTA ke upar use kar sakte hain */

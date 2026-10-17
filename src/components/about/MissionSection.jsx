@@ -1,6 +1,6 @@
 import { FaBullseye, FaGem, FaUsers } from "react-icons/fa";
 import missionImg from "../../assets/images/about/hero3.png";
-import bg4 from "../../assets/backgrounds/bg4.png";
+import bg4 from "../../assets/backgrounds/image.png";
 
 const MissionSection = () => {
   return (

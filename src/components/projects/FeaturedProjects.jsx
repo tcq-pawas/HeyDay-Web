@@ -42,7 +42,7 @@ import madical from "../../assets/images/project/madicalroad.png";
 
 import taramandal from "../../assets/images/project/taramandal.png";
 
-import bg3 from "../../assets/backgrounds/bg3.png";
+import bg3 from "../../assets/backgrounds/image.png";
 
 
 

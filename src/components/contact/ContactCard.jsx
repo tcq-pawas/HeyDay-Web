@@ -1,6 +1,6 @@
 import ContactForm from "../contact/ContactForm";
 import ContactInfoCard from "../contact/ContactInfoCard";
-import bg5 from "../../assets/backgrounds/bg5.png";
+import bg5 from "../../assets/backgrounds/image1.png";
 
 const cardClass =
   "flex min-w-0 flex-col rounded-2xl bg-white p-5 shadow-[0_14px_42px_rgba(15,35,69,0.10)] lg:p-7";

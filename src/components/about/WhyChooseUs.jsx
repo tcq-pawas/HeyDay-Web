@@ -6,7 +6,7 @@ import {
   FaShieldAlt,
   FaHandshake,
 } from "react-icons/fa";
-import bg4 from "../../assets/backgrounds/bg4.png";
+import bg4 from "../../assets/backgrounds/image3.png";
 
 const WhyChooseUs = () => {
   const features = [

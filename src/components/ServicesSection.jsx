@@ -1,6 +1,6 @@
 import React from "react";
 import { Sprout, Home, Building2, Landmark, FileText, MapPin, ShieldCheck, ArrowRightLeft, ScrollText, Calendar, FileCheck, Navigation } from "lucide-react";
-import bg2 from "../assets/backgrounds/bg2.png";
+import bg2 from "../assets/backgrounds/image3.png";
 
 const ServicesSection = () => {
   const services = [

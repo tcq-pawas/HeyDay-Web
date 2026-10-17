@@ -6,7 +6,7 @@ import {
   FaChartLine,
   FaHeadset,
 } from "react-icons/fa";
-import bg2 from "../../assets/backgrounds/bg2.png";
+import bg2 from "../../assets/backgrounds/image.png";
 
 const features = [
   {

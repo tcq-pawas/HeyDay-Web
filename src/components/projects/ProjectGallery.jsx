@@ -3,7 +3,7 @@ import clubHouse from "../../assets/images/media/project/image1.png";
 import road from "../../assets/images/media/project/image2.png";
 import gate from "../../assets/images/media/project/image3.png";
 import park from "../../assets/images/media/project/image4.png";
-import bg3 from "../../assets/backgrounds/bg3.png";
+import bg3 from "../../assets/backgrounds/image.png";
 
 const ProjectGallery = () => {
   return (

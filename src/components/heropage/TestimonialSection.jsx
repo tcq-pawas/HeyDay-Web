@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { FaQuoteLeft, FaUserCircle } from "react-icons/fa";
-import bg4 from "../../assets/backgrounds/bg4.png";
+import "../../assets/backgrounds/section-bg.css";
 
 const TestimonialSection = () => {
   const testimonials = [
@@ -184,10 +184,7 @@ const TestimonialSection = () => {
 
   return (
     <section 
-      className="bg-cover bg-center bg-no-repeat py-16"
-      style={{
-        backgroundImage: `url(${bg4})`,
-      }}
+      className="sec-bg sec-bg--investors py-16"
     >
       <div className="wide-container px-4 sm:px-6 lg:px-8 2xl:px-10">
         {/* Heading */}
