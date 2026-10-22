@@ -1,6 +1,8 @@
 import { useState, useEffect, useRef } from "react";
 import { FaQuoteLeft, FaUserCircle } from "react-icons/fa";
 import "../../assets/backgrounds/section-bg.css";
+import sectionBg from "../../assets/backgrounds/image.png";
+import { image } from "framer-motion/client";
 
 const TestimonialSection = () => {
   const testimonials = [
@@ -184,7 +186,7 @@ const TestimonialSection = () => {
 
   return (
     <section 
-      className="sec-bg sec-bg--investors py-16"
+      className=" py-16" 
     >
       <div className="wide-container px-4 sm:px-6 lg:px-8 2xl:px-10">
         {/* Heading */}

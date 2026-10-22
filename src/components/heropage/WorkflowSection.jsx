@@ -8,6 +8,7 @@ import gallery4 from "../../assets/images/home/short4-image.png";
 import gallery5 from "../../assets/images/home/short5-image.png";
 import gallery6 from "../../assets/images/home/roshanbagh.png";
 import "../../assets/backgrounds/section-bg.css";
+import sectionBg from "../../assets/backgrounds/image.png";
 
 const WorkflowSection = () => {
   const gallery = [
@@ -49,7 +50,7 @@ const WorkflowSection = () => {
     >
 
       {/* Why Heyday Realty */}
-      <div className="wide-container px-4 sm:px-6 lg:px-8 2xl:px-10 py-16">
+      <div className="wide-container px-4 sm:px-6 lg:px-8 2xl:px-10 py-16" style={{ backgroundImage: `url(${sectionBg})` }}>
 
         <div className="text-center balanced-container">
 

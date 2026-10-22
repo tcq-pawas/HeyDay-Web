@@ -2,6 +2,7 @@ import { useState } from "react";
 import { FaPlus, FaMinus } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import "../assets/backgrounds/section-bg.css";
+import sectionBg from "../assets/backgrounds/image3.png";
 
 const FAQSection = () => {
   const [openIndex, setOpenIndex] = useState(null);
@@ -41,7 +42,8 @@ const FAQSection = () => {
   return (
     <section 
       id="faq"
-      className="sec-bg sec-bg--faq py-12 sm:py-16 lg:py-20"
+      className=" py-12 sm:py-16 lg:py-20" 
+      style={{ backgroundImage: `url(${sectionBg})` }}
     >
       <div className="balanced-container px-4 sm:px-6 lg:px-8">
         {/* Heading */}
